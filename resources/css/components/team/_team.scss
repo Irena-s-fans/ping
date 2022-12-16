@@ -1,0 +1,121 @@
+.team {
+    margin-top: 200px;
+    margin-left: 20px;
+
+    &__header {
+        margin-left: 55px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        background-color: #1B1B1B;
+        margin-top: 55px;
+        border: 1px solid white;
+        transform: skewX(-16deg);
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: -65px;
+        transform: skewX(16deg);
+    }
+
+    &__about {
+        margin-top: 41px;
+        margin-left: 136px;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: start;
+        transform: skewX(16deg);
+    }
+
+    &__name {
+        color: #90FFFF;
+        font-family: Radio, sans-serif;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 42px;
+        letter-spacing: 0.1em;
+        margin-right: 25px;
+    }
+
+    &__title {
+        color: white;
+        font-family: Play, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 40px;    
+    }
+
+    &__list {
+        margin-top: 30px;
+        margin-left: 185px;
+    }
+
+    &__list-item {
+        color: white;
+        font-family: Play, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        list-style-type: none;
+        max-width: 460px;
+        padding-block: 15px;
+        margin-bottom: 17px;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list-text {
+        transform: skewX(16deg);
+    }
+
+    &__socials {
+        margin-left: 185px;
+        transform: skewX(16deg);
+        display: flex;
+        align-items: center;
+    }
+
+    &__socials-item {
+        margin-right: 19px;
+        opacity: 0.2;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__img-item {
+
+    }
+
+    &__line {
+        position: relative;
+        margin-top: 28px;
+        margin-left: -62px;
+        height: 13px;
+        width: 1600px;
+        background-color: white;
+        transform: skewX(-16deg);
+
+        &::before {
+            position: absolute;
+            content: '';
+            height: 13px;
+            width: 10px;
+            background-color: #212121;
+            top: 0;
+            left: 15px;
+        }
+    }
+}

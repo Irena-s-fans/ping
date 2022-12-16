@@ -1,0 +1,44 @@
+.quest {
+    display: flex;
+    position: relative;
+    max-width: 851px;
+    margin-top: 71px;
+    align-items: center;
+    margin-left: 261px;
+
+    &__title {
+        font-family: TTSquares, sans-serif;
+        font-size: 77px;
+        font-weight: 900;
+        line-height: 83px;
+        text-align: right;
+        color: transparent;
+        letter-spacing: 0.1em;
+        -webkit-text-stroke: 1px rgba(#90FFFF, 1); 
+        max-width: 414px;
+        margin-right: 33px;
+    }
+
+    &__text {
+        max-width: 398px;
+        color: white;
+        font-family: Play, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 36px;
+    }
+
+    &__icon {
+        color: white;
+        border: 2px solid white;
+        padding-inline: 11px;
+        font-family: Play, sans-serif;
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 29px;
+        position: absolute;     
+        right: 0;
+        top: -10px; 
+        cursor: pointer;
+    }
+}

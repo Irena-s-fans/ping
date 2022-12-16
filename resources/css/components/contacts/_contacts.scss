@@ -1,0 +1,18 @@
+.contacts {
+    margin-top: 200px;
+
+    &__header {
+        margin-left: 75px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        padding-top: 17px;
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 57px;
+        }
+    }
+}

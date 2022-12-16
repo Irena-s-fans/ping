@@ -1,0 +1,17 @@
+.reviews {
+    margin-top: 200px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-left: 75px;
+    }
+
+    &__content {
+        margin-top: 43px;
+        width: 1550px;
+        height: 600px;
+        border: 1px solid white;
+        transform: skewX(-16deg);
+    }
+}

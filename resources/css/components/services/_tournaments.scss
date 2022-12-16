@@ -1,0 +1,73 @@
+.tournaments {
+    margin-top: 60px;
+    margin-left: -50px;
+    display: none;
+
+    &__content {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__img {
+        max-height: 674px;
+        border: 1px solid white;
+        transform: skewX(-16deg);
+    }
+
+    &__wrap {
+        border: 1px solid white;
+        transform: skewX(-16deg);
+        padding: 80px 45px 120px 75px;
+    }
+
+    &__title {
+        color: white;
+        font-family: Radio, sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 27px;
+        transform: skewX(16deg);
+    }
+
+    &__text {
+        color: white;
+        font-family: Play, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        transform: skewX(16deg);
+        margin-top: 40px;
+        
+        
+        &:nth-child(2) {
+            color: #90FFFF;
+            font-weight: 700;
+        }
+        
+        
+    }
+
+    &__btn {
+        color: white;
+        font-family: Play, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 40px;
+        background-color: #8E0CD0;
+        border: 1px solid white;
+        transform: skewX(-16deg);
+        max-width: 145px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            box-shadow: 0px 0px 45px rgba(255, 255, 255, 0.23), 0px 0px 35px rgba(165, 9, 178, 0.52), 0px 0px 19px rgba(191, 28, 232, 0.5);
+        }
+    }
+
+    &__btn-text {
+        transform:rotate(-86deg) skewX(-10deg);
+        white-space: nowrap;
+    }
+}

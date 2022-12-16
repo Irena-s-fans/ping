@@ -1,0 +1,84 @@
+.header {
+    margin-left: 185px;
+    background: linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0) 100%);
+    width: 304px;
+    transform: skewX(-20deg);
+    position: fixed;
+    z-index: 1000;
+
+    &__logo {
+        margin-top: 141px;
+        width: 425px;
+        height: 148px;
+        transform: skewX(20deg);
+        margin-left: -47px;
+    }
+
+    &__nav {
+        margin-top: 127px;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__nav-item {
+        color: #FFFFFF40;
+        font-family: Play;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 29px;
+        text-align: center;
+        list-style-type: none;
+        transform: skewX(20deg);
+        position: relative;
+        padding-block: 10px;
+
+        &:hover {
+            color: #FFFFFF80;
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: skewX(0deg);
+
+            &::before {
+                content: '';
+                height: 49px;
+                width: 9px;
+                background-color: #212121;
+                position: absolute;
+                left: 9px;
+                top: 0;
+            }
+        }
+
+        &:first-child {
+            color: white;
+            background-color: #8E0CD0;
+            transform: skewX(0deg);
+
+            &::before {
+                content: '';
+                height: 49px;
+                width: 9px;
+                background-color: #212121;
+                position: absolute;
+                left: 9px;
+                top: 0;
+            }
+        }
+    }
+
+    &__nav-link {
+        text-decoration: none;
+        color: #FFFFFF40;
+
+        &:hover {
+            transform: skewX(20deg); //не работает?
+        }
+    }
+}
+
+.nav-item__text{
+    transform: skewX(20deg);
+}

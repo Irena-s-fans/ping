@@ -1,0 +1,52 @@
+.form {
+    margin-top: 31px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 72px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__label {
+        margin-bottom: 15px;
+        margin-left: 9px;
+        color: #FFFFFF80;
+        font-family: Radio, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    &__input-wrap {
+        
+    }
+
+    &__input {
+        background: none;
+        color: white;
+        font-family: Play, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 23px;
+        border: 1px solid #FFFFFF40;
+        border-left: none;
+        outline: none;
+        padding: 15px 0 15px 30px;
+        
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            background-color: white;
+            border-left: 1px solid #FFFFFF40;
+            border-bottom: 1px solid #FFFFFF40;
+            top: 0;
+            left: 0;
+        }
+    }
+}
