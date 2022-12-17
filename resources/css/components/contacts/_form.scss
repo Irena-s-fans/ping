@@ -1,13 +1,25 @@
 .form {
     margin-top: 31px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px 72px;
+    display: flex;
+    gap: 72px;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 
     &__item {
         display: flex;
         flex-direction: column;
         position: relative;
+        margin-left: 146px;
+        grid-column-start: 1;
+        max-height: 94px;
+
+        &:nth-child(3) {
+            max-height: none;
+        }
     }
 
     &__label {
@@ -18,10 +30,35 @@
         font-size: 20px;
         font-weight: 400;
         line-height: 18px;
+        
     }
 
     &__input-wrap {
+        position: relative;
         
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 61px;
+            width: 18px;
+            border-left: 1px solid #FFFFFF40;
+            border-bottom: 1px solid #FFFFFF40;
+            bottom: 0;
+            left: -10px;
+            transform: skewX(-16deg);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 59px;
+            width: 6px;
+            border: 1px solid #FFFFFF40;
+            bottom: 0;
+            left: -24px;
+            transform: skewX(-16deg);
+        }
     }
 
     &__input {
@@ -34,19 +71,126 @@
         border: 1px solid #FFFFFF40;
         border-left: none;
         outline: none;
-        padding: 15px 0 15px 30px;
-        
+        padding: 15px 0 15px 30px;   
+        width: 450px;
+    }
+
+    &__texarea-wrap {
+        position: relative;
 
         &::after {
             content: '';
             position: absolute;
-            height: 10px;
-            width: 10px;
-            background-color: white;
+            height: 341px;
+            width: 98px;
             border-left: 1px solid #FFFFFF40;
             border-bottom: 1px solid #FFFFFF40;
-            top: 0;
-            left: 0;
+            bottom: 4px;
+            left: -50px;
+            transform: skewX(-16deg);
         }
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 341px;
+            width: 6px;
+            border: 1px solid #FFFFFF40;
+            bottom: 4px;
+            left: -65px;
+            transform: skewX(-16deg);
+        }
+    }
+
+    &__textarea {
+        box-sizing: border-box;
+        background: none;
+        color: white;
+        font-family: Play, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        border: 1px solid #FFFFFF40;
+        border-left: none;
+        outline: none;
+        padding: 15px 30px 15px 30px;  
+        overflow: hidden;
+        resize: none;
+        max-height: 342px;
+        width: 481px;
+    }
+
+    &__btn {
+        grid-column-start: 1;
+        margin-right: 9px;
+        padding: 14px 72px;
+        border: none;
+        background-color: #8E0CD0;
+        color: white;
+        font-family: Radio, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 11px;
+        max-width: 230px;
+        align-self: end;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            bottom: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #8E0CD0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 38px;
+            width: 12px;
+            border-left: 1px solid #8E0CD0;
+            border-bottom: 1px solid #8E0CD0;
+            background-color: #8E0CD0;
+            bottom: 0px;
+            left: -8px;
+            transform: skewX(-16deg);
+        }
+    }
+
+    &__list {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    &__list-item {
+        margin-bottom: 38px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__subtitle {
+        color: white;
+        font-family: Radio, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 31px;
+    }
+
+    &__checkbox {
+        margin-right: 28px;
+    }
+
+    &__checkbox-text {
+        color: white;
+        font-family: Play, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 18px;
     }
 }

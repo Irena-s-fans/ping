@@ -96,7 +96,7 @@
                 </div>
                 <div class="partners__line"></div>
             </div>
-            <!-- __________________________________________НОВЫЙ БЛОК______________________________________________________________________________________________ -->
+            
 
             <div class="services">
                 <h1 class="services__title">Услуги</h1>
@@ -289,45 +289,51 @@
                 </div>
 
                 <form class="form" action="">
-                    <div class="form__item">
-                        <label class="form__label" for="">Имя</label>
-                        <div class="form__input-wrap">
-                            <input class="form__input" type="text">
+                    <div class="form__wrap">
+                        <div class="form__item">
+                            <label class="form__label" for="">Имя</label>
+                            <div class="form__input-wrap">
+                                <input class="form__input" type="text">
+                            </div>
+                        </div> 
+                        <div class="form__item">
+                            <label class="form__label" for="">E-Mail</label>
+                            <div class="form__input-wrap">
+                                <input class="form__input" type="text">
+                            </div>
                         </div>
-                        <!-- <input class="form__input" type="text"> -->
+                        <div class="form__item">
+                            <label class="form__label" for="">Сообщение</label>
+                            <div class="form__texarea-wrap">
+                                <textarea class="form__textarea" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            
+                        </div>
+                            <button class="form__btn" type="submit">Отправить</button> 
                     </div>
                     <div class="form__list">
                         <h2 class="form__subtitle">Выберите услугу</h2>
                         <div class="form__list-item">
                             <input class="form__checkbox" name="" type="checkbox">
-                            <label class="from__checkbox-text" for="">Турниры</label>
+                            <label class="form__checkbox-text" for="">Турниры</label>
                         </div>
                         <div class="form__list-item">
                             <input class="form__checkbox" name="" type="checkbox">
-                            <label class="from__checkbox-text" for="">Спец проекты</label>
+                            <label class="form__checkbox-text" for="">Спец проекты</label>
                         </div>
                         <div class="form__list-item">
                             <input class="form__checkbox" name="" type="checkbox">
-                            <label class="from__checkbox-text" for="">Офлайн ивенты</label>
+                            <label class="form__checkbox-text" for="">Офлайн ивенты</label>
                         </div>
                         <div class="form__list-item">
                             <input class="form__checkbox" name="" type="checkbox">
-                            <label class="from__checkbox-text" for="">Digital реклама</label>
+                            <label class="form__checkbox-text" for="">Digital-реклама</label>
                         </div>
                         <div class="form__list-item">
                             <input class="form__checkbox" name="" type="checkbox">
-                            <label class="from__checkbox-text" for="">Дизайн</label>
+                            <label class="form__checkbox-text" for="">Дизайн</label>
                         </div>
                     </div>
-                    <div class="form__item">
-                        <label class="form__label" for="">E-Mail</label>
-                        <input class="form__input" type="text">
-                    </div>
-                    <div class="form__item">
-                        <label class="form__label" for="">Сообщение</label>
-                        <textarea class="form__textarea" name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                    <input class="form__btn" type="submit" placeholder="Отправить">
                 </form>
             </div>
         </div>
