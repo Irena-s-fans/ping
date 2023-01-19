@@ -15,6 +15,9 @@ mix.webpackConfig({
     output: {
         chunkFilename: 'public/js/chunks/[name].[chunkhash].js'
     },
+    stats: {
+        children: true,
+    },
 });
 
 mix.js('resources/js/app.js', 'public/js');

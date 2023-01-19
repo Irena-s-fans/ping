@@ -16,5 +16,8 @@
         "postcss": "^8.1.14",
         "sass": "^1.56.2",
         "sass-loader": "^12.1.0"
+    },
+    "dependencies": {
+        "swiper": "^8.4.6"
     }
 }

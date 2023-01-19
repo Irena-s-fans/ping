@@ -30,12 +30,12 @@
         font-size: 20px;
         font-weight: 400;
         line-height: 18px;
-        
+
     }
 
     &__input-wrap {
         position: relative;
-        
+
 
         &::after {
             content: '';
@@ -46,7 +46,7 @@
             border-bottom: 1px solid #FFFFFF40;
             bottom: 0;
             left: -10px;
-            transform: skewX(-16deg);
+            transform: skewX(-$skewX);
         }
 
         &::before {
@@ -57,7 +57,7 @@
             border: 1px solid #FFFFFF40;
             bottom: 0;
             left: -24px;
-            transform: skewX(-16deg);
+            transform: skewX(-$skewX);
         }
     }
 
@@ -71,7 +71,7 @@
         border: 1px solid #FFFFFF40;
         border-left: none;
         outline: none;
-        padding: 15px 0 15px 30px;   
+        padding: 15px 0 15px 30px;
         width: 450px;
     }
 
@@ -87,7 +87,7 @@
             border-bottom: 1px solid #FFFFFF40;
             bottom: 4px;
             left: -50px;
-            transform: skewX(-16deg);
+            transform: skewX(-$skewX);
         }
 
         &::before {
@@ -98,7 +98,7 @@
             border: 1px solid #FFFFFF40;
             bottom: 4px;
             left: -65px;
-            transform: skewX(-16deg);
+            transform: skewX(-$skewX);
         }
     }
 
@@ -113,7 +113,7 @@
         border: 1px solid #FFFFFF40;
         border-left: none;
         outline: none;
-        padding: 15px 30px 15px 30px;  
+        padding: 15px 30px 15px 30px;
         overflow: hidden;
         resize: none;
         max-height: 342px;
@@ -132,7 +132,7 @@
         font-weight: 400;
         line-height: 11px;
         max-width: 230px;
-        align-self: end;
+        align-self: flex-end;
         position: relative;
 
         &::after {
@@ -155,7 +155,7 @@
             background-color: #8E0CD0;
             bottom: 0px;
             left: -8px;
-            transform: skewX(-16deg);
+            transform: skewX(-$skewX);
         }
     }
 

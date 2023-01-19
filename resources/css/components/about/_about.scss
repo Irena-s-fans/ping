@@ -3,17 +3,21 @@
     padding: 0;
 }
 
-body {
-    background: no-repeat url(/public/img/bg.png);
-    background-size: cover;
-}
-
 .about {
+    position: relative;
     display: flex;
     max-width: 1024px;
     max-height: 230px;
     margin-left: 75px;
-    
+
+    &__video {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        filter: brightness(50%);
+    }
+
     &__wrap {
         margin-right: 35px;
     }

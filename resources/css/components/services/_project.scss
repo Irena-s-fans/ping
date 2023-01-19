@@ -11,7 +11,7 @@
     &__wrapper {
         position: relative;
         border: 3px solid #FFFFFF;
-        transform: skewX(-16deg);
+        transform: skewX(-$skewX);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -19,7 +19,7 @@
 
     &__icon {
         position: absolute;
-        transform: skewX(16deg);
+        transform: skewX($skewX);
     }
 
     &__img {
@@ -30,7 +30,7 @@
 
     &__wrap {
         border: 1px solid white;
-        transform: skewX(-16deg);
+        transform: skewX(-$skewX);
         padding: 80px 45px 120px 75px;
     }
 
@@ -40,7 +40,7 @@
         font-size: 28px;
         font-weight: 400;
         line-height: 27px;
-        transform: skewX(16deg);
+        transform: skewX($skewX);
     }
 
     &__text {
@@ -49,13 +49,13 @@
         font-size: 20px;
         font-weight: 400;
         line-height: 32px;
-        transform: skewX(16deg);
+        transform: skewX($skewX);
         margin-top: 40px;
-        
+
         &:nth-child(2) {
             color: #90FFFF;
             font-weight: 700;
-        } 
+        }
     }
 
     &__btn {
@@ -66,7 +66,7 @@
         line-height: 40px;
         background-color: #8E0CD0;
         border: 1px solid white;
-        transform: skewX(-16deg);
+        transform: skewX(-$skewX);
         max-width: 145px;
         display: flex;
         justify-content: center;

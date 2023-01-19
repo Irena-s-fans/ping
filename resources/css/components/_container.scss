@@ -1,9 +1,7 @@
 .container {
-    &_fluid {
-        display: flex;
-        max-width: 1920px;
-        position: relative;
-        margin-inline: auto;
-        overflow: hidden;
-    }
+    display: flex;
+    max-width: 1920px;
+    position: relative;
+    margin-inline: auto;
+    overflow: hidden;
 }

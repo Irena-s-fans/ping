@@ -1,16 +1,25 @@
 .header {
-    margin-left: 185px;
-    background: linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0) 100%);
-    width: 304px;
-    transform: skewX(-20deg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
     position: fixed;
+    top: 0;
+    transform: skewX(-$skewX) translateX(50%);
+    background: linear-gradient(180deg, #232323 0%, rgba(35, 35, 35, 0) 100%);
     z-index: 1000;
 
+    &__wrapper {
+        box-sizing: border-box;
+        width: 304px;
+        height: 100%;
+        max-height: 1080px;
+        padding-top: max(4vh, 100px);
+    }
+
     &__logo {
-        margin-top: 141px;
         width: 425px;
         height: 148px;
-        transform: skewX(20deg);
+        transform: skewX($skewX);
         margin-left: -47px;
     }
 
@@ -26,17 +35,18 @@
 
     &__nav-item {
         color: #FFFFFF40;
-        font-family: Play;
+        font-family: Play, sans-serif;
         font-size: 25px;
         font-weight: 400;
         line-height: 29px;
         text-align: center;
         list-style-type: none;
-        transform: skewX(20deg);
+        transform: skewX($skewX);
         position: relative;
         padding-block: 10px;
+        cursor: pointer;
 
-        &:hover {
+        &:hover:not(.header__nav-item_active) {
             color: #FFFFFF80;
             background-color: rgba(255, 255, 255, 0.1);
             transform: skewX(0deg);
@@ -50,9 +60,13 @@
                 left: 9px;
                 top: 0;
             }
+
+            .nav-item__text {
+                transform: skewX($skewX);
+            }
         }
 
-        &:first-child {
+        &_active {
             color: white;
             background-color: #8E0CD0;
             transform: skewX(0deg);
@@ -66,19 +80,18 @@
                 left: 9px;
                 top: 0;
             }
+
+            .nav-item__text {
+                transform: skewX($skewX);
+            }
         }
     }
 
-    &__nav-link {
-        text-decoration: none;
+    &__nav-text {
         color: #FFFFFF40;
 
         &:hover {
-            transform: skewX(20deg); //не работает?
+            transform: skewX($skewX); //не работает?
         }
     }
-}
-
-.nav-item__text{
-    transform: skewX(20deg);
 }

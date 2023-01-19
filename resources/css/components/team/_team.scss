@@ -1,5 +1,4 @@
 .team {
-    margin-top: 200px;
     margin-left: 20px;
 
     &__header {
@@ -12,7 +11,7 @@
         background-color: #1B1B1B;
         margin-top: 55px;
         border: 1px solid white;
-        transform: skewX(-16deg);
+        transform: skewX(-$skewX);
         position: relative;
     }
 
@@ -20,7 +19,7 @@
         position: absolute;
         bottom: 0;
         left: -65px;
-        transform: skewX(16deg);
+        transform: skewX($skewX);
     }
 
     &__about {
@@ -30,8 +29,8 @@
 
     &__wrap {
         display: flex;
-        align-items: start;
-        transform: skewX(16deg);
+        align-items: flex-start;
+        transform: skewX($skewX);
     }
 
     &__name {
@@ -49,7 +48,7 @@
         font-family: Play, sans-serif;
         font-size: 25px;
         font-weight: 400;
-        line-height: 40px;    
+        line-height: 40px;
     }
 
     &__list {
@@ -76,12 +75,12 @@
     }
 
     &__list-text {
-        transform: skewX(16deg);
+        transform: skewX($skewX);
     }
 
     &__socials {
         margin-left: 185px;
-        transform: skewX(16deg);
+        transform: skewX($skewX);
         display: flex;
         align-items: center;
     }
@@ -104,9 +103,8 @@
         margin-top: 28px;
         margin-left: -62px;
         height: 13px;
-        width: 1600px;
         background-color: white;
-        transform: skewX(-16deg);
+        transform: skewX(-$skewX);
 
         &::before {
             position: absolute;

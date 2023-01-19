@@ -1,0 +1,16 @@
+.section {
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("/public/img/bg.png");
+
+    &__wrapper {
+        box-sizing: border-box;
+        height: 100%;
+        max-height: 1080px;
+        position: relative;
+        padding-top: max(4vh, 100px);
+        padding-left: 600px;
+    }
+}
