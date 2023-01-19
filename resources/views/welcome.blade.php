@@ -327,24 +327,24 @@
                                 <div class="form__list">
                                     <h2 class="form__subtitle">Выберите услугу</h2>
                                     <div class="form__list-item">
-                                        <input class="form__checkbox" name="" type="checkbox">
-                                        <label class="form__checkbox-text" for="">Турниры</label>
+                                        <input class="form__checkbox" name="tournaments" type="checkbox" id="tournaments">
+                                        <label class="form__checkbox-text" for="tournaments">Турниры</label>
                                     </div>
                                     <div class="form__list-item">
-                                        <input class="form__checkbox" name="" type="checkbox">
-                                        <label class="form__checkbox-text" for="">Спец проекты</label>
+                                        <input class="form__checkbox" name="specialProjects" type="checkbox" id="specialProjects">
+                                        <label class="form__checkbox-text" for="specialProjects">Спец проекты</label>
                                     </div>
                                     <div class="form__list-item">
-                                        <input class="form__checkbox" name="" type="checkbox">
-                                        <label class="form__checkbox-text" for="">Офлайн ивенты</label>
+                                        <input class="form__checkbox" name="offlineEvents" type="checkbox" id="offlineEvents">
+                                        <label class="form__checkbox-text" for="offlineEvents">Офлайн ивенты</label>
                                     </div>
                                     <div class="form__list-item">
-                                        <input class="form__checkbox" name="" type="checkbox">
-                                        <label class="form__checkbox-text" for="">Digital-реклама</label>
+                                        <input class="form__checkbox" name="digitalAds" type="checkbox" id="digitalAds">
+                                        <label class="form__checkbox-text" for="digitalAds">Digital-реклама</label>
                                     </div>
                                     <div class="form__list-item">
-                                        <input class="form__checkbox" name="" type="checkbox">
-                                        <label class="form__checkbox-text" for="">Дизайн</label>
+                                        <input class="form__checkbox" name="design" type="checkbox" id="design">
+                                        <label class="form__checkbox-text" for="design">Дизайн</label>
                                     </div>
                                 </div>
                             </form>
