@@ -39,23 +39,7 @@
             <div class="header__wrapper">
                 <img class="header__logo" src="/public/img/logo.png" alt="">
                 <nav class="header__nav">
-                    <ul class="header__nav-list">
-<!--                        <li class="header__nav-item">
-                            <p class="nav-item__text">О нас</p>
-                        </li>
-                        <li class="header__nav-item">
-                            <a class="header__nav-link" href="">Услуги</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a class="header__nav-link" href="">Команда</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a class="header__nav-link" href="">Партнёры</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a class="header__nav-link" href="">Контакты</a>
-                        </li>-->
-                    </ul>
+                    <ul class="header__nav-list"></ul>
                 </nav>
             </div>
         </div>
@@ -87,24 +71,50 @@
                         </div>
                         <div class="partners">
                             <h2 class="partners__title">Партнёры</h2>
-                            <div class="partners__list">
-                                <img class="partners__list-item" src="/public/img/partners/igromania 2.png" alt="">
-                                <img class="partners__list-item" src="/public/img/partners/western_digital 2.png" alt="">
-                                <img class="partners__list-item" src="/public/img/partners/universal_pictures 2.png" alt="">
-                                <img class="partners__list-item" src="/public/img/partners/ubisoft 2.png" alt="">
-                                <img class="partners__list-item" src="/public/img/partners/kanobu 2.png" alt="">
-                                <img class="partners__list-item" src="/public/img/partners/dtf 2.png" alt="">
-                                <img class="partners__list-item" src="/public/img/partners/syberia 2.png" alt="">
-                                <img class="partners__list-item" src="/public/img/partners/sports_ru 2.png" alt="">
-                                <img class="partners__list-item" src="/public/img/partners/viewsonic 2.png" alt="">
-                                <img class="partners__list-item" src="/public/img/partners/vk_gaming 2.png" alt="">
+                            <div class="partners__list-wrapper">
+                                <div class="partners__list swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/igromania 2.png" alt="">
+                                        </div>
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/western_digital 2.png" alt="">
+                                        </div>
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/universal_pictures 2.png" alt="">
+                                        </div>
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/ubisoft 2.png" alt="">
+                                        </div>
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/kanobu 2.png" alt="">
+                                        </div>
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/dtf 2.png" alt="">
+                                        </div>
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/syberia 2.png" alt="">
+                                        </div>
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/sports_ru 2.png" alt="">
+                                        </div>
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/viewsonic 2.png" alt="">
+                                        </div>
+                                        <div class="partners__item swiper-slide">
+                                            <img class="partners__img" src="/public/img/partners/vk_gaming 2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="partners__line"></div>
                         </div>
                     </div>
                 </div>
                 <div class="section swiper-slide">
-                    <div class="section__wrapper">
+                    <div class="light light_left"></div>
+                    <div class="light light_right"></div>
+                    <div class="section__wrapper section__wrapper_no-overflow">
                         <div class="services">
                             <h1 class="services__title">Услуги</h1>
                             <div class="services__line"></div>
@@ -235,49 +245,141 @@
                                 </div>
                             </div>-->
                 <div class="section swiper-slide">
+                    <div class="light light_left"></div>
+                    <div class="light light_right"></div>
                     <div class="section__wrapper">
                         <div class="team">
                             <div class="team__header">
                                 <h1 class="services__title">Команда</h1>
                                 <div class="services__line"></div>
                             </div>
-
                             <div class="team__content">
-                                <img class="team__img" src="public/img/team/Andrey.png" alt="">
-                                <div class="team__about">
-                                    <div class="team__wrap">
-                                        <h2 class="team__name"> Андрей Дубчак</h2>
-                                        <p class="team__title">Cоздаст для вас:</p>
+                                <div class="team__item team__item_active">
+                                    <div class="team__img-wrap">
+                                        <img class="team__img_shadow" src="public/img/team/team1.png" alt="">
+                                        <img class="team__img" src="public/img/team/team1.png" alt="">
                                     </div>
-                                    <ul class="team__list">
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">Стратегия продвижения бренда и сметы</p>
-                                        </li>
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">Креативное наполнение ивента</p>
-                                        </li>
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">Написание сценария</p>
-                                        </li>
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">SMM</p>
-                                        </li>
-                                    </ul>
-                                    <div class="team__socials">
-                                        <img class="team__socials-item" src="public/img/team/VK.png" alt="">
-                                        <img class="team__socials-item" src="public/img/team/TG.png" alt="">
-                                        <img class="team__socials-item" src="public/img/team/YT.png" alt="">
+                                    <div class="team__about">
+                                        <div class="team__wrap">
+                                            <h2 class="team__name">Андрей Дубчак</h2>
+                                            <p class="team__title">Cоздаст для вас:</p>
+                                        </div>
+                                        <ul class="team__list">
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Стратегия продвижения бренда и сметы</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Креативное наполнение ивента</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Написание сценария</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">SMM</p>
+                                            </li>
+                                        </ul>
+                                        <div class="team__socials">
+                                            <img class="team__socials-item" src="public/img/team/VK.png" alt="">
+                                            <img class="team__socials-item" src="public/img/team/TG.png" alt="">
+                                            <img class="team__socials-item" src="public/img/team/YT.png" alt="">
+                                        </div>
                                     </div>
                                 </div>
-                                <img class="team__img-item" src="" alt="">
-                                <img class="team__img-item" src="" alt="">
-                                <img class="team__img-item" src="" alt="">
+                                <div class="team__item">
+                                    <div class="team__img-wrap">
+                                        <img class="team__img_shadow" src="public/img/team/team2.png" alt="">
+                                        <img class="team__img" src="public/img/team/team2.png" alt="">
+                                    </div>
+                                    <div class="team__about">
+                                        <div class="team__wrap">
+                                            <h2 class="team__name">Виктория Мартоян</h2>
+                                            <p class="team__title">Cоздаст для вас:</p>
+                                        </div>
+                                        <ul class="team__list">
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Индивидуальный мерч</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Графическое оформление для трансляций</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Дизайнерское решение по декору</p>
+                                            </li>
+                                        </ul>
+                                        <div class="team__socials">
+                                            <img class="team__socials-item" src="public/img/team/VK.png" alt="">
+                                            <img class="team__socials-item" src="public/img/team/TG.png" alt="">
+                                            <img class="team__socials-item" src="public/img/team/YT.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team__item">
+                                    <div class="team__img-wrap">
+                                        <img class="team__img_shadow" src="public/img/team/team3.png" alt="">
+                                        <img class="team__img" src="public/img/team/team3.png" alt="">
+                                    </div>
+                                    <div class="team__about">
+                                        <div class="team__wrap">
+                                            <h2 class="team__name">Антон Мурашов</h2>
+                                            <p class="team__title">Cоздаст для вас:</p>
+                                        </div>
+                                        <ul class="team__list">
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Работа с клиентами</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Поиск индивидуального подхода</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Создание креативов</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Подбор инфлюенсера</p>
+                                            </li>
+                                        </ul>
+                                        <div class="team__socials">
+                                            <img class="team__socials-item" src="public/img/team/VK.png" alt="">
+                                            <img class="team__socials-item" src="public/img/team/TG.png" alt="">
+                                            <img class="team__socials-item" src="public/img/team/YT.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team__item">
+                                    <div class="team__img-wrap">
+                                        <img class="team__img_shadow" src="public/img/team/team4.png" alt="">
+                                        <img class="team__img" src="public/img/team/team4.png" alt="">
+                                    </div>
+                                    <div class="team__about">
+                                        <div class="team__wrap">
+                                            <h2 class="team__name">Руслан Соколов</h2>
+                                            <p class="team__title">Cоздаст для вас:</p>
+                                        </div>
+                                        <ul class="team__list">
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Организация мероприятий</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Коммуникация с инфлюенсерами</p>
+                                            </li>
+                                            <li class="team__list-item">
+                                                <p class="team__list-text">Продюссирование трансляций</p>
+                                            </li>
+                                        </ul>
+                                        <div class="team__socials">
+                                            <img class="team__socials-item" src="public/img/team/VK.png" alt="">
+                                            <img class="team__socials-item" src="public/img/team/TG.png" alt="">
+                                            <img class="team__socials-item" src="public/img/team/YT.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="team__line"></div>
                     </div>
                 </div>
                 <div class="section swiper-slide">
+                    <div class="light light_left"></div>
+                    <div class="light light_right"></div>
                     <div class="section__wrapper">
                         <div class="reviews">
                             <div class="reviews__header">
@@ -291,6 +393,8 @@
                     </div>
                 </div>
                 <div class="section swiper-slide">
+                    <div class="light light_left"></div>
+                    <div class="light light_right"></div>
                     <div class="section__wrapper">
                         <div class="contacts">
                             <div class="contacts__header">

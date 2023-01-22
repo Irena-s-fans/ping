@@ -1,41 +1,44 @@
 .partners {
-    margin-top: 65px;
-    margin-left: -120px;
+    margin-top: clamp(25px, 3.3vw, 65px);
+    margin-left: calc(-1 * clamp(-50px, 6.25vw, 120px));
     position: relative;
 
     &__title {
+        margin-left: min(2.86vw, 55px);
         font-family: TTSquares, sans-serif;
-        font-size: 60px;
+        font-size: min(3.12vw, 60px);
         font-weight: 900;
-        line-height: 54px;
+        line-height: 100%;
         color: transparent;
         -webkit-text-stroke: 1px rgba(#FFFFFF, 1);
-        margin-left: 55px;
     }
 
-    &__list {
-        margin-top: 38px;
-        margin-right: -100px;
-        padding: 50px 0 50px 78px;
+    &__list-wrapper {
+        width: 100%;
+        margin-top: min(1.97vw, 38px);
+        margin-right: calc(-1 * min(5.2vw, 100px));
+        padding: min(2.6vw, 50px) 0 min(2.6vw, 50px) min(4vw, 50px);
         border: 1px solid white;
-        display: flex;
-        gap: 46px;
-        align-items: center;
+        border-right: none;
         transform: skewX(-$skewX);
     }
 
-    &__list-item {
+    &__item {
+        height: clamp(30px, 4.68vw, 90px) !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
+    &__img {
+        max-width: 100%;
         transform: skewX($skewX);
-        position: relative;
-        z-index: 999;
     }
 
     &__line {
-        margin: 38px 0 30px -60px;
-        margin-top: 39px;
-        border-top: 2px solid #FFFFFF;
         width: 120%;
-        box-shadow: 0px 0px 54px #FFFFFF, 0px 0px 35px #A509B2, 0px 0px 15px #BF1CE8;
+        margin: min(2.03vw, 39px) 0 min(1.56vw, 30px) calc(-1 * min(3.12vw, 60px));
+        border-top: 2px solid #FFFFFF;
+        box-shadow: 0 0 54px #FFFFFF, 0 0 35px #A509B2, 0 0 15px #BF1CE8;
     }
 }

@@ -1,0 +1,18 @@
+.light {
+    width: 13.5vw;
+    height: 28vw;
+    position: absolute;
+    background: linear-gradient(306.93deg, #8E0CD0 0%, #90FFFF 100%);
+    filter: blur(115px);
+    transform: rotate(15deg);
+
+    &_left {
+        left: -12.5%;
+        top: 15%;
+    }
+
+    &_right {
+        right: -9.5%;
+        bottom: -2%;
+    }
+}

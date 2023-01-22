@@ -1,6 +1,9 @@
 @use 'sass:math';
 
-$margin: math.tan(16deg)*(327px+20px);
+$cardHeight: 320px;
+$cardGap: 20px;
+$margin: math.tan($skewX)*($cardHeight+$cardGap);
+$imgOffset: math.tan($skewX)*$cardHeight;
 
 .services {
     display: flex;
@@ -21,24 +24,28 @@ $margin: math.tan(16deg)*(327px+20px);
         margin-top: 17px;
         border-top: 2px solid #FFFFFF;
         width: 100%;
-        box-shadow: 0px 0px 54px #FFFFFF, 0px 0px 35px #A509B2, 0px 0px 15px #BF1CE8;
+        box-shadow: 0 0 54px #FFFFFF, 0 0 35px #A509B2, 0 0 15px #BF1CE8;
     }
 
     &__list {
         margin-top: 60px;
+        padding-right: 135px;
         display: grid;
         grid-template-columns: repeat(3, minmax(0,1fr));
-        gap: 20px;
+        grid-template-rows: repeat(2, $cardHeight);
+        gap: $cardGap;
     }
 
     &__list-item {
+        box-sizing: content-box;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         transform: skewX(-$skewX);
-        max-height: 327px;
         border: 1px solid white;
+        overflow: hidden;
+        transition: all 0.25s;
 
         &:nth-last-child(-n+3) {
             left: -$margin;
@@ -46,16 +53,16 @@ $margin: math.tan(16deg)*(327px+20px);
 
         &:hover {
             border: 11px solid #90FFFF;
-            box-shadow: 0px 0px 54px #FFFFFF, 0px 0px 35px #A509B2, 0px 0px 19px #BF1CE8;
-            transform: skewX(-$skewX) scale(1.1);
+            box-shadow: 0 0 54px #FFFFFF, 0 0 35px #A509B2, 0 0 19px #BF1CE8;
+            transform: skewX(-$skewX);
             z-index: 999;
         }
     }
 
     &__list-img {
-        width: 100%;
-        height: 100%;
+        max-width: 125%;
         filter: blur(9px);
+        transform: skewX($skewX);
     }
 
     &__list-text {

@@ -1,0 +1,23 @@
+@mixin to($max-width) {
+    @media(max-width: $max-width + 'px') {
+        @content;
+    }
+}
+
+@mixin from($min-width) {
+    @media(min-width: $min-width + 'px') {
+        @content;
+    }
+}
+
+@mixin to_h($max-height) {
+    @media(max-height: $max-height + 'px') {
+        @content;
+    }
+}
+
+@mixin from_h($min-height) {
+    @media(min-height: $min-height + 'px') {
+        @content;
+    }
+}

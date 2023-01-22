@@ -1,22 +1,22 @@
 .quest {
-    display: flex;
+    max-width: 850px;
     position: relative;
-    max-width: 851px;
-    margin-top: 71px;
+    display: flex;
     align-items: center;
-    margin-left: 261px;
+    margin-top: min(3.7vw, 71px);
+    margin-left: min(13.6vw, 261px);
 
     &__title {
+        max-width: 414px;
+        margin-right: clamp(15px, 1.7vw, 33px);
         font-family: TTSquares, sans-serif;
-        font-size: 77px;
+        font-size: min(4vw, 77px);
         font-weight: 900;
-        line-height: 83px;
+        line-height: 110%;
         text-align: right;
         color: transparent;
         letter-spacing: 0.1em;
-        -webkit-text-stroke: 1px rgba(#90FFFF, 1); 
-        max-width: 414px;
-        margin-right: 33px;
+        -webkit-text-stroke: 1px rgba(#90FFFF, 1);
     }
 
     &__text {
@@ -25,20 +25,20 @@
         font-family: Play, sans-serif;
         font-size: 20px;
         font-weight: 400;
-        line-height: 36px;
+        line-height: 150%;
     }
 
     &__icon {
-        color: white;
-        border: 2px solid white;
+        position: absolute;
+        right: 0;
+        top: -10px;
         padding-inline: 11px;
         font-family: Play, sans-serif;
-        font-size: 27px;
+        font-size: clamp(14px, 1.4vw, 27px);
         font-weight: 700;
-        line-height: 29px;
-        position: absolute;     
-        right: 0;
-        top: -10px; 
+        line-height: 100%;
+        color: white;
+        border: 2px solid white;
         cursor: pointer;
     }
 }

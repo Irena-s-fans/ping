@@ -6,6 +6,7 @@ const paginationNames = ['О нас', 'Услуги', 'Команда', 'Пар�
 $(document).ready(function() {
     const swiper = new Swiper('.fullpage', {
         direction: 'vertical',
+        threshold: 25,
         mousewheel: {
             forceToAxis: true,
         },
@@ -20,5 +21,5 @@ $(document).ready(function() {
             verticalClass: 'pagination-vertical',
             clickable: true,
         },
-    })
+    });
 })
