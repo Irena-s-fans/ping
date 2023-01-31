@@ -1,44 +1,98 @@
+@use 'sass:math';
+
 .partners {
-    margin-top: clamp(25px, 3.3vw, 65px);
+    margin-top: clamp(15px, min(3.3vw, 6vh), 65px);
     margin-left: calc(-1 * clamp(-50px, 6.25vw, 120px));
     position: relative;
+
+    @include to(768) {
+        margin-top: 50px;
+        margin-left: 0;
+    }
 
     &__title {
         margin-left: min(2.86vw, 55px);
         font-family: TTSquares, sans-serif;
-        font-size: min(3.12vw, 60px);
+        font-size: min(min(3.12vw, 5.55vh), 60px);
         font-weight: 900;
         line-height: 100%;
         color: transparent;
         -webkit-text-stroke: 1px rgba(#FFFFFF, 1);
+
+        @include to(768) {
+            text-align: center;
+            margin-left: 0;
+            font-size: clamp(42px, 14.49vw, 75px);
+        }
     }
 
     &__list-wrapper {
         width: 100%;
-        margin-top: min(1.97vw, 38px);
+        height: min(min(10.4vw, 18.51vh), 200px);
+        box-sizing: border-box;
+        margin-top: min(min(1.97vw, 3.51vh), 38px);
         margin-right: calc(-1 * min(5.2vw, 100px));
-        padding: min(2.6vw, 50px) 0 min(2.6vw, 50px) min(4vw, 50px);
+        padding: min(min(2.6vw, 4.62vh), 50px) 0 min(min(2.6vw, 4.62vh), 50px);
         border: 1px solid white;
         border-right: none;
         transform: skewX(-$skewX);
+        transform-origin: bottom;
+
+        @include to(768) {
+            width: calc(100% + 15px);
+            height: clamp(75px, 16.27vw, 125px);
+            position: relative;
+            margin-top: 50px;
+            margin-right: 0;
+            padding-block: 15px;
+        }
+
+        @include to(576) {
+            margin-top: 35px;
+        }
+
+        @include to(450) {
+            margin-top: 25px;
+        }
     }
 
-    &__item {
-        height: clamp(30px, 4.68vw, 90px) !important;
-        display: flex;
+    &__list {
+        height: 100%;
+    }
+
+    &__swiper-wrapper {
         align-items: center;
-        justify-content: center;
     }
 
     &__img {
+        width: auto !important;
+        height: auto !important;
+        min-height: min(2.3vw, 45px);
         max-width: 100%;
-        transform: skewX($skewX);
+        max-height: 100%;
+        padding-left: min(4vw, 45px);
+        transform: translateZ(0) skewX($skewX) !important;
+
+        @include to(768) {
+            max-width: 65vw;
+            min-height: 40px;
+            max-height: 90%;
+            padding-left: 35px;
+        }
+
+        @include to(576) {
+            padding-left: 25px;
+        }
     }
 
     &__line {
         width: 120%;
-        margin: min(2.03vw, 39px) 0 min(1.56vw, 30px) calc(-1 * min(3.12vw, 60px));
+        margin: min(min(2.03vw, 3.61vh), 39px) 0 min(1.56vw, 30px) calc(-1 * calc(min(2.03vw, 39px) * #{math.tan($skewX)}));
         border-top: 2px solid #FFFFFF;
         box-shadow: 0 0 54px #FFFFFF, 0 0 35px #A509B2, 0 0 15px #BF1CE8;
+
+        @include to(768) {
+            display: none;
+        }
     }
 }

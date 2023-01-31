@@ -1,73 +1,83 @@
 .tournaments {
-    margin-top: 60px;
-    margin-left: -50px;
+    margin-top: clamp(25px, min(3.12vw, 5.55vh), 60px);
+    margin-left: calc(-1 * clamp(20px, 2.6vw, 50px));
     display: none;
 
     &__content {
         display: flex;
         gap: 10px;
+        margin-right: min(6vw, 100px);
     }
 
     &__img {
-        max-height: 674px;
+        height: 100%;
+        flex: 1;
+        transform: skewX($skewX);
+    }
+
+    &__img-wrap {
+        width: min(300px, min(15.62vw, 27.77vh));
+        max-height: min(min(35vw, 62.5vh), 675px);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: 1px solid white;
         transform: skewX(-$skewX);
+        overflow: hidden;
     }
 
     &__wrap {
         border: 1px solid white;
         transform: skewX(-$skewX);
-        padding: 80px 45px 120px 75px;
+        padding: min(min(4.1vw, 7.4vh), 80px) min(2.3vw, 45px) min(min(6.25vw, 11.1vh), 120px) min(3.9vw, 75px);
     }
 
     &__title {
-        color: white;
         font-family: Radio, sans-serif;
-        font-size: 28px;
+        font-size: min(min(1.4vw, 2.59vh), 28px);
         font-weight: 400;
-        line-height: 27px;
+        line-height: 100%;
+        color: white;
         transform: skewX($skewX);
     }
 
     &__text {
-        color: white;
+        margin-top: clamp(10px, min(2vw, 3.7vh), 40px);
         font-family: Play, sans-serif;
-        font-size: 20px;
+        font-size: min(min(1.04vw, 1.85vh), 20px);
         font-weight: 400;
-        line-height: 32px;
+        line-height: 150%;
+        color: white;
         transform: skewX($skewX);
-        margin-top: 40px;
-
 
         &:nth-child(2) {
             color: #90FFFF;
             font-weight: 700;
         }
-
-
     }
 
     &__btn {
-        color: white;
-        font-family: Play, sans-serif;
-        font-size: 25px;
-        font-weight: 400;
-        line-height: 40px;
-        background-color: #8E0CD0;
-        border: 1px solid white;
-        transform: skewX(-$skewX);
-        max-width: 145px;
+        max-width: min(7.55vw, 145px);
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: Play, sans-serif;
+        font-size: min(min(1.3vw, 2.31vh), 25px);
+        font-weight: 400;
+        line-height: 150%;
+        color: white;
+        background-color: #8E0CD0;
+        border: 1px solid white;
+        transform: skewX(-$skewX);
 
         &:hover {
-            box-shadow: 0px 0px 45px rgba(255, 255, 255, 0.23), 0px 0px 35px rgba(165, 9, 178, 0.52), 0px 0px 19px rgba(191, 28, 232, 0.5);
+            box-shadow: 0 0 min(45px, 2.34vw) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);
         }
     }
 
     &__btn-text {
-        transform:rotate(-86deg) skewX(-10deg);
+        transform: skewX($skewX) rotate(calc(-1 * calc(90deg - $skewX)));
         white-space: nowrap;
     }
 }

@@ -1,139 +1,282 @@
+@use 'sass:math';
+
 .form {
-    margin-top: 31px;
+    margin-top: clamp(15px, min(1.56vw, 2.77vh), 30px);
     display: flex;
-    gap: 72px;
+    gap: clamp(25px, min(3.75vw, 6.94vh), 72px);
+
+    @include to(768) {
+        max-width: min(80%, 450px);
+        flex-direction: column;
+        gap: 40px;
+        margin-inline: auto;
+        margin-top: 25px;
+    }
 
     &__wrap {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: clamp(15px, min(1.56vw, 2.77vh), 30px);
+        margin-left: min(7.81vw, 150px);
+
+        @include to(768) {
+            margin-left: 0;
+        }
     }
 
     &__item {
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-left: 146px;
         grid-column-start: 1;
         max-height: 94px;
 
         &:nth-child(3) {
             max-height: none;
         }
+
+        @include to(768) {
+            max-height: none;
+        }
     }
 
     &__label {
         margin-bottom: 15px;
-        margin-left: 9px;
+        margin-left: 10px;
         color: #FFFFFF80;
         font-family: Radio, sans-serif;
-        font-size: 20px;
+        font-size: min(min(1.04vw, 1.85vh), 20px);
         font-weight: 400;
-        line-height: 18px;
+        line-height: 100%;
 
+        @include to(991) {
+            margin-bottom: 10px;
+        }
+
+        @include to(768) {
+            font-size: clamp(12px, 2.34vw, 18px);
+        }
     }
 
     &__input-wrap {
         position: relative;
 
-
         &::after {
+            box-sizing: border-box;
             content: '';
+            height: 100%;
+            width: calc(min(min(3.17vw, 5.64vh), 61px) * #{math.tan($skewX)});
             position: absolute;
-            height: 61px;
-            width: 18px;
-            border-left: 1px solid #FFFFFF40;
-            border-bottom: 1px solid #FFFFFF40;
             bottom: 0;
-            left: -10px;
-            transform: skewX(-$skewX);
+            left: 0;
+            border: 1px solid #FFFFFF40;
+            border-top: none;
+            border-right: none;
+            background: #202020;
+            transform: skewX(-$skewX) translateX(-50%);
+            z-index: 19;
+
+            @include to(1199) {
+                width: 12px;
+            }
+
+            @include to(991) {
+                width: 9px;
+            }
+
+            @include to(768) {
+                width: 14px;
+            }
+
         }
 
         &::before {
+            box-sizing: border-box;
             content: '';
-            position: absolute;
-            height: 59px;
+            height: 100%;
             width: 6px;
-            border: 1px solid #FFFFFF40;
+            position: absolute;
             bottom: 0;
-            left: -24px;
+            left: -5.5%;
+            border: 1px solid #FFFFFF40;
             transform: skewX(-$skewX);
+            transition: all 0.25s;
+            z-index: 21;
+
+            @include to(1199) {
+                left: -20px;
+            }
+
+            @include to(768) {
+                left: -20px;
+            }
+
+            @include to(450) {
+                width: 4px;
+                left: -15px;
+            }
         }
     }
 
     &__input {
-        background: none;
-        color: white;
+        width: 100%;
+        height: min(min(3.17vw, 5.64vh), 61px);
+        box-sizing: border-box;
+        position: relative;
+        padding: clamp(5px, min(0.78vw, 1.38vh), 15px) 0 clamp(5px, min(0.78vw, 1.38vh), 15px) clamp(15px, 1.56vw, 30px);
         font-family: Play, sans-serif;
-        font-size: 25px;
+        font-size: min(min(1.3vw, 2.31vh), 25px);
         font-weight: 400;
-        line-height: 23px;
+        line-height: 100%;
+        color: white;
         border: 1px solid #FFFFFF40;
         border-left: none;
         outline: none;
-        padding: 15px 0 15px 30px;
-        width: 450px;
+        background: #202020;
+        z-index: 20;
+
+        @include to(768) {
+            height: auto;
+            padding: 14px 0 14px 20px;
+            font-size: clamp(14px, 2.34vw, 18px);
+        }
+
+        @include to(576) {
+            padding: 12px 0 12px 16px;
+        }
+
+        @include to(450) {
+            padding: 10px 0 10px 14px;
+        }
+    }
+
+    &__textarea-label {
+        @include to(768) {
+            position: relative;
+            left: -14px;
+            margin-left: 0;
+        }
     }
 
     &__texarea-wrap {
         position: relative;
+        display: flex;
+
+        @include to(768) {
+            margin-left: -14px;
+        }
 
         &::after {
             content: '';
             position: absolute;
-            height: 341px;
-            width: 98px;
-            border-left: 1px solid #FFFFFF40;
-            border-bottom: 1px solid #FFFFFF40;
-            bottom: 4px;
-            left: -50px;
-            transform: skewX(-$skewX);
+            box-sizing: border-box;
+            height: 100%;
+            width: calc(min(min(17.708vw, 31.4vh), 340px) * #{math.tan($skewX)});
+            border: 1px solid #FFFFFF40;
+            border-top: none;
+            border-right: none;
+            bottom: 0;
+            left: 0;
+            transform: skewX(-$skewX) translateX(-50%);
+            background: #202020;
+            z-index: 19;
+
+            @include to(768) {
+                display: none;
+            }
         }
 
         &::before {
             content: '';
-            position: absolute;
-            height: 341px;
+            box-sizing: border-box;
+            height: 100%;
             width: 6px;
+            position: absolute;
+            bottom: 0;
+            left: -15%;
             border: 1px solid #FFFFFF40;
-            bottom: 4px;
-            left: -65px;
             transform: skewX(-$skewX);
+            transition: all 0.25s;
+            z-index: 21;
+
+            @include to(768) {
+                left: -15px;
+                transform: none;
+            }
+
+            @include to(576) {
+                left: -13px;
+            }
+
+            @include to(450) {
+                width: 4px;
+                left: -10px;
+            }
         }
     }
 
     &__textarea {
+        height: min(min(17.708vw, 31.4vh), 340px);
+        width: 100%;
+        position: relative;
+        padding: clamp(5px, min(0.78vw, 1.38vh), 15px) clamp(15px, 1.56vw, 30px) clamp(5px, min(0.78vw, 1.38vh), 15px) clamp(15px, 1.56vw, 30px);
         box-sizing: border-box;
-        background: none;
-        color: white;
         font-family: Play, sans-serif;
-        font-size: 20px;
+        font-size: min(min(1.04vw, 1.85vh), 20px);
         font-weight: 400;
-        line-height: 32px;
+        line-height: 150%;
+        color: white;
         border: 1px solid #FFFFFF40;
         border-left: none;
         outline: none;
-        padding: 15px 30px 15px 30px;
         overflow: hidden;
         resize: none;
-        max-height: 342px;
-        width: 481px;
+        background: #202020;
+        z-index: 20;
+
+        @include to(768) {
+            height: auto;
+            padding: 14px 15px 14px 20px;
+            font-size: clamp(14px, 2.34vw, 18px);
+            border: 1px solid #FFFFFF40;
+        }
+
+        @include to(576) {
+            padding: 12px 12px 12px 16px;
+        }
+
+        @include to(450) {
+            padding: 10px 10px 10px 14px;
+        }
+    }
+
+    &__field-wrap_active {
+        &:before {
+            background: #90FFFF;
+            box-shadow: 0 0 min(2.81vw, 54px) #FFFFFF, 0 0 min(1.82vw, 35px) #A509B2, 0 0 min(0.78vw, 15px) 2px #BF1CE8;
+        }
     }
 
     &__btn {
+        box-sizing: border-box;
+        max-width: min(11.97vw, 230px);
+        position: relative;
         grid-column-start: 1;
+        align-self: flex-end;
         margin-right: 9px;
-        padding: 14px 72px;
+        padding: clamp(5px, min(0.72vw, 1.29vh), 14px) clamp(25px, 3.75vw, 72px);
+        font-family: Radio, sans-serif;
+        font-size: min(0.62vw, 12px);
+        font-weight: 400;
+        line-height: 100%;
+        color: white;
         border: none;
         background-color: #8E0CD0;
-        color: white;
-        font-family: Radio, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 11px;
-        max-width: 230px;
-        align-self: flex-end;
-        position: relative;
+        cursor: pointer;
+
+        @include to(768) {
+            display: none;
+        }
 
         &::after {
             content: '';
@@ -146,51 +289,150 @@
         }
 
         &::before {
+            box-sizing: border-box;
             content: '';
             position: absolute;
-            height: 38px;
-            width: 12px;
+            height: 100%;
+            width: min(0.62vw, 12px);
             border-left: 1px solid #8E0CD0;
             border-bottom: 1px solid #8E0CD0;
             background-color: #8E0CD0;
-            bottom: 0px;
-            left: -8px;
-            transform: skewX(-$skewX);
+            bottom: 0;
+            left: 0;
+            transform: skewX(-$skewX) translateX(-50%);
+
+            @include to(768) {
+                width: 20px;
+            }
+        }
+    }
+
+    &__btn-wrap {
+        text-align: center;
+    }
+
+    &__btn_sm {
+        min-width: min(58vw, 275px);
+        display: none;
+        padding: 15px 0;
+        font-size: clamp(12px, 2.6vw, 18px);
+
+        @include to(768) {
+            display: inline-block;
+        }
+
+        @include to(576) {
+            min-width: min(58vw, 240px);
+            padding: 12px 0;
+        }
+
+        @include to(450) {
+            min-width: min(58vw, 212px);
+            padding: 10px 0;
         }
     }
 
     &__list {
-        grid-column-start: 2;
-        grid-row-start: 1;
-        grid-row-end: 3;
+        padding-top: clamp(25px, min(2.08vw, 3.7vh), 40px);
+
+        @include to(768) {
+            width: clamp(212px, 51vw, 350px);
+            margin-inline: auto;
+            padding-top: 0;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: min(min(1.61vw, 2.81vh), 31px);
+        color: white;
+        font-family: Radio, sans-serif;
+        font-size: min(min(1.04vw, 1.85vh), 20px);
+        font-weight: 400;
+        line-height: 100%;
+        opacity: 0.5;
+
+        @include to(768) {
+            text-align: center;
+            font-size: clamp(14px, 2.34vw, 18px);
+        }
     }
 
     &__list-item {
-        margin-bottom: 38px;
+        margin-bottom: clamp(10px, min(1.97vw, 3.51vh), 38px);
+
+        &:first-of-type {
+            @include to(768) {
+                margin-top: 15px;
+            }
+        }
 
         &:last-child {
             margin-bottom: 0;
         }
     }
 
-    &__subtitle {
+    &__checkbox-label {
+        display: flex;
+        align-items: center;
         color: white;
-        font-family: Radio, sans-serif;
-        font-size: 20px;
+        font-family: Play, sans-serif;
+        font-size: min(min(1.04vw, 1.85vh), 20px);
         font-weight: 400;
-        line-height: 18px;
-        margin-bottom: 31px;
+        line-height: 100%;
+        cursor: pointer;
+
+        &_active {
+            .form__checkbox:before {
+                opacity: 1;
+            }
+        }
+
+        @include to(768) {
+            font-size: 20px;
+        }
     }
 
     &__checkbox {
-        margin-right: 28px;
-    }
+        margin-right: clamp(15px, 1.5vw, 30px);
+        width: clamp(15px, min(1.31vw, 2.31vh), 25px);
+        height: clamp(15px, min(1.31vw, 2.31vh), 25px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(#ffffff, 0.25);
 
-    &__checkbox-text {
-        color: white;
-        font-family: Play, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 18px;
+        &:before {
+            content: '';
+            width: 40%;
+            height: 40%;
+            background-color: #90FFFF;
+            opacity: 0;
+            transition: all .25s;
+
+            @include to(768) {
+                width: 60%;
+                height: 60%;
+            }
+        }
+
+        @include to(768) {
+            width: 35px;
+            height: 35px;
+            margin-right: 30px;
+        }
+
+        @include to(576) {
+            margin-right: 25px;
+        }
+
+        @include to(414) {
+            margin-right: 20px;
+        }
+
+        @include to(375) {
+            width: 27px;
+            height: 27px;
+            margin-right: 15px;
+        }
     }
 }

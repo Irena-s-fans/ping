@@ -18,76 +18,196 @@
 
     &__content {
         border: 1px solid white;
-        max-width: 962px;
-        transform: skewX(-17deg);
-        padding: 26px 100px 44px 100px;
+        max-width: min(50vw, 960px);
+        transform: skewX(-$skewX);
+        padding: clamp(15px, 1.3vw, 26px) clamp(45px, 5.2vw, 100px) clamp(22px, 2.3vw, 44px) clamp(45px, 5.2vw, 100px);
+
+        @include to(768) {
+            max-width: none;
+            width: 65%;
+            padding: 30px 40px 25px 30px;
+        }
+
+        @include to(576) {
+            width: 60%;
+            padding: 25px 20px 25px 20px;
+        }
+
+        @include to(450) {
+            box-sizing: border-box;
+            width: 90%;
+            padding-top: 35px;
+            transform: none;
+        }
     }
 
     &__wrap {
-        margin-bottom: 57px;
+        margin-bottom: clamp(20px, 3.12vw, 60px);
         display: flex;
         justify-content: flex-end;
         position: relative;
     }
 
     &__border {
+        box-sizing: border-box;
         border: 1px solid white;
-        padding: 5px 42px;
+        padding: 5px clamp(15px, 2.18vw, 42px);
         position: absolute;
-        right: -70px;
+        right: calc(-1 * clamp(30px, 3.6vw, 70px));
         cursor: pointer;
+        transition: 0.25s background-color, 0.25s border;
 
-        &::before {
+        @include to(768) {
+            top: -15px;
+            padding: 3px 15px;
+        }
+
+        @include to(576) {
+            right: 0;
+        }
+
+        &:before {
             content: '';
-            height: 34px;
-            width: 5px;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-shadow: 0 0 min(2.34vw, 45px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);
+            opacity: 0;
+            transition: 0.25s opacity;
+        }
+
+        &::after {
+            box-sizing: border-box;
+            content: '';
+            height: calc(100% + 2px);
+            width: 3px;
             background-color: white;
             position: absolute;
             left: -10px;
             top: -1px;
+            transition: 0.25s background-color;
+        }
+
+        &:hover {
+            background-color: #8E0CD0;
+            border: 1px solid #8E0CD0;
+
+            &:before {
+                opacity: 1;
+            }
+
+            &:after {
+                background-color: #8E0CD0;
+            }
         }
     }
 
     &__close {
         color: white;
         font-family: Radio, sans-serif;
-        font-size: 12px;
+        font-size: min(0.6vw, 12px);
         font-weight: 400;
-        line-height: 22px;
+        line-height: 180%;
         text-decoration: none;
-        transform: skewX(17deg);
+        transform: skewX($skewX);
+
+        @include to(768) {
+            font-size: 12px;
+        }
+
+        @include to(576) {
+            font-size: 10px;
+        }
+    }
+
+    &__icon-wrap {
+        width: clamp(20px, 2.9vw, 56px);
+        height: clamp(20px, 2.9vw, 56px);
+        margin-top: 15px;
+        margin-left: -6%;
+        margin-bottom: -2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #90FFFF;
+        transform: skewX($skewX);
+
+        @include to(768) {
+            width: 35px;
+            height: 35px;
+            margin-left: -3%;
+            margin-bottom: -1%;
+        }
+
+        @include to(576) {
+            width: 27px;
+            height: 27px;
+            margin-left: -1%;
+            margin-bottom: 0;
+        }
+
+        @include to(450) {
+            transform: none;
+            margin-inline: auto;
+        }
     }
 
     &__icon {
-        color:#90FFFF;
-        border: 3px solid #90FFFF;
-        font-family: Play;
-        font-size: 43px;
+        font-family: Play, sans-serif;
+        font-size: min(2.2vw, 43px);
         font-weight: 700;
-        line-height: 50px;
-        padding-inline: 15px;
-        max-width: 20px;
-        transform: skewX(17deg);
-        margin-top: 17px;
-        text-align: center;
-        margin-left: -45px;
+        line-height: 115%;
+        color:#90FFFF;
+
+        @include to(768) {
+            font-size: 26px;
+        }
+
+        @include to(576) {
+            font-size: 22px;
+        }
     }
 
     &__text {
-        color: white;
+        max-width: min(49.2vw, 945px);
+        margin-top: min(4.73vw, 91px);
+        padding-left: min(1.4vw, 27px);
         font-family: Play, sans-serif;
-        font-size: 20px;
+        font-size: min(1.5vw, 20px);
         font-weight: 400;
-        line-height: 36px;
-        transform: skewX(17deg);
-        margin-top: 91px;
-        max-width: 945px;
-        padding-left: 27px;
+        line-height: 150%;
+        color: white;
+        transform: skewX($skewX);
 
         &:nth-child(3) {
-            margin-top: 24px;
-            max-width: 978px;
+            margin-top: min(1.2vw, 24px);
+            max-width: min(50.9vw, 978px);
             padding-left: 0;
+
+            @include to(768) {
+                max-width: none;
+                margin-top: 10px;
+                padding-left: 25px;
+            }
+        }
+
+        @include to(768) {
+            max-width: none;
+            font-size: 14px;
+            line-height: 140%;
+        }
+
+        @include to(576) {
+            font-size: 12px;
+            line-height: 130%;
+        }
+
+        @include to(450) {
+            padding-left: 0 !important;
+            font-size: 14px;
+            transform: none;
         }
     }
 

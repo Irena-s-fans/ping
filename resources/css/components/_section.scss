@@ -1,27 +1,63 @@
 .section {
+    max-width: 1920px;
+    height: 100vh;
     position: relative;
     box-sizing: border-box;
-    height: 100vh;
     display: flex;
     align-items: center;
     background: url("/public/img/bg.png");
+
+    @include to(768) {
+        height: auto !important;
+        background: none;
+    }
 
     &__wrapper {
         box-sizing: border-box;
         width: 100vw;
         height: 100%;
-        max-height: 1080px;
+        max-height: min(min(56.25vw, 100vh), 1080px);
         position: relative;
         padding-left: min(31.25vw, 600px);
-        padding-top: 7.5vh;
-        overflow: hidden;
+        padding-top: min(min(6.77vw, 12.03vh), 130px);
 
-        @include from_h(1080) {
-            padding-top: max(4vh, 130px);
+        @include to(768) {
+            padding: 110px 15px 0 15px;
+            max-height: none;
         }
 
         &_no-overflow {
             overflow: visible;
+        }
+
+        &:before, &:after {
+            content: '';
+            width: min(13.5vw, 256px);
+            height: min(28vw, 536px);
+            position: absolute;
+            background: linear-gradient(307deg, #8E0CD0 0%, #90FFFF 100%);
+            filter: blur(min(5.9vw, 115px));
+            transform: rotate(15deg);
+        }
+
+        &:before {
+            left: -12.5%;
+            top: 15%;
+
+            @include to(768) {
+                top: 30%;
+            }
+        }
+
+        &:after {
+            right: -9.5%;
+            bottom: -2%;
+        }
+    }
+
+    &:first-child {
+        .section__wrapper:before, .section__wrapper:after {
+            display: none;
         }
     }
 }

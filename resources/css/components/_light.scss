@@ -1,8 +1,9 @@
 .light {
-    width: 13.5vw;
-    height: 28vw;
+    display: none;
+    width: min(13.5vw, 256px);
+    height: min(28vw, 536px);
     position: absolute;
-    background: linear-gradient(306.93deg, #8E0CD0 0%, #90FFFF 100%);
+    background: linear-gradient(307deg, #8E0CD0 0%, #90FFFF 100%);
     filter: blur(115px);
     transform: rotate(15deg);
 

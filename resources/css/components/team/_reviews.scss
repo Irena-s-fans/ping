@@ -3,12 +3,13 @@
     &__header {
         display: flex;
         align-items: center;
-        margin-left: 75px;
+        margin-left: clamp(25px, 3.9vw, 75px);
     }
 
     &__content {
-        margin-top: 43px;
-        height: 600px;
+        margin-right: min(5.2vw, 100px);
+        margin-top: clamp(15px, 2.2vw, 43px);
+        height: min(31.25vw, 600px);
         border: 1px solid white;
         transform: skewX(-$skewX);
     }

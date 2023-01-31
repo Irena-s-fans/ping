@@ -1,17 +1,128 @@
 .contacts {
-
     &__header {
-        margin-left: 75px;
+        margin-left: clamp(30px, 3.9vw, 75px);
         display: flex;
         align-items: center;
+
+        @include to(768) {
+            margin-left: 0;
+            justify-content: center;
+        }
+    }
+
+    &__header-title {
+       @include to(768) {
+           margin-right: 0;
+       }
+    }
+
+    &__header-line {
+        display: block;
+
+        @include to(768) {
+            display: none;
+        }
+    }
+
+    &__icon-list {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(5px, min(1.04vw, 1.85vh), 20px);
+        margin-top: min(min(0.88vw, 1.57vh), 17px);
+        margin-right: clamp(25px, 2.96vw, 57px);
+
+        @include to(768) {
+            display: none;
+        }
+    }
+
+    &__icon-list_sm {
+        display: none;
+        gap: 15px;
+
+        @include to(768) {
+            display: flex;
+        }
+
+        @include to(576) {
+            gap: 10px;
+        }
+
+        @include to(450) {
+            gap: 8px;
+        }
+    }
+
+    &__icons-wrap {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+        margin-bottom: 60px;
+
+        @include to(768) {
+            display: flex;
+        }
+    }
+
+    &__icon-row {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    &__icon-wrap {
+        margin-right: clamp(5px, 0.78vw, 15px);
+        flex-shrink: 0;
+        line-height: 0;
+        text-decoration: none;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include to(768) {
+            margin-right: 10px;
+        }
+
+        @include to(450) {
+            margin-right: 8px;
+        }
     }
 
     &__icon {
-        padding-top: 17px;
-        margin-right: 30px;
+        width: clamp(15px, min(2.08vw, 3.7vh), 40px);
+        height: clamp(15px, min(2.08vw, 3.7vh), 40px);
 
-        &:last-child {
-            margin-right: 57px;
+        @include to(768) {
+            width: 45px;
+            height: 45px;
+        }
+
+        @include to(576) {
+            width: 40px;
+            height: 40px;
+        }
+
+        @include to(450) {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    &__icon-rect, &__icon-path {
+        transition: 0.25s fill;
+    }
+
+    &__icon-symbol {
+        &:hover {
+            .contacts__icon-rect {
+                fill: #fff;
+            }
+
+            .contacts__icon-path {
+                fill: #8E0CD0;
+            }
         }
     }
 }

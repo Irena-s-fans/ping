@@ -1,5 +1,11 @@
 $(document).ready(function() {
-   $('.form__btn').on('click', function(e) {
+    $('.form__field').on('focus', function() {
+        console.log('foc')
+       $('.form__field-wrap_active').removeClass('form__field-wrap_active');
+       $(this).parent().addClass('form__field-wrap_active');
+    });
+
+    $('.form__btn').on('click', function(e) {
        e.preventDefault();
        const formData = {};
        $('.form input[type="text"]').each(function() {
@@ -9,6 +15,7 @@ $(document).ready(function() {
            formData[$(this).attr('name')] = $(this).val();
        });
        $('.form input[type="checkbox"]').each(function() {
+           console.log($(this))
            formData[$(this).attr('name')] = $(this).is(':checked') ? 'Y' : 'N';
        });
        $.ajax({
@@ -16,11 +23,15 @@ $(document).ready(function() {
            url: '/form/send/',
            data: formData,
            success: () => {
-                alert('норм форму отправили');
+                alert('Форма была отправлена.');
            },
            error: () => {
-                alert('чёто ошибка при отправке формы');
+                alert('Ошибка при отправке формы.');
            },
        });
-   });
+    });
+
+    $('.form__checkbox-label').on('click', function() {
+       $(this).toggleClass('form__checkbox-label_active');
+    });
 });

@@ -1,9 +1,9 @@
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from 'swiper';
+import 'swiper/css';
 
 $(document).ready(function() {
     const swiper = new Swiper('.partners__list', {
-        slidesPerView: 4.8,
+        slidesPerView: 'auto',
         loop: true,
     })
 });

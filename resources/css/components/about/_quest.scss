@@ -3,42 +3,121 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: min(3.7vw, 71px);
+    margin-top: min(min(3.7vw, 6.57vh), 71px);
     margin-left: min(13.6vw, 261px);
 
+    @include to(768) {
+        display: block;
+        text-align: right;
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
     &__title {
-        max-width: 414px;
+        max-width: min(100%, 414px);
+        position: relative;
         margin-right: clamp(15px, 1.7vw, 33px);
         font-family: TTSquares, sans-serif;
-        font-size: min(4vw, 77px);
+        font-size: min(min(4vw, 7.13vh), 77px);
         font-weight: 900;
         line-height: 110%;
         text-align: right;
         color: transparent;
         letter-spacing: 0.1em;
         -webkit-text-stroke: 1px rgba(#90FFFF, 1);
+
+        @include to(768) {
+            margin-right: 0;
+            text-align: right;
+            display: inline-block;
+            font-size: clamp(42px, 14.49vw, 75px);
+            line-height: 100%;
+        }
     }
 
     &__text {
-        max-width: 398px;
-        color: white;
+        position: relative;
+        max-width: min(20.8vw, 400px);
         font-family: Play, sans-serif;
-        font-size: 20px;
+        font-size: min(min(1vw, 1.85vh), 20px);
         font-weight: 400;
-        line-height: 150%;
+        line-height: 200%;
+        color: white;
+
+        @include to(768) {
+            max-width: 75%;
+            text-align: right;
+            margin-top: 20px;
+            margin-left: auto;
+            font-size: clamp(14px, 3.3vw, 20px);
+            line-height: 150%;
+        }
+
+        @include to(450) {
+            max-width: 90%;
+        }
+    }
+
+    &__icon-wrap {
+        width: clamp(20px, min(1.8vw, 3.25vh), 35px);
+        height: clamp(20px, min(1.8vw, 3.25vh), 35px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 5px;
+        top: -5px;
+        transform: translateY(-100%);
+        border: 2px solid white;
+        cursor: pointer;
+
+        @include to(991) {
+            border: 1px solid #ffffff;
+        }
+
+        @include to(768) {
+            display: none;
+        }
+    }
+
+    &__icon-wrap_sm {
+        display: none;
+
+        @include to(768) {
+            width: clamp(35px, 5.2vw, 40px);
+            height: clamp(35px, 5.2vw, 40px);
+            top: auto;
+            bottom: 4.5%;
+            left: 13%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-color: #90FFFF;
+            transform: none;
+        }
+
+        @include to(375) {
+            width: 25px;
+            height: 25px;
+        }
     }
 
     &__icon {
-        position: absolute;
-        right: 0;
-        top: -10px;
-        padding-inline: 11px;
         font-family: Play, sans-serif;
-        font-size: clamp(14px, 1.4vw, 27px);
+        font-size: clamp(12px, min(1.4vw, 2.5vh), 27px);
         font-weight: 700;
         line-height: 100%;
         color: white;
-        border: 2px solid white;
-        cursor: pointer;
+        letter-spacing: normal;
+
+        @include to(991) {
+            line-height: 105%;
+        }
+
+        @include to(768) {
+            font-size: clamp(22px, 4.16vw, 32px);
+            color: #90FFFF;
+            -webkit-text-stroke: 0 #90FFFF;
+        }
     }
 }

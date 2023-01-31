@@ -4,18 +4,23 @@
 }
 
 .about {
+    max-height: 230px;
     position: relative;
     display: flex;
-    max-width: min(53.33vw, 1024px);
-    max-height: 230px;
+    margin-right: min(10.4vw, 200px);
     margin-left: min(3.9vw, 75px);
 
     &__video {
         width: 100%;
         position: absolute;
         left: 0;
-        top: 0;
-        filter: brightness(50%);
+        top: 50%;
+        filter: brightness(30%);
+        transform: translateY(-50%);
+
+        @include to(768) {
+            display: none;
+        }
     }
 
     &__wrap {
@@ -26,20 +31,33 @@
         margin-bottom: 11px;
         text-align: right;
         font-family: TTSquares, sans-serif;
-        font-size: clamp(60px, 6.3vw, 122px);
+        font-size: clamp(30px, min(6.3vw, 11.29vh), 122px);
         font-weight: 900;
         line-height: 100%;
         color: white;
+
+        @include to(768) {
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: clamp(60px, 14.49vw, 75px);
+        }
     }
 
     &__text {
         max-width: min(26.82vw, 515px);
         margin-top: 14px;
         font-family: Play, sans-serif;
-        font-size: min(1vw, 20px);
+        font-size: min(min(1vw, 1.85vh), 20px);
         font-weight: 400;
         line-height: 150%;
         color: white;
+
+        @include to(768) {
+            max-width: max(75%, 250px);
+            text-align: left !important;
+            margin-top: 0;
+            font-size: clamp(14px, 3.3vw, 22px);
+        }
     }
 
     &__text_blue {
@@ -50,5 +68,33 @@
 
     &__text_purple {
         color: #8E0CD0;
+    }
+
+    &__text-description {
+        margin-top: clamp(5px, min(0.78vw, 1.38vh), 15px);
+        line-height: 180%;
+
+        @include to(768) {
+            max-width: 75%;
+            display: block;
+            margin-top: 15px;
+            margin-left: auto;
+            text-align: right !important;
+            line-height: 150%;
+        }
+
+        @include to(576) {
+            max-width: max(85%, 270px);
+        }
+    }
+
+    @include to(1200) {
+        margin-right: max(5vw, 40px);
+    }
+
+    @include to(768) {
+        max-height: none;
+        display: block;
+        margin: 0;
     }
 }

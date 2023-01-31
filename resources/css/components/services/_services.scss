@@ -1,39 +1,72 @@
 @use 'sass:math';
 
-$cardHeight: 320px;
-$cardGap: 20px;
-$margin: math.tan($skewX)*($cardHeight+$cardGap);
-$imgOffset: math.tan($skewX)*$cardHeight;
-
 .services {
     display: flex;
     align-items: center;
-    margin-left: 75px;
+    margin-left: clamp(30px, 3.9vw, 75px);
+
+    @include to(768) {
+        margin-left: clamp(25px, 19.53vw, 135px);
+    }
 
     &__title {
         font-family: TTSquares, sans-serif;
-        font-size: 100px;
+        font-size: clamp(36px, min(5.2vw, 9.25vh), 100px);
         font-weight: 900;
-        line-height: 90px;
+        line-height: 100%;
         color: transparent;
         -webkit-text-stroke: 1px rgba(#FFFFFF, 1);
-        margin-inline: 25px 38px;
+        margin-inline: clamp(10px, 1.3vw, 25px) clamp(15px, 2.08vw, 40px);
+
+        @include to(768) {
+            margin-left: 0;
+            font-size: clamp(42px, 14.49vw, 75px);
+        }
     }
 
     &__line {
-        margin-top: 17px;
+        margin-top: clamp(8px, 0.88vw, 17px);
         border-top: 2px solid #FFFFFF;
         width: 100%;
-        box-shadow: 0 0 54px #FFFFFF, 0 0 35px #A509B2, 0 0 15px #BF1CE8;
+        box-shadow: 0 0 clamp(12px, 2.8vw, 54px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 35px) #A509B2, 0 0 clamp(3px, 0.78vw, 15px) #BF1CE8;
+
+        @include to(768) {
+            margin-right: -15px;
+        }
     }
 
     &__list {
-        margin-top: 60px;
-        padding-right: 135px;
+        margin-top: clamp(15px, min(3.12vw, 5.55vh), 60px);
+        padding-right: clamp(25px, 4.6vw, 90px);
+        padding-left: clamp(25px, 7vw, 75px);
         display: grid;
         grid-template-columns: repeat(3, minmax(0,1fr));
-        grid-template-rows: repeat(2, $cardHeight);
-        gap: $cardGap;
+        grid-template-rows: repeat(2, min(min(16.66vw, 29.62vh), 320px));
+        gap: clamp(10px, min(1.04vw, 1.85vh), 20px);
+        transform: skewX(-$skewX);
+        transform-origin: top;
+
+        @include to(768) {
+            display: none;
+        }
+    }
+
+    &__list_sm {
+        display: none;
+        position: relative;
+        transform: skewX(-$skewX);
+        margin-top: 50px;
+        padding-inline: 10%;
+        margin-inline: 0 -8px;
+        z-index: 10;
+
+        @include to(768) {
+            display: block;
+        }
+    }
+
+    &__swiper {
+        overflow: visible !important;
     }
 
     &__list-item {
@@ -42,20 +75,36 @@ $imgOffset: math.tan($skewX)*$cardHeight;
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: skewX(-$skewX);
+        transform-origin: bottom;
         border: 1px solid white;
         overflow: hidden;
         transition: all 0.25s;
 
-        &:nth-last-child(-n+3) {
-            left: -$margin;
+        &:hover {
+            border: clamp(4px, 0.57vw, 11px) solid #90FFFF;
+            box-shadow: 0 0 clamp(12px, 2.8vw, 54px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 35px) #A509B2, 0 0 clamp(5px, 0.98vw, 19px) #BF1CE8;
+            z-index: 999;
+        }
+    }
+
+    &__list-item_sm {
+        height: 325px !important;
+        box-sizing: border-box;
+        transition-property: all !important;
+
+        @include to(450) {
+            height: 300px !important;
+        }
+
+        @include to(375) {
+            height: 270px !important;
         }
 
         &:hover {
-            border: 11px solid #90FFFF;
-            box-shadow: 0 0 54px #FFFFFF, 0 0 35px #A509B2, 0 0 19px #BF1CE8;
-            transform: skewX(-$skewX);
-            z-index: 999;
+            border: 1px solid #FFFFFF;
+            box-shadow: 0 0 45px rgba(255, 255, 255, 0.23), 0 0 35px rgba(165, 9, 178, 0.52), 0 0 19px rgba(191, 28, 232, 0.5);
+            transform-origin: center;
+            transform: scale(1.04) translateZ(0) !important;
         }
     }
 
@@ -69,9 +118,79 @@ $imgOffset: math.tan($skewX)*$cardHeight;
         position: absolute;
         color: white;
         font-family: Radio, sans-serif;
-        font-size: 20px;
+        font-size: min(min(1.04vw, 1.85vh), 20px);
         font-weight: 400;
-        line-height: 19px;
+        line-height: 100%;
         transform: skewX($skewX);
+
+        @include to(768) {
+            font-size: clamp(18px, 3.125vw, 24px);
+        }
+    }
+
+    &__list-line {
+        display: none;
+        width: min(90%, 450px);
+        margin-inline: auto;
+        margin-top: 30px;
+        border-top: 2px solid #FFFFFF;
+        box-shadow: 0 0 clamp(12px, 2.8vw, 54px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 35px) #A509B2, 0 0 clamp(3px, 0.78vw, 15px) #BF1CE8;
+
+        @include to(768) {
+            display: block;
+        }
+    }
+
+    &__btn-wrap {
+        display: none;
+        margin-top: 25px;
+        text-align: center;
+        transform: skewX(-$skewX);
+        transform-origin: top;
+
+        @include to(768) {
+            display: block;
+        }
+    }
+
+    &__btn {
+        width: min(75%, 300px);
+        position: relative;
+        border: 1px solid #fff;
+        font-family: Play, sans-serif;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 115%;
+        color: #FFFFFF;
+        background: transparent;
+        transition: 0.25s background-color;
+
+        &:before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-shadow: 0 0 min(2.34vw, 45px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);
+            opacity: 0;
+            transition: 0.25s opacity;
+        }
+
+        &:hover {
+            background-color: #8E0CD0;
+            border: 1px solid #8E0CD0;
+
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__btn-text {
+        display: inline-block;
+        transform: skewX($skewX);
+        padding-block: 10px;
+        cursor: pointer;
     }
 }
