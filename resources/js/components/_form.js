@@ -19,7 +19,11 @@ $(document).ready(function() {
        $.ajax({
            type: 'POST',
            url: '/form/send',
-           data: formData,
+           datatype: 'json',
+           headers: {
+               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+           },
+           data: JSON.stringify(formData),
            success: () => {
                 alert('Форма была отправлена.');
            },
