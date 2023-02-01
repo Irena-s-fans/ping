@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $('.form__field').on('focus', function() {
-        console.log('foc')
        $('.form__field-wrap_active').removeClass('form__field-wrap_active');
        $(this).parent().addClass('form__field-wrap_active');
     });
@@ -15,12 +14,11 @@ $(document).ready(function() {
            formData[$(this).attr('name')] = $(this).val();
        });
        $('.form input[type="checkbox"]').each(function() {
-           console.log($(this))
            formData[$(this).attr('name')] = $(this).is(':checked') ? 'Y' : 'N';
        });
        $.ajax({
            type: 'POST',
-           url: '/form/send/',
+           url: '/form/send',
            data: formData,
            success: () => {
                 alert('Форма была отправлена.');
