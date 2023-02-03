@@ -7,10 +7,99 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Креативное Агенство PinG</title>
     <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="preload" href="/public/fonts/Play-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/public/fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/public/fonts/TTSquares-Black.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" as="image" href="/public/img/loader__logo.png">
+    <link rel="preload" as="image" href="/public/img/bg.png">
     <script src="/public/js/libs/jquery-3.6.1.min.js"></script>
     <script src="/public/js/index.js"></script>
 </head>
 <body class="body">
+    <div class="loader loader_active">
+        <div class="loader__wrap">
+            <img src="/public/img/loader__logo.png" alt="" class="loader__logo">
+            <div class="loader__progress">
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+                <div class="loader__el"></div>
+            </div>
+            <div class="loader__text-wrap">
+                <p class="loader__text">
+                    <span class="loader__text-percents">0</span>
+                    %
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="popup" id="popup1">
         <div class="popup__body">
             <div class="popup__content">
@@ -37,7 +126,7 @@
         </div>
 
     </div>
-    <div class="container">
+    <div class="container main main_disabled">
         <div class="header__nav_sm">
             <img src="/public/img/logo_sm.png" alt="" class="header__logo header__logo_sm">
             <div class="header__burger">
@@ -53,6 +142,22 @@
                     <nav class="header__nav">
                         <ul class="header__nav-list"></ul>
                     </nav>
+                    <div class="header__nav header__nav_mobile">
+                        <ul class="header__nav-list_sm">
+                            <li class="header__nav-item" rel="#about_section">
+                                <p class="nav-item__text">О нас</p>
+                            </li>
+                            <li class="header__nav-item" rel="#services_section">
+                                <p class="nav-item__text">Услуги</p>
+                            </li>
+                            <li class="header__nav-item" rel="#team_section">
+                                <p class="nav-item__text">Команда</p>
+                            </li>
+                            <li class="header__nav-item" rel="#contacts_section">
+                                <p class="nav-item__text">Контакты</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
         </div>
         <div class="content fullpage">
@@ -110,8 +215,6 @@
                     </div>
                 </div>
                 <div class="section swiper-slide" id="services_section">
-                    <div class="light light_left"></div>
-                    <div class="light light_right"></div>
                     <div class="section__wrapper section__wrapper_no-overflow">
                         <div class="services">
                             <h1 class="services__title">Услуги</h1>
@@ -678,24 +781,7 @@
                         <div class="team__line"></div>
                     </div>
                 </div>
-<!--                <div class="section swiper-slide">
-                    <div class="light light_left"></div>
-                    <div class="light light_right"></div>
-                    <div class="section__wrapper">
-                        <div class="reviews">
-                            <div class="reviews__header">
-                                <h1 class="services__title">Отзывы</h1>
-                                <div class="services__line"></div>
-                            </div>
-                            <div class="reviews__content">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
                 <div class="section swiper-slide" id="contacts_section">
-                    <div class="light light_left"></div>
-                    <div class="light light_right"></div>
                     <div class="section__wrapper">
                         <div class="contacts">
                             <div class="contacts__header">

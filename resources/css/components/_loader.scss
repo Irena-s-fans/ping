@@ -1,0 +1,183 @@
+$elOffset: 4px;
+$progressPadding: 3px;
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url("/public/img/bg.png");
+    z-index: -1;
+
+    &_active {
+        z-index: 9999;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5%;
+    }
+
+    &__logo {
+        width: min(43.28vw, 830px);
+
+        @include to(991) {
+            width: 450px;
+        }
+
+        @include to(576) {
+            max-width: 95vw;
+        }
+    }
+
+    &__progress {
+        width: 1000px;
+        height: 23px;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: clamp(25px, 3.9vw, 60px);
+        padding: $progressPadding;
+        transform: skewX(-$skewX);
+        border: 1px solid #FFFFFF;
+
+        @include to(1600) {
+            width: 750px;
+        }
+
+        @include to(1340) {
+            width: 600px;
+        }
+
+        @include to(991) {
+            width: 500px;
+        }
+
+        @include to(768) {
+            width: 450px;
+        }
+
+        @include to(576) {
+            width: 400px;
+        }
+
+        @include to(450) {
+            width: 330px;
+        }
+
+        @include to(375) {
+            width: 280px;
+        }
+
+        &::before {
+            content: '';
+            width: 2px;
+            height: calc(100% + 2px);
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-8px, -50%);
+            background: #8E0CD0;
+        }
+    }
+
+    &__el {
+        width: calc(calc(#{1000px} - 2 * #{$progressPadding} - 71 * #{$elOffset}) / 71);
+        height: 100%;
+        flex-shrink: 0;
+        margin-right: $elOffset;
+        background: #90FFFF;
+        opacity: 0;
+        transition: 0.25s opacity;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &_active {
+            opacity: 1;
+        }
+
+        @include to(1600) {
+            width: calc(calc(#{750px} - 2 * #{$progressPadding} - 50 * #{$elOffset}) / 50);
+
+            &:nth-last-child(-n + 21) {
+                display: none;
+            }
+        }
+
+        @include to(1340) {
+            width: calc(calc(#{600px} - 2 * #{$progressPadding} - 40 * #{$elOffset}) / 40);
+
+            &:nth-last-child(-n + 31) {
+                display: none;
+            }
+        }
+
+        @include to(991) {
+            width: calc(calc(#{500px} - 2 * #{$progressPadding} - 35 * #{$elOffset}) / 35);
+
+            &:nth-last-child(-n + 36) {
+                display: none;
+            }
+        }
+
+        @include to(768) {
+            width: calc(calc(#{450px} - 2 * #{$progressPadding} - 27 * #{$elOffset}) / 27);
+
+            &:nth-last-child(-n + 44) {
+                display: none;
+            }
+        }
+
+        @include to(576) {
+            width: calc(calc(#{400px} - 2 * #{$progressPadding} - 24 * #{$elOffset}) / 24);
+
+            &:nth-last-child(-n + 47) {
+                display: none;
+            }
+        }
+
+        @include to(450) {
+            width: calc(calc(#{330px} - 2 * #{$progressPadding} - 20 * #{$elOffset}) / 20);
+
+            &:nth-last-child(-n + 51) {
+                display: none;
+            }
+        }
+
+        @include to(375) {
+            width: calc(calc(#{280px} - 2 * #{$progressPadding} - 16 * #{$elOffset}) / 16);
+
+            &:nth-last-child(-n + 55) {
+                display: none;
+            }
+        }
+    }
+
+    &__text-wrap {
+        margin-top: 30px;
+        text-align: center;
+
+        @include to(991) {
+            margin-top: 20px;
+        }
+    }
+
+    &__text {
+        font-family: Play, sans-serif;
+        font-weight: 400;
+        font-size: 25px;
+        color: #FFFFFF;
+    }
+}

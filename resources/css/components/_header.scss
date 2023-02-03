@@ -138,11 +138,30 @@
         margin-top: min(min(6.6vw, 11.75vh), 127px);
 
         @include to(768) {
+            display: none;
             margin-top: 0;
         }
     }
 
+    &__nav_mobile {
+        display: none;
+
+        @include to(768) {
+            display: block;
+        }
+    }
+
     &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: min(min(2vw, 3.25vh), 35px);
+
+        @include to(768) {
+            gap: clamp(15px, 3.9vw, 30px);
+        }
+    }
+
+    &__nav-list_sm {
         display: flex;
         flex-direction: column;
         gap: min(min(2vw, 3.25vh), 35px);
