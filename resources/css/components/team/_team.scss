@@ -1,7 +1,6 @@
 .team {
     position: relative;
     margin-left: 20px;
-    //z-index: 50;
 
     @include to(768) {
         margin-left: 0;

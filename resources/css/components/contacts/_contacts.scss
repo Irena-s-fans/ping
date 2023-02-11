@@ -108,14 +108,6 @@
             width: 35px;
             height: 35px;
         }
-    }
-
-    &__icon-rect, &__icon-path {
-        transition: 0.25s fill;
-    }
-
-    &__icon-symbol {
-        pointer-events:all;
 
         &:hover {
             .contacts__icon-rect {
@@ -128,5 +120,15 @@
                 pointer-events:all;
             }
         }
+    }
+
+    &__icon-rect, &__icon-path {
+        transition: 0.25s fill;
+    }
+
+    &__icon-symbol {
+        pointer-events:all;
+
+
     }
 }
