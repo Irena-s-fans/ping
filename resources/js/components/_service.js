@@ -1,27 +1,28 @@
+const mapTitles = {
+    'tournaments': 'Турниры',
+    'services': 'Услуги',
+    'projects': 'Проекты',
+}
+
 $(document).ready(function() {
-/*    $('.show_service').click(function() {
-        $($('#' + $(this).attr("rel"))).show();
-        $('.services__list').hide();
+    $('.show-services').on('click', function() {
+        console.log('click')
+        changeServicesContent($(this).attr('rel'));
     });
-
-    $('.close_service').click(function() {
-        $('.tournaments').hide();
-        $('.services__list').show();
-    });
-
-    $('.show_projects').click(function(){
-        $('.projects').show();
-        $('.services__list').hide();
-        $('.services').hide();
-    });
-
-    $('.projects_1').click(function(){
-        $('.project').show();
-        $('.projects').hide();
-    });
-
-    $('.project__btn').click(function(){
-        $('.project').hide();
-        $('.projects').show();
-    });*/
 })
+
+function changeServicesContent(contentId) {
+    const blockToShow = $(`#${contentId}`);
+    const blockToHide = $('.services__wrap_active');
+
+    $('#services__title').fadeOut(300, () => {
+        $('#services__title').html(mapTitles[contentId] || 'Услуги');
+        $('#services__title').fadeIn(300);
+    })
+
+    blockToHide.fadeOut(300, () => {
+        blockToHide.removeClass('services__wrap_active');
+        blockToShow.fadeIn(300);
+        blockToShow.addClass('services__wrap_active');
+    });
+}

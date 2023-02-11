@@ -7,13 +7,16 @@ $(document).ready(function() {
         breakpoints: {
             375: {
                 slidesPerView: 1,
+                height: 270,
             },
             450: {
                 slidesPerView: 1.25,
+                height: 300,
             },
             576: {
                 slidesPerView: 1.5,
             },
         },
+        height: 325,
     })
 });

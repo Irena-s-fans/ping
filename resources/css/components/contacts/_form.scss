@@ -130,6 +130,7 @@
         line-height: 100%;
         color: white;
         border: 1px solid #FFFFFF40;
+        border-radius: 0 !important;
         border-left: none;
         outline: none;
         background: #202020;
@@ -138,7 +139,7 @@
         @include to(768) {
             height: auto;
             padding: 14px 0 14px 20px;
-            font-size: clamp(14px, 2.34vw, 18px);
+            font-size: clamp(16px, 2.34vw, 18px);
         }
 
         @include to(576) {

@@ -124,7 +124,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="container main main_disabled">
         <div class="header__nav_sm">
@@ -216,171 +215,95 @@
                 </div>
                 <div class="section swiper-slide" id="services_section">
                     <div class="section__wrapper section__wrapper_no-overflow">
-                        <div class="services">
-                            <h1 class="services__title">Услуги</h1>
+                        <div class="services__header">
+                            <h1 class="services__title" id="services__title">Услуги</h1>
                             <div class="services__line"></div>
                         </div>
-                        <div class="services__list">
-                            <div class="services__list-item" rel="tournaments">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_1.png" alt="">
-                                <p class="services__list-text">Турниры</p>
+                        <div class="services__wrap services__wrap_active" id="services">
+                            <div class="services__list">
+                                <div class="services__list-item show-services" rel="tournaments">
+                                    <img class="services__list-img" src="/public/img/services/dir_desc_1.png" alt="">
+                                    <p class="services__list-text">Турниры</p>
+                                </div>
+                                <div class="services__list-item">
+                                    <img class="services__list-img" src="/public/img/services/dir_desc_2.png" alt="">
+                                    <p class="services__list-text">Спец проекты</p>
+                                </div>
+                                <div class="services__list-item">
+                                    <img class="services__list-img" src="/public/img/services/dir_desc_3.png" alt="">
+                                    <p class="services__list-text">Офлайн ивенты</p>
+                                </div>
+                                <div class="services__list-item">
+                                    <img class="services__list-img" src="/public/img/services/dir_desc_4.png" alt="">
+                                    <p class="services__list-text">digital реклама</p>
+                                </div>
+                                <div class="services__list-item">
+                                    <img class="services__list-img" src="/public/img/services/dir_desc_5.png" alt="">
+                                    <p class="services__list-text">дизайн</p>
+                                </div>
+                                <div class="services__list-item">
+                                    <p class="services__list-text">все проекты</p>
+                                </div>
                             </div>
-                            <div class="services__list-item">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                <p class="services__list-text">Спец проекты</p>
-                            </div>
-                            <div class="services__list-item">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_3.png" alt="">
-                                <p class="services__list-text">Офлайн ивенты</p>
-                            </div>
-                            <div class="services__list-item">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_4.png" alt="">
-                                <p class="services__list-text">digital реклама</p>
-                            </div>
-                            <div class="services__list-item">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_5.png" alt="">
-                                <p class="services__list-text">дизайн</p>
-                            </div>
-                            <div class="services__list-item">
-                                <p class="services__list-text">все проекты</p>
-                            </div>
-                        </div>
-                        <div class="services__list_sm">
-                            <div class="swiper services__swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="services__list-item services__list-item_sm swiper-slide show_service" rel="tournaments">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_1.png" alt="">
-                                        <p class="services__list-text">Турниры</p>
-                                    </div>
-                                    <div class="services__list-item services__list-item_sm swiper-slide">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                        <p class="services__list-text">Спец проекты</p>
-                                    </div>
-                                    <div class="services__list-item services__list-item_sm swiper-slide">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_3.png" alt="">
-                                        <p class="services__list-text">Офлайн ивенты</p>
-                                    </div>
-                                    <div class="services__list-item services__list-item_sm swiper-slide">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_4.png" alt="">
-                                        <p class="services__list-text">digital реклама</p>
-                                    </div>
-                                    <div class="services__list-item services__list-item_sm swiper-slide">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_5.png" alt="">
-                                        <p class="services__list-text">дизайн</p>
+                            <div class="services__list_sm">
+                                <div class="swiper services__swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="services__list-item services__list-item_sm swiper-slide show-services" rel="tournaments">
+                                            <img class="services__list-img" src="/public/img/services/dir_desc_1.png" alt="">
+                                            <p class="services__list-text">Турниры</p>
+                                        </div>
+                                        <div class="services__list-item services__list-item_sm swiper-slide">
+                                            <img class="services__list-img" src="/public/img/services/dir_desc_2.png" alt="">
+                                            <p class="services__list-text">Спец проекты</p>
+                                        </div>
+                                        <div class="services__list-item services__list-item_sm swiper-slide">
+                                            <img class="services__list-img" src="/public/img/services/dir_desc_3.png" alt="">
+                                            <p class="services__list-text">Офлайн ивенты</p>
+                                        </div>
+                                        <div class="services__list-item services__list-item_sm swiper-slide">
+                                            <img class="services__list-img" src="/public/img/services/dir_desc_4.png" alt="">
+                                            <p class="services__list-text">digital реклама</p>
+                                        </div>
+                                        <div class="services__list-item services__list-item_sm swiper-slide">
+                                            <img class="services__list-img" src="/public/img/services/dir_desc_5.png" alt="">
+                                            <p class="services__list-text">дизайн</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="services__list-line"></div>
-                        <div class="services__btn-wrap">
-                            <button class="services__btn show_projects">
+                            <div class="services__list-line"></div>
+                            <div class="services__btn-wrap">
+                                <button class="services__btn show_projects">
                                 <span class="services__btn-text">
                                     Все проекты
                                 </span>
-                            </button>
+                                </button>
+                            </div>
                         </div>
-                        <div class="tournaments" id="tournaments">
-                            <div class="tournaments__content">
-                                <div class="tournaments__img-wrap">
-                                    <img class="tournaments__img" src="/public/img/services/dir_desc_1.png" alt="">
+                        <div class="project services__wrap" id="tournaments">
+                            <div class="project__content">
+                                <div class="project__img-wrap">
+                                    <img class="project__img" src="/public/img/services/dir_desc_1.png" alt="">
                                 </div>
-                                <div class="tournaments__wrap">
-                                    <h2 class="tournaments__title">Турниры</h2>
-                                    <p class="tournaments__text"> Все профессиональные киберспортивные турниры начинаются с
+                                <div class="project__wrap">
+                                    <h2 class="project__title">Турниры</h2>
+                                    <p class="project__text"> Все профессиональные киберспортивные турниры начинаются с
                                         правильно
                                         разработанной концепции и стратегии.</p>
-                                    <p class="tournaments__text"> Наша команда имеет многолетний опыт в создании форматов турниров и
+                                    <p class="project__text"> Наша команда имеет многолетний опыт в создании форматов турниров и
                                         соревнований, а также сводов правил, регламента для участников, планировании и управлении
                                         матчами и, конечно же, администрировании.</p>
-                                    <p class="tournaments__text"> Данный вид мероприятия повысит узнаваемость вашего бренда и
+                                    <p class="project__text"> Данный вид мероприятия повысит узнаваемость вашего бренда и
                                         привлечет
                                         внимание, установив прямой контакт с аудиторией.</p>
                                 </div>
-                                <div class="tournaments__btn close_service">
-                                    <p class="tournaments__btn-text">К остальным услугам</p>
+                                <div class="project__btn show-services" rel="services">
+                                    <p class="project__btn-text">К остальным услугам</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--            <div class="section swiper-slide">
-                                <div class="section__wrapper">
-                                    <div class="projects">
-                                        <div class="projects__wrap">
-                                            <h1 class="projects__title">Проекты</h1>
-                                            <div class="services__line"></div>
-                                        </div>
-
-                                        <div class="projects__list">
-                                            <div class="projects__list-item projects_1">
-                                                <img class="projects__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                                <p class="projects__list-text">Проект 1</p>
-                                            </div>
-                                            <div class="projects__list-item">
-                                                <img class="projects__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                                <p class="projects__list-text">Проект 2</p>
-                                            </div>
-                                            <div class="projects__list-item">
-                                                <img class="projects__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                                <p class="projects__list-text">Проект 3</p>
-                                            </div>
-                                            <div class="projects__list-item">
-                                                <img class="projects__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                                <p class="projects__list-text">Проект 1</p>
-                                            </div>
-                                            <div class="projects__list-item">
-                                                <img class="projects__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                                <p class="projects__list-text">Проект 2</p>
-                                            </div>
-                                            <div class="projects__list-item">
-                                                <img class="projects__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                                <p class="projects__list-text">Проект 3</p>
-                                            </div>
-                                            <div class="projects__list-item">
-                                                <img class="projects__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                                <p class="projects__list-text">Проект 1</p>
-                                            </div>
-                                            <div class="projects__list-item">
-                                                <img class="projects__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                                <p class="projects__list-text">Проект 2</p>
-                                            </div>
-                                            <div class="projects__list-item">
-                                                <img class="projects__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                                <p class="projects__list-text">Проект 3</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="project">
-                                        <div class="projects__wrap">
-                                            <h1 class="projects__title">Проект №1</h1>
-                                            <div class="services__line"></div>
-                                        </div>
-
-                                        <div class="project__content">
-                                            <div class="project__wrapper">
-                                                <img class="project__img" src="/public/img/services/dir_desc_1.png" alt="">
-                                                <img class="project__icon" src="/public/img/team/yt.svg" alt="">
-                                            </div>
-
-                                            <div class="project__wrap">
-                                                <h2 class="project__title">Проектик был норм</h2>
-                                                <p class="project__text"> Все профессиональные киберспортивные турниры начинаются с
-                                                    правильно
-                                                    разработанной концепции и стратегии.</p>
-                                                <p class="project__text"> Наша команда имеет многолетний опыт в создании форматов турниров и
-                                                    соревнований, а также сводов правил, регламента для участников, планировании и управлении
-                                                    матчами и, конечно же, администрировании.</p>
-                                                <p class="project__text"> Данный вид мероприятия повысит узнаваемость вашего бренда и
-                                                    привлечет
-                                                    внимание, установив прямой контакт с аудиторией.</p>
-                                            </div>
-                                            <div class="project__btn">
-                                                <p class="project__btn-text">К остальным проектам</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
                 <div class="section swiper-slide" id="team_section">
                     <div class="section__wrapper">
                         <div class="team">
@@ -777,6 +700,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                         <div class="team__line"></div>
                     </div>

@@ -115,13 +115,17 @@
     }
 
     &__icon-symbol {
+        pointer-events:all;
+
         &:hover {
             .contacts__icon-rect {
                 fill: #fff;
+                pointer-events:all;
             }
 
             .contacts__icon-path {
                 fill: #8E0CD0;
+                pointer-events:all;
             }
         }
     }

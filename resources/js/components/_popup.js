@@ -1,10 +1,13 @@
 $(document).ready(function() {
     $('.show_popup').click(function() {
-        let popup_id = $('#' + $(this).attr("rel"));
-        $(popup_id).show();
+        $($('#' + $(this).attr("rel"))).fadeIn(300);
     })
     $('.close_popup').click(function() {
-        $('.popup').hide();
+        $('.popup').fadeOut(300);
+    });
+    $('.popup__body').on('click', function(e) {
+        if (this === e.target) {
+            $('.popup').fadeOut(300);
+        }
     })
-
 })
