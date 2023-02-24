@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,20 @@ Route::post(
         FormController::class, 'form',
     ],
 );
+
+Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
+    Route::get('dashboard', function() {
+        return view('dashboard');
+    });
+    Route::get('offers', function() {
+        return view('offers');
+    });
+    Route::get('seo', function() {
+        return view('seo');
+    });
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
