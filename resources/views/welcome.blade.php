@@ -201,26 +201,19 @@
                     <div class="partners">
                         <h2 class="partners__title">Партнёры</h2>
                         <div class="partners__list-wrapper">
-                            <div class="partners__list swiper">
-                                <div class="swiper-wrapper partners__swiper-wrapper">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/igromania 2.png"
-                                         alt="">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/wd.svg" alt="">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/universal.svg"
-                                         alt="">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/ubisoft 2.png"
-                                         alt="">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/kanobu.svg"
-                                         alt="">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/dtf 2.png" alt="">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/syberia 2.png"
-                                         alt="">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/sports_ru 2.png"
-                                         alt="">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/viewsonic 2.png"
-                                         alt="">
-                                    <img class="partners__img swiper-slide" src="/public/img/partners/vk.svg" alt="">
-                                </div>
+                            <div class="partners__list">
+<!--                                <div class="partners__swiper-wrapper">-->
+                                    <img class="partners__img" src="/public/img/partners/igromania 2.png" alt="">
+                                    <img class="partners__img" src="/public/img/partners/wd.svg" alt="">
+                                    <img class="partners__img" src="/public/img/partners/universal.svg" alt="">
+                                    <img class="partners__img" src="/public/img/partners/ubisoft 2.png" alt="">
+                                    <img class="partners__img" src="/public/img/partners/kanobu.svg" alt="">
+                                    <img class="partners__img" src="/public/img/partners/dtf 2.png" alt="">
+                                    <img class="partners__img" src="/public/img/partners/syberia 2.png" alt="">
+                                    <img class="partners__img" src="/public/img/partners/sports_ru 2.png" alt="">
+                                    <img class="partners__img" src="/public/img/partners/viewsonic 2.png" alt="">
+                                    <img class="partners__img" src="/public/img/partners/vk.svg" alt="">
+<!--                                </div>-->
                             </div>
                         </div>
                         <div class="partners__line"></div>

@@ -29,9 +29,15 @@
         box-sizing: border-box;
         width: min(min(15.8vw, 27.77vh), 300px);
         height: 100%;
-        max-height: min(1080px, 56.25vw);
+        max-height: min(1920px, 56.25vw);
         position: relative;
         padding-top: min(min(6.77vw, 12.03vh), 130px);
+
+        @include from(1921) {
+            width: min(min(15.8vw, 27.77vh), 404px);
+            max-height: min(1440px, 56.25vw);
+            padding-top: min(min(6.77vw, 12.03vh), 173px);
+        }
 
         @include to(768) {
             width: 300px;
@@ -92,6 +98,12 @@
         transform: skewX($skewX);
         margin-left: calc(-1 * min(2.4vw, 47px));
 
+        @include from(1921) {
+            width: min(min(22.1vw, 38.33vh), 565px);
+            height: min(min(7.7vw, 13.33vh), 179px);
+            margin-left: calc(-1 * min(2.4vw, 61px));
+        }
+
         @include to(768) {
             display: none;
         }
@@ -137,6 +149,10 @@
     &__nav {
         margin-top: min(min(6.6vw, 11.75vh), 127px);
 
+        @include from(1921) {
+            margin-top: min(min(6.6vw, 11.75vh), 169px);
+        }
+
         @include to(768) {
             display: none;
             margin-top: 0;
@@ -155,6 +171,10 @@
         display: flex;
         flex-direction: column;
         gap: min(min(2vw, 3.25vh), 35px);
+
+        @include from(1921) {
+            gap: min(min(2vw, 3.25vh), 51px);
+        }
 
         @include to(768) {
             gap: clamp(15px, 3.9vw, 30px);
@@ -183,6 +203,11 @@
         list-style-type: none;
         transform: skewX($skewX);
         cursor: pointer;
+
+        @include from(1921) {
+            padding-block: min(13px, 0.5vw);
+            font-size: min(1.3vw, 33px);
+        }
 
         @include to(768) {
             font-size: clamp(25px, 3.6vw, 26px);
