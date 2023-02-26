@@ -26,6 +26,13 @@ Route::post(
     ],
 );
 
+Route::post(
+    '/form/admin/seo',
+    [
+        FormController::class, 'seoForm',
+    ],
+);
+
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('dashboard', function() {
         return view('dashboard');
