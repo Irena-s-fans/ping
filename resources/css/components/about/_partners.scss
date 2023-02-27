@@ -40,6 +40,9 @@
         width: 100%;
         height: min(min(10.4vw, 18.51vh), 200px);
         box-sizing: border-box;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
         margin-top: min(min(1.97vw, 3.51vh), 38px);
         margin-right: calc(-1 * min(5.2vw, 100px));
         padding: min(min(2.6vw, 4.62vh), 50px) 0 min(min(2.6vw, 4.62vh), 50px);
@@ -47,6 +50,7 @@
         border-right: none;
         transform: skewX(-$skewX);
         transform-origin: bottom;
+        overflow: hidden;
 
         @include from(1921) {
             height: min(min(10.4vw, 18.51vh), 266px);
@@ -78,6 +82,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        flex-shrink: 0;
     }
 
     &__swiper-wrapper {
@@ -95,11 +100,12 @@
         min-height: min(2.3vw, 45px);
         padding-left: min(4vw, 38px);
         padding-right: 7px;
-        transform: translateZ(0) skewX($skewX) !important;
+        transform: skewX($skewX);
 
         @include from(1921) {
-            min-height: min(2.3vw, 85px);
-            padding-left: min(4vw, 102px);
+            min-height: 0;
+            max-height: 100%;
+            padding-left: min(4vw, 50px);
         }
 
         @include to(768) {
@@ -111,6 +117,30 @@
 
         @include to(576) {
             padding-left: 25px;
+        }
+    }
+
+    &__img_sm {
+        @include from(1921) {
+            height: clamp(49px, 2.53vw, 65px) !important;
+        }
+    }
+
+    &__img_regular {
+        @include from(1921) {
+            height: clamp(56px, 2.92vw, 75px) !important;
+        }
+    }
+
+    &__img_xl {
+        @include from(1921) {
+            height: clamp(78px, 4.1vw, 105px) !important;
+        }
+    }
+
+    &__img_xxl {
+        @include from(1921) {
+            height: clamp(97px, 5.07vw, 130px) !important;
         }
     }
 
@@ -130,26 +160,11 @@
     }
 }
 
-.marquee {
-    /*   overflow: hidden; */
-}
-
-.marquee-content {
-    display: flex;
-    animation: scrolling 10s linear infinite;
-}
-
-.marquee-item {
-    flex: 0 0 16vw;
-    margin: 0 1vw;
-}
-
-.marquee-item img {
-    display: block;
-    width: 100%;
+.partners__list {
+    animation: scrolling 26s linear infinite;
 }
 
 @keyframes scrolling {
     0% { transform: translateX(0); }
-    100% { transform: translatex(-144vw); }
+    100% { transform: translateX(-100%); }
 }

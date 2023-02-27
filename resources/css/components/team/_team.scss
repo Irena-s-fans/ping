@@ -11,6 +11,10 @@
         display: flex;
         align-items: center;
 
+        @include from(1921) {
+            margin-left: min(2.8vw, 72px);
+        }
+
         @include to(768) {
             margin-left: clamp(25px, 19.53vw, 50px);
         }
@@ -30,6 +34,10 @@
         background-color: #1B1B1B;
         border: 1px solid white;
         transform: skewX(-$skewX);
+
+        @include from(1921) {
+            margin-top: min(min(2.8vw, 5vh), 72px);
+        }
 
         @include to(768) {
             display: none;
@@ -63,19 +71,36 @@
         flex-shrink: 0;
         background: #1B1B1B;
 
+        @include from(1921) {
+            height: min(min(25.78vw, 45.8vh), 660px);
+        }
+
         &:not(&_active):hover {
             border: clamp(3px, 0.36vw, 7px) solid #90FFFF;
             box-shadow: 0 0 min(45px, 2.34vw) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);
             transform: scale(1.05);
+
+            @include from(1921) {
+                border: clamp(3px, 0.36vw, 9px) solid #90FFFF;
+                box-shadow: 0 0 min(60px, 2.34vw) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 46px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 25px) rgba(191, 28, 232, 0.5);
+            }
         }
 
         &:nth-child(1) {
             .team__img-wrap {
                 left: calc(-1 * min(3.38vw, 65px));
+
+                @include from(1921) {
+                    left: calc(-1 * min(3.38vw, 87px));
+                }
             }
 
             .team__wrap {
                 margin-left: calc(-1 * min(7.8vw, 150px));
+
+                @include from(1921) {
+                    margin-left: calc(-1 * min(7.8vw, 200px));
+                }
             }
 
             .team__about {
@@ -87,6 +112,10 @@
             .team__img-wrap {
                 left: calc(-1 * min(2.6vw, 50px));
                 z-index: 3;
+
+                @include from(1921) {
+                    left: calc(-1 * min(2.6vw, 67px));
+                }
             }
 
             .team__about {
@@ -98,10 +127,18 @@
             .team__img-wrap {
                 left: calc(-1 * min(1.3vw, 25px));
                 z-index: 4;
+
+                @include from(1921) {
+                    left: calc(-1 * min(1.3vw, 33px));
+                }
             }
 
             .team__wrap {
                 margin-left: calc(-1 * min(7.8vw, 150px));
+
+                @include from(1921) {
+                    margin-left: calc(-1 * min(7.8vw, 200px));
+                }
             }
 
             .team__about {
@@ -117,6 +154,10 @@
             .team__img-wrap {
                 left: min(1.82vw, 35px);
                 z-index: 5;
+
+                @include from(1921) {
+                    left: min(1.82vw, 46px);
+                }
             }
 
             .team__img_shadow {
@@ -125,6 +166,10 @@
 
             .team__wrap {
                 margin-left: calc(-1 * min(7.8vw, 150px));
+
+                @include from(1921) {
+                    margin-left: calc(-1 * min(7.8vw, 200px));
+                }
             }
 
             .team__about {
@@ -144,23 +189,39 @@
             .team__img_shadow {
                 opacity: 1;
                 right: calc(-1 * clamp(3px, 0.52vw, 10px));
+
+                @include from(1921) {
+                    right: calc(-1 * clamp(3px, 0.52vw, 13px));
+                }
             }
 
             &:nth-child(2) {
                 .team__img-wrap {
                     left: calc(-1 * min(6.5vw, 125px));
+
+                    @include from(1921) {
+                        left: calc(-1 * min(6.5vw, 166px));
+                    }
                 }
             }
 
             &:nth-child(3) {
                 .team__img-wrap {
                     left: calc(-1 * min(5.2vw, 100px));
+
+                    @include from(1921) {
+                        left: calc(-1 * min(5.2vw, 133px));
+                    }
                 }
             }
 
             &:nth-child(4) {
                 .team__img-wrap {
                     left: calc(-1 * min(2.3vw, 45px));
+
+                    @include from(1921) {
+                        left: calc(-1 * min(2.3vw, 58px));
+                    }
                 }
             }
         }
@@ -186,6 +247,10 @@
         flex-shrink: 0;
         transition: none;
 
+        @include from(1921) {
+            height: min(min(23.59vw, 41.94vh), 603px);
+        }
+
         &_shadow {
             position: absolute;
             height: min(min(23.59vw, 41.94vh), 453px);
@@ -194,17 +259,29 @@
             transform: skewX($skewX);
             opacity: 0;
             transition: right 0.45s 0.5s, opacity 0.45s 0.5s;
+
+            @include from(1921) {
+                height: min(min(23.59vw, 41.94vh), 603px);
+            }
         }
     }
 
     &__img_sm {
         height: clamp(275px, 45.5vw, 350px);
+
+        @include from(1921) {
+            height: clamp(275px, 45.5vw, 1164px);
+        }
     }
 
     &__img_shadow-sm {
         opacity: 1;
         height: clamp(275px, 45.5vw, 350px);
         right: -7px;
+
+        @include from(1921) {
+            height: clamp(275px, 45.5vw, 1164px);
+        }
     }
 
     &__about {
@@ -230,6 +307,11 @@
         align-items: center;
         flex-shrink: 0;
         transform: skewX($skewX);
+
+        @include from(1921) {
+            margin-top: min(min(2.08vw, 3.7vh), 53px);
+            margin-left: calc(-1 * min(10.41vw, 266px));
+        }
     }
 
     &__name {
@@ -240,6 +322,11 @@
         letter-spacing: 0.1em;
         color: #90FFFF;
         margin-right: min(1.3vw, 25px);
+
+        @include from(1921) {
+            font-size: min(min(1.35vw, 2.4vh), 34px);
+            margin-right: min(1.3vw, 33px);
+        }
     }
 
     &__name_sm {
@@ -270,12 +357,22 @@
         font-size: min(min(1.3vw, 2.31vh), 25px);
         font-weight: 400;
         line-height: 150%;
+
+        @include from(1921) {
+            font-size: min(min(1.3vw, 2.31vh), 33px);
+        }
     }
 
     &__list {
         margin-top: min(min(1.5vw, 2.77vh), 30px);
         margin-left: min(1.04vw, 20px);
         padding-right: min(2.6vw, 50px);
+
+        @include from(1921) {
+            margin-top: min(min(1.5vw, 2.77vh), 38px);
+            margin-left: min(1.04vw, 27px);
+            padding-right: min(2.6vw, 66px);
+        }
     }
 
     &__list_sm {
@@ -301,6 +398,11 @@
         color: white;
         border: 1px solid rgba(255, 255, 255, 0.2);
         list-style-type: none;
+
+        @include from(1921) {
+            padding-block: clamp(8px, min(0.78vw, 1.38vh), 20px);
+            margin-bottom: clamp(8px, min(0.78vw, 1.38vh), 20px);
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -356,6 +458,12 @@
         margin-left: min(1.04vw, 20px);
         transform: skewX($skewX);
 
+        @include from(1921) {
+            margin-top: min(min(1.5vw, 2.77vh), 38px);
+            margin-bottom: min(min(1.5vw, 2.77vh), 38px);
+            margin-left: min(1.04vw, 27px);
+        }
+
         @include to(991) {
             margin-top: 8px;
         }
@@ -383,6 +491,10 @@
     &__socials-item {
         margin-right: min(1.04vw, 20px);
 
+        @include from(1921) {
+            margin-right: min(1.04vw, 27px);
+        }
+
         &:last-child {
             margin-right: 0;
         }
@@ -390,6 +502,11 @@
         svg {
             width: clamp(14px, min(1.66vw, 2.96vh), 32px);
             height: clamp(14px, min(1.66vw, 2.96vh), 32px);
+
+            @include from(1921) {
+                width: clamp(14px, min(1.66vw, 2.96vh), 42px);
+                height: clamp(14px, min(1.66vw, 2.96vh), 42px);
+            }
         }
     }
 
@@ -425,6 +542,12 @@
         background-color: white;
         transform: skewX(-$skewX);
 
+        @include from(1921) {
+            margin-top: min(min(1.45vw, 2.59vh), 37px);
+            margin-left: calc(-1 * min(3.12vw, 80px));
+            height: clamp(7px, min(0.67vw, 1.2vh), 17px);
+        }
+
         &::before {
             content: '';
             height: clamp(7px, min(0.67vw, 1.2vh), 13px);
@@ -433,6 +556,12 @@
             background-color: #212121;
             top: 0;
             left: clamp(5px, 0.78vw, 15px);
+
+            @include from(1921) {
+                height: clamp(7px, min(0.67vw, 1.2vh), 17px);
+                width: clamp(7px, min(0.5vw, 0.92vh), 13px);
+                left: clamp(5px, 0.78vw, 20px);
+            }
         }
     }
 

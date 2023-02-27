@@ -6,6 +6,10 @@
         align-items: center;
         margin-left: clamp(30px, 3.9vw, 75px);
 
+        @include from(1921) {
+            margin-left: clamp(30px, 3.9vw, 100px);
+        }
+
         @include to(768) {
             margin-left: clamp(25px, 19.53vw, 135px);
         }
@@ -20,6 +24,11 @@
         -webkit-text-stroke: 1px rgba(#FFFFFF, 1);
         margin-inline: clamp(10px, 1.3vw, 25px) clamp(15px, 2.08vw, 40px);
 
+        @include from(1921) {
+            font-size: clamp(36px, min(5.2vw, 9.25vh), 133px);
+            margin-inline: clamp(10px, 1.3vw, 33px) clamp(15px, 2.08vw, 53px);
+        }
+
         @include to(768) {
             margin-left: 0;
             font-size: clamp(42px, 14.49vw, 75px);
@@ -31,6 +40,11 @@
         border-top: 2px solid #FFFFFF;
         width: 100%;
         box-shadow: 0 0 clamp(12px, 2.8vw, 54px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 35px) #A509B2, 0 0 clamp(3px, 0.78vw, 15px) #BF1CE8;
+
+        @include from(1921) {
+            margin-top: clamp(8px, 0.88vw, 22px);
+            box-shadow: 0 0 clamp(12px, 2.8vw, 72px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 46px) #A509B2, 0 0 clamp(3px, 0.78vw, 20px) #BF1CE8;
+        }
 
         @include to(768) {
             margin-right: -15px;
@@ -47,6 +61,14 @@
         gap: clamp(10px, min(1.04vw, 1.85vh), 20px);
         transform: skewX(-$skewX);
         transform-origin: top;
+
+        @include from(1921) {
+            margin-top: clamp(15px, min(3.12vw, 5.55vh), 80px);
+            padding-right: clamp(25px, 4.6vw, 117px);
+            padding-left: clamp(25px, 7vw, 179px);
+            grid-template-rows: repeat(2, min(min(16.66vw, 29.62vh), 426px));
+            gap: clamp(10px, min(1.04vw, 1.85vh), 26px);
+        }
 
         @include to(768) {
             display: none;
@@ -86,6 +108,11 @@
             border: clamp(4px, 0.57vw, 11px) solid #90FFFF;
             box-shadow: 0 0 clamp(12px, 2.8vw, 54px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 35px) #A509B2, 0 0 clamp(5px, 0.98vw, 19px) #BF1CE8;
             z-index: 999;
+
+            @include from(1921) {
+                border: clamp(4px, 0.57vw, 14px) solid #90FFFF;
+                box-shadow: 0 0 clamp(12px, 2.8vw, 72px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 46px) #A509B2, 0 0 clamp(5px, 0.98vw, 25px) #BF1CE8;
+            }
         }
     }
 
@@ -105,8 +132,8 @@
         &:hover {
             border: 1px solid #FFFFFF;
             box-shadow: 0 0 45px rgba(255, 255, 255, 0.23), 0 0 35px rgba(165, 9, 178, 0.52), 0 0 19px rgba(191, 28, 232, 0.5);
-            //transform-origin: center;
-            //transform: scale(1.04) translateZ(0) !important;
+            transform-origin: center;
+            transform: scale(1.04) translateZ(0) !important;
         }
     }
 
@@ -125,6 +152,10 @@
         line-height: 100%;
         transform: skewX($skewX);
 
+        @include from(1921) {
+            font-size: min(min(1.04vw, 1.85vh), 26px);
+        }
+
         @include to(768) {
             font-size: clamp(18px, 3.125vw, 24px);
         }
@@ -137,6 +168,11 @@
         margin-top: 30px;
         border-top: 2px solid #FFFFFF;
         box-shadow: 0 0 clamp(12px, 2.8vw, 54px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 35px) #A509B2, 0 0 clamp(3px, 0.78vw, 15px) #BF1CE8;
+
+        @include from(1921) {
+            width: min(90%, 600px);
+            box-shadow: 0 0 clamp(12px, 2.8vw, 72px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 46px) #A509B2, 0 0 clamp(3px, 0.78vw, 20px) #BF1CE8;
+        }
 
         @include to(768) {
             display: block;
@@ -167,6 +203,10 @@
         background: transparent;
         transition: 0.25s background-color;
 
+        @include from(1921) {
+            width: min(75%, 400px);
+        }
+
         &:before {
             content: '';
             height: 100%;
@@ -177,6 +217,10 @@
             box-shadow: 0 0 min(2.34vw, 45px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);
             opacity: 0;
             transition: 0.25s opacity;
+
+            @include from(1921) {
+                box-shadow: 0 0 min(2.34vw, 60px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 46px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 25px) rgba(191, 28, 232, 0.5);
+            }
         }
 
         &:hover {
