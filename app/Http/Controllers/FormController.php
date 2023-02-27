@@ -60,7 +60,7 @@ class FormController extends Controller
             $file = $request->file('media');
             $file_name = $file->getClientOriginalName();
             if ($file->move($destinationPath , $file_name)) {
-                $item->pic = $file_name ?: '';
+                $item->pic = $file_name;
             }
         }
 
