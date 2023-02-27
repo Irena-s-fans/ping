@@ -33,6 +33,13 @@ Route::post(
     ],
 );
 
+Route::post(
+    '/form/admin/offers',
+    [
+        FormController::class, 'offerForm',
+    ],
+);
+
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('dashboard', function() {
         return view('dashboard');
