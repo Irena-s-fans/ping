@@ -1,16 +1,94 @@
-.reviews {
-
+.review {
     &__header {
+        margin-left: min(2.8vw, 55px);
         display: flex;
         align-items: center;
-        margin-left: clamp(25px, 3.9vw, 75px);
+
+        @include from(1921) {
+            margin-left: min(2.8vw, 72px);
+        }
+
+        @include to(768) {
+            margin-left: clamp(25px, 19.53vw, 50px);
+        }
+
+        @include to(450) {
+            margin-left: 0;
+            justify-content: center;
+        }
     }
 
     &__content {
-        margin-right: min(5.2vw, 100px);
-        margin-top: clamp(15px, 2.2vw, 43px);
-        height: min(31.25vw, 600px);
-        border: 1px solid white;
+        margin-right: -35%;
+        margin-top: clamp(15px, min(3.12vw, 5.55vh), 60px);
+        padding-right: clamp(25px, 4.6vw, 90px);
+        padding-left: clamp(25px, 7vw, 75px);
         transform: skewX(-$skewX);
+        transform-origin: top;
+
+        @include from(1921) {
+            margin-top: clamp(15px, min(3.12vw, 5.55vh), 80px);
+            padding-left: clamp(25px, 7vw, 179px);
+        }
+
+        @include to(768) {
+            display: none;
+        }
+    }
+
+    &__row {
+        width: 640px;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(10px, min(1.3vw, 2.3vh), 25px);
+        margin-right: clamp(10px, min(1.3vw, 2.3vh), 25px);
+        justify-content: space-between;
+    }
+
+    &__el {
+        padding: 25px 25px 25px 15px;
+        background: rgba(27, 27, 27, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 12px rgba(191, 28, 232, 0.5);
+    }
+
+    &__el-header {
+        display: flex;
+        align-items: center;
+        transform: skewX($skewX);
+        transform-origin: top;
+    }
+
+    &__el-avatar {
+        width: 40px;
+        height: 40px;
+        background: grey;
+        border-radius: 50%;
+    }
+
+    &__el-name {
+        margin-left: 20px;
+        font-family: Play, sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: #8E0CD0;
+    }
+
+    &__el-content {
+        margin-top: 16px;
+    }
+
+    &__el-text {
+        margin-top: 15px;
+        font-family: Play, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        color: rgba(#FFFFFF, 0.4);
+        transform: skewX($skewX);
+        transform-origin: top;
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 }

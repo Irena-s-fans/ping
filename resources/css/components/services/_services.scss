@@ -87,6 +87,14 @@
         @include to(768) {
             display: block;
         }
+
+        .splide__list {
+            display: flex !important;
+        }
+
+        .splide__track {
+            overflow: visible;
+        }
     }
 
     &__swiper {
