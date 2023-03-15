@@ -279,7 +279,7 @@
             }
 
             @include to(768) {
-                height: min(42.3vw, 325px) !important;
+                height: clamp(275px, 42.3vw, 325px) !important;
             }
         }
     }
