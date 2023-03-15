@@ -59,7 +59,7 @@
     &__item {
         box-sizing: border-box;
         position: relative;
-        width: 11%;
+        width: 9%;
         height: min(min(25.78vw, 45.8vh), 495px);
         display: flex;
         align-items: flex-end;
@@ -177,8 +177,23 @@
             }
         }
 
+        &:nth-child(5) {
+            .team__img-wrap {
+                left: calc(-1 * min(2.6vw, 50px));
+                z-index: 6;
+
+                @include from(1921) {
+                    left: calc(-1 * min(2.6vw, 67px));
+                }
+            }
+
+            .team__about {
+                padding-left: 33%;
+            }
+        }
+
         &_active {
-            width: 67%;
+            width: 64%;
             border: none;
             overflow: visible;
 
@@ -221,6 +236,16 @@
 
                     @include from(1921) {
                         left: calc(-1 * min(2.3vw, 58px));
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+                .team__img-wrap {
+                    left: calc(-1 * min(5.2vw, 100px));
+
+                    @include from(1921) {
+                        left: calc(-1 * min(5.2vw, 133px));
                     }
                 }
             }
@@ -316,16 +341,20 @@
 
     &__name {
         font-family: Radio, sans-serif;
-        font-size: min(min(1.35vw, 2.4vh), 26px);
+        font-size: min(min(1.35vw, 2.4vh), 24px);
         font-weight: 400;
         line-height: 200%;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.08em;
         color: #90FFFF;
-        margin-right: min(1.3vw, 25px);
+        margin-right: min(1.3vw, 15px);
 
         @include from(1921) {
-            font-size: min(min(1.35vw, 2.4vh), 34px);
-            margin-right: min(1.3vw, 33px);
+            font-size: min(min(1.35vw, 2.4vh), 31px);
+            margin-right: min(1.3vw, 27px);
+        }
+
+        @include to(991) {
+            font-size: min(min(1.2vw, 2.4vh), 12px);
         }
     }
 

@@ -54,6 +54,7 @@
 
         @include to(576) {
             width: 275px;
+            padding-top: 100px;
             transform-origin: top;
             left: auto;
             right: 0;
@@ -170,14 +171,9 @@
     &__nav-list {
         display: flex;
         flex-direction: column;
-        gap: min(min(2vw, 3.25vh), 35px);
-
-        @include from(1921) {
-            gap: min(min(2vw, 3.25vh), 51px);
-        }
 
         @include to(768) {
-            gap: clamp(15px, 3.9vw, 30px);
+
         }
     }
 
@@ -189,11 +185,16 @@
         @include to(768) {
             gap: clamp(15px, 3.9vw, 30px);
         }
+
+        @include to(576) {
+            gap: clamp(15px, 3.9vw, 20px);
+        }
     }
 
     &__nav-item {
         position: relative;
         text-align: center;
+        margin-top: min(min(2vw, 3.25vh), 30px);
         padding-block: min(10px, 0.5vw);
         font-family: Play, sans-serif;
         font-size: min(1.3vw, 25px);
@@ -201,39 +202,37 @@
         line-height: 115%;
         color: #FFFFFF40;
         list-style-type: none;
-        transform: skewX($skewX);
         cursor: pointer;
 
         @include from(1921) {
             padding-block: min(13px, 0.5vw);
+            margin-top: min(min(2vw, 3.25vh), 40px);
             font-size: min(1.3vw, 33px);
         }
 
         @include to(768) {
+            margin-top: clamp(15px, 3.9vw, 20px);
             font-size: clamp(25px, 3.6vw, 26px);
             padding-block: 15px;
         }
 
         @include to(576) {
+            margin-top: 0;
             padding-block: 12px;
         }
 
         @include to(450) {
-            padding-block: 10px;
+            padding-block: 7px;
+            font-size: 20px;
         }
 
         &:hover:not(.header__nav-item_active) {
             color: #FFFFFF80;
             background-color: rgba(255, 255, 255, 0.1);
-            transform: skewX(0deg);
             transition: background-color 0.25s, color 0.25s;
 
             &::before {
                 opacity: 1;
-            }
-
-            .nav-item__text {
-                transform: skewX($skewX);
             }
         }
 
@@ -252,11 +251,6 @@
         &_active {
             color: white;
             background-color: #8E0CD0;
-            transform: skewX(0deg);
-
-            .nav-item__text {
-                transform: skewX($skewX);
-            }
         }
 
         &_active::before {
@@ -264,13 +258,47 @@
             background-color: #212121;
             opacity: 1;
         }
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 
     &__nav-text {
         color: #FFFFFF40;
+    }
 
-        &:hover {
-            transform: skewX($skewX);
+    &__nav-language-item {
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF40;
+        opacity: 0;
+        transition: background-color 0.25s, color 0.25s, transform 0.25s, opacity 0.25s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: max(4px, 3.3%);
+            background-color: #212121;
+            left: 3.3%;
+            top: 0;
+            opacity: 0;
+            transition: background-color 0.25s;
         }
     }
+
+    &__nav-language {
+        position: relative;
+    }
+}
+
+.nav-item__text {
+    transform: skewX($skewX);
 }

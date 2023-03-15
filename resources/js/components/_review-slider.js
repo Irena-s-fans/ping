@@ -1,9 +1,14 @@
+import Swiper from 'swiper';
+import 'swiper/css';
+
 $(document).ready(function() {
-   new Splide('#review__list', {
-       arrows: false,
-       pagination: false,
-       drag: 'free',
-       autoWidth: true,
-       padding: { left: '0', right: '25%' },
-   }).mount();
+    const swiper = new Swiper('.review__content', {
+        slidesPerView: 'auto',
+        spaceBetween: 25,
+    });
+
+    const swiper_sm = new Swiper('.review__content_sm', {
+        slidesPerView: 1,
+        spaceBetween: 25,
+    });
 });

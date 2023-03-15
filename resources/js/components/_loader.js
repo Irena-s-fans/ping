@@ -8,13 +8,15 @@ $(document).ready(function() {
     mediaFiles.on('load', function() {
         loadedAmount++;
         changeLoaderPercent(loadedAmount / overallAmount);
+
+        setTimeout(function() {
+            finishLoad();
+        }, 4000)
     });
 });
 
 $(window).on('load', function() {
-    changeLoaderPercent(1);
-    $('.loader').fadeOut(500);
-    $('.main').fadeIn(750);
+    finishLoad();
 });
 
 function changeLoaderPercent(ratio) {
@@ -48,4 +50,10 @@ function changeLoaderPercent(ratio) {
             }
         }
     });
+}
+
+function finishLoad() {
+    changeLoaderPercent(1);
+    $('.loader').fadeOut(500);
+    $('.main').fadeIn(750);
 }

@@ -1,33 +1,13 @@
-/*import Swiper, {Pagination, Mousewheel} from 'swiper';*/
-/*import 'swiper/css';
+import Swiper, {Pagination, Mousewheel} from 'swiper';
+import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/mousewheel';*/
+import 'swiper/css/mousewheel';
 
 const paginationNames = ['О нас', 'Услуги', 'Команда', 'Отзывы', 'Контакты'];
 const paginationRels = ['#about_section', '#services_section', '#team_section', '#reviews_section', '#contacts_section'];
 
 $(document).ready(function() {
-    new Splide('#fullpage', {
-        height: '100vh',
-        direction: 'ttb',
-        drag: true,
-        wheel: true,
-        wheelSleep: 250,
-        speed: 650,
-        dragMinThreshold: {
-            mouse: 25,
-            touch: 25,
-        },
-        arrows: false,
-        pagination: false,
-        mediaQuery: 'max',
-        breakpoints: {
-            768: {
-                destroy: true,
-            }
-        }
-    }).mount();
-    /*let swiper = enableSwiper();
+    let swiper = enableSwiper();
     let resizeTimer = 0;
 
     function breakpointChecker() {
@@ -47,15 +27,16 @@ $(document).ready(function() {
     }
 
     $(window).on('resize', breakpointChecker);
-    breakpointChecker();*/
+    breakpointChecker();
 })
 
 function enableSwiper() {
-    /*const sw = new Swiper('.fullpage', {
+    const sw = new Swiper('.fullpage', {
         modules: [Pagination, Mousewheel],
         direction: 'vertical',
         threshold: 25,
         spaceBetween: 150,
+        speed: 500,
         mousewheel: {
             forceToAxis: true,
         },
@@ -70,9 +51,9 @@ function enableSwiper() {
             verticalClass: 'pagination-vertical',
             clickable: true,
         },
-    });*/
+    });
 
-    /*$('.header__nav-item').on('click', function() {
+    $('.header__nav-item').on('click', function() {
         if ($(window).width() <= 768) {
             $('.header__nav-item_active').removeClass('header__nav-item_active');
             $(this).addClass('header__nav-item_active');
@@ -81,17 +62,5 @@ function enableSwiper() {
         }
     });
 
-    return sw;*/
-
-/*    return new Splide('.fullpage', {
-        direction: 'ttb',
-        heightRatio: 1,
-        drag: true,
-        dragMinThreshold: {
-            mouse: 25,
-            touch: 25,
-        },
-        arrows: false,
-        pagination: false,
-    });*/
+    return sw;
 }

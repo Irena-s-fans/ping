@@ -267,4 +267,41 @@
         margin: 0;
         padding: 0;
     }
+
+    &-video {
+        background: rgba(0,0,0, 0.5);
+    }
+
+    &-video__wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &-video__cross {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(110%, -110%);
+        cursor: pointer;
+        transition: background-color 0.25s;
+
+        &:hover {
+            path {
+                fill: #8E0CD0;
+            }
+        }
+
+        @include to(1300) {
+            transform: translate(0%, -125%);
+        }
+    }
+
+    &-video__content {
+        width: 1200px;
+        max-width: 95vw;
+    }
 }
