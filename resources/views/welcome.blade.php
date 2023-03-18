@@ -7,9 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>Креативное Агенство PinG</title>
     <link rel="stylesheet" href="/public/css/index.css">
-    <link rel="preload" href="/public/fonts/Play-Regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/public/fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/public/fonts/TTSquares-Black.ttf" as="font" type="font/ttf" crossorigin>
+    <link href="/public/fonts/Play-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link href="/public/fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link href="/public/fonts/TTSquares-Black.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" as="image" href="/public/img/loader__logo.png">
     <link rel="preload" as="image" href="/public/img/bg.png">
     <script src="/public/js/libs/jquery-3.6.1.min.js"></script>
@@ -129,7 +129,7 @@
 </div>
 <div class="popup popup-video" id="video__popup">
     <div class="popup-video__wrap">
-        <video class="popup-video__content" src="#" controls></video>
+        <video class="popup-video__content" controls></video>
         <img src="/public/img/cross.svg" alt="" class="popup-video__cross">
     </div>
 </div>
@@ -150,12 +150,15 @@
                 <ul class="header__nav-list">
 
                 </ul>
-<!--                <div class="header__nav-item header__nav-language">
-                    <div class="header__nav-language-item">
-                        <p class="nav-item__text">En</p>
-                    </div>
-                    <p class="nav-item__text">Ru</p>
-                </div>-->
+                <div class="header__nav-item header__language">
+                    <a href="" class="header__language-item header__language-item_active">
+                        Ru
+<!--                        <img class="header__language-arrow" src="/public/img/arrow.svg" alt="">-->
+                    </a>
+                    <a href="" class="header__language-item">
+                        En
+                    </a>
+                </div>
             </nav>
             <div class="header__nav header__nav_mobile">
                 <ul class="header__nav-list_sm">

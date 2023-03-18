@@ -268,35 +268,55 @@
         color: #FFFFFF40;
     }
 
-    &__nav-language-item {
-        width: 100%;
-        min-height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #FFFFFF40;
-        opacity: 0;
-        transition: background-color 0.25s, color 0.25s, transform 0.25s, opacity 0.25s;
+/*    .header__language {
+        position: relative;
 
-        &::before {
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: max(4px, 3.3%);
-            background-color: #212121;
-            left: 3.3%;
-            top: 0;
-            opacity: 0;
-            transition: background-color 0.25s;
+        &:hover {
+            .header__language-item:not(.header__language-item_active) {
+                opacity: 1;
+                transform: translate(-50%, 100%) skewX($skewX);
+            }
         }
     }
 
-    &__nav-language {
-        position: relative;
+    .header__language-item {
+        align-items: center;
+        justify-content: center;
+        font-family: Play, sans-serif;
+        font-size: min(1.3vw, 25px);
+        font-weight: 400;
+        line-height: 115%;
+        color: #FFFFFF40;
+        text-decoration: none;
+        transform: skewX($skewX);
+
+        &_active {
+            display: flex;
+
+            .header__language-arrow {
+                display: inline-block;
+            }
+        }
     }
+
+    .header__language-item:not(.header__language-item_active) {
+        width: 40%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        border-top: 1px solid #212121;
+        transform: translate(-50%, 0) skewX($skewX);
+        background-color: rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        transition: transform 0.3s, opacity 0.35s;
+    }
+
+    .header__language-arrow {
+        width: 16px;
+        display: none;
+        margin-left: 5px;
+    }*/
 }
 
 .nav-item__text {
