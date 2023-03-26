@@ -20,50 +20,67 @@
         border: 1px solid white;
         max-width: min(50vw, 960px);
         transform: skewX(-$skewX);
-        padding: clamp(15px, 1.3vw, 26px) clamp(45px, 5.2vw, 100px) clamp(22px, 2.3vw, 44px) clamp(45px, 5.2vw, 100px);
+        padding: clamp(15px, 1.3vw, 20px) clamp(45px, 5.2vw, 100px) clamp(22px, 2.3vw, 44px) clamp(45px, 5.2vw, 100px);
+
+        @include from(1921) {
+            max-width: min(50vw, 1280px);
+            padding: clamp(15px, 1.3vw, 33px) clamp(45px, 5.2vw, 133px) clamp(22px, 2.3vw, 59px) clamp(45px, 5.2vw, 133px);
+        }
 
         @include to(768) {
             max-width: none;
             width: 65%;
-            padding: 30px 40px 25px 30px;
+            padding: 20px 40px 25px 30px;
+            transform: none;
         }
 
         @include to(576) {
-            width: 60%;
-            padding: 25px 20px 25px 20px;
+            width: 80%;
+            padding: 20px 20px 25px 20px;
         }
 
         @include to(450) {
             box-sizing: border-box;
             width: 90%;
-            padding-top: 35px;
-            transform: none;
         }
     }
 
     &__wrap {
-        margin-bottom: clamp(20px, 3.12vw, 60px);
         display: flex;
         justify-content: flex-end;
         position: relative;
+
+        @include to(768) {
+            margin-bottom: 15px;
+        }
     }
 
     &__border {
         box-sizing: border-box;
-        border: 1px solid white;
+        position: relative;
+        right: calc(-1 * clamp(20px, 2.08vw, 40px));
         padding: 5px clamp(15px, 2.18vw, 42px);
-        position: absolute;
-        right: calc(-1 * clamp(30px, 3.6vw, 70px));
+        margin-left: auto;
+        border: 1px solid white;
         cursor: pointer;
         transition: 0.25s background-color, 0.25s border;
 
+        @include from(1921) {
+            right: calc(-1 * clamp(20px, 2.08vw, 53px));
+            padding: 5px clamp(15px, 2.18vw, 56px);
+        }
+
+        @include to(991) {
+            padding: 3px 16px;
+        }
+
         @include to(768) {
-            top: -15px;
+            right: -15px;
             padding: 3px 15px;
         }
 
         @include to(576) {
-            right: 0;
+            right: -5px;
         }
 
         &:before {
@@ -76,6 +93,10 @@
             box-shadow: 0 0 min(2.34vw, 45px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);
             opacity: 0;
             transition: 0.25s opacity;
+
+            @include from(1921) {
+                box-shadow: 0 0 min(2.34vw, 460px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 47px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 25px) rgba(191, 28, 232, 0.5);
+            }
         }
 
         &::after {
@@ -107,14 +128,27 @@
     &__close {
         color: white;
         font-family: Radio, sans-serif;
-        font-size: min(0.6vw, 12px);
+        font-size: 12px;
         font-weight: 400;
         line-height: 180%;
         text-decoration: none;
         transform: skewX($skewX);
 
+        @include from(1921) {
+            font-size: clamp(12px, 0.7vw, 18px);
+        }
+
+        @include to(1200) {
+            font-size: 10px;
+        }
+
+        @include to(991) {
+            font-size: 8px;
+        }
+
         @include to(768) {
-            font-size: 12px;
+            font-size: 10px;
+            transform: none;
         }
 
         @include to(576) {
@@ -134,23 +168,23 @@
         border: 3px solid #90FFFF;
         transform: skewX($skewX);
 
+        @include from(1921) {
+            width: clamp(20px, 2.9vw, 74px);
+            height: clamp(20px, 2.9vw, 74px);
+        }
+
         @include to(768) {
             width: 35px;
             height: 35px;
-            margin-left: -3%;
+            margin-inline: auto;
             margin-bottom: -1%;
+            transform: none;
         }
 
         @include to(576) {
             width: 27px;
             height: 27px;
-            margin-left: -1%;
             margin-bottom: 0;
-        }
-
-        @include to(450) {
-            transform: none;
-            margin-inline: auto;
         }
     }
 
@@ -160,6 +194,10 @@
         font-weight: 700;
         line-height: 115%;
         color:#90FFFF;
+
+        @include from(1921) {
+            font-size: min(2.2vw, 56px);
+        }
 
         @include to(768) {
             font-size: 26px;
@@ -172,7 +210,7 @@
 
     &__text {
         max-width: min(49.2vw, 945px);
-        margin-top: min(4.73vw, 91px);
+        margin-top: min(1.2vw, 24px);
         padding-left: min(1.4vw, 27px);
         font-family: Play, sans-serif;
         font-size: min(1.5vw, 20px);
@@ -180,42 +218,90 @@
         line-height: 150%;
         color: white;
         transform: skewX($skewX);
+        user-select: none;
+
+        @include from(1921) {
+            max-width: min(49.2vw, 1260px);
+            margin-top: min(1.2vw, 31px);
+            padding-left: min(1.4vw, 36px);
+            font-size: min(1.5vw, 28px);
+        }
 
         &:nth-child(3) {
-            margin-top: min(1.2vw, 24px);
             max-width: min(50.9vw, 978px);
             padding-left: 0;
+
+            @include from(1921) {
+                max-width: min(50.9vw, 1303px);
+            }
 
             @include to(768) {
                 max-width: none;
                 margin-top: 10px;
-                padding-left: 25px;
             }
         }
 
         @include to(768) {
             max-width: none;
+            padding-left: 0;
             font-size: 14px;
             line-height: 140%;
+            transform: none;
         }
 
         @include to(576) {
-            font-size: 12px;
             line-height: 130%;
-        }
-
-        @include to(450) {
-            padding-left: 0 !important;
-            font-size: 14px;
-            transform: none;
         }
     }
 
     &__text_bold {
         font-weight: 700;
+        border: none;
+        margin: 0;
+        padding: 0;
     }
 
     &__text_blue {
         color: #90FFFF;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &-video {
+        background: rgba(0,0,0, 0.5);
+    }
+
+    &-video__wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &-video__cross {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(110%, -110%);
+        cursor: pointer;
+        transition: background-color 0.25s;
+
+        &:hover {
+            path {
+                fill: #8E0CD0;
+            }
+        }
+
+        @include to(1300) {
+            transform: translate(0%, -125%);
+        }
+    }
+
+    &-video__content {
+        width: 1200px;
+        max-width: 95vw;
     }
 }

@@ -12,7 +12,7 @@ $progressPadding: 3px;
     justify-content: center;
     text-align: center;
     background: url("/public/img/bg.png");
-    z-index: -1;
+    z-index: 9999;
 
     &_active {
         z-index: 9999;
@@ -27,6 +27,10 @@ $progressPadding: 3px;
 
     &__logo {
         width: min(43.28vw, 830px);
+
+        @include from(1921) {
+            width: min(43.28vw, 1107px);
+        }
 
         @include to(991) {
             width: 450px;
@@ -49,6 +53,15 @@ $progressPadding: 3px;
         padding: $progressPadding;
         transform: skewX(-$skewX);
         border: 1px solid #FFFFFF;
+
+        @include from(2200) {
+            width: 1250px;
+        }
+
+        @include from(1921) {
+            height: clamp(23px, 1.09vw, 28px);
+            margin-top: clamp(25px, 3.9vw, 100px);
+        }
 
         @include to(1600) {
             width: 750px;
@@ -106,6 +119,10 @@ $progressPadding: 3px;
 
         &_active {
             opacity: 1;
+        }
+
+        @include from(2200) {
+            width: calc(calc(#{1250px} - 2 * #{$progressPadding} - 71 * #{$elOffset}) / 71);
         }
 
         @include to(1600) {
@@ -179,5 +196,9 @@ $progressPadding: 3px;
         font-weight: 400;
         font-size: 25px;
         color: #FFFFFF;
+
+        @include from(1921) {
+            font-size: clamp(25px, 1.25vw, 32px);
+        }
     }
 }

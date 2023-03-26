@@ -10,6 +10,12 @@
     margin-right: min(10.4vw, 200px);
     margin-left: min(3.9vw, 75px);
 
+    @include from(1921) {
+        max-height: min(11.97vw, 305px);
+        margin-right: min(10.4vw, 266px);
+        margin-left: min(3.9vw, 100px);
+    }
+
     &__video {
         width: 100%;
         position: absolute;
@@ -18,6 +24,10 @@
         filter: brightness(30%);
         transform: translateY(-50%);
 
+        @include from(1921) {
+            max-width: 2560px;
+        }
+
         @include to(768) {
             display: none;
         }
@@ -25,6 +35,10 @@
 
     &__wrap {
         margin-right: clamp(15px, 1.8vw, 35px);
+
+        @include from(1921) {
+            margin-right: clamp(15px, 1.8vw, 46px);
+        }
     }
 
     &__title {
@@ -35,6 +49,10 @@
         font-weight: 900;
         line-height: 100%;
         color: white;
+
+        @include from(1921) {
+            font-size: clamp(30px, min(6.3vw, 11.29vh), 161px);
+        }
 
         @include to(768) {
             text-align: left;
@@ -52,6 +70,11 @@
         line-height: 150%;
         color: white;
 
+        @include from(1921) {
+            max-width: min(26.82vw, 686px);
+            font-size: min(min(1vw, 1.85vh), 25px);
+        }
+
         @include to(768) {
             max-width: max(75%, 250px);
             text-align: left !important;
@@ -68,11 +91,18 @@
 
     &__text_purple {
         color: #8E0CD0;
+        border: none;
+        margin: 0;
+        padding: 0;
     }
 
     &__text-description {
         margin-top: clamp(5px, min(0.78vw, 1.38vh), 15px);
         line-height: 180%;
+
+        @include from(1921) {
+            margin-top: clamp(5px, min(0.78vw, 1.38vh), 20px);
+        }
 
         @include to(768) {
             max-width: 75%;

@@ -1,16 +1,250 @@
-.reviews {
-
+.review {
     &__header {
+        margin-left: min(2.8vw, 55px);
         display: flex;
         align-items: center;
-        margin-left: clamp(25px, 3.9vw, 75px);
+
+        @include from(1921) {
+            margin-left: min(2.8vw, 72px);
+        }
+
+        @include to(768) {
+            margin-left: clamp(25px, 19.53vw, 50px);
+        }
+
+        @include to(450) {
+            margin-left: 0;
+            justify-content: center;
+        }
     }
 
     &__content {
-        margin-right: min(5.2vw, 100px);
-        margin-top: clamp(15px, 2.2vw, 43px);
-        height: min(31.25vw, 600px);
-        border: 1px solid white;
+        margin-top: clamp(0px, min(3.12vw, 5.55vh), 45px);
+        margin-right: -30%;
+        padding-block: 15px;
+        padding-left: clamp(25px, 7vw, 75px);
+        padding-right: 30%;
         transform: skewX(-$skewX);
+        transform-origin: top;
+        overflow: hidden;
+
+        @include from(1921) {
+            margin-top: clamp(15px, min(3.12vw, 5.55vh), 80px);
+            padding-left: clamp(25px, 7vw, 179px);
+        }
+
+        @include to(768) {
+            display: none;
+        }
+    }
+
+    &__row {
+        width: clamp(320px, 33.3vw, 640px) !important;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(10px, min(1.3vw, 2.3vh), 25px);
+        justify-content: space-between;
+
+        @include from(1921) {
+            width: clamp(640px, 33.3vw, 852px) !important;
+            gap: clamp(10px, min(1.3vw, 2.3vh), 33px);
+        }
+    }
+
+    &__el {
+        box-sizing: border-box;
+        position: relative;
+        padding: min(min(1.3vw, 2.31vh), 25px) min(1.3vw, 25px) min(min(1.3vw, 2.31vh), 25px) min(0.78vw, 15px);
+        background: rgba(27, 27, 27, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 12px rgba(191, 28, 232, 0.5);
+        z-index: 100;
+        transition: background-color 0.25s;
+
+        @include from(1921) {
+            padding: min(min(1.3vw, 2.31vh), 33px) min(1.3vw, 33px) min(min(1.3vw, 2.31vh), 33px) min(0.78vw, 20px);
+        }
+
+        @include to(768) {
+            padding: clamp(5px, 3.25vw, 25px) clamp(5px, 3.25vw, 25px) clamp(5px, 3.25vw, 25px) clamp(5px, 1.95vw, 15px);
+        }
+
+        &:hover {
+            background-color: #8E0CD0;
+
+            .review__el-name, .review__el-subname, .review__el-text {
+                color: #fff;
+            }
+
+            .review__el-subname:before {
+                background-color: #FFFFFF;
+            }
+        }
+    }
+
+    &__el-header {
+        display: flex;
+        align-items: center;
+        transform: skewX($skewX);
+        transform-origin: top;
+    }
+
+    &__el-avatar {
+        width: clamp(25px, 2.08vw, 40px);
+        height: clamp(25px, 2.08vw, 40px);
+        border-radius: 50%;
+
+        @include from(1921) {
+            width: clamp(25px, 2.08vw, 53px);
+            height: clamp(25px, 2.08vw, 53px);
+        }
+
+        @include to(576) {
+            width: 35px;
+            height: 35px;
+        }
+
+        @include to(450) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__el-name {
+        margin-left: clamp(5px, 1.08vw, 20px);
+        font-family: Play, sans-serif;
+        font-weight: 700;
+        font-size: clamp(5px, 1.08vw, 20px);
+        color: #8E0CD0;
+        line-height: 115%;
+        transition: color 0.25s;
+
+        @include from(1921) {
+            margin-left: clamp(5px, 1.08vw, 27px);
+            font-size: clamp(5px, 1.08vw, 27px);
+        }
+
+        @include to(768) {
+            margin-left: clamp(5px, 2.6vw, 20px);
+            font-size: min(3.38vw, 20px);
+        }
+    }
+
+    &__el-subname {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: clamp(5px, 0.52vw, 10px);
+        font-family: Play, sans-serif;
+        font-weight: 700;
+        font-size: clamp(5px, 1.08vw, 20px);
+        color: #8E0CD0;
+        line-height: 115%;
+        transition: color 0.25s;
+
+        @include from(1921) {
+            margin-left: clamp(5px, 0.52vw, 13px);
+            font-size: clamp(5px, 1.08vw, 27px);
+        }
+
+        @include to(768) {
+            margin-left: clamp(3px, 1.3vw, 10px);
+            font-size: min(3.38vw, 20px);
+        }
+
+        &:before {
+            content: '';
+            width: clamp(6px, 0.41vw, 8px);
+            height: clamp(6px, 0.41vw, 8px);
+            display: inline-block;
+            margin-right: clamp(5px, 0.52vw, 10px);
+            border-radius: 50%;
+            background-color: #8E0CD0;
+            transition: background-color 0.25s;
+
+            @include from(1921) {
+                width: clamp(6px, 0.41vw, 11px);
+                height: clamp(6px, 0.41vw, 11px);
+                margin-right: clamp(5px, 0.52vw, 13px);
+            }
+
+            @include to(768) {
+                margin-right: clamp(3px, 1.3vw, 10px);
+            }
+
+            @include to(576) {
+                width: 7px;
+                height: 7px;
+            }
+
+            @include to(450) {
+                width: 6px;
+                height: 6px;
+            }
+        }
+    }
+
+    &__el-content {
+        margin-top: clamp(10px, 0.83vw, 16px);
+
+        @include from(1921) {
+            margin-top: clamp(10px, 0.83vw, 21px);
+        }
+
+        @include to(768) {
+            margin-top: clamp(5px, 2.08vw, 16px);
+        }
+    }
+
+    &__el-text {
+        max-width: 92.5%;
+        margin-top: clamp(7px, 0.78vw, 15px);
+        font-family: Play, sans-serif;
+        font-weight: 400;
+        font-size: clamp(5px, 1.08vw, 20px);
+        color: rgba(#FFFFFF, 0.4);
+        transform: skewX($skewX);
+        transform-origin: top;
+        transition: color 0.25s;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        @include from(1921) {
+            margin-top: clamp(7px, 0.78vw, 20px);
+            font-size: clamp(5px, 1.08vw, 27px);
+        }
+
+        @include to(768) {
+            margin-top: clamp(7px, 1.95vw, 15px);
+            font-size: min(3.38vw, 20px);
+        }
+    }
+
+    &__content_sm {
+        display: none;
+        transform: skewX(-$skewX);
+        margin-left: -5%;
+        padding: clamp(20px, 2.08vw, 40px) 15%;
+
+        @include from(1921) {
+            padding: clamp(20px, 2.08vw, 53px) 15%;
+        }
+
+        @include to(768) {
+            display: block;
+        }
+
+        @include to(576) {
+            padding: 30px 5%;
+        }
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 }

@@ -4,6 +4,10 @@
         display: flex;
         align-items: center;
 
+        @include from(1921) {
+            margin-left: clamp(30px, 3.9vw, 100px);
+        }
+
         @include to(768) {
             margin-left: 0;
             justify-content: center;
@@ -30,6 +34,12 @@
         gap: clamp(5px, min(1.04vw, 1.85vh), 20px);
         margin-top: min(min(0.88vw, 1.57vh), 17px);
         margin-right: clamp(25px, 2.96vw, 57px);
+
+        @include from(1921) {
+            gap: clamp(5px, min(1.04vw, 1.85vh), 27px);
+            margin-top: min(min(0.88vw, 1.57vh), 22px);
+            margin-right: clamp(25px, 2.96vw, 76px);
+        }
 
         @include to(768) {
             display: none;
@@ -77,6 +87,10 @@
         line-height: 0;
         text-decoration: none;
 
+        @include from(1921) {
+            margin-right: clamp(5px, 0.78vw, 20px);
+        }
+
         &:last-child {
             margin-right: 0;
         }
@@ -94,6 +108,12 @@
         width: clamp(15px, min(2.08vw, 3.7vh), 40px);
         height: clamp(15px, min(2.08vw, 3.7vh), 40px);
 
+        @include from(1921) {
+            width: clamp(15px, min(2.08vw, 3.7vh), 53px);
+            height: clamp(15px, min(2.08vw, 3.7vh), 53px);
+        }
+
+
         @include to(768) {
             width: 45px;
             height: 45px;
@@ -108,6 +128,18 @@
             width: 35px;
             height: 35px;
         }
+
+        &:hover {
+            .contacts__icon-rect {
+                fill: #fff;
+                pointer-events:all;
+            }
+
+            .contacts__icon-path {
+                fill: #8E0CD0;
+                pointer-events:all;
+            }
+        }
     }
 
     &__icon-rect, &__icon-path {
@@ -115,14 +147,6 @@
     }
 
     &__icon-symbol {
-        &:hover {
-            .contacts__icon-rect {
-                fill: #fff;
-            }
-
-            .contacts__icon-path {
-                fill: #8E0CD0;
-            }
-        }
+        pointer-events:all;
     }
 }

@@ -3,8 +3,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 
-const paginationNames = ['О нас', 'Услуги', 'Команда', 'Контакты'];
-const paginationRels = ['#about_section', '#services_section', '#team_section', '#contacts_section'];
+const paginationNames = ['О нас', 'Услуги', 'Команда', 'Отзывы', 'Контакты'];
+const paginationRels = ['#about_section', '#services_section', '#team_section', '#reviews_section', '#contacts_section'];
 
 $(document).ready(function() {
     let swiper = enableSwiper();
@@ -36,6 +36,7 @@ function enableSwiper() {
         direction: 'vertical',
         threshold: 25,
         spaceBetween: 150,
+        speed: 500,
         mousewheel: {
             forceToAxis: true,
         },
