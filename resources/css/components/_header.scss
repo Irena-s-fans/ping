@@ -16,7 +16,7 @@
         background: none;
         left: 0;
         backdrop-filter: none;
-        transition: transform 0.5s;
+        transition: transform $ui-transition-2;
     }
 
     &_active {
@@ -229,7 +229,7 @@
         &:hover:not(.header__nav-item_active) {
             color: #FFFFFF80;
             background-color: rgba(255, 255, 255, 0.1);
-            transition: background-color 0.25s, color 0.25s;
+            transition: background-color $ui-transition-1, color $ui-transition-1;
 
             &::before {
                 opacity: 1;
@@ -245,7 +245,7 @@
             left: 3.3%;
             top: 0;
             opacity: 0;
-            transition: background-color 0.25s;
+            transition: background-color $ui-transition-1;
         }
 
         &_active {
@@ -279,7 +279,7 @@
         justify-content: center;
         color: #FFFFFF40;
         opacity: 0;
-        transition: background-color 0.25s, color 0.25s, transform 0.25s, opacity 0.25s;
+        transition: background-color $ui-transition-1, color $ui-transition-1, transform $ui-transition-1, opacity $ui-transition-1;
 
         &::before {
             content: '';
@@ -290,7 +290,7 @@
             left: 3.3%;
             top: 0;
             opacity: 0;
-            transition: background-color 0.25s;
+            transition: background-color $ui-transition-1;
         }
     }
 

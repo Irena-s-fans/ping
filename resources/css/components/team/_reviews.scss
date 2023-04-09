@@ -60,7 +60,7 @@
         border: 1px solid rgba(255, 255, 255, 0.5);
         box-shadow: 0 0 12px rgba(191, 28, 232, 0.5);
         z-index: 100;
-        transition: background-color 0.25s;
+        transition: background-color $ui-transition-1;
 
         @include from(1921) {
             padding: min(min(1.3vw, 2.31vh), 33px) min(1.3vw, 33px) min(min(1.3vw, 2.31vh), 33px) min(0.78vw, 20px);
@@ -118,7 +118,7 @@
         font-size: clamp(5px, 1.08vw, 20px);
         color: #8E0CD0;
         line-height: 115%;
-        transition: color 0.25s;
+        transition: color $ui-transition-1;
 
         @include from(1921) {
             margin-left: clamp(5px, 1.08vw, 27px);
@@ -141,7 +141,7 @@
         font-size: clamp(5px, 1.08vw, 20px);
         color: #8E0CD0;
         line-height: 115%;
-        transition: color 0.25s;
+        transition: color $ui-transition-1;
 
         @include from(1921) {
             margin-left: clamp(5px, 0.52vw, 13px);
@@ -161,7 +161,7 @@
             margin-right: clamp(5px, 0.52vw, 10px);
             border-radius: 50%;
             background-color: #8E0CD0;
-            transition: background-color 0.25s;
+            transition: background-color $ui-transition-1;
 
             @include from(1921) {
                 width: clamp(6px, 0.41vw, 11px);
@@ -206,7 +206,7 @@
         color: rgba(#FFFFFF, 0.4);
         transform: skewX($skewX);
         transform-origin: top;
-        transition: color 0.25s;
+        transition: color $ui-transition-1;
 
         &:first-child {
             margin-top: 0;

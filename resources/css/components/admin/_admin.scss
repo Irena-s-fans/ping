@@ -16,7 +16,7 @@
         border: 1px solid #FFFFFF;
         transform: skewX(-$skewX);
         transform-origin: bottom;
-        transition: all 0.25s;
+        transition: all $ui-transition-1;
 
         &:before {
             content: '';
@@ -27,7 +27,7 @@
             top: 0;
             box-shadow: 0 0 min(2.34vw, 45px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);
             opacity: 0;
-            transition: 0.25s opacity;
+            transition: $ui-transition-1 opacity;
         }
 
         &:hover {

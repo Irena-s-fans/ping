@@ -230,10 +230,12 @@
                                 <img class="partners__img partners__img_xxl" src="/public/img/partners/universal.svg" alt="">
                                 <img class="partners__img partners__img_xxl" src="/public/img/partners/ubisoft 2.png" alt="">
                                 <img class="partners__img partners__img_regular" src="/public/img/partners/kanobu.svg" alt="">
+                                <img class="partners__img partners__img_xxl" src="/public/img/partners/lg.png" alt="">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/dtf 2.png" alt="">
                                 <img class="partners__img partners__img_regular" src="/public/img/partners/syberia 2.png" alt="">
                                 <img class="partners__img partners__img_regular" src="/public/img/partners/sports_ru 2.png" alt="">
                                 <img class="partners__img partners__img_sm" src="/public/img/partners/viewsonic 2.png" alt="">
+                                <img class="partners__img partners__img_xxl" src="/public/img/partners/cm.png" alt="">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/vk.svg" alt="">
                             </div>
                             <div class="partners__list">
@@ -242,10 +244,12 @@
                                 <img class="partners__img partners__img_xxl" src="/public/img/partners/universal.svg" alt="">
                                 <img class="partners__img partners__img_xxl" src="/public/img/partners/ubisoft 2.png" alt="">
                                 <img class="partners__img partners__img_regular" src="/public/img/partners/kanobu.svg" alt="">
+                                <img class="partners__img partners__img_xxl" src="/public/img/partners/lg.png" alt="">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/dtf 2.png" alt="">
                                 <img class="partners__img partners__img_regular" src="/public/img/partners/syberia 2.png" alt="">
                                 <img class="partners__img partners__img_regular" src="/public/img/partners/sports_ru 2.png" alt="">
                                 <img class="partners__img partners__img_sm" src="/public/img/partners/viewsonic 2.png" alt="">
+                                <img class="partners__img partners__img_xxl" src="/public/img/partners/cm.png" alt="">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/vk.svg" alt="">
                             </div>
                         </div>
@@ -631,13 +635,10 @@
                                             <p class="team__list-text">Стратегия продвижения бренда и сметы</p>
                                         </li>
                                         <li class="team__list-item">
+                                            <p class="team__list-text">Интеграция продукта в сферу гейминга</p>
+                                        </li>
+                                        <li class="team__list-item">
                                             <p class="team__list-text">Креативное наполнение ивента</p>
-                                        </li>
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">Написание сценария</p>
-                                        </li>
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">SMM</p>
                                         </li>
                                     </ul>
                                     <div class="team__socials">
@@ -688,7 +689,7 @@
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Индивидуальный мерч</p>
+                                            <p class="team__list-text">Создание индивидуального мерча</p>
                                         </li>
                                         <li class="team__list-item">
                                             <p class="team__list-text">Графическое оформление для трансляций</p>
@@ -749,16 +750,16 @@
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
+                                            <p class="team__list-text">Консультирование по сложным проектам</p>
+                                        </li>
+                                        <li class="team__list-item">
+                                            <p class="team__list-text">Создание и реализация креативов</p>
+                                        </li>
+                                        <li class="team__list-item">
+                                            <p class="team__list-text">Подбор инфлюенсеров</p>
+                                        </li>
+                                        <li class="team__list-item">
                                             <p class="team__list-text">Работа с клиентами</p>
-                                        </li>
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">Поиск индивидуального подхода</p>
-                                        </li>
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">Создание креативов</p>
-                                        </li>
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">Подбор инфлюенсера</p>
                                         </li>
                                     </ul>
                                     <div class="team__socials">
@@ -810,13 +811,13 @@
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Организация мероприятий</p>
+                                            <p class="team__list-text">Организация онлайн-трансляций</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Коммуникация с инфлюенсерами</p>
+                                            <p class="team__list-text">Подбор инфлюенсеров</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Продюссирование трансляций</p>
+                                            <p class="team__list-text">Видеопроизводство</p>
                                         </li>
                                         <li class="team__list-item">
                                             <p class="team__list-text">Event-management</p>
@@ -877,9 +878,6 @@
                                         </li>
                                         <li class="team__list-item">
                                             <p class="team__list-text">Продвижение соц.сетей и SMM</p>
-                                        </li>
-                                        <li class="team__list-item">
-                                            <p class="team__list-text">PinG Communities</p>
                                         </li>
                                     </ul>
                                     <div class="team__socials">
@@ -1173,17 +1171,12 @@
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
+                                                Интеграция продукта в сферу гейминга
+                                            </p>
+                                        </li>
+                                        <li class="team__list-item team__list-item_sm">
+                                            <p class="team__list-text team__list-text_sm">
                                                 Креативное наполнение ивента
-                                            </p>
-                                        </li>
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                Написание сценария
-                                            </p>
-                                        </li>
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                SMM
                                             </p>
                                         </li>
                                     </ul>
@@ -1192,7 +1185,7 @@
                                     <ul class="team__list team__list_sm">
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Индивидуальный мерч
+                                                Создание индивидуального мерча
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
@@ -1216,22 +1209,22 @@
                                     <ul class="team__list team__list_sm">
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
+                                                Консультирование по сложным проектам
+                                            </p>
+                                        </li>
+                                        <li class="team__list-item team__list-item_sm">
+                                            <p class="team__list-text team__list-text_sm">
+                                                Создание и реализация креативов
+                                            </p>
+                                        </li>
+                                        <li class="team__list-item team__list-item_sm">
+                                            <p class="team__list-text team__list-text_sm">
+                                                Подбор инфлюенсеров
+                                            </p>
+                                        </li>
+                                        <li class="team__list-item team__list-item_sm">
+                                            <p class="team__list-text team__list-text_sm">
                                                 Работа с клиентами
-                                            </p>
-                                        </li>
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                Поиск индивидуального подхода
-                                            </p>
-                                        </li>
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                Создание креативов
-                                            </p>
-                                        </li>
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                Подбор инфлюенсера
                                             </p>
                                         </li>
                                     </ul>
@@ -1240,17 +1233,17 @@
                                     <ul class="team__list team__list_sm">
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Организация мероприятий
+                                                Организация онлайн-трансляций
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Коммуникация с инфлюенсерами
+                                                Подбор инфлюенсеров
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Продюссирование трансляций
+                                                Видеопроизводство
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
@@ -1275,11 +1268,6 @@
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
                                                 Продвижение соц.сетей и SMM
-                                            </p>
-                                        </li>
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                PinG Communities
                                             </p>
                                         </li>
                                     </ul>
