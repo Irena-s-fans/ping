@@ -6,6 +6,11 @@
             На главную
         </span>
     </a>
+    <a href="/admin/all" class="admin__btn admin__btn_back">
+        <span class="admin__btn-text">
+            Все проекты
+        </span>
+    </a>
     <h2 class="admin__title">
         Добавить проект
     </h2>

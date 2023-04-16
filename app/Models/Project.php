@@ -20,4 +20,14 @@ class Project extends Model
         'preview',
         'pic'
     ];
+
+    public static function getPicUrl($url): string
+    {
+        return 'img/media/' . $url;
+    }
+
+    public static function getPreviewUrl($url): string
+    {
+        return 'img/preview/' . $url;
+    }
 }
