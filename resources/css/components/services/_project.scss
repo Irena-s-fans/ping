@@ -110,7 +110,7 @@
     }
 
     &__video-icon-path {
-        transition: fill 0.25s;
+        transition: fill $ui-transition-1;
     }
 
     &__wrap {
@@ -203,7 +203,7 @@
         background-color: #8E0CD0;
         border: 1px solid white;
         cursor: pointer;
-        transition: box-shadow 0.25s;
+        transition: box-shadow $ui-transition-1;
 
         &:hover {
             box-shadow: 0 0 min(45px, 2.34vw) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);

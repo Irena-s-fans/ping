@@ -63,7 +63,7 @@
         margin-left: auto;
         border: 1px solid white;
         cursor: pointer;
-        transition: 0.25s background-color, 0.25s border;
+        transition: $ui-transition-1 background-color, $ui-transition-1 border;
 
         @include from(1921) {
             right: calc(-1 * clamp(20px, 2.08vw, 53px));
@@ -92,7 +92,7 @@
             top: 0;
             box-shadow: 0 0 min(2.34vw, 45px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);
             opacity: 0;
-            transition: 0.25s opacity;
+            transition: $ui-transition-1 opacity;
 
             @include from(1921) {
                 box-shadow: 0 0 min(2.34vw, 460px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 47px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 25px) rgba(191, 28, 232, 0.5);
@@ -108,7 +108,7 @@
             position: absolute;
             left: -10px;
             top: -1px;
-            transition: 0.25s background-color;
+            transition: $ui-transition-1 background-color;
         }
 
         &:hover {
@@ -287,7 +287,7 @@
         right: 0;
         transform: translate(110%, -110%);
         cursor: pointer;
-        transition: background-color 0.25s;
+        transition: background-color $ui-transition-1;
 
         &:hover {
             path {

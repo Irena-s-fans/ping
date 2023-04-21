@@ -67,7 +67,7 @@
         border-top: none;
         border-bottom: none;
         overflow: hidden;
-        transition: width 0.75s, border 0.25s, box-shadow 0.25s;
+        transition: width $ui-transition-3, border $ui-transition-1, box-shadow $ui-transition-1;
         flex-shrink: 0;
         background: #1B1B1B;
 
@@ -283,7 +283,7 @@
             filter: invert(25%) sepia(74%) saturate(450%) hue-rotate(257deg) brightness(150%) contrast(104%);
             transform: skewX($skewX);
             opacity: 0;
-            transition: right 0.45s 0.5s, opacity 0.45s 0.5s;
+            transition: right 0.45s $ui-transition-2, opacity 0.45s $ui-transition-2;
 
             @include from(1921) {
                 height: min(min(23.59vw, 41.94vh), 603px);
@@ -318,7 +318,7 @@
         padding-left: 25%;
         flex-shrink: 0;
         opacity: 0;
-        transition: 0.5s opacity ease-in-out;
+        transition: $ui-transition-2 opacity ease-in-out;
         z-index: 1;
         white-space: nowrap;
         box-sizing: border-box;
@@ -657,7 +657,7 @@
         height: 15px;
         margin-right: 5px;
         background: #424242;
-        transition: 0.25s background-color;
+        transition: $ui-transition-1 background-color;
         cursor: pointer;
 
         @include to(450) {

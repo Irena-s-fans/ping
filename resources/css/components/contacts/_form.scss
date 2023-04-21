@@ -118,7 +118,7 @@
             left: -5.5%;
             border: 1px solid #FFFFFF40;
             transform: skewX(-$skewX);
-            transition: all 0.25s;
+            transition: all $ui-transition-1;
             z-index: 21;
 
             @include to(1199) {
@@ -225,7 +225,7 @@
             left: -15%;
             border: 1px solid #FFFFFF40;
             transform: skewX(-$skewX);
-            transition: all 0.25s;
+            transition: all $ui-transition-1;
             z-index: 21;
 
             @include to(768) {
@@ -480,7 +480,7 @@
             height: 40%;
             background-color: #90FFFF;
             opacity: 0;
-            transition: all .25s;
+            transition: all $ui-transition-1;
 
             @include to(768) {
                 width: 60%;

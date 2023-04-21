@@ -1,0 +1,27 @@
+.admin-container {
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 25px;
+
+    @include to(1440) {
+        max-width: 1200px;
+    }
+
+    @include to(1200) {
+        max-width: 991px;
+    }
+
+    @include to(991) {
+        max-width: 768px;
+    }
+
+    @include to(768) {
+        max-width: 576px;
+        padding-inline: 15px;
+    }
+
+    @include to(576) {
+        max-width: 450px;
+    }
+}

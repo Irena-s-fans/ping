@@ -115,7 +115,7 @@
         transform-origin: bottom;
         border: 1px solid white;
         overflow: hidden;
-        transition: transform 0.25s, box-shadow 0.25s, border 0.25s !important;
+        transition: transform $ui-transition-1, box-shadow $ui-transition-1, border $ui-transition-1 !important;
         cursor: pointer;
 
         &:hover {
@@ -215,7 +215,7 @@
         line-height: 115%;
         color: #FFFFFF;
         background: transparent;
-        transition: 0.25s background-color;
+        transition: $ui-transition-1 background-color;
 
         @include from(1921) {
             width: min(75%, 400px);
@@ -230,7 +230,7 @@
             top: 0;
             box-shadow: 0 0 min(2.34vw, 45px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 35px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 19px) rgba(191, 28, 232, 0.5);
             opacity: 0;
-            transition: 0.25s opacity;
+            transition: $ui-transition-1 opacity;
 
             @include from(1921) {
                 box-shadow: 0 0 min(2.34vw, 60px) rgba(255, 255, 255, 0.23), 0 0 min(1.82vw, 46px) rgba(165, 9, 178, 0.52), 0 0 min(0.98vw, 25px) rgba(191, 28, 232, 0.5);

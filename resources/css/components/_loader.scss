@@ -111,7 +111,7 @@ $progressPadding: 3px;
         margin-right: $elOffset;
         background: #90FFFF;
         opacity: 0;
-        transition: 0.25s opacity;
+        transition: $ui-transition-1 opacity;
 
         &:last-child {
             margin-right: 0;
