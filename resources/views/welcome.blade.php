@@ -105,21 +105,15 @@
         <div class="popup__content">
             <div class="popup__wrap">
                 <div class="popup__border close_popup">
-                    <p class="popup__close">Закрыть</p>
+                    <p class="popup__close">{{ __('Close') }}</p>
                 </div>
             </div>
-            <p class="popup__text">Все, что мы делаем, основано на принципе построения <span class="about__text_purple">значимых связей</span>.
-                В такой захватывающей отрасли, как <span class="popup__text_bold">киберспорт</span>, мы понимаем
-                важность обеспечения <span class="popup__text_bold">надежных партнерских отношений</span> между
-                брендами с известными игроками и лидерами мнений.
+            <p class="popup__text">{{ __('Everything we do is based on the principle of building') }} <span class="about__text_purple">{{ __('meaningful connections') }}</span>.
+                {{ __('In an exciting industry like') }} <span class="popup__text_bold">{{ __('esports') }}</span>, {{ __('we understand the importance of building') }} <span class="popup__text_bold">{{ __('strong brand partnerships') }}</span> {{ __('with established players and influencers') }}.
             </p>
             <p class="popup__text">
-                <span class="popup__text_blue">Наше агентство</span> хочет внести
-                активный вклад в создание <span class="about__text_purple">глобальной экосистемы киберспорта</span>.
-                Мы видим свою миссию в преодолении разрыва и установки коммуникации между <span
-                    class="popup__text_bold">брендами</span> и
-                <span class="popup__text_bold">миром геймеров</span> благодаря возможностям партнерства, маркетинга,
-                создания и распространения контента.
+                <span class="popup__text_blue">{{ __('Our agency') }}</span> {{ __('wants to actively contribute to building') }} <span class="about__text_purple">{{ __('the global esports ecosystem') }}</span>. {{ __('We see our mission in bridging the gap and establishing communication between') }} <span class="popup__text_bold">{{ __('brands') }}</span> {{ __('and') }}
+                <span class="popup__text_bold">{{ __('the world of gamers') }}</span> {{ __('through partnerships, marketing, content creation and distribution') }}.
             </p>
             <div class="popup__icon-wrap">
                 <p class="popup__icon">!</p>
@@ -151,11 +145,11 @@
 
                 </ul>
                 <div class="header__nav-item header__language">
-                    <a href="" class="header__language-item header__language-item_active">
+                    <p class="header__language-item header__language-item_active">
                         Ru
-<!--                        <img class="header__language-arrow" src="/public/img/arrow.svg" alt="">-->
-                    </a>
-                    <a href="" class="header__language-item">
+                        <img class="header__language-arrow" src="/public/img/arrow.svg" alt="">
+                    </p>
+                    <a href="/locale/en" class="header__language-item">
                         En
                     </a>
                 </div>
@@ -163,7 +157,7 @@
             <div class="header__nav header__nav_mobile">
                 <ul class="header__nav-list_sm">
                     <li class="header__nav-item" rel="#about_section">
-                        <p class="nav-item__text">О нас</p>
+                        <p class="nav-item__text">{{ __('About') }}</p>
                     </li>
                     <li class="header__nav-item" rel="#services_section">
                         <p class="nav-item__text">Услуги</p>
@@ -198,23 +192,19 @@
                     <div class="about">
                         <div class="about__wrap">
                             <h1 class="about__title">
-                                О НАС
+                                {{ __('About') }}
                             </h1>
                             <p class="about__text about__text_blue">
-                                Мы креативное агентство, совмещающее в себе функции event и рекламной деятельности в
-                                киберспорте, гейминге и гик культуре.
+                                {{ __('We are a creative agency that combines the functions of event and advertising activities in esports, gaming and geek culture') }}.
                             </p>
                         </div>
                         <p class="about__text about__text-description">
-                            <span class="about__text_purple">PinG</span> поможет развиваться в мире маркетинга и
-                            коммерческого партнерства, чтобы найти подходящие возможности, которые соответствуют
-                            ценностям вашего бренда, команды и коммьюнити. Мы точно знаем, как создать проект, который
-                            привлекает любую аудиторию.
+                            <span class="about__text_purple">PinG</span> {{ __('will help you grow in the world of marketing and commercial partnerships to find the right opportunities that match the values ​​of your brand, team and community. We know exactly how to create a project that attracts any audience') }}.
                         </p>
                     </div>
                     <div class="quest">
                         <h2 class="quest__title">
-                            Главный <br> квест
+                            {{ __('Main') }} <br> {{ __('quest') }}
                             <span class="quest__icon-wrap quest__icon-wrap_sm show_popup" rel="popup1">
                                     <span class="quest__icon" rel="popup1">!</span>
                                 </span>
@@ -223,12 +213,12 @@
                                 <span class="quest__icon-wrap show_popup" rel="popup1">
                                     <span class="quest__icon">!</span>
                                 </span>
-                            Наша задача состоит в том, чтобы предлагать <span class="about__text_purple">инновационные и креативные кампании</span>,
-                            которые находят отклик в игровом сообществе.
+                            {{ __('Our mission is to offer') }} <span class="about__text_purple">{{ __('innovative and creative campaigns') }}</span>,
+                            {{ __('that resonate with the gaming community') }}.
                         </p>
                     </div>
                     <div class="partners">
-                        <h2 class="partners__title">Партнёры</h2>
+                        <h2 class="partners__title">{{ __('Partners') }}</h2>
                         <div class="partners__list-wrapper">
                             <div class="partners__list">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/igromania 2.png" alt="">
@@ -266,33 +256,33 @@
             <div class="section swiper-slide" id="services_section">
                 <div class="section__wrapper section__wrapper_no-overflow">
                     <div class="services__header">
-                        <h1 class="services__title" id="services__title">Услуги</h1>
+                        <h1 class="services__title" id="services__title">{{ __('Services') }}</h1>
                         <div class="services__line"></div>
                     </div>
                     <div class="services__wrap services__wrap_active" id="services">
                         <div class="services__list">
                             <div class="services__list-item show-services" rel="tournaments">
                                 <img class="services__list-img" src="/public/img/services/dir_desc_1.png" alt="">
-                                <p class="services__list-text">Турниры</p>
+                                <p class="services__list-text">{{ __('Tournaments') }}</p>
                             </div>
                             <div class="services__list-item show-services" rel="specialProjects">
                                 <img class="services__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                <p class="services__list-text">Спец проекты</p>
+                                <p class="services__list-text">{{ __('Spec projects') }}</p>
                             </div>
                             <div class="services__list-item show-services" rel="offline">
                                 <img class="services__list-img" src="/public/img/services/dir_desc_3.png" alt="">
-                                <p class="services__list-text">Офлайн ивенты</p>
+                                <p class="services__list-text">{{ __('Offline events') }}</p>
                             </div>
                             <div class="services__list-item show-services" rel="digital">
                                 <img class="services__list-img" src="/public/img/services/dir_desc_4.png" alt="">
-                                <p class="services__list-text">digital реклама</p>
+                                <p class="services__list-text">{{ __('Digital ads') }}</p>
                             </div>
                             <div class="services__list-item show-services" rel="design">
                                 <img class="services__list-img" src="/public/img/services/dir_desc_5.png" alt="">
-                                <p class="services__list-text">дизайн</p>
+                                <p class="services__list-text">{{ __('Design') }}</p>
                             </div>
                             <div class="services__list-item show-services" rel="projects">
-                                <p class="services__list-text">все проекты</p>
+                                <p class="services__list-text">{{ __('All projects') }}</p>
                             </div>
                         </div>
                         <div class="services__list_sm">
@@ -302,26 +292,26 @@
                                          rel="tournaments">
                                         <img class="services__list-img" src="/public/img/services/dir_desc_1.png"
                                              alt="">
-                                        <p class="services__list-text">Турниры</p>
+                                        <p class="services__list-text">{{ __('Tournaments') }}</p>
                                     </div>
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services" rel="specialProjects">
                                         <img class="services__list-img" src="/public/img/services/dir_desc_2.png"
                                              alt="">
-                                        <p class="services__list-text">Спец проекты</p>
+                                        <p class="services__list-text">{{ __('Spec projects') }}</p>
                                     </div>
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services" rel="offline">
                                         <img class="services__list-img" src="/public/img/services/dir_desc_3.png"
                                              alt="">
-                                        <p class="services__list-text">Офлайн ивенты</p>
+                                        <p class="services__list-text">{{ __('Offline events') }}</p>
                                     </div>
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services" rel="digital">
                                         <img class="services__list-img" src="/public/img/services/dir_desc_4.png" alt="">
-                                        <p class="services__list-text">digital реклама</p>
+                                        <p class="services__list-text">{{ __('Digital ads') }}</p>
                                     </div>
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services" rel="design">
                                         <img class="services__list-img" src="/public/img/services/dir_desc_5.png"
                                              alt="">
-                                        <p class="services__list-text">дизайн</p>
+                                        <p class="services__list-text">{{ __('Design') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +320,7 @@
                         <div class="services__btn-wrap">
                             <button class="services__btn show-services" rel="projects">
                                 <span class="services__btn-text">
-                                    Все проекты
+                                    {{ __('All projects') }}
                                 </span>
                             </button>
                         </div>
@@ -622,7 +612,7 @@
                 <div class="section__wrapper">
                     <div class="team">
                         <div class="team__header">
-                            <h1 class="services__title">Команда</h1>
+                            <h1 class="services__title">{{ __('Team') }}</h1>
                             <div class="services__line team__header-line"></div>
                         </div>
                         <div class="team__content">
@@ -633,24 +623,23 @@
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
-                                        <h2 class="team__name">Андрей Дубчак</h2>
-                                        <p class="team__title">В агентстве отвечает за:</p>
+                                        <h2 class="team__name">{{ __('Andrey Dubchak') }}</h2>
+                                        <p class="team__title">{{ __("I’m responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Стратегия продвижения бренда и сметы</p>
+                                            <p class="team__list-text">{{ __('Promotion strategy and financial estimates') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Интеграция продукта в сферу гейминга</p>
+                                            <p class="team__list-text">{{ __('Creative events and activations') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Креативное наполнение ивента</p>
+                                            <p class="team__list-text">{{ __("Product's integration into the e-sports industry")  }}</p>
                                         </li>
                                     </ul>
                                     <div class="team__socials">
                                         <a href="https://vk.com/cd_tux0" class="team__socials-item" target="_blank">
                                             <svg viewBox="0 0 42 42" class="contacts__icon">
-
                                                 <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
                                                       fill="#4F4F4F"/>
                                                 <path
@@ -690,21 +679,21 @@
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
-                                        <h2 class="team__name">Виктория Мартоян</h2>
-                                        <p class="team__title">В агентстве отвечает за:</p>
+                                        <h2 class="team__name">{{ __('Vika Martoyan') }}</h2>
+                                        <p class="team__title">{{ __("I'm responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Создание индивидуального мерча</p>
+                                            <p class="team__list-text">{{ __('Live streams graphic design') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Графическое оформление для трансляций</p>
+                                            <p class="team__list-text">{{ __('Venue design solutions') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Дизайнерское решение по декору</p>
+                                            <p class="team__list-text">{{ __('Social media design') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Дизайн соцсетей</p>
+                                            <p class="team__list-text">{{ __('Creation of an individual merch') }}</p>
                                         </li>
                                     </ul>
                                     <div class="team__socials">
@@ -751,21 +740,21 @@
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
-                                        <h2 class="team__name">Антон Мурашов</h2>
-                                        <p class="team__title">В агентстве отвечает за:</p>
+                                        <h2 class="team__name">{{ __('Anton Murashov') }}</h2>
+                                        <p class="team__title">{{ __("I'm responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Консультирование по сложным проектам</p>
+                                            <p class="team__list-text">{{ __('Advising on projects of varying complexity') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Создание и реализация креативов</p>
+                                            <p class="team__list-text">{{ __('Creative ideas generation and realization') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Подбор инфлюенсеров</p>
+                                            <p class="team__list-text">{{ __('Influencer recruitment') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Работа с клиентами</p>
+                                            <p class="team__list-text">{{ __('Partnership with clients') }}</p>
                                         </li>
                                     </ul>
                                     <div class="team__socials">
@@ -812,18 +801,18 @@
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
-                                        <h2 class="team__name">Руслан Соколов</h2>
-                                        <p class="team__title">В агентстве отвечает за:</p>
+                                        <h2 class="team__name">{{ __('Ruslan Sokolov') }}</h2>
+                                        <p class="team__title">{{ __("I'm responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Организация онлайн-трансляций</p>
+                                            <p class="team__list-text">{{ __('Live stream organization') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Подбор инфлюенсеров</p>
+                                            <p class="team__list-text">{{ __('Influencer recruitment') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Видеопроизводство</p>
+                                            <p class="team__list-text">{{ __('Video production') }}</p>
                                         </li>
                                         <li class="team__list-item">
                                             <p class="team__list-text">Event-management</p>
@@ -872,18 +861,18 @@
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
-                                        <h2 class="team__name">Максим Лагуткин</h2>
-                                        <p class="team__title">В агентстве отвечает за:</p>
+                                        <h2 class="team__name">{{ __('Maxim Lagutkin') }}</h2>
+                                        <p class="team__title">{{ __("I'm responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Организация тематических турниров</p>
+                                            <p class="team__list-text">{{ __("PinG Communities events management") }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Графическое наполнение проекта</p>
+                                            <p class="team__list-text">{{ __("Social media promotion strategy and SMM") }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">Продвижение соц.сетей и SMM</p>
+                                            <p class="team__list-text">{{ __("Graphic content of the project") }}</p>
                                         </li>
                                     </ul>
                                     <div class="team__socials">
@@ -932,7 +921,7 @@
                                             <img src="/public/img/team/team1.png" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
-                                            Андрей <br> Дубчак
+                                            {{ __('Andrey') }} <br> {{ __('Dubchak') }}
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
@@ -977,7 +966,7 @@
                                             <img src="/public/img/team/team2.png" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
-                                            Виктория <br> Мартоян
+                                            {{ __('Vika') }} <br> {{ __('Martoyan') }}
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
@@ -1025,7 +1014,7 @@
                                             <img src="/public/img/team/team3.png" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
-                                            Антон <br> Мурашов
+                                            {{ __('Anton') }} <br> {{ __('Murashov') }}
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
@@ -1073,7 +1062,7 @@
                                             <img src="/public/img/team/team4.png" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
-                                            Руслан <br> Соколов
+                                            {{ __('Ruslan') }} <br> {{ __('Sokolov') }}
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
@@ -1121,7 +1110,7 @@
                                             <img src="/public/img/team/team5.png" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
-                                            Максим <br> Лагуткин
+                                            {{ __('Maxin') }} <br> {{ __('Lagutkin') }}
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
@@ -1172,41 +1161,17 @@
                                     <ul class="team__list team__list_sm">
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Стратегия продвижения бренда и сметы
+                                                {{ __('Promotion strategy and financial estimates') }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Интеграция продукта в сферу гейминга
+                                                {{ __("Product's integration into the e-sports industry") }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Креативное наполнение ивента
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="swiper-slide team__slide-text">
-                                    <ul class="team__list team__list_sm">
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                Создание индивидуального мерча
-                                            </p>
-                                        </li>
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                Графическое оформление для трансляций
-                                            </p>
-                                        </li>
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                Дизайнерское решение по декору
-                                            </p>
-                                        </li>
-                                        <li class="team__list-item team__list-item_sm">
-                                            <p class="team__list-text team__list-text_sm">
-                                                Дизайн соцсетей
+                                                {{ __('Creative events and activations') }}
                                             </p>
                                         </li>
                                     </ul>
@@ -1215,22 +1180,22 @@
                                     <ul class="team__list team__list_sm">
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Консультирование по сложным проектам
+                                                {{ __('Creation of an individual merch') }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Создание и реализация креативов
+                                                {{ __('Live streams graphic design') }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Подбор инфлюенсеров
+                                                {{ __('Venue design solutions') }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Работа с клиентами
+                                                {{ __('Social media design') }}
                                             </p>
                                         </li>
                                     </ul>
@@ -1239,17 +1204,41 @@
                                     <ul class="team__list team__list_sm">
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Организация онлайн-трансляций
+                                                {{ __('Advising on projects of varying complexity') }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Подбор инфлюенсеров
+                                                {{ __('Creative ideas generation and realization') }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Видеопроизводство
+                                                {{ __('Influencer recruitment') }}
+                                            </p>
+                                        </li>
+                                        <li class="team__list-item team__list-item_sm">
+                                            <p class="team__list-text team__list-text_sm">
+                                                {{ __('Partnership with clients') }}
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide team__slide-text">
+                                    <ul class="team__list team__list_sm">
+                                        <li class="team__list-item team__list-item_sm">
+                                            <p class="team__list-text team__list-text_sm">
+                                                {{ __('Live stream organization') }}
+                                            </p>
+                                        </li>
+                                        <li class="team__list-item team__list-item_sm">
+                                            <p class="team__list-text team__list-text_sm">
+                                                {{ __('Influencer recruitment') }}
+                                            </p>
+                                        </li>
+                                        <li class="team__list-item team__list-item_sm">
+                                            <p class="team__list-text team__list-text_sm">
+                                                {{ __('Video production') }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
@@ -1263,17 +1252,17 @@
                                     <ul class="team__list team__list_sm">
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Организация тематических турниров
+                                                {{ __('PinG Communities events management') }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Графическое наполнение проекта
+                                                {{ __('Graphic content of the project') }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                Продвижение соц.сетей и SMM
+                                                {{ __('Social media promotion strategy and SMM') }}
                                             </p>
                                         </li>
                                     </ul>
@@ -1287,7 +1276,7 @@
             <div class="section swiper-slide" id="reviews_section">
                 <div class="section__wrapper">
                     <div class="review__header">
-                        <h2 class="services__title review__title">Отзывы</h2>
+                        <h2 class="services__title review__title">{{ __('Reviews') }}</h2>
                         <div class="services__line review__header-line"></div>
                     </div>
                     <div class="review__content">
@@ -1488,7 +1477,7 @@
                 <div class="section__wrapper">
                     <div class="contacts">
                         <div class="contacts__header">
-                            <h1 class="services__title contacts__header-title">Контакты</h1>
+                            <h1 class="services__title contacts__header-title">{{ __('Contacts') }}</h1>
                             <div class="contacts__icon-list">
                                 <div class="contacts__icon-row">
                                     <a href="https://vk.com/ping_agency" class="contacts__icon-wrap" target="_blank">
@@ -1594,7 +1583,7 @@
                             @csrf
                             <div class="form__wrap">
                                 <div class="form__item">
-                                    <label class="form__label" for="name">Имя</label>
+                                    <label class="form__label" for="name">{{ __('Name') }}</label>
                                     <div class="form__input-wrap">
                                         <input class="form__input form__field" type="text" id="name" name="name" autocomplete="off">
                                     </div>
@@ -1611,48 +1600,48 @@
                                         <textarea class="form__textarea form__field" id="message" name="message" cols="30" rows="10" autocomplete="off"></textarea>
                                     </div>
                                 </div>
-                                <button class="form__btn" type="submit">Отправить</button>
+                                <button class="form__btn" type="submit">{{ __('Send') }}</button>
                             </div>
                             <div class="form__list">
-                                <h2 class="form__subtitle">Выберите услугу</h2>
+                                <h2 class="form__subtitle">{{ __('Choose services') }}</h2>
                                 <div class="form__list-item">
                                     <input name="tours" type="checkbox" id="tours" hidden>
                                     <label class="form__checkbox-label" for="tours">
                                         <span class="form__checkbox"></span>
-                                        Турниры
+                                        {{ __('Tournaments') }}
                                     </label>
                                 </div>
                                 <div class="form__list-item">
                                     <input name="specialProjects" type="checkbox" id="specialProjects" hidden>
                                     <label class="form__checkbox-label" for="specialProjects">
                                         <span class="form__checkbox"></span>
-                                        Спец проекты
+                                        {{ __('Spec projects') }}
                                     </label>
                                 </div>
                                 <div class="form__list-item">
                                     <input name="offlineEvents" type="checkbox" id="offlineEvents" hidden>
                                     <label class="form__checkbox-label" for="offlineEvents">
                                         <span class="form__checkbox"></span>
-                                        Офлайн ивенты
+                                        {{ __('Offline events') }}
                                     </label>
                                 </div>
                                 <div class="form__list-item">
                                     <input name="digitalAds" type="checkbox" id="digitalAds" hidden>
                                     <label class="form__checkbox-label" for="digitalAds">
                                         <span class="form__checkbox"></span>
-                                        Digital-реклама
+                                        {{ __('Digital ads') }}
                                     </label>
                                 </div>
                                 <div class="form__list-item">
                                     <input name="design" type="checkbox" id="design" hidden>
                                     <label class="form__checkbox-label" for="design">
                                         <span class="form__checkbox"></span>
-                                        Дизайн
+                                        {{ __('Design') }}
                                     </label>
                                 </div>
                             </div>
                             <div class="form__btn-wrap">
-                                <button class="form__btn form__btn_sm" type="submit">Отправить</button>
+                                <button class="form__btn form__btn_sm" type="submit">{{ __('Send') }}</button>
                             </div>
                         </form>
                         <div class="contacts__icons-wrap">

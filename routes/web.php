@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('locale/{locale}', [
+Route::get('/locale/{locale}', [
     LocaleController::class, 'changeLocale'
 ]);
 
