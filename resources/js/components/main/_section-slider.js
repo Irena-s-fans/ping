@@ -34,7 +34,7 @@ function enableSwiper() {
     const sw = new Swiper('.fullpage', {
         modules: [Pagination, Mousewheel],
         direction: 'vertical',
-        //threshold: 25,
+        threshold: 25,
         spaceBetween: 150,
         speed: 750,
         mousewheel: {
