@@ -50,7 +50,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('seo', function() {
         return view('seo');
     });
-    Route::get('/all', [App\Http\Controllers\ProjectsController::class, 'index']);
+    Route::get('/projects/all', [App\Http\Controllers\ProjectsController::class, 'index']);
 });
 
 Auth::routes();
