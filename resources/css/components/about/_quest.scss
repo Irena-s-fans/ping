@@ -108,12 +108,14 @@
         @include to(768) {
             width: clamp(35px, 5.2vw, 40px);
             height: clamp(35px, 5.2vw, 40px);
+            position: static;
             top: auto;
-            bottom: 4.5%;
-            left: 13%;
-            display: flex;
+            bottom: auto;
+            left: auto;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
+            vertical-align: middle;
             border-color: #90FFFF;
             transform: none;
         }

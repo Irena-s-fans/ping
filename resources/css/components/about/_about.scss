@@ -49,6 +49,7 @@
         font-weight: 900;
         line-height: 100%;
         color: white;
+        text-transform: uppercase;
 
         @include from(1921) {
             font-size: clamp(30px, min(6.3vw, 11.29vh), 161px);

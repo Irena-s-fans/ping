@@ -4,7 +4,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 
 const paginationNames = ['О нас', 'Услуги', 'Команда', 'Отзывы', 'Контакты'];
+const paginationNamesEN = ['About', 'Services', 'Team', 'Reviews', 'Contacts'];
 const paginationRels = ['#about_section', '#services_section', '#team_section', '#reviews_section', '#contacts_section'];
+const isLocaleEnglish = $('html').attr('lang') === 'en';
 
 $(document).ready(function() {
     let swiper = enableSwiper();
@@ -44,7 +46,11 @@ function enableSwiper() {
             el: '.header__nav-list',
             type: 'bullets',
             renderBullet: function (index, className) {
-                return `<li class="${className}" rel="${paginationRels[index]}"><p class="nav-item__text">${paginationNames[index]}</p></li>`
+                if (isLocaleEnglish) {
+                    return `<li class="${className}" rel="${paginationRels[index]}"><p class="nav-item__text">${paginationNamesEN[index]}</p></li>`
+                } else {
+                    return `<li class="${className}" rel="${paginationRels[index]}"><p class="nav-item__text">${paginationNames[index]}</p></li>`
+                }
             },
             bulletClass: 'header__nav-item',
             bulletActiveClass: 'header__nav-item_active',

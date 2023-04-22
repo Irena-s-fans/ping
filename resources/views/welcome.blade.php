@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ App::currentLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -100,6 +100,282 @@
         </div>
     </div>
 </div>
+
+<style>
+    .loader {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: url("/public/img/bg.png");
+        z-index: 9999;
+    }
+    .loader_active {
+        z-index: 9999;
+    }
+    .loader__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5%;
+    }
+    .loader__logo {
+        width: min(43.28vw, 830px);
+    }
+    @media (min-width: 1921px) {
+        .loader__logo {
+            width: min(43.28vw, 1107px);
+        }
+    }
+    @media (max-width: 991px) {
+        .loader__logo {
+            width: 450px;
+        }
+    }
+    @media (max-width: 576px) {
+        .loader__logo {
+            max-width: 95vw;
+        }
+    }
+    .loader__progress {
+        width: 1000px;
+        height: 23px;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: clamp(25px, 3.9vw, 60px);
+        padding: 3px;
+        transform: skewX(-16deg);
+        border: 1px solid #FFFFFF;
+    }
+    @media (min-width: 2200px) {
+        .loader__progress {
+            width: 1250px;
+        }
+    }
+    @media (min-width: 1921px) {
+        .loader__progress {
+            height: clamp(23px, 1.09vw, 28px);
+            margin-top: clamp(25px, 3.9vw, 100px);
+        }
+    }
+    @media (max-width: 1600px) {
+        .loader__progress {
+            width: 750px;
+        }
+    }
+    @media (max-width: 1340px) {
+        .loader__progress {
+            width: 600px;
+        }
+    }
+    @media (max-width: 991px) {
+        .loader__progress {
+            width: 500px;
+        }
+    }
+    @media (max-width: 768px) {
+        .loader__progress {
+            width: 450px;
+        }
+    }
+    @media (max-width: 576px) {
+        .loader__progress {
+            width: 400px;
+        }
+    }
+    @media (max-width: 450px) {
+        .loader__progress {
+            width: 330px;
+        }
+    }
+    @media (max-width: 375px) {
+        .loader__progress {
+            width: 280px;
+        }
+    }
+    .loader__progress::before {
+        content: "";
+        width: 2px;
+        height: calc(100% + 2px);
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-8px, -50%);
+        background: #8E0CD0;
+    }
+    .loader__el {
+        width: calc((1000px - 2 * 3px - 71 * 4px) / 71);
+        height: 100%;
+        flex-shrink: 0;
+        margin-right: 4px;
+        background: #90FFFF;
+        opacity: 0;
+        transition: 0.35s opacity;
+    }
+    .loader__el:last-child {
+        margin-right: 0;
+    }
+    .loader__el_active {
+        opacity: 1;
+    }
+    @media (min-width: 2200px) {
+        .loader__el {
+            width: calc((1250px - 2 * 3px - 71 * 4px) / 71);
+        }
+    }
+    @media (max-width: 1600px) {
+        .loader__el {
+            width: calc((750px - 2 * 3px - 50 * 4px) / 50);
+        }
+        .loader__el:nth-last-child(-n+21) {
+            display: none;
+        }
+    }
+    @media (max-width: 1340px) {
+        .loader__el {
+            width: calc((600px - 2 * 3px - 40 * 4px) / 40);
+        }
+        .loader__el:nth-last-child(-n+31) {
+            display: none;
+        }
+    }
+    @media (max-width: 991px) {
+        .loader__el {
+            width: calc((500px - 2 * 3px - 35 * 4px) / 35);
+        }
+        .loader__el:nth-last-child(-n+36) {
+            display: none;
+        }
+    }
+    @media (max-width: 768px) {
+        .loader__el {
+            width: calc((450px - 2 * 3px - 27 * 4px) / 27);
+        }
+        .loader__el:nth-last-child(-n+44) {
+            display: none;
+        }
+    }
+    @media (max-width: 576px) {
+        .loader__el {
+            width: calc((400px - 2 * 3px - 24 * 4px) / 24);
+        }
+        .loader__el:nth-last-child(-n+47) {
+            display: none;
+        }
+    }
+    @media (max-width: 450px) {
+        .loader__el {
+            width: calc((330px - 2 * 3px - 20 * 4px) / 20);
+        }
+        .loader__el:nth-last-child(-n+51) {
+            display: none;
+        }
+    }
+    @media (max-width: 375px) {
+        .loader__el {
+            width: calc((280px - 2 * 3px - 16 * 4px) / 16);
+        }
+        .loader__el:nth-last-child(-n+55) {
+            display: none;
+        }
+    }
+    .loader__text-wrap {
+        margin-top: 30px;
+        text-align: center;
+    }
+    @media (max-width: 991px) {
+        .loader__text-wrap {
+            margin-top: 20px;
+        }
+    }
+    .loader__text {
+        font-family: Play, sans-serif;
+        font-weight: 400;
+        font-size: 25px;
+        color: #FFFFFF;
+    }
+    @media (min-width: 1921px) {
+        .loader__text {
+            font-size: clamp(25px, 1.25vw, 32px);
+        }
+    }
+
+    .main_disabled {
+        display: block !important;
+    }
+</style>
+<script>
+    (function() {
+        let loadRatio = 0
+        const intervalID = setInterval(() => {
+            loadRatio += 0.02;
+            if (loadRatio >= 1) {
+                clearInterval(intervalID);
+                finishLoad();
+            } else {
+                changeLoaderPercent(loadRatio)
+            }
+        },100)
+    }());
+
+    $(window).on('load', function() {
+        finishLoad();
+    });
+
+    function changeLoaderPercent(ratio) {
+        if ($('.loader__text-percents').hasClass('finished')) {
+            return false;
+        }
+
+        const percents = ratio * 100;
+        let elementsAmount = 0;
+        $('.loader__text-percents').html(percents.toFixed());
+
+        $('.loader__el').each(function(idx) {
+            if ($(this).css('display') === 'none') {
+                return false;
+            }
+
+            elementsAmount++;
+        });
+
+        $('.loader__el').each(function(idx) {
+            if ($(this).css('display') === 'none' || ratio < (idx + 1) / elementsAmount) {
+                return false;
+            }
+            const isHidden = !$(this).hasClass('loader__el_active');
+
+            if (isHidden) {
+                if (idx + 1 === elementsAmount) {
+                    if (document.readyState === 'complete') {
+                        $(this).addClass('loader__el_active');
+                    } else {
+                        return false;
+                    }
+                } else {
+                    $(this).addClass('loader__el_active');
+                }
+            }
+        });
+    }
+
+    function finishLoad() {
+        changeLoaderPercent(1);
+        $('.loader__text-percents').addClass('finished');
+        $('.loader').fadeOut(500);
+        $('.main').fadeIn(750);
+    }
+</script>
+
 <div class="popup" id="popup1">
     <div class="popup__body">
         <div class="popup__content">
@@ -127,7 +403,7 @@
         <img src="/public/img/cross.svg" alt="" class="popup-video__cross">
     </div>
 </div>
-<div class="container main main_disabled">
+<div class="container main">
     <div class="header__nav_sm">
         <img src="/public/img/logo_sm.png" alt="" class="header__logo header__logo_sm">
         <div class="header__burger">
@@ -185,7 +461,7 @@
         <div class="swiper-wrapper">
             <div class="section swiper-slide" id="about_section">
                 <div class="section__wrapper">
-                    <video class="about__video" autoplay muted loop preload="auto">
+                    <video class="about__video" autoplay muted loop>
                         <source src="/public/videos/main.mp4" type="video/mp4">
                         <source src="/public/videos/test.webm" type="video/webm">
                     </video>
@@ -1595,7 +1871,7 @@
                                     </div>
                                 </div>
                                 <div class="form__item">
-                                    <label class="form__label form__textarea-label" for="message">Сообщение</label>
+                                    <label class="form__label form__textarea-label" for="message">{{ __('Message') }}</label>
                                     <div class="form__texarea-wrap">
                                         <textarea class="form__textarea form__field" id="message" name="message" cols="30" rows="10" autocomplete="off"></textarea>
                                     </div>
@@ -1752,284 +2028,4 @@
 </div>
 <img src="/public/img/bg.png" alt="" class="body__background">
 </body>
-<style>
-    .loader {
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: url("/public/img/bg.png");
-        z-index: 9999;
-    }
-    .loader_active {
-        z-index: 9999;
-    }
-    .loader__wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: -5%;
-    }
-    .loader__logo {
-        width: min(43.28vw, 830px);
-    }
-    @media (min-width: 1921px) {
-        .loader__logo {
-            width: min(43.28vw, 1107px);
-        }
-    }
-    @media (max-width: 991px) {
-        .loader__logo {
-            width: 450px;
-        }
-    }
-    @media (max-width: 576px) {
-        .loader__logo {
-            max-width: 95vw;
-        }
-    }
-    .loader__progress {
-        width: 1000px;
-        height: 23px;
-        box-sizing: border-box;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: clamp(25px, 3.9vw, 60px);
-        padding: 3px;
-        transform: skewX(-16deg);
-        border: 1px solid #FFFFFF;
-    }
-    @media (min-width: 2200px) {
-        .loader__progress {
-            width: 1250px;
-        }
-    }
-    @media (min-width: 1921px) {
-        .loader__progress {
-            height: clamp(23px, 1.09vw, 28px);
-            margin-top: clamp(25px, 3.9vw, 100px);
-        }
-    }
-    @media (max-width: 1600px) {
-        .loader__progress {
-            width: 750px;
-        }
-    }
-    @media (max-width: 1340px) {
-        .loader__progress {
-            width: 600px;
-        }
-    }
-    @media (max-width: 991px) {
-        .loader__progress {
-            width: 500px;
-        }
-    }
-    @media (max-width: 768px) {
-        .loader__progress {
-            width: 450px;
-        }
-    }
-    @media (max-width: 576px) {
-        .loader__progress {
-            width: 400px;
-        }
-    }
-    @media (max-width: 450px) {
-        .loader__progress {
-            width: 330px;
-        }
-    }
-    @media (max-width: 375px) {
-        .loader__progress {
-            width: 280px;
-        }
-    }
-    .loader__progress::before {
-        content: "";
-        width: 2px;
-        height: calc(100% + 2px);
-        box-sizing: border-box;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(-8px, -50%);
-        background: #8E0CD0;
-    }
-    .loader__el {
-        width: calc((1000px - 2 * 3px - 71 * 4px) / 71);
-        height: 100%;
-        flex-shrink: 0;
-        margin-right: 4px;
-        background: #90FFFF;
-        opacity: 0;
-        transition: 0.35s opacity;
-    }
-    .loader__el:last-child {
-        margin-right: 0;
-    }
-    .loader__el_active {
-        opacity: 1;
-    }
-    @media (min-width: 2200px) {
-        .loader__el {
-            width: calc((1250px - 2 * 3px - 71 * 4px) / 71);
-        }
-    }
-    @media (max-width: 1600px) {
-        .loader__el {
-            width: calc((750px - 2 * 3px - 50 * 4px) / 50);
-        }
-        .loader__el:nth-last-child(-n+21) {
-            display: none;
-        }
-    }
-    @media (max-width: 1340px) {
-        .loader__el {
-            width: calc((600px - 2 * 3px - 40 * 4px) / 40);
-        }
-        .loader__el:nth-last-child(-n+31) {
-            display: none;
-        }
-    }
-    @media (max-width: 991px) {
-        .loader__el {
-            width: calc((500px - 2 * 3px - 35 * 4px) / 35);
-        }
-        .loader__el:nth-last-child(-n+36) {
-            display: none;
-        }
-    }
-    @media (max-width: 768px) {
-        .loader__el {
-            width: calc((450px - 2 * 3px - 27 * 4px) / 27);
-        }
-        .loader__el:nth-last-child(-n+44) {
-            display: none;
-        }
-    }
-    @media (max-width: 576px) {
-        .loader__el {
-            width: calc((400px - 2 * 3px - 24 * 4px) / 24);
-        }
-        .loader__el:nth-last-child(-n+47) {
-            display: none;
-        }
-    }
-    @media (max-width: 450px) {
-        .loader__el {
-            width: calc((330px - 2 * 3px - 20 * 4px) / 20);
-        }
-        .loader__el:nth-last-child(-n+51) {
-            display: none;
-        }
-    }
-    @media (max-width: 375px) {
-        .loader__el {
-            width: calc((280px - 2 * 3px - 16 * 4px) / 16);
-        }
-        .loader__el:nth-last-child(-n+55) {
-            display: none;
-        }
-    }
-    .loader__text-wrap {
-        margin-top: 30px;
-        text-align: center;
-    }
-    @media (max-width: 991px) {
-        .loader__text-wrap {
-            margin-top: 20px;
-        }
-    }
-    .loader__text {
-        font-family: Play, sans-serif;
-        font-weight: 400;
-        font-size: 25px;
-        color: #FFFFFF;
-    }
-    @media (min-width: 1921px) {
-        .loader__text {
-            font-size: clamp(25px, 1.25vw, 32px);
-        }
-    }
-
-    .main_disabled {
-        display: block !important;
-    }
-</style>
-
-<script>
-    $(document).ready(function() {
-        const mediaFiles = $('img, video[preload="auto"]');
-        const overallAmount = mediaFiles.length;
-        let loadedAmount = 0;
-
-        changeLoaderPercent(loadedAmount / overallAmount);
-
-        mediaFiles
-            .on('load', function() {
-                loadedAmount++;
-                changeLoaderPercent(loadedAmount / overallAmount);
-            }).on('error', function() {
-                console.log('errored')
-                loadedAmount++;
-                changeLoaderPercent(loadedAmount / overallAmount);
-            });
-
-        setTimeout(function() {
-            finishLoad();
-        }, 7500)
-    });
-
-    $(window).on('load', function() {
-        finishLoad();
-    });
-
-    function changeLoaderPercent(ratio) {
-        const percents = ratio * 100;
-        let elementsAmount = 0;
-        $('.loader__text-percents').html(percents.toFixed());
-
-        $('.loader__el').each(function(idx) {
-            if ($(this).css('display') === 'none') {
-                return false;
-            }
-
-            elementsAmount++;
-        });
-
-        $('.loader__el').each(function(idx) {
-            if ($(this).css('display') === 'none' || ratio < (idx + 1) / elementsAmount) {
-                return false;
-            }
-            const isHidden = !$(this).hasClass('loader__el_active');
-
-            if (isHidden) {
-                if (idx + 1 === elementsAmount) {
-                    if (document.readyState === 'complete') {
-                        $(this).addClass('loader__el_active');
-                    } else {
-                        return false;
-                    }
-                } else {
-                    $(this).addClass('loader__el_active');
-                }
-            }
-        });
-    }
-
-    function finishLoad() {
-        changeLoaderPercent(1);
-        $('.loader').fadeOut(500);
-        $('.main').fadeIn(750);
-    }
-
-</script>
 </html>
