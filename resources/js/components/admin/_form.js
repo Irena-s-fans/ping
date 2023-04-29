@@ -38,7 +38,9 @@ $(document).ready(function() {
 
         if (form.valid()) {
             const formData = new FormData(form.get(0));
-            formData.append('text', tinymce.get('text').getContent({format: 'Document'}));
+            formData.set('text', tinymce.get('text').getContent({format: 'Document'}));
+            formData.set('lang', form.find('input[name="lang"]').is(':checked') ? 'on' : 'off');
+            formData.set('linkExternal', form.find('input[name="linkExternal"]').is(':checked') ? 'on' : 'off');
 
             $.ajax({
                 type: 'POST',
@@ -70,7 +72,9 @@ $(document).ready(function() {
 
         if (form.valid()) {
             const formData = new FormData(form.get(0));
-            formData.append('text', tinymce.get('text').getContent({format: 'Document'}));
+            formData.set('text', tinymce.get('text').getContent({format: 'Document'}));
+            formData.set('lang', form.find('input[name="lang"]').is(':checked') ? 'on' : 'off');
+            formData.set('linkExternal', form.find('input[name="linkExternal"]').is(':checked') ? 'on' : 'off');
 
             $.ajax({
                 type: 'POST',
