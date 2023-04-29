@@ -57,9 +57,9 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('seo', function() {
         return view('seo');
     });
-    Route::get('/all', [App\Http\Middleware\ProjectsController::class, 'index']);
+    Route::get('/projects/all', [App\Http\Controllers\ProjectsController::class, 'index']);
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Middleware\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
