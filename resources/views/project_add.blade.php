@@ -14,7 +14,7 @@
     <h2 class="admin__title">
         Добавить проект
     </h2>
-    <form class="form admin__form" data-url="/admin/projects/edit" redirect-on-submit>
+    <form class="form admin__form" data-url="/admin/projects/add" redirect-on-submit>
         <input type="hidden" name="projectID" value="">
         <div class="form__block">
             <input name="lang" type="checkbox" id="lang" hidden>
@@ -69,7 +69,7 @@
             <textarea class="wysiwyg" id="text" name="text" cols="30" rows="10" placeholder="Введите текст"></textarea>
         </div>
         <div class="form__block">
-            <a class="admin__btn form__btn edit__btn">
+            <a class="admin__btn form__btn add__btn">
                 <span class="admin__btn-text">
                     Добавить
                 </span>

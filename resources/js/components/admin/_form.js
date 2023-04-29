@@ -30,7 +30,7 @@ $(document).ready(function() {
         },
     })
 
-    $('.edit__btn').on('click', function(e) {
+    $('.edit__btn, .add__btn').on('click', function(e) {
         e.preventDefault();
         const form = $(this).closest('form');
 

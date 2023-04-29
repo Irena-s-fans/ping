@@ -18,6 +18,11 @@ class ProjectsController extends Controller
         ]);
     }
 
+    public function new()
+    {
+        return view('project_add');
+    }
+
     public function delete(Request $request)
     {
         Project::where('id', $request->projectID)->delete();
