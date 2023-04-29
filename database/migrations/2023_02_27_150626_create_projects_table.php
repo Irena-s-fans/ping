@@ -21,7 +21,7 @@ class CreateProjectsTable extends Migration
             $table->string('description')->nullable();
             $table->smallInteger('status')->nullable();
             $table->smallInteger('is_vk')->nullable();
-            $table->smallInteger('id_eng')->nullable();
+            $table->smallInteger('is_eng')->nullable();
             $table->timestamps();
         });
     }
