@@ -16,7 +16,7 @@
         Изменить проект
     </h2>
     <form class="form admin__form" data-url="/admin/projects/edit/project_edit">
-        <input type="hidden" name="projectID" value="">
+        <input type="hidden" name="projectID" value="<?= $project->id ?>">
         <div class="form__block">
             <input name="lang" type="checkbox" id="lang" <?= $project->is_eng ? 'checked' : '' ?> hidden>
             <label class="form__checkbox-label" for="lang">

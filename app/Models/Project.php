@@ -44,4 +44,31 @@ class Project extends Model
     {
         return self::query()->where(['id' => $id])->first();
     }
+
+
+    /**
+     * @param string $isVk
+     * @return null|int
+     */
+    public static function getResultForVk(string $isVk): ?int
+    {
+        if ($isVk == 'on') {
+            return null;
+        } else {
+            return  1;
+        }
+    }
+
+    /**
+     * @param string $isEng
+     * @return null|int
+     */
+    public static function getResultForEng(string $isEng): ?int
+    {
+        if ($isEng == 'on') {
+            return  1;
+        } else {
+            return null;
+        }
+    }
 }

@@ -20,6 +20,9 @@
             <th>description</th>
             <th>preview</th>
             <th>pic</th>
+            <th>video</th>
+            <th>is_vk</th>
+            <th>is_eng</th>
             @foreach ($projects as $project)
                 <tr>
                     <td>{{ $project->title}}</td>
@@ -30,6 +33,9 @@
                             {{ \App\Models\Project::getPicUrl($project->pic)}}
                         @endif
                     </td>
+                    <td>{{$project->video}}</td>
+                    <td>{{$project->is_vk}}</td>
+                    <td>{{$project->is_eng}}</td>
                     <td><a href="/admin/projects/edit/<?= $project->id ?>">Редактировать</a></td>
                     <td><a class="project-delete" href="/admin/projects/delete" data-project-id="<?= $project->id ?>">X</a></td>
                 </tr>

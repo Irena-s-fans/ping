@@ -66,7 +66,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 
     Route::get('projects/edit/{projectID}', [App\Http\Controllers\ProjectsController::class, 'edit']);
 
-    Route::post('projects/edit/project_edit', [App\Http\Controllers\ProjectsController::class, 'editProject']);
+    Route::post('projects/edit/project_edit', [App\Http\Controllers\ProjectsController::class, 'projectEdit']);
 
     Route::post('projects/delete', [App\Http\Controllers\ProjectsController::class, 'delete']);
 });
