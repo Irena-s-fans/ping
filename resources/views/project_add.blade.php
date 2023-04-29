@@ -14,8 +14,7 @@
     <h2 class="admin__title">
         Добавить проект
     </h2>
-    <form class="form admin__form" data-url="/admin/projects/add">
-        <input type="hidden" name="projectID" value="">
+    <form class="form admin__form" data-url="/projects/add">
         <div class="form__block">
             <input name="lang" type="checkbox" id="lang" hidden>
             <label class="form__checkbox-label" for="lang">
@@ -59,7 +58,7 @@
             <input name="linkExternal" type="checkbox" id="linkExternal" hidden>
             <label class="form__checkbox-label" for="linkExternal">
                 <span class="form__checkbox"></span>
-                Встроенное видео из ютуба?
+                Встроено видео из youtube
             </label>
         </div>
         <div class="form__block">
