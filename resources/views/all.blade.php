@@ -1,6 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+    <a href="/home" class="admin__btn admin__btn_back">
+        <span class="admin__btn-text">
+            На главную
+        </span>
+    </a>
+    <h2 class="admin__title">
+        Все проекты
+    </h2>
+    <a href="/admin/projects/add" class="admin__btn admin__btn_back">
+        <span class="admin__btn-text">
+            Добавить проект
+        </span>
+    </a>
     @if ($projects)
         <table>
             <th>title</th>

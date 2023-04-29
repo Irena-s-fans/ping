@@ -69,7 +69,7 @@
             <textarea class="wysiwyg" id="text" name="text" cols="30" rows="10" placeholder="Введите текст"></textarea>
         </div>
         <div class="form__block">
-            <a class="admin__btn form__btn">
+            <a class="admin__btn form__btn edit__btn">
                 <span class="admin__btn-text">
                     Добавить
                 </span>
