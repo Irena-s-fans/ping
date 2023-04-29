@@ -18,7 +18,10 @@ class Project extends Model
         'title',
         'description',
         'preview',
-        'pic'
+        'pic',
+        'is_vk',
+        'status',
+        'is_eng'
     ];
 
     public static function getPicUrl($url): string
