@@ -58,6 +58,8 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 
     Route::get('projects/all', [App\Http\Controllers\ProjectsController::class, 'index']);
 
+    Route::get('projects/add', [App\Http\Controllers\ProjectsController::class, 'add']);
+
     Route::get('projects/edit/{projectID}', function($projectID) {
         return view('project_edit', ['projectID' => $projectID]);
     });
