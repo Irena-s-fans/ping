@@ -19,7 +19,7 @@
                     СЕО
                 </span>
             </a>
-            <a class="dashboard__el admin__btn" href="/admin/offers">
+            <a class="dashboard__el admin__btn" href="/admin/projects/all">
                 <span class="admin__btn-text">
                     Проекты
                 </span>

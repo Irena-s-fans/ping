@@ -17,4 +17,12 @@ class ProjectsController extends Controller
             'projects' => $projects
         ]);
     }
+
+    public function delete(Request $request)
+    {
+        Project::where('id', $request->projectID)->delete();
+        return json_encode([
+            'status' => 1,
+        ]);
+    }
 }

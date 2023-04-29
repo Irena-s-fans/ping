@@ -10,6 +10,7 @@
     <script src="/public/js/libs/jquery-3.6.1.min.js"></script>
     <script src="/public/js/libs/jquery.validate.min.js"></script>
     <script src="/public/js/admin.js"></script>
+    <script src="https://cdn.tiny.cloud/1/m0995flxa8uyq68fgacwx6dsx5ed4ozsn4k13sm7fpwwzw4t/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body class="body">
     <div class="admin">
@@ -51,5 +52,19 @@
             </main>
         </div>
     </div>
+    <script>
+        tinymce.init({
+            selector: 'textarea.wysiwyg',
+            height: 300,
+            menubar: 'format',
+            plugins: [
+                'autolink', 'lists', 'link', 'charmap', 'preview',
+                'anchor', 'visualblocks', 'fullscreen',
+                'help', 'wordcount'
+            ],
+            toolbar: 'undo redo | formatselect fontselect fontsizeselect | bold italic backcolor | bullist numlist outdent indent  link | code  visualblocks  | removeformat | help | link image',
+            promotion: false,
+        });
+    </script>
 </body>
 </html>

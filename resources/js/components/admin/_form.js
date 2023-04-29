@@ -36,6 +36,7 @@ $(document).ready(function() {
 
         if (form.valid()) {
             const formData = new FormData(form.get(0));
+            formData.append('text', tinymce.get('text').getContent({format: 'Document'}));
 
             $.ajax({
                 type: 'POST',

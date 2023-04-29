@@ -51,13 +51,18 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('dashboard', function() {
         return view('dashboard');
     });
-    Route::get('offers', function() {
-        return view('offers');
-    });
+
     Route::get('seo', function() {
         return view('seo');
     });
-    Route::get('/projects/all', [App\Http\Controllers\ProjectsController::class, 'index']);
+
+    Route::get('projects/all', [App\Http\Controllers\ProjectsController::class, 'index']);
+
+    Route::get('projects/edit/{projectID}', function($projectID) {
+        return view('project_edit', ['projectID' => $projectID]);
+    });
+
+    Route::post('projects/delete', [App\Http\Controllers\ProjectsController::class, 'delete']);
 });
 
 Auth::routes();
