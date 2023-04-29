@@ -40,9 +40,10 @@ class ProjectsController extends Controller
      */
     public function edit(Request $request)
     {
+        $project = Project::getProjectById($request->projectID);
 
         return view('project_edit', [
-            'projectId' => 'projectId'
+            'project' => $project
         ]);
     }
 }

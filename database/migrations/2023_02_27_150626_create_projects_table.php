@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('preview');
             $table->string('pic')->nullable();
+            $table->string('video')->nullable();
             $table->string('title');
             $table->string('description')->nullable();
             $table->smallInteger('status')->nullable();
