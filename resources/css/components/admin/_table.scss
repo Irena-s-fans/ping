@@ -1,15 +1,24 @@
 .table {
     max-width: 100%;
+    border: 1px solid #FFFFFF;
 
     &__row {
 
     }
 
     &__cell {
+        text-align: center;
+        padding: 5px 10px;
+        border: 1px solid #FFFFFF;
 
+        &:first-child {
+
+        }
     }
 
     &__text {
+        font-size: 16px;
+        vertical-align: middle;
         font-weight: 700;
     }
 
