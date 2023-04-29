@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <a href="/home" class="admin__btn admin__btn_back">
         <span class="admin__btn-text">
             На главную
@@ -12,7 +13,7 @@
         </span>
     </a>
     <h2 class="admin__title">
-        Добавить проект
+        Изменить проект
     </h2>
     <form class="form admin__form" data-url="/admin/projects/edit">
         <input type="hidden" name="projectID" value="">
@@ -59,7 +60,7 @@
             <input name="linkExternal" type="checkbox" id="linkExternal" hidden>
             <label class="form__checkbox-label" for="linkExternal">
                 <span class="form__checkbox"></span>
-                Встроенное видео из ютуба?
+                Встроено видео из youtube
             </label>
         </div>
         <div class="form__block">
@@ -71,7 +72,7 @@
         <div class="form__block">
             <a class="admin__btn form__btn edit__btn">
                 <span class="admin__btn-text">
-                    Добавить
+                    Изменить
                 </span>
             </a>
         </div>

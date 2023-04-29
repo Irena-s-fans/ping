@@ -24,7 +24,7 @@
                 <tr>
                     <td>{{ $project->title}}</td>
                     <td>{{ $project->description}}</td>
-                    <td>{{ \App\Models\Project::getPreviewUrl($project->preview)}}</td>
+                    <td>{{ $project->preview }}</td>
                     <td>
                         @if ($project->pic)
                             {{ \App\Models\Project::getPicUrl($project->pic)}}

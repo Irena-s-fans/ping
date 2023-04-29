@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\Seo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
 
 class ProjectsController extends Controller
 {
@@ -23,6 +24,20 @@ class ProjectsController extends Controller
         Project::where('id', $request->projectID)->delete();
         return json_encode([
             'status' => 1,
+        ]);
+    }
+
+    /**
+     * Редактирование проекта
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function edit(Request $request)
+    {
+
+        return view('project_edit', [
+            'projectId' => 'projectId'
         ]);
     }
 }

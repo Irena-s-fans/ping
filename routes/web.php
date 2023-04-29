@@ -60,9 +60,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 
     Route::get('projects/add', [App\Http\Controllers\ProjectsController::class, 'add']);
 
-    Route::get('projects/edit/{projectID}', function($projectID) {
-        return view('project_edit', ['projectID' => $projectID]);
-    });
+    Route::get('projects/edit/{projectID}', [App\Http\Controllers\ProjectsController::class, 'edit']);
 
     Route::post('projects/delete', [App\Http\Controllers\ProjectsController::class, 'delete']);
 });
