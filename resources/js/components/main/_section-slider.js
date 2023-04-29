@@ -17,8 +17,8 @@ $(document).ready(function() {
         resizeTimer = setTimeout(() => {
             if ($(window).width() <= 768) {
                 if (!swiper.destroyed) {
-                    $('.header__nav-item_active').removeClass('header__nav-item_active');
-                    $('.header__nav-item:first-of-type').addClass('header__nav-item_active');
+                    $('.header__nav-item_active:not(.header__language, .header__nav-language)').removeClass('header__nav-item_active');
+                    $('.header__nav-item:not(.header__language, .header__nav-language):first-of-type').addClass('header__nav-item_active');
                     swiper.destroy( true, true );
                 }
                 return 0;
@@ -59,9 +59,9 @@ function enableSwiper() {
         },
     });
 
-    $('.header__nav-item').on('click', function() {
+    $('.header__nav-item:not(.header__language, .header__nav-language)').on('click', function() {
         if ($(window).width() <= 768) {
-            $('.header__nav-item_active').removeClass('header__nav-item_active');
+            $('.header__nav-item_active:not(.header__language, .header__nav-language)').removeClass('header__nav-item_active');
             $(this).addClass('header__nav-item_active');
             $('.header').removeClass('header_active');
             $($(this).attr('rel')).get(0).scrollIntoView({behavior: 'smooth'});

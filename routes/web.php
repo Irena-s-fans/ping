@@ -4,6 +4,7 @@ use App\Http\Controllers\FormController;
 use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +19,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware(\App\Http\Middleware\LocaleMiddleware::class);
 
-Route::get('/locale/{locale}', [
-    LocaleController::class, 'changeLocale'
-]);
+Route::get('/locale/{key}', function ($key) {
+    Session::put('locale', $key);
+    return redirect()->back();
+});
 
 Route::post(
     '/form/send',
@@ -55,9 +57,9 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('seo', function() {
         return view('seo');
     });
-    Route::get('/all', [App\Http\Controllers\ProjectsController::class, 'index']);
+    Route::get('/all', [App\Http\Middleware\ProjectsController::class, 'index']);
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Middleware\HomeController::class, 'index'])->name('home');

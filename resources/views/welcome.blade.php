@@ -420,15 +420,11 @@
                 <ul class="header__nav-list">
 
                 </ul>
-                <div class="header__nav-item header__language">
+                <a href="/locale/{{ App::currentLocale() == 'en' ? 'ru' : 'en' }}" class="header__nav-item header__language">
                     <p class="header__language-item header__language-item_active">
-                        Ru
-                        <img class="header__language-arrow" src="/public/img/arrow.svg" alt="">
+                        {{ __('lang') }}
                     </p>
-                    <a href="/locale/en" class="header__language-item">
-                        En
-                    </a>
-                </div>
+                </a>
             </nav>
             <div class="header__nav header__nav_mobile">
                 <ul class="header__nav-list_sm">
@@ -447,12 +443,9 @@
                     <li class="header__nav-item" rel="#contacts_section">
                         <p class="nav-item__text">Контакты</p>
                     </li>
-                    <li class="header__nav-item header__nav-language">
-                        <div class="header__nav-language-item">
-                            <p class="nav-item__text">En</p>
-                        </div>
-                        <p class="nav-item__text">Ru</p>
-                    </li>
+                    <a href="/locale/{{ App::currentLocale() == 'en' ? 'ru' : 'en' }}" class="header__nav-item header__nav-language">
+                        <p class="nav-item__text">{{ __('lang') }}</p>
+                    </a>
                 </ul>
             </div>
         </div>
@@ -745,25 +738,6 @@
                                     <video class="services__list-img" src="/public/videos/project6.webm" muted loop></video>
                                     <p class="services__list-text">Турнир по Rocket League</p>
                                 </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project">
-                                    <img class="services__list-img" src="/public/img/services/dir_desc_2.png" alt="">
-                                    <p class="services__list-text">Спец проекты</p>
-                                </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project">
-                                    <img class="services__list-img" src="/public/img/services/dir_desc_3.png" alt="">
-                                    <p class="services__list-text">Офлайн ивенты</p>
-                                </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project">
-                                    <img class="services__list-img" src="/public/img/services/dir_desc_4.png" alt="">
-                                    <p class="services__list-text">digital реклама</p>
-                                </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project">
-                                    <img class="services__list-img" src="/public/img/services/dir_desc_5.png" alt="">
-                                    <p class="services__list-text">дизайн</p>
-                                </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project">
-                                    <p class="services__list-text">все проекты</p>
-                                </div>
                             </div>
                         </div>
                         <div class="projects__controls">
@@ -902,6 +876,7 @@
                                         <h2 class="team__name">{{ __('Andrey Dubchak') }}</h2>
                                         <p class="team__title">{{ __("I’m responsible for") }}:</p>
                                     </div>
+
                                     <ul class="team__list">
                                         <li class="team__list-item">
                                             <p class="team__list-text">{{ __('Promotion strategy and financial estimates') }}</p>

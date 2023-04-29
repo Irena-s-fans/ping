@@ -22,11 +22,11 @@
         display: flex;
         flex-direction: column;
         gap: clamp(15px, min(1.56vw, 2.77vh), 30px);
-        margin-left: min(7.81vw, 150px);
+        margin-left: min(2.08vw, 40px);
 
         @include from(1921) {
             gap: clamp(15px, min(1.56vw, 2.77vh), 40px);
-            margin-left: min(7.81vw, 200px);
+            margin-left: min(2.08vw, 75px);
         }
 
         @include to(768) {
@@ -77,7 +77,7 @@
 
         &::after {
             box-sizing: border-box;
-            content: '';
+            //content: '';
             height: 100%;
             width: calc(min(min(3.17vw, 5.64vh), 61px) * #{math.tan($skewX)});
             position: absolute;
@@ -112,26 +112,29 @@
             box-sizing: border-box;
             content: '';
             height: 100%;
-            width: 6px;
+            width: 8px;
             position: absolute;
             bottom: 0;
-            left: -5.5%;
+            left: -8px;
             border: 1px solid #FFFFFF40;
-            transform: skewX(-$skewX);
             transition: all $ui-transition-1;
             z-index: 21;
+            transform: translateX(-100%);
 
-            @include to(1199) {
-                left: -20px;
+            @include to(1440) {
+                width: 7px;
             }
 
-            @include to(768) {
-                left: -20px;
+            @include to(1200) {
+                width: 6px;
+            }
+
+            @include to(992) {
+                width: 5px;
             }
 
             @include to(450) {
                 width: 4px;
-                left: -15px;
             }
         }
     }
@@ -149,7 +152,6 @@
         color: white;
         border: 1px solid #FFFFFF40;
         border-radius: 0 !important;
-        border-left: none;
         outline: none;
         background: #202020;
         z-index: 20;
@@ -178,7 +180,6 @@
     &__textarea-label {
         @include to(768) {
             position: relative;
-            left: -14px;
             margin-left: 0;
         }
     }
@@ -187,12 +188,8 @@
         position: relative;
         display: flex;
 
-        @include to(768) {
-            margin-left: -14px;
-        }
-
         &::after {
-            content: '';
+            //content: '';
             position: absolute;
             box-sizing: border-box;
             height: 100%;
@@ -219,27 +216,39 @@
             content: '';
             box-sizing: border-box;
             height: 100%;
-            width: 6px;
+            width: 8px;
             position: absolute;
-            bottom: 0;
-            left: -15%;
+            top: 0;
+            left: -8px;
             border: 1px solid #FFFFFF40;
-            transform: skewX(-$skewX);
             transition: all $ui-transition-1;
             z-index: 21;
+            transform: translateX(-100%);
+
+            @include to(1440) {
+                width: 7px;
+            }
+
+            @include to(1200) {
+                width: 6px;
+            }
+
+            @include to(992) {
+                width: 5px;
+            }
 
             @include to(768) {
-                left: -15px;
-                transform: none;
+                //left: -15px;
+                //transform: none;
             }
 
             @include to(576) {
-                left: -13px;
+                //left: -13px;
             }
 
             @include to(450) {
                 width: 4px;
-                left: -10px;
+                //left: -10px;
             }
         }
     }
@@ -257,7 +266,6 @@
         color: white;
         border: 1px solid #FFFFFF40;
         border-radius: 0 !important;
-        border-left: none;
         outline: none;
         overflow: hidden;
         resize: none;

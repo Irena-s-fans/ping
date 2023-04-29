@@ -297,6 +297,30 @@
     &__nav-language {
         position: relative;
     }
+
+    &__language-item {
+        transform: skewX($skewX);
+        text-decoration: none !important;
+    }
+
+    &__language {
+        display: block;
+        text-decoration: none !important;
+    }
+
+    &__language:hover {
+        .header__language-drop {
+            display: flex;
+        }
+    }
+
+    &__language-drop {
+        position: absolute;
+    }
+
+    &__nav-language {
+        text-decoration: none !important;
+    }
 }
 
 .nav-item__text {
