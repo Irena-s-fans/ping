@@ -15,7 +15,7 @@
     <h2 class="admin__title">
         Изменить проект
     </h2>
-    <form class="form admin__form" data-url="/admin/projects/edit" redirect-on-submit>
+    <form class="form admin__form" data-url="/admin/projects/edit/project_edit">
         <input type="hidden" name="projectID" value="">
         <div class="form__block">
             <input name="lang" type="checkbox" id="lang" <?= $project->is_eng ? 'checked' : '' ?> hidden>
@@ -29,7 +29,7 @@
                 Превью (фото/видео)
             </p>
             <label for="preview" class="form__field form__field_label">
-                Выберите файл
+                <?= $project->preview ?: 'Выберите файл' ?>
             </label>
             <div class="form__file-list"></div>
             <input id="preview" name="preview" type="file" value="<?= $project->preview ?: '' ?>" class="form__field form__field_file">
@@ -45,7 +45,7 @@
                 Превью внутри проекта (фото/видео)
             </p>
             <label for="media" class="form__field form__field_label">
-                Выберите файл
+                <?= \App\Models\Project::getPreviewUrl($project->preview) ?: 'Выберите файл' ?>
             </label>
             <div class="form__file-list"></div>
             <input id="media" name="media" value="<?= \App\Models\Project::getPreviewUrl($project->preview) ?: '' ?>" type="file" class="form__field form__field_file">

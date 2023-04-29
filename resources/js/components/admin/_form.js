@@ -1,13 +1,18 @@
 $(document).ready(function() {
+    $('.form__checkbox-label').each(function() {
+        if ($(this).closest('.form__block').find('input[type="checkbox"]').is(':checked')) {
+            $(this).addClass('form__checkbox-label_active');
+        } else {
+            $(this).removeClass('form__checkbox-label_active');
+        }
+    });
+
     $('form').validate({
         rules: {
             title: {
                 required: true,
             },
             description: {
-                required: true,
-            },
-            preview: {
                 required: true,
             },
             text: {
@@ -21,16 +26,45 @@ $(document).ready(function() {
             description: {
                 required: 'Заполните данное поле',
             },
-            preview: {
-                required: 'Заполните данное поле',
-            },
             text: {
                 required: 'Заполните данное поле',
             },
         },
     })
 
-    $('.edit__btn, .add__btn').on('click', function(e) {
+    $('.edit__btn').on('click', function(e) {
+        e.preventDefault();
+        const form = $(this).closest('form');
+
+        if (form.valid()) {
+            const formData = new FormData(form.get(0));
+            formData.append('text', tinymce.get('text').getContent({format: 'Document'}));
+
+            $.ajax({
+                type: 'POST',
+                url: form.attr('data-url'),
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                },
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: () => {
+                    if (form.attr('redirect-on-submit') !== undefined) {
+                        window.location.href = '/home';
+                        return;
+                    }
+                    alert('Форма была отправлена.');
+                },
+                error: () => {
+                    alert('Ошибка при отправке формы.');
+                },
+            });
+        }
+    });
+
+    $('.add__btn').on('click', function(e) {
         e.preventDefault();
         const form = $(this).closest('form');
 
