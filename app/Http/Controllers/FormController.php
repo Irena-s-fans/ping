@@ -43,29 +43,4 @@ class FormController extends Controller
        $item->save();
     }
 
-    public function offerForm(Request $request)
-    {
-        $item = new Project();
-        if ($request->hasFile('preview')) {
-            $destinationPath = 'img/preview';
-            $file = $request->file('preview');
-            $file_name = $file->getClientOriginalName();
-            if ($file->move($destinationPath , $file_name)) {
-                $item->preview = $file_name;
-            }
-        }
-
-        if ($request->hasFile('media')) {
-            $destinationPath = 'img/media';
-            $file = $request->file('media');
-            $file_name = $file->getClientOriginalName();
-            if ($file->move($destinationPath , $file_name)) {
-                $item->pic = $file_name;
-            }
-        }
-
-        $item->title = $request->title;
-        $item->description = $request->text;
-        $item->save();
-    }
 }
