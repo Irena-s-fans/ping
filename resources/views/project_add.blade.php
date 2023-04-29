@@ -14,7 +14,7 @@
     <h2 class="admin__title">
         Добавить проект
     </h2>
-    <form class="form admin__form" data-url="/admin/projects/add">
+    <form class="form admin__form" data-url="/projects/add">
         <div class="form__block">
             <input name="lang" type="checkbox" id="lang" hidden>
             <label class="form__checkbox-label" for="lang">
