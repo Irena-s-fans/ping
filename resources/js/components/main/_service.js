@@ -15,9 +15,12 @@ $(document).ready(function() {
     addPlayOnHover($('.services__list-item'));
     addPlayOnHover($('.project__img-wrap'));
 
-    $('.project__img-wrap').on('click', function() {
-        $('.popup-video__content').attr('src', $(this).find('video').attr('src'));
-        $('#video__popup').show(300);
+    $('.project__img-wrap_clickable').on('click', function(e) {
+        if ($(this).attr('target') === '_self') {
+            e.preventDefault();
+            $('.popup-video__content').attr('src', $(this).attr('data-video-embed'));
+            $('#video__popup').show(300);
+        }
     })
 
     $('#video__popup').on('click', function(e) {

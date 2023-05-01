@@ -21,7 +21,7 @@
             </label>
         </div>
         <div class="form__block form__block_horizontal">
-            <a class="form__btn admin__btn">
+            <a class="form__btn admin__btn login__btn">
                 <span class="admin__btn-text">
                     Войти
                 </span>
