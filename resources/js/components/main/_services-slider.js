@@ -21,15 +21,27 @@ $(document).ready(function() {
     const projects_swiper = new Swiper('.projects__list', {
         modules: [Grid],
         slidesPerView: 1,
+        grid: {
+            rows: 1,
+        },
         breakpoints: {
             376: {
                 slidesPerView: 1,
+                grid: {
+                    rows: 1,
+                },
             },
             451: {
                 slidesPerView: 1.25,
+                grid: {
+                    rows: 1,
+                },
             },
             577: {
                 slidesPerView: 1.5,
+                grid: {
+                    rows: 1,
+                },
             },
             769: {
                 grid: {

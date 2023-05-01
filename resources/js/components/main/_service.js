@@ -1,11 +1,13 @@
+const lang = $('html').attr('lang');
+
 const mapTitles = {
-    'tournaments': 'Турниры',
-    'services': 'Услуги',
-    'projects': 'Проекты',
+    'tournaments': lang === 'ru' ? 'Турниры' : 'Tournaments',
+    'services': lang === 'ru' ? 'Услуги' : 'Services',
+    'projects': lang === 'ru' ? 'Проекты' : 'Projects',
     'specialProjects': 'Special',
-    'offline': 'Оффлайн',
+    'offline': lang === 'ru' ? 'Оффлайн' : 'Offline',
     'digital': 'Digital',
-    'design': 'Дизайн',
+    'design': lang === 'ru' ? 'Дизайн' : 'Design',
 }
 
 $(document).ready(function() {
@@ -19,28 +21,36 @@ $(document).ready(function() {
         if ($(this).attr('target') === '_self') {
             e.preventDefault();
             $('.popup-video__content').attr('src', $(this).attr('data-video-embed'));
-            $('#video__popup').show(300);
+            $('#video__popup').fadeIn(300);
         }
     })
 
     $('#video__popup').on('click', function(e) {
         if (e.target === this) {
-            $('#video__popup').hide(300);
+            $('#video__popup').fadeOut(300);
         }
     });
 
     $('.popup-video__cross').on('click', function() {
-        $('#video__popup').hide(300);
+        $('#video__popup').fadeOut(300);
     })
 })
 
 function changeServicesContent(contentId) {
+    const titles = {
+        project: lang === 'ru' ? 'Проект' : 'Project',
+        services: lang === 'ru' ? 'Услуги' : 'Services',
+    }
+
     const blockToShow = $(`#${contentId}`);
     const blockToHide = $('.services__wrap_active');
     const title = $('#services__title');
 
     title.fadeOut(300, () => {
-        title.html(mapTitles[contentId] !== undefined ? mapTitles[contentId] : contentId.search(/^project\d+$/gi) !== -1 ? 'Проект' : 'Услуги') //|| c);
+        title.html(
+            mapTitles[contentId] !== undefined ? mapTitles[contentId]
+                : (contentId.search(/^project\d+$/gi) !== -1 ? titles.project : titles.services)
+        );
         title.fadeIn(300);
     })
 

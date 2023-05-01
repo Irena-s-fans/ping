@@ -125,11 +125,11 @@
 
         &:nth-child(3) {
             .team__img-wrap {
-                left: calc(-1 * min(1.3vw, 25px));
+                left: calc(-1 * min(1.82vw, 35px));
                 z-index: 4;
 
                 @include from(1921) {
-                    left: calc(-1 * min(1.3vw, 33px));
+                    left: calc(-1 * min(1.82vw, 46px));
                 }
             }
 
@@ -179,11 +179,11 @@
 
         &:nth-child(5) {
             .team__img-wrap {
-                left: calc(-1 * min(2.6vw, 50px));
+                left: calc(-1 * min(1.82vw, 35px));
                 z-index: 6;
 
                 @include from(1921) {
-                    left: calc(-1 * min(2.6vw, 67px));
+                    left: calc(-1 * min(2.6vw, 46px));
                 }
             }
 

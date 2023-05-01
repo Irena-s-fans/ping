@@ -203,6 +203,7 @@
         color: #FFFFFF40;
         list-style-type: none;
         cursor: pointer;
+        transition: background-color $ui-transition-1, color $ui-transition-1;
 
         @include from(1921) {
             padding-block: min(13px, 0.5vw);
@@ -229,7 +230,6 @@
         &:hover:not(.header__nav-item_active) {
             color: #FFFFFF80;
             background-color: rgba(255, 255, 255, 0.1);
-            transition: background-color $ui-transition-1, color $ui-transition-1;
 
             &::before {
                 opacity: 1;
@@ -264,8 +264,22 @@
         }
     }
 
-    &__nav-text {
+    &__nav-text, &__language-item-lang {
         color: #FFFFFF40;
+    }
+
+    &__language-item-lang {
+        text-decoration: none;
+        transition: color $ui-transition-1, font-weight $ui-transition-1;
+
+        &:hover {
+            font-weight: 700;
+            color: #8E0CD0;
+        }
+    }
+
+    &__language-item-lang.active {
+        text-decoration: underline;
     }
 
     &__nav-language-item {
@@ -306,6 +320,7 @@
     &__language {
         display: block;
         text-decoration: none !important;
+        cursor: auto !important;
     }
 
     &__language:hover {
@@ -325,4 +340,8 @@
 
 .nav-item__text {
     transform: skewX($skewX);
+
+    &_underlined {
+        text-decoration: underline;
+    }
 }

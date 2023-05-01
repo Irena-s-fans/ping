@@ -256,7 +256,7 @@
         }
 
         @include from(769) {
-            height: 100%;
+            height: min(min(36.4vw, 64.8vh), 700px) !important;
         }
 
         @include to(768) {

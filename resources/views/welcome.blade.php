@@ -415,16 +415,18 @@
     <div class="header">
         <div class="header__bg_sm"></div>
         <div class="header__wrapper">
-            <img class="header__logo" src="/public/img/logo.png" alt="">
+            <img class="header__logo" src="/public/img/logo.svg" alt="">
             <nav class="header__nav">
                 <ul class="header__nav-list">
 
                 </ul>
-                <a href="/locale/{{ App::currentLocale() == 'en' ? 'ru' : 'en' }}" class="header__nav-item header__language">
-                    <p class="header__language-item header__language-item_active">
-                        {{ __('lang') }}
+                <div  class="header__nav-item header__language">
+                    <p class="header__language-item">
+                        <a class="header__language-item-lang {{ App::currentLocale() === 'ru' ? 'active' : '' }}" href="/locale/ru">Ru</a>
+                        /
+                        <a class="header__language-item-lang {{ App::currentLocale() === 'en' ? 'active' : '' }}" href="/locale/en">En</a>
                     </p>
-                </a>
+                </div>
             </nav>
             <div class="header__nav header__nav_mobile">
                 <ul class="header__nav-list_sm">
@@ -432,19 +434,22 @@
                         <p class="nav-item__text">{{ __('About') }}</p>
                     </li>
                     <li class="header__nav-item" rel="#services_section">
-                        <p class="nav-item__text">Услуги</p>
+                        <p class="nav-item__text">{{ __('Services') }}</p>
                     </li>
                     <li class="header__nav-item" rel="#team_section">
-                        <p class="nav-item__text">Команда</p>
+                        <p class="nav-item__text">{{ __('Team') }}</p>
                     </li>
                     <li class="header__nav-item" rel="#reviews_section">
-                        <p class="nav-item__text">Отзывы</p>
+                        <p class="nav-item__text">{{ __('Reviews') }}</p>
                     </li>
                     <li class="header__nav-item" rel="#contacts_section">
-                        <p class="nav-item__text">Контакты</p>
+                        <p class="nav-item__text">{{ __('Contacts') }}</p>
                     </li>
                     <a href="/locale/{{ App::currentLocale() == 'en' ? 'ru' : 'en' }}" class="header__nav-item header__nav-language">
-                        <p class="nav-item__text">{{ __('lang') }}</p>
+                        <p class="nav-item__text">
+                            <span class="{{ App::currentLocale() === 'ru' ? 'nav-item__text_underlined' : '' }}">Ru</span> /
+                            <span class="{{ App::currentLocale() === 'en' ? 'nav-item__text_underlined' : '' }}">En</span>
+                        </p>
                     </a>
                 </ul>
             </div>
@@ -712,7 +717,7 @@
                         <div class="projects__list">
                             <div class="swiper-wrapper">
                                 <div class="services__list-item swiper-slide show-services projects__return" rel="services">
-                                    <p class="services__list-text">вернуться</p>
+                                    <p class="services__list-text">{{ __('Go back') }}</p>
                                 </div>
                                 @foreach($projects as $project)
                                     <div class="services__list-item swiper-slide show-services" rel="project{{ $project->id }}">
@@ -724,30 +729,6 @@
                                         <p class="services__list-text">{{ $project->title }}</p>
                                     </div>
                                 @endforeach
-<!--                                <div class="services__list-item swiper-slide show-services" rel="project1">
-                                    <video class="services__list-img" src="/public/videos/project1.webm" muted loop></video>
-                                    <p class="services__list-text">Rainbow 6 Siege Russian Major League S1</p>
-                                </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project2">
-                                    <video class="services__list-img" src="/public/videos/project2.webm" muted loop></video>
-                                    <p class="services__list-text">Rainbow 6 Siege Russian Major League S2</p>
-                                </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project3">
-                                    <video class="services__list-img" src="/public/videos/project3.webm" muted loop></video>
-                                    <p class="services__list-text">Rainbow 6 Siege Russian Major League S3</p>
-                                </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project4">
-                                    <video class="services__list-img" src="/public/videos/project4.webm" muted loop></video>
-                                    <p class="services__list-text">Стенд Mega Drive на ИгроМир 2019</p>
-                                </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project5">
-                                    <video class="services__list-img" src="/public/videos/project5.webm" muted loop></video>
-                                    <p class="services__list-text">Турнир по Dead by Daylight</p>
-                                </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project6">
-                                    <video class="services__list-img" src="/public/videos/project6.webm" muted loop></video>
-                                    <p class="services__list-text">Турнир по Rocket League</p>
-                                </div>-->
                             </div>
                         </div>
                         <div class="projects__controls">
@@ -755,7 +736,7 @@
                             <div class="services__btn-wrap">
                                 <button class="services__btn show-services" rel="services">
                                     <span class="services__btn-text">
-                                        Вернуться
+                                        {{ __('Go back') }}
                                     </span>
                                 </button>
                             </div>
@@ -786,96 +767,13 @@
                                         {!! $project->description !!}
                                     </div>
                                     <div class="project__btn show-services" rel="projects">
-                                        <p class="project__btn-text">К остальным проектам</p>
+                                        <p class="project__btn-text">
+                                            {{ __('To other projects') }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
-                        <div class="project services__wrap" id="project2">
-                            <div class="project__content">
-                                <div class="project__img-wrap project__img-wrap_clickable">
-                                    <video class="project__img project__img_blurred" src="/public/videos/project2.webm" muted loop></video>
-                                    <svg viewBox="0 0 42 42" class="project__video-icon">
-                                        <path class="project__video-icon-path" d="M37.7051 13.6966C37.521 13.0661 37.1605 12.4913 36.6596 12.0296C36.1587 11.5679 35.535 11.2356 34.851 11.0659C32.332 10.4375 22.2096 10.4375 22.2096 10.4375C22.2096 10.4375 12.0873 10.4375 9.56825 11.0659C8.88423 11.2356 8.26056 11.5679 7.75967 12.0296C7.25878 12.4913 6.89824 13.0661 6.71412 13.6966C6.24376 16.0645 6.01551 18.4678 6.03236 20.875C6.01551 23.2822 6.24376 25.6856 6.71412 28.0534C6.89824 28.6839 7.25878 29.2588 7.75967 29.7204C8.26056 30.1821 8.88423 30.5144 9.56825 30.6841C12.0873 31.3125 22.2096 31.3125 22.2096 31.3125C22.2096 31.3125 32.332 31.3125 34.851 30.6841C35.535 30.5144 36.1587 30.1821 36.6596 29.7204C37.1605 29.2588 37.521 28.6839 37.7051 28.0534C38.1755 25.6856 38.4037 23.2822 38.3869 20.875C38.4037 18.4678 38.1755 16.0645 37.7051 13.6966ZM18.9742 25.3482V16.4018L27.3748 20.875L18.9742 25.3482Z" fill="#FFFFFF"/>
-                                    </svg>
-                                </div>
-                                <div class="project__wrap">
-                                    <h2 class="project__title">Rainbow 6 Siege Russian Major League S2</h2>
-                                    <p class="project__text">Lan-финалы второго сезона крупнейшего турнира по Rainbow 6 Siege в России, на котором мы создали по-настоящему уникальную фото-зону, воссоздав часть карты из игры, добавили новых активностей для зрителей и провели эффектную церемонию открытия.</p>
-                                </div>
-                                <div class="project__btn show-services" rel="projects">
-                                    <p class="project__btn-text">К остальным проектам</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project services__wrap" id="project3">
-                            <div class="project__content">
-                                <div class="project__img-wrap project__img-wrap_clickable">
-                                    <video class="project__img project__img_blurred" src="/public/videos/project3.webm" muted loop></video>
-                                    <svg viewBox="0 0 42 42" class="project__video-icon">
-                                        <path class="project__video-icon-path" d="M37.7051 13.6966C37.521 13.0661 37.1605 12.4913 36.6596 12.0296C36.1587 11.5679 35.535 11.2356 34.851 11.0659C32.332 10.4375 22.2096 10.4375 22.2096 10.4375C22.2096 10.4375 12.0873 10.4375 9.56825 11.0659C8.88423 11.2356 8.26056 11.5679 7.75967 12.0296C7.25878 12.4913 6.89824 13.0661 6.71412 13.6966C6.24376 16.0645 6.01551 18.4678 6.03236 20.875C6.01551 23.2822 6.24376 25.6856 6.71412 28.0534C6.89824 28.6839 7.25878 29.2588 7.75967 29.7204C8.26056 30.1821 8.88423 30.5144 9.56825 30.6841C12.0873 31.3125 22.2096 31.3125 22.2096 31.3125C22.2096 31.3125 32.332 31.3125 34.851 30.6841C35.535 30.5144 36.1587 30.1821 36.6596 29.7204C37.1605 29.2588 37.521 28.6839 37.7051 28.0534C38.1755 25.6856 38.4037 23.2822 38.3869 20.875C38.4037 18.4678 38.1755 16.0645 37.7051 13.6966ZM18.9742 25.3482V16.4018L27.3748 20.875L18.9742 25.3482Z" fill="#FFFFFF"/>
-                                    </svg>
-                                </div>
-                                <div class="project__wrap">
-                                    <h2 class="project__title">Rainbow 6 Siege Russian Major League S3</h2>
-                                    <p class="project__text">Lan-финалы третьего сезона крупнейшего турнира по Rainbow 6 Siege в России. Помимо активностей было также проведено первое закрытое бета-тестирование Roller Champions и VR-стенд, которые могли опробовать все гости мероприятия.</p>
-                                </div>
-                                <div class="project__btn show-services" rel="projects">
-                                    <p class="project__btn-text">К остальным проектам</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project services__wrap" id="project4">
-                            <div class="project__content">
-                                <div class="project__img-wrap project__img-wrap_clickable">
-                                    <video class="project__img project__img_blurred" src="/public/videos/project4.webm" muted loop></video>
-                                    <svg viewBox="0 0 42 42" class="project__video-icon">
-                                        <path class="project__video-icon-path" d="M37.7051 13.6966C37.521 13.0661 37.1605 12.4913 36.6596 12.0296C36.1587 11.5679 35.535 11.2356 34.851 11.0659C32.332 10.4375 22.2096 10.4375 22.2096 10.4375C22.2096 10.4375 12.0873 10.4375 9.56825 11.0659C8.88423 11.2356 8.26056 11.5679 7.75967 12.0296C7.25878 12.4913 6.89824 13.0661 6.71412 13.6966C6.24376 16.0645 6.01551 18.4678 6.03236 20.875C6.01551 23.2822 6.24376 25.6856 6.71412 28.0534C6.89824 28.6839 7.25878 29.2588 7.75967 29.7204C8.26056 30.1821 8.88423 30.5144 9.56825 30.6841C12.0873 31.3125 22.2096 31.3125 22.2096 31.3125C22.2096 31.3125 32.332 31.3125 34.851 30.6841C35.535 30.5144 36.1587 30.1821 36.6596 29.7204C37.1605 29.2588 37.521 28.6839 37.7051 28.0534C38.1755 25.6856 38.4037 23.2822 38.3869 20.875C38.4037 18.4678 38.1755 16.0645 37.7051 13.6966ZM18.9742 25.3482V16.4018L27.3748 20.875L18.9742 25.3482Z" fill="#FFFFFF"/>
-                                    </svg>
-                                </div>
-                                <div class="project__wrap">
-                                    <h2 class="project__title">Стенд Mega Drive на ИгроМир 2019</h2>
-                                    <p class="project__text">Стенд платинового партнера ИгроМир/Comic Con Russia 2019. В ходе фестиваля мы организовали зажигательный Just Dance для посетителей, talk-show с Викой Картер, в котором приняли участие популярные блогеры и стримеры, а также крупный турнир по Just Dance среди косплееров на главной сцене.</p>
-                                </div>
-                                <div class="project__btn show-services" rel="projects">
-                                    <p class="project__btn-text">К остальным проектам</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project services__wrap" id="project5">
-                            <div class="project__content">
-                                <div class="project__img-wrap project__img-wrap_clickable">
-                                    <video class="project__img project__img_blurred" src="/public/videos/project5.webm" muted loop></video>
-                                    <svg viewBox="0 0 42 42" class="project__video-icon">
-                                        <path class="project__video-icon-path" d="M37.7051 13.6966C37.521 13.0661 37.1605 12.4913 36.6596 12.0296C36.1587 11.5679 35.535 11.2356 34.851 11.0659C32.332 10.4375 22.2096 10.4375 22.2096 10.4375C22.2096 10.4375 12.0873 10.4375 9.56825 11.0659C8.88423 11.2356 8.26056 11.5679 7.75967 12.0296C7.25878 12.4913 6.89824 13.0661 6.71412 13.6966C6.24376 16.0645 6.01551 18.4678 6.03236 20.875C6.01551 23.2822 6.24376 25.6856 6.71412 28.0534C6.89824 28.6839 7.25878 29.2588 7.75967 29.7204C8.26056 30.1821 8.88423 30.5144 9.56825 30.6841C12.0873 31.3125 22.2096 31.3125 22.2096 31.3125C22.2096 31.3125 32.332 31.3125 34.851 30.6841C35.535 30.5144 36.1587 30.1821 36.6596 29.7204C37.1605 29.2588 37.521 28.6839 37.7051 28.0534C38.1755 25.6856 38.4037 23.2822 38.3869 20.875C38.4037 18.4678 38.1755 16.0645 37.7051 13.6966ZM18.9742 25.3482V16.4018L27.3748 20.875L18.9742 25.3482Z" fill="#FFFFFF"/>
-                                    </svg>
-                                </div>
-                                <div class="project__wrap">
-                                    <h2 class="project__title">Турнир по Dead by Daylight</h2>
-                                    <p class="project__text">Турнир для всех любителей игры с призовым фондом в 75 000 рублей и подарками от генерального партнера Western Digital. Комментаторы освещали турнир в прямом эфире в оборудованной студии, украшенной тематическими декорациями.</p>
-                                </div>
-                                <div class="project__btn show-services" rel="projects">
-                                    <p class="project__btn-text">К остальным проектам</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project services__wrap" id="project6">
-                            <div class="project__content">
-                                <div class="project__img-wrap project__img-wrap_clickable">
-                                    <video class="project__img project__img_blurred" src="/public/videos/project6.webm" muted loop></video>
-                                    <svg viewBox="0 0 42 42" class="project__video-icon">
-                                        <path class="project__video-icon-path" d="M37.7051 13.6966C37.521 13.0661 37.1605 12.4913 36.6596 12.0296C36.1587 11.5679 35.535 11.2356 34.851 11.0659C32.332 10.4375 22.2096 10.4375 22.2096 10.4375C22.2096 10.4375 12.0873 10.4375 9.56825 11.0659C8.88423 11.2356 8.26056 11.5679 7.75967 12.0296C7.25878 12.4913 6.89824 13.0661 6.71412 13.6966C6.24376 16.0645 6.01551 18.4678 6.03236 20.875C6.01551 23.2822 6.24376 25.6856 6.71412 28.0534C6.89824 28.6839 7.25878 29.2588 7.75967 29.7204C8.26056 30.1821 8.88423 30.5144 9.56825 30.6841C12.0873 31.3125 22.2096 31.3125 22.2096 31.3125C22.2096 31.3125 32.332 31.3125 34.851 30.6841C35.535 30.5144 36.1587 30.1821 36.6596 29.7204C37.1605 29.2588 37.521 28.6839 37.7051 28.0534C38.1755 25.6856 38.4037 23.2822 38.3869 20.875C38.4037 18.4678 38.1755 16.0645 37.7051 13.6966ZM18.9742 25.3482V16.4018L27.3748 20.875L18.9742 25.3482Z" fill="#FFFFFF"/>
-                                    </svg>
-                                </div>
-                                <div class="project__wrap">
-                                    <h2 class="project__title">Турнир по Rocket League</h2>
-                                    <p class="project__text">Турнир, обрадовавший всех фанатов дисциплины в СНГ. Крупный призовой фонд, активности для зрителей и прямая трансляция из студии.</p>
-                                </div>
-                                <div class="project__btn show-services" rel="projects">
-                                    <p class="project__btn-text">К остальным проектам</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -952,7 +850,7 @@
                                 <div class="team__about">
                                     <div class="team__wrap">
                                         <h2 class="team__name">{{ __('Vika Martoyan') }}</h2>
-                                        <p class="team__title">{{ __("I'm responsible for") }}:</p>
+                                        <p class="team__title">{{ __("I’m responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
@@ -1013,7 +911,7 @@
                                 <div class="team__about">
                                     <div class="team__wrap">
                                         <h2 class="team__name">{{ __('Anton Murashov') }}</h2>
-                                        <p class="team__title">{{ __("I'm responsible for") }}:</p>
+                                        <p class="team__title">{{ __("I’m responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
@@ -1074,7 +972,7 @@
                                 <div class="team__about">
                                     <div class="team__wrap">
                                         <h2 class="team__name">{{ __('Ruslan Sokolov') }}</h2>
-                                        <p class="team__title">{{ __("I'm responsible for") }}:</p>
+                                        <p class="team__title">{{ __("I’m responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
@@ -1134,7 +1032,7 @@
                                 <div class="team__about">
                                     <div class="team__wrap">
                                         <h2 class="team__name">{{ __('Maxim Lagutkin') }}</h2>
-                                        <p class="team__title">{{ __("I'm responsible for") }}:</p>
+                                        <p class="team__title">{{ __("I’m responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
                                         <li class="team__list-item">
@@ -1382,7 +1280,7 @@
                                             <img src="/public/img/team/team5.png" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
-                                            {{ __('Maxin') }} <br> {{ __('Lagutkin') }}
+                                            {{ __('Maxim') }} <br> {{ __('Lagutkin') }}
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
