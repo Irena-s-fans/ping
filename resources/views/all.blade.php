@@ -9,35 +9,65 @@
     <h2 class="admin__title">
         Все проекты
     </h2>
-    <a href="/admin/projects/new" class="admin__btn admin__btn_back">
+    <a href="/admin/projects/new" class="admin__btn add-project__btn">
         <span class="admin__btn-text">
             Добавить проект
         </span>
     </a>
     @if ($projects)
-        <table>
-            <th>title</th>
-            <th>description</th>
-            <th>preview</th>
-            <th>pic</th>
-            <th>video</th>
-            <th>is_vk</th>
-            <th>is_eng</th>
-            @foreach ($projects as $project)
-                <tr>
-                    <td>{{ $project->title}}</td>
-                    <td>{{ $project->description}}</td>
-                    <td>{{ \App\Models\Project::getPreviewUrl($project->preview)}}</td>
-                    <td>
-                        @if ($project->pic)
-                            {{ \App\Models\Project::getPicUrl($project->pic)}}
-                        @endif
+        <table class="table">
+            <thead>
+                <tr class="table__row">
+                    <td class="table__cell">
+                        <p class="table__text table__text_bold table__text_xl table__text_blue">
+                            №
+                        </p>
                     </td>
-                    <td>{{$project->video}}</td>
-                    <td>{{$project->is_vk}}</td>
-                    <td>{{$project->is_eng}}</td>
-                    <td><a href="/admin/projects/edit/<?= $project->id ?>">Редактировать</a></td>
-                    <td><a class="project-delete" href="/admin/projects/delete" data-project-id="<?= $project->id ?>">X</a></td>
+                    <td class="table__cell">
+                        <p class="table__text table__text_bold table__text_xl table__text_blue">
+                            Заголовок
+                        </p>
+                    </td>
+                    <td class="table__cell">
+                        <p class="table__text table__text_bold table__text_xl table__text_blue">
+                            Язык
+                        </p>
+                    </td>
+                    <td class="table__cell">
+
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </thead>
+            @foreach ($projects as $key => $project)
+                <tr>
+                    <td class="table__cell">
+                        <p class="table__text">
+                            {{ $key + 1 }}
+                        </p>
+                    </td>
+                    <td class="table__cell">
+                        <p class="table__text">
+                            {{ $project->title }}
+                        </p>
+                    </td>
+                    <td class="table__cell">
+                        <p class="table__text">
+                            {{ $project->is_eng ? 'English' : 'Русский' }}
+                        </p>
+                    </td>
+                    <td class="table__cell">
+                        <a class="table__link" href="/admin/projects/edit/<?= $project->id ?>">
+                            <img class="table__img" src="/public/img/pencil.svg" alt="">
+                        </a>
+                    </td>
+                    <td class="table__cell">
+                        <a class="table__link table__link_red project-delete" href="/admin/projects/delete" data-project-id="<?= $project->id ?>">
+                            <img class="table__img" src="/public/img/trash.svg" alt="">
+                        </a>
+                    </td>
                 </tr>
             @endforeach
         </table>

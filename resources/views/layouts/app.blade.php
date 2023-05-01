@@ -60,7 +60,7 @@
             plugins: [
                 'autolink', 'lists', 'link', 'charmap', 'preview',
                 'anchor', 'visualblocks', 'fullscreen',
-                'help', 'wordcount'
+                'help', 'wordcount', 'code'
             ],
             toolbar: 'undo redo | formatselect fontselect fontsizeselect | bold italic backcolor | bullist numlist outdent indent  link | code  visualblocks  | removeformat | help | link image',
             promotion: false,

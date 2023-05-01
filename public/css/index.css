@@ -1238,6 +1238,8 @@
 }
 .popup-video__content {
   width: 1200px;
+  height: 675px;
+  max-height: 53.43vw;
   max-width: 95vw;
 }
 
@@ -1608,6 +1610,7 @@
   transition: fill 0.35s;
 }
 .project__wrap {
+  flex: 1;
   border: 1px solid white;
   padding: clamp(25px, min(2.6vw, 4.62vh), 50px) clamp(40px, 4.16vw, 80px) clamp(15px, min(1.56vw, 2.77vh), 30px) clamp(25px, 1.56vw, 30px);
 }
@@ -1625,6 +1628,41 @@
     padding: 0 0 0 15px;
     border: none;
   }
+}
+.project__wrap p {
+  max-width: 97.5%;
+  margin-top: clamp(5px, min(1.3vw, 2.31vh), 25px);
+  font-family: Play, sans-serif;
+  font-size: min(min(1.04vw, 1.85vh), 20px);
+  font-weight: 400;
+  line-height: 135%;
+  color: white;
+  transform: skewX(16deg);
+  transform-origin: top;
+}
+@media (min-width: 1921px) {
+  .project__wrap p {
+    margin-top: clamp(5px, min(1.3vw, 2.31vh), 33px);
+    font-size: min(min(1.04vw, 1.85vh), 26px);
+  }
+}
+@media (max-width: 768px) {
+  .project__wrap p {
+    max-width: none;
+    margin-top: 15px;
+    font-size: clamp(14px, 2.6vw, 20px);
+    line-height: 150%;
+    transform: none;
+  }
+}
+@media (max-width: 375px) {
+  .project__wrap p {
+    font-size: 12px;
+  }
+}
+.project__wrap p_blue {
+  color: #90FFFF;
+  font-style: italic;
 }
 .project__title {
   font-family: Radio, sans-serif;
@@ -1646,45 +1684,6 @@
     font-size: clamp(20px, 3.9vw, 30px);
     transform: none;
   }
-}
-.project__text {
-  max-width: 97.5%;
-  margin-top: clamp(5px, min(1.3vw, 2.31vh), 25px);
-  font-family: Play, sans-serif;
-  font-size: min(min(1.04vw, 1.85vh), 20px);
-  font-weight: 400;
-  line-height: 135%;
-  color: white;
-  transform: skewX(16deg);
-  transform-origin: top;
-}
-@media (min-width: 1921px) {
-  .project__text {
-    margin-top: clamp(5px, min(1.3vw, 2.31vh), 33px);
-    font-size: min(min(1.04vw, 1.85vh), 26px);
-  }
-}
-@media (max-width: 768px) {
-  .project__text {
-    max-width: none;
-    margin-top: 15px;
-    font-size: clamp(14px, 2.6vw, 20px);
-    line-height: 150%;
-    transform: none;
-  }
-}
-@media (max-width: 375px) {
-  .project__text {
-    font-size: 12px;
-  }
-}
-.project__text:nth-of-type(1) {
-  color: #90FFFF;
-  font-weight: 700;
-}
-.project__text_blue {
-  color: #90FFFF;
-  font-style: italic;
 }
 .project__btn {
   max-width: min(5.2vw, 100px);

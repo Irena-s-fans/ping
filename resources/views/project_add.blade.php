@@ -29,8 +29,9 @@
             <label for="preview" class="form__field form__field_label">
                 Выберите файл
             </label>
-            <div class="form__file-list"></div>
-            <input id="preview" name="preview" type="file" class="form__field form__field_file">
+            <video class="form__media form-video" muted loop autoplay></video>
+            <img class="form__media form-img" alt="Превьюшка">
+            <input id="preview" name="preview" type="file" class="form__field form__field_file" accept="image/*, video/*">
         </div>
         <div class="form__block">
             <label for="title" class="form__label">
@@ -45,8 +46,9 @@
             <label for="media" class="form__field form__field_label">
                 Выберите файл
             </label>
-            <div class="form__file-list"></div>
-            <input id="media" name="media" type="file" class="form__field form__field_file">
+            <video class="form__media form-video" muted loop autoplay></video>
+            <img class="form__media form-img" alt="Превьюшка">
+            <input id="media" name="media" type="file" class="form__field form__field_file" accept="image/*, video/*">
         </div>
         <div class="form__block">
             <label for="description" class="form__label">

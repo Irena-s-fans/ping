@@ -52,12 +52,8 @@ $(document).ready(function() {
                 cache: false,
                 contentType: false,
                 processData: false,
-                success: () => {
-                    if (form.attr('redirect-on-submit') !== undefined) {
-                        window.location.href = '/home';
-                        return;
-                    }
-                    alert('Форма была отправлена.');
+                success: (data) => {
+                    alert(JSON.parse(data).msg);
                 },
                 error: () => {
                     alert('Ошибка при отправке формы.');
@@ -86,12 +82,8 @@ $(document).ready(function() {
                 cache: false,
                 contentType: false,
                 processData: false,
-                success: () => {
-                    if (form.attr('redirect-on-submit') !== undefined) {
-                        window.location.href = '/home';
-                        return;
-                    }
-                    alert('Форма была отправлена.');
+                success: (data) => {
+                    alert(JSON.parse(data).msg);
                 },
                 error: () => {
                     alert('Ошибка при отправке формы.');
@@ -132,7 +124,29 @@ $(document).ready(function() {
     });
 
     $('.form__field_file').on('change', function() {
-        $(this).closest('.form__block').find('.form__field_label').html(this.files.length ? this.files[0].name : 'Выберите файл');
+        const formBlock = $(this).closest('.form__block');
+        formBlock.find('.form__field_label').html(this.files.length ? this.files[0].name : 'Выберите файл');
+
+        formBlock.find('.form__media.active').removeClass('active');
+        if (this.files[0].type.startsWith('video')) {
+            const videoTag = formBlock.find('.form-video');
+
+            videoTag.attr('src', window.URL.createObjectURL(this.files[0]));
+            videoTag.on('loadeddata', function() {
+                window.URL.revokeObjectURL(videoTag.attr('src'));
+                videoTag.addClass('active');
+            });
+        } else if (this.files[0].type.startsWith('image')) {
+            const imgTag = formBlock.find('.form-img');
+
+            imgTag.attr('src', window.URL.createObjectURL(this.files[0]));
+            imgTag.on('load', function() {
+                window.URL.revokeObjectURL(imgTag.attr('src'));
+                imgTag.addClass('active');
+            });
+        } else {
+            alert(`Формат файла не поддерживается. Текущий формат файла: ${this.files[0].type}`)
+        }
     });
 
     $('.form__checkbox-label').on('click', function() {

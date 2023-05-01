@@ -36,6 +36,11 @@ class ProjectsController extends Controller
             if ($file->move($destinationPath , $file_name)) {
                 $item->preview = $file_name;
             }
+        } else {
+            return \json_encode([
+                'status' => 0,
+                'msg' => 'Файл для превью проекта не был выбран. Загрузите и попробуйте ещё раз',
+            ]);
         }
 
         if ($request->hasFile('media')) {
@@ -45,6 +50,11 @@ class ProjectsController extends Controller
             if ($file->move($destinationPath , $file_name)) {
                 $item->pic = $file_name;
             }
+        } else {
+            return \json_encode([
+                'status' => 0,
+                'msg' => 'Файл видео внутри проекта не был выбран. Загрузите и попробуйте ещё раз',
+            ]);
         }
 
         $item->title = $request->title;
@@ -55,11 +65,13 @@ class ProjectsController extends Controller
 
         if ($item->save()) {
             return \json_encode([
-                'addStatus' => 1,
+                'status' => 1,
+                'msg' => 'Проект был успешно добавлен!',
             ]);
         } else {
             return \json_encode([
-                'addStatus' => 0,
+                'status' => 0,
+                'msg' => 'Произошла ошибка при сохранении проекта. Проверьте введённые данные и попробуйте ещё раз',
             ]);
         }
     }
@@ -97,7 +109,7 @@ class ProjectsController extends Controller
     {
         $item = Project::getProjectById($request->projectID);
 
-        if ($item->preview != $request->preview) {
+        if ($request->hasFile('preview') && $item->preview != $request->preview) {
             $item->preview = $request->preview;
         }
 
@@ -113,7 +125,7 @@ class ProjectsController extends Controller
             $item->title = $request->title;
         }
 
-        if ($item->pic != $request->media) {
+        if ($request->hasFile('media') && $item->pic != $request->media) {
             $item->pic = $request->media;
         }
 
@@ -127,11 +139,13 @@ class ProjectsController extends Controller
 
         if ($item->save()) {
             return \json_encode([
-                'editStatus' => 1,
+                'status' => 1,
+                'msg' => 'Проект был успешно изменён!',
             ]);
         } else {
             return \json_encode([
-                'editStatus' => 0,
+                'status' => 0,
+                'msg' => 'Произошла ошибка. Попробуйте ещё раз',
             ]);
         }
     }

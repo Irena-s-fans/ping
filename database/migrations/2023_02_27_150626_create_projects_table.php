@@ -19,7 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('pic')->nullable();
             $table->string('video')->nullable();
             $table->string('title');
-            $table->string('description')->nullable();
+            $table->string('description', 750)->nullable();
             $table->smallInteger('status')->nullable();
             $table->smallInteger('is_vk')->nullable();
             $table->smallInteger('is_eng')->nullable();

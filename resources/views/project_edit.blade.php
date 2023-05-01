@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <a href="/home" class="admin__btn admin__btn_back">
         <span class="admin__btn-text">
             На главную
@@ -31,8 +30,21 @@
             <label for="preview" class="form__field form__field_label">
                 <?= $project->preview ?: 'Выберите файл' ?>
             </label>
-            <div class="form__file-list"></div>
-            <input id="preview" name="preview" type="file" value="<?= $project->preview ?: '' ?>" class="form__field form__field_file">
+            <?php $isPreviewVideo = explode('/', mime_content_type(base_path() . '/img/preview/' . $project->preview))[0] === 'video'; ?>
+            <video
+                class="form__media form-video{{ $isPreviewVideo ? ' active' : '' }}"
+                src="{{ $isPreviewVideo ? '/img/preview/' . $project->preview : '' }}"
+                muted
+                loop
+                autoplay
+            >
+            </video>
+            <img
+                class="form__media form-img{{ !$isPreviewVideo ? ' active' : '' }}"
+                src="{{ !$isPreviewVideo ? '/img/preview/' . $project->preview : '' }}"
+                alt="Превьюшка"
+            >
+            <input id="preview" name="preview" type="file" value="<?= $project->preview ?: '' ?>" class="form__field form__field_file" accept="image/*, video/*">
         </div>
         <div class="form__block">
             <label for="title" class="form__label">
@@ -45,10 +57,23 @@
                 Превью внутри проекта (фото/видео)
             </p>
             <label for="media" class="form__field form__field_label">
-                <?= \App\Models\Project::getPreviewUrl($project->preview) ?: 'Выберите файл' ?>
+                {{ $project->pic ?: 'Выберите файл' }}
             </label>
-            <div class="form__file-list"></div>
-            <input id="media" name="media" value="<?= \App\Models\Project::getPreviewUrl($project->preview) ?: '' ?>" type="file" class="form__field form__field_file">
+            <?php $isMediaVideo = explode('/', mime_content_type(base_path() . '/img/media/' . $project->pic))[0] === 'video'; ?>
+            <video
+                class="form__media form-video{{ $isMediaVideo ? ' active' : '' }}"
+                src="{{ $isMediaVideo ? '/img/media/' . $project->pic : '' }}"
+                muted
+                loop
+                autoplay
+            >
+            </video>
+            <img
+                class="form__media form-img{{ !$isMediaVideo ? ' active' : '' }}"
+                src="{{ !$isMediaVideo ? '/img/media/' . $project->pic : '' }}"
+                alt="Превьюшка"
+            >
+            <input id="media" name="media" value="<?= \App\Models\Project::getPreviewUrl($project->preview) ?: '' ?>" type="file" class="form__field form__field_file" accept="image/*, video/*">
         </div>
         <div class="form__block">
             <label for="description" class="form__label">

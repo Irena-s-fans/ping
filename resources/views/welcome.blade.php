@@ -399,7 +399,7 @@
 </div>
 <div class="popup popup-video" id="video__popup">
     <div class="popup-video__wrap">
-        <video class="popup-video__content" controls></video>
+        <iframe class="popup-video__content" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <img src="/public/img/cross.svg" alt="" class="popup-video__cross">
     </div>
 </div>
@@ -714,7 +714,17 @@
                                 <div class="services__list-item swiper-slide show-services projects__return" rel="services">
                                     <p class="services__list-text">вернуться</p>
                                 </div>
-                                <div class="services__list-item swiper-slide show-services" rel="project1">
+                                @foreach($projects as $project)
+                                    <div class="services__list-item swiper-slide show-services" rel="project{{ $project->id }}">
+                                        @if (explode('/', mime_content_type(base_path() . '/img/preview/' . $project->preview))[0] === 'video')
+                                            <video class="services__list-img" src="/img/preview/{{ $project->preview }}" muted loop></video>
+                                        @else
+                                            <img class="services__list-img" alt="" src="/img/preview/{{ $project->preview }}">
+                                        @endif
+                                        <p class="services__list-text">{{ $project->title }}</p>
+                                    </div>
+                                @endforeach
+<!--                                <div class="services__list-item swiper-slide show-services" rel="project1">
                                     <video class="services__list-img" src="/public/videos/project1.webm" muted loop></video>
                                     <p class="services__list-text">Rainbow 6 Siege Russian Major League S1</p>
                                 </div>
@@ -737,7 +747,7 @@
                                 <div class="services__list-item swiper-slide show-services" rel="project6">
                                     <video class="services__list-img" src="/public/videos/project6.webm" muted loop></video>
                                     <p class="services__list-text">Турнир по Rocket League</p>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <div class="projects__controls">
@@ -752,24 +762,35 @@
                         </div>
                     </div>
                     <div class="projects-full">
-                        <div class="project services__wrap" id="project1">
-                            <div class="project__content">
-                                <div class="project__img-wrap project__img-wrap_clickable">
-                                    <video class="project__img project__img_blurred" src="/public/videos/project1.webm" muted loop></video>
-                                    <svg viewBox="0 0 42 42" class="project__video-icon">
-                                        <path class="project__video-icon-path" d="M37.7051 13.6966C37.521 13.0661 37.1605 12.4913 36.6596 12.0296C36.1587 11.5679 35.535 11.2356 34.851 11.0659C32.332 10.4375 22.2096 10.4375 22.2096 10.4375C22.2096 10.4375 12.0873 10.4375 9.56825 11.0659C8.88423 11.2356 8.26056 11.5679 7.75967 12.0296C7.25878 12.4913 6.89824 13.0661 6.71412 13.6966C6.24376 16.0645 6.01551 18.4678 6.03236 20.875C6.01551 23.2822 6.24376 25.6856 6.71412 28.0534C6.89824 28.6839 7.25878 29.2588 7.75967 29.7204C8.26056 30.1821 8.88423 30.5144 9.56825 30.6841C12.0873 31.3125 22.2096 31.3125 22.2096 31.3125C22.2096 31.3125 32.332 31.3125 34.851 30.6841C35.535 30.5144 36.1587 30.1821 36.6596 29.7204C37.1605 29.2588 37.521 28.6839 37.7051 28.0534C38.1755 25.6856 38.4037 23.2822 38.3869 20.875C38.4037 18.4678 38.1755 16.0645 37.7051 13.6966ZM18.9742 25.3482V16.4018L27.3748 20.875L18.9742 25.3482Z" fill="#FFFFFF"/>
-                                    </svg>
-                                </div>
-                                <div class="project__wrap">
-                                    <h2 class="project__title">Rainbow 6 Siege Russian Major League S1</h2>
-                                    <p class="project__text">Lan-финалы крупнейшего турнира по Rainbow 6 Siege в России с полным оборудованием площадки под мероприятие, интерактивными активностями и призами от спонсоров.</p>
-                                    <p class="project__text"> Гостей мероприятия ждали косплееры, квест на площадке, интервью с игроками, конкурсы, а также прямая трансляция для тех, кто не смог прийти.</p>
-                                </div>
-                                <div class="project__btn show-services" rel="projects">
-                                    <p class="project__btn-text">К остальным проектам</p>
+                        @foreach($projects as $project)
+                            <div class="project services__wrap" id="project{{ $project->id }}">
+                                <div class="project__content">
+                                    <a
+                                        href="{{ $project->is_vk ? $project->video : '' }}"
+                                        target="{{ $project->is_vk ? '_blank' : '_self' }}"
+                                        class="project__img-wrap project__img-wrap_clickable"
+                                        data-video-embed="{{ $project->is_vk ? '' : $project->video }}"
+                                    >
+                                        @if (explode('/', mime_content_type(base_path() . '/img/media/' . $project->pic))[0] === 'video')
+                                            <video class="project__img project__img_blurred" src="/img/media/{{ $project->pic }}" muted loop></video>
+                                        @else
+                                            <img class="project__img project__img_blurred" alt="" src="/img/media/{{ $project->pic }}">
+                                        @endif
+
+                                        <svg viewBox="0 0 42 42" class="project__video-icon">
+                                            <path class="project__video-icon-path" d="M37.7051 13.6966C37.521 13.0661 37.1605 12.4913 36.6596 12.0296C36.1587 11.5679 35.535 11.2356 34.851 11.0659C32.332 10.4375 22.2096 10.4375 22.2096 10.4375C22.2096 10.4375 12.0873 10.4375 9.56825 11.0659C8.88423 11.2356 8.26056 11.5679 7.75967 12.0296C7.25878 12.4913 6.89824 13.0661 6.71412 13.6966C6.24376 16.0645 6.01551 18.4678 6.03236 20.875C6.01551 23.2822 6.24376 25.6856 6.71412 28.0534C6.89824 28.6839 7.25878 29.2588 7.75967 29.7204C8.26056 30.1821 8.88423 30.5144 9.56825 30.6841C12.0873 31.3125 22.2096 31.3125 22.2096 31.3125C22.2096 31.3125 32.332 31.3125 34.851 30.6841C35.535 30.5144 36.1587 30.1821 36.6596 29.7204C37.1605 29.2588 37.521 28.6839 37.7051 28.0534C38.1755 25.6856 38.4037 23.2822 38.3869 20.875C38.4037 18.4678 38.1755 16.0645 37.7051 13.6966ZM18.9742 25.3482V16.4018L27.3748 20.875L18.9742 25.3482Z" fill="#FFFFFF"/>
+                                        </svg>
+                                    </a>
+                                    <div class="project__wrap">
+                                        <h2 class="project__title">{{ $project->title }}</h2>
+                                        {!! $project->description !!}
+                                    </div>
+                                    <div class="project__btn show-services" rel="projects">
+                                        <p class="project__btn-text">К остальным проектам</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                         <div class="project services__wrap" id="project2">
                             <div class="project__content">
                                 <div class="project__img-wrap project__img-wrap_clickable">
