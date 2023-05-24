@@ -140,10 +140,14 @@
         }
 
         &:hover {
-            border: 1px solid #FFFFFF;
-            box-shadow: 0 0 45px rgba(255, 255, 255, 0.23), 0 0 35px rgba(165, 9, 178, 0.52), 0 0 19px rgba(191, 28, 232, 0.5);
-            transform-origin: center;
-            transform: scale(1.04) translateZ(0) !important;
+            border: clamp(4px, 0.57vw, 11px) solid #90FFFF;
+            box-shadow: 0 0 clamp(12px, 2.8vw, 54px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 35px) #A509B2, 0 0 clamp(5px, 0.98vw, 19px) #BF1CE8;
+            z-index: 999;
+
+            @include from(1921) {
+                border: clamp(4px, 0.57vw, 14px) solid #90FFFF;
+                box-shadow: 0 0 clamp(12px, 2.8vw, 72px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 46px) #A509B2, 0 0 clamp(5px, 0.98vw, 25px) #BF1CE8;
+            }
         }
     }
 

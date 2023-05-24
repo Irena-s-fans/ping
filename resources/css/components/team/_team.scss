@@ -249,6 +249,10 @@
                     }
                 }
             }
+
+            .team__phrase {
+                display: block;
+            }
         }
     }
 
@@ -542,10 +546,6 @@
     &__socials-item_sm {
         margin-right: 15px;
 
-        &:last-child {
-            margin-right: 0;
-        }
-
         svg {
             width: 32px;
             height: 32px;
@@ -560,6 +560,8 @@
                 height: 24px;
             }
         }
+
+
     }
 
     &__line {
@@ -687,5 +689,96 @@
         @include to(768) {
             display: block;
         }
+    }
+
+    &__phrase {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+
+    &__phrase-icon {
+        width: min(3.75vw, 96px);
+        height: min(3.75vw, 96px);
+        transform: skewX($skewX);
+    }
+
+    &__phrase-content {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: min(20.8vw, 533px);
+        padding: min(1.3vw, 33px) min(2.6vw, 66px) min(1.3vw, 33px) min(3.9vw, 99px);
+        display: none;
+        transform: translate(100%, 100%);
+        background: rgb(27, 27, 27);
+        border: 1px solid #FFFFFF;
+        box-shadow: 0 0 21px #90FFFF;
+    }
+
+    &__phrase-text {
+        max-width: 100%;
+        font-family: Play, sans-serif;
+        color: #FFFFFF;
+        font-size: min(1.04vw, 27px);
+        line-height: 135%;
+        font-weight: 700;
+        transform: skewX($skewX);
+    }
+
+    &__phrase_sm {
+        transform: skewX(-$skewX);
+        z-index: 1000;
+        cursor: pointer;
+
+        @include to(450) {
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translate(calc(-50% - 8px), -100%) skewX(-$skewX);
+        }
+    }
+
+    &__phrase-icon_sm {
+        width: 32px;
+        height: 32px;
+
+        @include to(576) {
+            width: 28px;
+            height: 28px;
+        }
+
+        @include to(450) {
+            width: 24px;
+            height: 24px;
+        }
+
+        transform: skewX($skewX);
+    }
+
+    &__phrase-content_sm {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: min(20.8vw, 533px);
+        padding: min(1.3vw, 33px) min(2.6vw, 66px) min(1.3vw, 33px) min(3.9vw, 99px);
+        display: none;
+        transform: translate(100%, 100%);
+        background: rgb(27, 27, 27);
+        border: 1px solid #FFFFFF;
+        box-shadow: 0 0 21px #90FFFF;
+    }
+
+    &__phrase-text_sm {
+        max-width: 100%;
+        font-family: Play, sans-serif;
+        color: #FFFFFF;
+        font-size: min(1.04vw, 27px);
+        line-height: 135%;
+        font-weight: 700;
+        transform: skewX($skewX);
     }
 }

@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>Креативное Агенство PinG</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/favicon_180x180.ico">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/public/img/favicon_32x32.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/public/img/favicon_16x16.ico">
+
     <link rel="stylesheet" href="/public/css/index.css">
     <link href="/public/fonts/Play-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <link href="/public/fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
@@ -15,92 +20,6 @@
     <script src="/public/js/libs/jquery-3.6.1.min.js"></script>
     <script src="/public/js/index.js"></script>
 </head>
-<body class="body">
-<div class="loader loader_active">
-    <div class="loader__wrap">
-        <img src="/public/img/loader__logo.png" alt="" class="loader__logo">
-        <div class="loader__progress">
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-            <div class="loader__el"></div>
-        </div>
-        <div class="loader__text-wrap">
-            <p class="loader__text">
-                <span class="loader__text-percents">0</span>
-                %
-            </p>
-        </div>
-    </div>
-</div>
-
 <style>
     .loader {
         width: 100vw;
@@ -313,6 +232,91 @@
         display: block !important;
     }
 </style>
+<body class="body">
+<div class="loader loader_active">
+    <div class="loader__wrap">
+        <img src="/public/img/loader__logo.png" alt="" class="loader__logo">
+        <div class="loader__progress">
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+            <div class="loader__el"></div>
+        </div>
+        <div class="loader__text-wrap">
+            <p class="loader__text">
+                <span class="loader__text-percents">0</span>
+                %
+            </p>
+        </div>
+    </div>
+</div>
 <script>
     (function() {
         let loadRatio = 0
@@ -394,6 +398,56 @@
             <div class="popup__icon-wrap">
                 <p class="popup__icon">!</p>
             </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup_phrase" id="phrase_andrey">
+    <div class="popup__body">
+        <div class="popup__content popup__content_phrase">
+            <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
+            <p class="popup__text popup__text_xl popup__text_bold">
+                {{ __('I also like: argue with your friends on discord about your next purchase of a co-op game on Steam') }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="popup popup_phrase" id="phrase_vika">
+    <div class="popup__body">
+        <div class="popup__content popup__content_phrase">
+            <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
+            <p class="popup__text popup__text_xl popup__text_bold">
+                {{ __('I also like: buying Battle Pass in the games but never levelling it') }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="popup popup_phrase" id="phrase_anton">
+    <div class="popup__body">
+        <div class="popup__content popup__content_phrase">
+            <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
+            <p class="popup__text popup__text_xl popup__text_bold">
+                {{ __('I also like: planning a whole bunch of streams only to never start them') }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="popup popup_phrase" id="phrase_ruslan">
+    <div class="popup__body">
+        <div class="popup__content popup__content_phrase">
+            <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
+            <p class="popup__text popup__text_xl popup__text_bold">
+                {{ __('I also like: sharing pictures of my cat') }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="popup popup_phrase" id="phrase_maxim">
+    <div class="popup__body">
+        <div class="popup__content popup__content_phrase">
+            <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
+            <p class="popup__text popup__text_xl popup__text_bold">
+                {{ __('I also like: riding a bicycle for at least 20 kms straight') }}
+            </p>
         </div>
     </div>
 </div>
@@ -606,21 +660,13 @@
                                     <img class="project__img" src="/public/img/services/dir_desc_1.png" alt="">
                                 </div>
                                 <div class="project__wrap">
-                                    <h2 class="project__title">Турниры</h2>
-                                    <p class="project__text"> Все профессиональные киберспортивные турниры начинаются с
-                                        правильно
-                                        разработанной концепции и стратегии.</p>
-                                    <p class="project__text"> Наша команда имеет многолетний опыт в создании форматов
-                                        турниров и
-                                        соревнований, а также сводов правил, регламента для участников, планировании и
-                                        управлении
-                                        матчами и, конечно же, администрировании.</p>
-                                    <p class="project__text"> Данный вид мероприятия повысит узнаваемость вашего бренда и
-                                        привлечет
-                                        внимание, установив прямой контакт с аудиторией.</p>
+                                    <h2 class="project__title">{{ __('Tournaments') }}</h2>
+                                    <p class="project__text">{{ __('All professional esports tournaments start with a properly developed concept and strategy') }}.</p>
+                                    <p class="project__text">{{ __('Our team has many years of experience in creating tournament and competition formats, as well as rulebooks, regulations for participants, planning and managing matches and, of course, administration') }}.</p>
+                                    <p class="project__text">{{ __('This type of event will increase your brand awareness and attract attention by establishing direct contact with the audience') }}.</p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
-                                    <p class="project__btn-text">К остальным услугам</p>
+                                    <p class="project__btn-text">{{ __('To other services') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -630,13 +676,14 @@
                                     <img class="project__img" src="/public/img/services/dir_desc_2.png" alt="">
                                 </div>
                                 <div class="project__wrap">
-                                    <h2 class="project__title">Спец. проекты</h2>
-                                    <p class="project__text">Исходя из ваших маркетинговых задач, мы можем создать уникальный специальный проект для вашего бренда.Это могут быть развлекательные шоу игрового, новостного или разговорного характера, дополненные виджетами и лэндингами.</p>
-                                    <p class="project__text">С их помощью можно выделиться среди конкурентов, завладеть интересом аудитории, напрямую поднять продажи и задать отправную точку полноценной кампании.</p>
-                                    <p class="project__text"> Для нас важно передать ценности бренда потребителям и представить продукт в понятном и интересующим их ключе.</p>
+                                    <h2 class="project__title">{{ __('Spec projects') }}</h2>
+                                    <p class="project__text">{{ __('Based on your marketing objectives, we can create a unique special project for your brand. These can be entertainment shows of a gaming, news or conversational nature, supplemented with widgets and landing pages') }}.
+                                    </p>
+                                    <p class="project__text">{{ __('With their help, you can stand out among competitors, capture the interest of the audience, directly raise sales and set the starting point of a full-fledged campaign') }}.</p>
+                                    <p class="project__text">{{ __('It is important for us to convey brand values to consumers and present the product in a way that is understandable and interesting to them') }}.</p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
-                                    <p class="project__btn-text">К остальным услугам</p>
+                                    <p class="project__btn-text">{{ __('To other services') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -646,35 +693,22 @@
                                     <img class="project__img" src="/public/img/services/dir_desc_3.png" alt="">
                                 </div>
                                 <div class="project__wrap">
-                                    <h2 class="project__title">Оффлайн ивенты</h2>
-                                    <p class="project__text">Имея большой опыт в разработке, планировании и проведении мероприятий в различных сферах, наша команда проводит креативные и профессиональные мероприятия.</p>
+                                    <h2 class="project__title">{{ __('Offline events') }}</h2>
+                                    <p class="project__text">{{ __('Having extensive experience in the development, planning and holding of events in various fields, our team conducts creative and professional events') }}.</p>
                                     <p class="project__text">
-                                        Умея работать с посетителями вживую, мы можем организовать любое событие для вас:
-                                        <span class="project__text_blue">
-                                            lan-финалы
-                                        </span>,
-                                        <span class="project__text_blue">
-                                            презентации
-                                        </span>,
-                                        <span class="project__text_blue">
-                                            выставки
-                                        </span>,
-                                        <span class="project__text_blue">
-                                            тематические вечеринки
-                                        </span>,
-                                        <span class="project__text_blue">
-                                            корпоративы
-                                        </span>,
-                                        <span class="project__text_blue">
-                                            team building
-                                        </span>,
-                                        <span class="project__text_blue">
-                                            фестивали
-                                        </span>.
+                                        {{ __('Being able to work with visitors live, we can organize any event for you') }}
+                                        :<span class="project__text_blue">
+                                            {{ __('lan-finals') }}</span>,<span class="project__text_blue">
+                                            {{ __('presentations') }}</span>,<span class="project__text_blue">
+                                            {{ __('exhibitions') }}</span>,<span class="project__text_blue">
+                                            {{ __('theme parties') }}</span>,<span class="project__text_blue">
+                                            {{ __('corporate events') }}</span>,<span class="project__text_blue">
+                                            {{ __('team building') }}</span>,<span class="project__text_blue">
+                                            {{ __('festivals') }}</span>.
                                     </p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
-                                    <p class="project__btn-text">К остальным услугам</p>
+                                    <p class="project__btn-text">{{ __('To other services') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -684,14 +718,20 @@
                                     <img class="project__img" src="/public/img/services/dir_desc_4.png" alt="">
                                 </div>
                                 <div class="project__wrap">
-                                    <h2 class="project__title">Digital реклама</h2>
-                                    <p class="project__text">Наша команда может разработать для вас план маркетинга, который позволит охватить нужную аудиторию с помощью цифровых платформ, которые чаще всего используют профессионалы киберспорта и геймеры.</p>
+                                    <h2 class="project__title">{{ __('Digital ads') }}</h2>
+                                    <p class="project__text">{{ __('Our team can develop a marketing and content plan for you that will allow you to reach the right audience using digital platforms and social networks, which are most often used by esports professionals and gamers') }}.</p>
+                                    <p class="project__text"> {{ __("We understand that the main goal of brands is to increase sales and present their products as the best in their segments, and at the same time we understand what fans of the gaming sphere like. Therefore, we create individual marketing activities in which the audience gets acquainted with the brand's products in meaningful and interesting ways, creating value for all participants") }}.
+                                    </p>
                                     <p class="project__text">
-                                        Мы понимаем, что основная цель брендов — увеличить продажи и представить свою продукцию как лучшую, также мы понимаем, что нравится любителям игровой сферы. Поэтому мы создаем индивидуальные маркетинговые активности, в которых аудитория знакомится с продуктами бренда осмысленными и интересными способами, создавая ценность для всех участников.
+                                        {{ __('Our options') }}: <span class="project__text_blue">
+                                            {{ __('placement of brand promotions') }}</span>,<span class="project__text_blue">
+                                            {{ __('influencer engagement and social media coverage') }}</span>,<span class="project__text_blue">
+                                            {{ __('brand coverage on streams, voice mentions') }}</span>,<span class="project__text_blue">
+                                            {{ __('banner on the broadcast and in the channel description') }}</span>.
                                     </p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
-                                    <p class="project__btn-text">К остальным услугам</p>
+                                    <p class="project__btn-text">{{ __('To other services') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -701,14 +741,13 @@
                                     <img class="project__img" src="/public/img/services/dir_desc_5.png" alt="">
                                 </div>
                                 <div class="project__wrap">
-                                    <h2 class="project__title">Дизайнерские решения</h2>
-                                    <p class="project__text">Внешний вид интеграций очень важен для восприятия рекламной кампании, будь то красиво оформленная студия, креативы в социальных сетях или же баннер под транслацией.</p>
-                                    <p class="project__text">
-                                        Мы можем разработать и подготовить для вас полный пакет дизайна с нуля или же сделать специальное оформление на основе брендбука компании и ваших пожеланий: напечатать для вас продукцию с персональной айдентикой, мерч, pos-материалы и декоративные элементы
+                                    <h2 class="project__title">{{ __('Creative services') }}</h2>
+                                    <p class="project__text">{{ __('The appearance of integration is very important for the perception of an advertising campaign, whether it is a beautifully designed studio, a creative in social networks or a banner under the translation') }}.</p>
+                                    <p class="project__text"> {{ __("We can develop and prepare for you a complete design package from scratch or make a special design based on the company's brandbook and your wishes: print products with a personal identity, merch, pos materials and decorative elements for you") }}.
                                     </p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
-                                    <p class="project__btn-text">К остальным услугам</p>
+                                    <p class="project__btn-text">{{ __('To other services') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -786,9 +825,17 @@
                         </div>
                         <div class="team__content">
                             <div class="team__item team__item_active">
+                                <div class="team__phrase">
+                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <div class="team__phrase-content">
+                                        <p class="team__phrase-text">
+                                            {{ __('I also like: argue with your friends on discord about your next purchase of a co-op game on Steam') }}
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="public/img/team/team1.png" alt="">
-                                    <img class="team__img" src="public/img/team/team1.png" alt="">
+                                    <img class="team__img_shadow" src="/public/img/team/team1.png" alt="">
+                                    <img class="team__img" src="/public/img/team/team1.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
@@ -843,9 +890,17 @@
                                 </div>
                             </div>
                             <div class="team__item">
+                                <div class="team__phrase">
+                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <div class="team__phrase-content">
+                                        <p class="team__phrase-text">
+                                            {{ __('I also like: buying Battle Pass in the games but never levelling it') }}
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="public/img/team/team2.png" alt="">
-                                    <img class="team__img" src="public/img/team/team2.png" alt="">
+                                    <img class="team__img_shadow" src="/public/img/team/team2.png" alt="">
+                                    <img class="team__img" src="/public/img/team/team2.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
@@ -904,9 +959,17 @@
                                 </div>
                             </div>
                             <div class="team__item">
+                                <div class="team__phrase">
+                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <div class="team__phrase-content">
+                                        <p class="team__phrase-text">
+                                            {{ __('I also like: planning a whole bunch of streams only to never start them') }}
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="public/img/team/team3.png" alt="">
-                                    <img class="team__img" src="public/img/team/team3.png" alt="">
+                                    <img class="team__img_shadow" src="/public/img/team/team3.png" alt="">
+                                    <img class="team__img" src="/public/img/team/team3.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
@@ -965,9 +1028,17 @@
                                 </div>
                             </div>
                             <div class="team__item">
+                                <div class="team__phrase">
+                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <div class="team__phrase-content">
+                                        <p class="team__phrase-text">
+                                            {{ __('I also like: sharing pictures of my cat') }}
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="public/img/team/team4.png" alt="">
-                                    <img class="team__img" src="public/img/team/team4.png" alt="">
+                                    <img class="team__img_shadow" src="/public/img/team/team4.png" alt="">
+                                    <img class="team__img" src="/public/img/team/team4.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
@@ -1025,9 +1096,17 @@
                                 </div>
                             </div>
                             <div class="team__item">
+                                <div class="team__phrase">
+                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <div class="team__phrase-content">
+                                        <p class="team__phrase-text">
+                                            {{ __('I also like: riding a bicycle for at least 20 kms straight') }}
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="public/img/team/team5.png" alt="">
-                                    <img class="team__img" src="public/img/team/team5.png" alt="">
+                                    <img class="team__img_shadow" src="/public/img/team/team5.png" alt="">
+                                    <img class="team__img" src="/public/img/team/team5.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
@@ -1127,6 +1206,9 @@
                                                           fill="#1E1E1E"/>
                                                 </svg>
                                             </a>
+                                            <div class="team__phrase_sm show_popup" rel="phrase_andrey">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide team__slide">
@@ -1175,6 +1257,9 @@
                                                           fill="#1E1E1E"/>
                                                 </svg>
                                             </a>
+                                            <div class="team__phrase_sm show_popup" rel="phrase_vika">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide team__slide">
@@ -1223,6 +1308,9 @@
                                                           fill="#1E1E1E"/>
                                                 </svg>
                                             </a>
+                                            <div class="team__phrase_sm show_popup" rel="phrase_anton">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide team__slide">
@@ -1271,6 +1359,9 @@
                                                           fill="#1E1E1E"/>
                                                 </svg>
                                             </a>
+                                            <div class="team__phrase_sm show_popup" rel="phrase_ruslan">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide team__slide">
@@ -1319,6 +1410,9 @@
                                                           fill="#1E1E1E"/>
                                                 </svg>
                                             </a>
+                                            <div class="team__phrase_sm show_popup" rel="phrase_maxim">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1664,16 +1758,31 @@
                                             />
                                         </svg>
                                     </a>
-                                    <a href="https://www.facebook.com/pingmsk" class="contacts__icon-wrap"
-                                       target="_blank">
-                                        <svg viewBox="0 0 42 42" class="contacts__icon">
-                                            <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
-                                                  rx="5" fill="#4F4F4F"/>
-                                            <path class="contacts__icon-path"
-                                                  d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
-                                                  fill="#1E1E1E"/>
-                                        </svg>
-                                    </a>
+
+                                    @if (App::currentLocale() == 'ru')
+                                        <a href="https://www.facebook.com/pingmsk" class="contacts__icon-wrap"
+                                           target="_blank">
+                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                      rx="5" fill="#4F4F4F"/>
+                                                <path class="contacts__icon-path"
+                                                      d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                      fill="#1E1E1E"/>
+                                            </svg>
+                                        </a>
+                                    @else
+                                        <a href="https://www.facebook.com/peopleingaming" class="contacts__icon-wrap"
+                                           target="_blank">
+                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                      rx="5" fill="#4F4F4F"/>
+                                                <path class="contacts__icon-path"
+                                                      d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                      fill="#1E1E1E"/>
+                                            </svg>
+                                        </a>
+                                    @endif
+
                                     <a href="https://twitter.com/agencyping" class="contacts__icon-wrap"
                                        target="_blank">
                                         <svg viewBox="0 0 42 42" class="contacts__icon">
@@ -1684,16 +1793,31 @@
                                                   fill="#1E1E1E"/>
                                         </svg>
                                     </a>
-                                    <a href="https://www.instagram.com/ping_agency" class="contacts__icon-wrap"
-                                       target="_blank">
-                                        <svg viewBox="0 0 42 42" class="contacts__icon">
-                                            <rect class="contacts__icon-rect" x="0.21875" width="41.75" height="41.75"
-                                                  rx="5" fill="#4F4F4F"/>
-                                            <path class="contacts__icon-path"
-                                                  d="M14.5181 5.21875H27.6694C32.6794 5.21875 36.75 9.28938 36.75 14.2994V27.4506C36.75 29.859 35.7933 32.1687 34.0904 33.8716C32.3874 35.5745 30.0777 36.5313 27.6694 36.5313H14.5181C9.50813 36.5313 5.4375 32.4606 5.4375 27.4506V14.2994C5.4375 11.891 6.39421 9.58135 8.09715 7.8784C9.8001 6.17546 12.1098 5.21875 14.5181 5.21875ZM14.205 8.35C12.7102 8.35 11.2766 8.94382 10.2196 10.0008C9.16257 11.0578 8.56875 12.4914 8.56875 13.9863V27.7638C8.56875 30.8793 11.0894 33.4 14.205 33.4H27.9825C29.4773 33.4 30.9109 32.8062 31.9679 31.7492C33.0249 30.6922 33.6188 29.2586 33.6188 27.7638V13.9863C33.6188 10.8707 31.0981 8.35 27.9825 8.35H14.205ZM29.3133 10.6984C29.8323 10.6984 30.3301 10.9046 30.6971 11.2716C31.0641 11.6387 31.2703 12.1364 31.2703 12.6555C31.2703 13.1745 31.0641 13.6723 30.6971 14.0393C30.3301 14.4063 29.8323 14.6125 29.3133 14.6125C28.7942 14.6125 28.2965 14.4063 27.9295 14.0393C27.5624 13.6723 27.3563 13.1745 27.3563 12.6555C27.3563 12.1364 27.5624 11.6387 27.9295 11.2716C28.2965 10.9046 28.7942 10.6984 29.3133 10.6984ZM21.0938 13.0469C23.1699 13.0469 25.161 13.8716 26.6291 15.3397C28.0971 16.8077 28.9219 18.7989 28.9219 20.875C28.9219 22.9512 28.0971 24.9423 26.6291 26.4103C25.161 27.8784 23.1699 28.7031 21.0938 28.7031C19.0176 28.7031 17.0265 27.8784 15.5584 26.4103C14.0904 24.9423 13.2656 22.9512 13.2656 20.875C13.2656 18.7989 14.0904 16.8077 15.5584 15.3397C17.0265 13.8716 19.0176 13.0469 21.0938 13.0469ZM21.0938 16.1781C19.8481 16.1781 18.6534 16.673 17.7726 17.5538C16.8917 18.4346 16.3969 19.6293 16.3969 20.875C16.3969 22.1207 16.8917 23.3154 17.7726 24.1962C18.6534 25.077 19.8481 25.5719 21.0938 25.5719C22.3394 25.5719 23.5341 25.077 24.4149 24.1962C25.2958 23.3154 25.7906 22.1207 25.7906 20.875C25.7906 19.6293 25.2958 18.4346 24.4149 17.5538C23.5341 16.673 22.3394 16.1781 21.0938 16.1781Z"
-                                                  fill="#1E1E1E"/>
-                                        </svg>
-                                    </a>
+
+                                    @if (App::currentLocale() == 'ru')
+                                        <a href="https://www.instagram.com/ping_agency" class="contacts__icon-wrap"
+                                           target="_blank">
+                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                <rect class="contacts__icon-rect" x="0.21875" width="41.75" height="41.75"
+                                                      rx="5" fill="#4F4F4F"/>
+                                                <path class="contacts__icon-path"
+                                                      d="M14.5181 5.21875H27.6694C32.6794 5.21875 36.75 9.28938 36.75 14.2994V27.4506C36.75 29.859 35.7933 32.1687 34.0904 33.8716C32.3874 35.5745 30.0777 36.5313 27.6694 36.5313H14.5181C9.50813 36.5313 5.4375 32.4606 5.4375 27.4506V14.2994C5.4375 11.891 6.39421 9.58135 8.09715 7.8784C9.8001 6.17546 12.1098 5.21875 14.5181 5.21875ZM14.205 8.35C12.7102 8.35 11.2766 8.94382 10.2196 10.0008C9.16257 11.0578 8.56875 12.4914 8.56875 13.9863V27.7638C8.56875 30.8793 11.0894 33.4 14.205 33.4H27.9825C29.4773 33.4 30.9109 32.8062 31.9679 31.7492C33.0249 30.6922 33.6188 29.2586 33.6188 27.7638V13.9863C33.6188 10.8707 31.0981 8.35 27.9825 8.35H14.205ZM29.3133 10.6984C29.8323 10.6984 30.3301 10.9046 30.6971 11.2716C31.0641 11.6387 31.2703 12.1364 31.2703 12.6555C31.2703 13.1745 31.0641 13.6723 30.6971 14.0393C30.3301 14.4063 29.8323 14.6125 29.3133 14.6125C28.7942 14.6125 28.2965 14.4063 27.9295 14.0393C27.5624 13.6723 27.3563 13.1745 27.3563 12.6555C27.3563 12.1364 27.5624 11.6387 27.9295 11.2716C28.2965 10.9046 28.7942 10.6984 29.3133 10.6984ZM21.0938 13.0469C23.1699 13.0469 25.161 13.8716 26.6291 15.3397C28.0971 16.8077 28.9219 18.7989 28.9219 20.875C28.9219 22.9512 28.0971 24.9423 26.6291 26.4103C25.161 27.8784 23.1699 28.7031 21.0938 28.7031C19.0176 28.7031 17.0265 27.8784 15.5584 26.4103C14.0904 24.9423 13.2656 22.9512 13.2656 20.875C13.2656 18.7989 14.0904 16.8077 15.5584 15.3397C17.0265 13.8716 19.0176 13.0469 21.0938 13.0469ZM21.0938 16.1781C19.8481 16.1781 18.6534 16.673 17.7726 17.5538C16.8917 18.4346 16.3969 19.6293 16.3969 20.875C16.3969 22.1207 16.8917 23.3154 17.7726 24.1962C18.6534 25.077 19.8481 25.5719 21.0938 25.5719C22.3394 25.5719 23.5341 25.077 24.4149 24.1962C25.2958 23.3154 25.7906 22.1207 25.7906 20.875C25.7906 19.6293 25.2958 18.4346 24.4149 17.5538C23.5341 16.673 22.3394 16.1781 21.0938 16.1781Z"
+                                                      fill="#1E1E1E"/>
+                                            </svg>
+                                        </a>
+                                    @else
+                                        <a href="https://instagram.com/people_in_gaming" class="contacts__icon-wrap"
+                                           target="_blank">
+                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                <rect class="contacts__icon-rect" x="0.21875" width="41.75" height="41.75"
+                                                      rx="5" fill="#4F4F4F"/>
+                                                <path class="contacts__icon-path"
+                                                      d="M14.5181 5.21875H27.6694C32.6794 5.21875 36.75 9.28938 36.75 14.2994V27.4506C36.75 29.859 35.7933 32.1687 34.0904 33.8716C32.3874 35.5745 30.0777 36.5313 27.6694 36.5313H14.5181C9.50813 36.5313 5.4375 32.4606 5.4375 27.4506V14.2994C5.4375 11.891 6.39421 9.58135 8.09715 7.8784C9.8001 6.17546 12.1098 5.21875 14.5181 5.21875ZM14.205 8.35C12.7102 8.35 11.2766 8.94382 10.2196 10.0008C9.16257 11.0578 8.56875 12.4914 8.56875 13.9863V27.7638C8.56875 30.8793 11.0894 33.4 14.205 33.4H27.9825C29.4773 33.4 30.9109 32.8062 31.9679 31.7492C33.0249 30.6922 33.6188 29.2586 33.6188 27.7638V13.9863C33.6188 10.8707 31.0981 8.35 27.9825 8.35H14.205ZM29.3133 10.6984C29.8323 10.6984 30.3301 10.9046 30.6971 11.2716C31.0641 11.6387 31.2703 12.1364 31.2703 12.6555C31.2703 13.1745 31.0641 13.6723 30.6971 14.0393C30.3301 14.4063 29.8323 14.6125 29.3133 14.6125C28.7942 14.6125 28.2965 14.4063 27.9295 14.0393C27.5624 13.6723 27.3563 13.1745 27.3563 12.6555C27.3563 12.1364 27.5624 11.6387 27.9295 11.2716C28.2965 10.9046 28.7942 10.6984 29.3133 10.6984ZM21.0938 13.0469C23.1699 13.0469 25.161 13.8716 26.6291 15.3397C28.0971 16.8077 28.9219 18.7989 28.9219 20.875C28.9219 22.9512 28.0971 24.9423 26.6291 26.4103C25.161 27.8784 23.1699 28.7031 21.0938 28.7031C19.0176 28.7031 17.0265 27.8784 15.5584 26.4103C14.0904 24.9423 13.2656 22.9512 13.2656 20.875C13.2656 18.7989 14.0904 16.8077 15.5584 15.3397C17.0265 13.8716 19.0176 13.0469 21.0938 13.0469ZM21.0938 16.1781C19.8481 16.1781 18.6534 16.673 17.7726 17.5538C16.8917 18.4346 16.3969 19.6293 16.3969 20.875C16.3969 22.1207 16.8917 23.3154 17.7726 24.1962C18.6534 25.077 19.8481 25.5719 21.0938 25.5719C22.3394 25.5719 23.5341 25.077 24.4149 24.1962C25.2958 23.3154 25.7906 22.1207 25.7906 20.875C25.7906 19.6293 25.2958 18.4346 24.4149 17.5538C23.5341 16.673 22.3394 16.1781 21.0938 16.1781Z"
+                                                      fill="#1E1E1E"/>
+                                            </svg>
+                                        </a>
+                                    @endif
+
                                     <a href="https://t.me/ping_agency" class="contacts__icon-wrap" target="_blank">
                                         <svg viewBox="0 0 42 42" class="contacts__icon">
                                             <rect class="contacts__icon-rect" x="0.625" width="41.75" height="41.75"
@@ -1831,16 +1955,31 @@
                                             />
                                         </svg>
                                     </a>
-                                    <a href="https://www.facebook.com/pingmsk" class="contacts__icon-wrap"
-                                       target="_blank">
-                                        <svg viewBox="0 0 42 42" class="contacts__icon">
-                                            <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
-                                                  rx="5" fill="#4F4F4F"/>
-                                            <path class="contacts__icon-path"
-                                                  d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
-                                                  fill="#1E1E1E"/>
-                                        </svg>
-                                    </a>
+
+                                    @if (App::currentLocale() == 'ru')
+                                        <a href="https://www.facebook.com/pingmsk" class="contacts__icon-wrap"
+                                           target="_blank">
+                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                      rx="5" fill="#4F4F4F"/>
+                                                <path class="contacts__icon-path"
+                                                      d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                      fill="#1E1E1E"/>
+                                            </svg>
+                                        </a>
+                                    @else
+                                        <a href="https://www.facebook.com/peopleingaming" class="contacts__icon-wrap"
+                                           target="_blank">
+                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                      rx="5" fill="#4F4F4F"/>
+                                                <path class="contacts__icon-path"
+                                                      d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                      fill="#1E1E1E"/>
+                                            </svg>
+                                        </a>
+                                    @endif
+
                                     <a href="https://twitter.com/agencyping" class="contacts__icon-wrap"
                                        target="_blank">
                                         <svg viewBox="0 0 42 42" class="contacts__icon">
@@ -1851,16 +1990,31 @@
                                                   fill="#1E1E1E"/>
                                         </svg>
                                     </a>
-                                    <a href="https://www.instagram.com/ping_agency" class="contacts__icon-wrap"
-                                       target="_blank">
-                                        <svg viewBox="0 0 42 42" class="contacts__icon">
-                                            <rect class="contacts__icon-rect" x="0.21875" width="41.75" height="41.75"
-                                                  rx="5" fill="#4F4F4F"/>
-                                            <path class="contacts__icon-path"
-                                                  d="M14.5181 5.21875H27.6694C32.6794 5.21875 36.75 9.28938 36.75 14.2994V27.4506C36.75 29.859 35.7933 32.1687 34.0904 33.8716C32.3874 35.5745 30.0777 36.5313 27.6694 36.5313H14.5181C9.50813 36.5313 5.4375 32.4606 5.4375 27.4506V14.2994C5.4375 11.891 6.39421 9.58135 8.09715 7.8784C9.8001 6.17546 12.1098 5.21875 14.5181 5.21875ZM14.205 8.35C12.7102 8.35 11.2766 8.94382 10.2196 10.0008C9.16257 11.0578 8.56875 12.4914 8.56875 13.9863V27.7638C8.56875 30.8793 11.0894 33.4 14.205 33.4H27.9825C29.4773 33.4 30.9109 32.8062 31.9679 31.7492C33.0249 30.6922 33.6188 29.2586 33.6188 27.7638V13.9863C33.6188 10.8707 31.0981 8.35 27.9825 8.35H14.205ZM29.3133 10.6984C29.8323 10.6984 30.3301 10.9046 30.6971 11.2716C31.0641 11.6387 31.2703 12.1364 31.2703 12.6555C31.2703 13.1745 31.0641 13.6723 30.6971 14.0393C30.3301 14.4063 29.8323 14.6125 29.3133 14.6125C28.7942 14.6125 28.2965 14.4063 27.9295 14.0393C27.5624 13.6723 27.3563 13.1745 27.3563 12.6555C27.3563 12.1364 27.5624 11.6387 27.9295 11.2716C28.2965 10.9046 28.7942 10.6984 29.3133 10.6984ZM21.0938 13.0469C23.1699 13.0469 25.161 13.8716 26.6291 15.3397C28.0971 16.8077 28.9219 18.7989 28.9219 20.875C28.9219 22.9512 28.0971 24.9423 26.6291 26.4103C25.161 27.8784 23.1699 28.7031 21.0938 28.7031C19.0176 28.7031 17.0265 27.8784 15.5584 26.4103C14.0904 24.9423 13.2656 22.9512 13.2656 20.875C13.2656 18.7989 14.0904 16.8077 15.5584 15.3397C17.0265 13.8716 19.0176 13.0469 21.0938 13.0469ZM21.0938 16.1781C19.8481 16.1781 18.6534 16.673 17.7726 17.5538C16.8917 18.4346 16.3969 19.6293 16.3969 20.875C16.3969 22.1207 16.8917 23.3154 17.7726 24.1962C18.6534 25.077 19.8481 25.5719 21.0938 25.5719C22.3394 25.5719 23.5341 25.077 24.4149 24.1962C25.2958 23.3154 25.7906 22.1207 25.7906 20.875C25.7906 19.6293 25.2958 18.4346 24.4149 17.5538C23.5341 16.673 22.3394 16.1781 21.0938 16.1781Z"
-                                                  fill="#1E1E1E"/>
-                                        </svg>
-                                    </a>
+
+                                    @if (App::currentLocale() == 'ru')
+                                        <a href="https://www.instagram.com/ping_agency" class="contacts__icon-wrap"
+                                           target="_blank">
+                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                <rect class="contacts__icon-rect" x="0.21875" width="41.75" height="41.75"
+                                                      rx="5" fill="#4F4F4F"/>
+                                                <path class="contacts__icon-path"
+                                                      d="M14.5181 5.21875H27.6694C32.6794 5.21875 36.75 9.28938 36.75 14.2994V27.4506C36.75 29.859 35.7933 32.1687 34.0904 33.8716C32.3874 35.5745 30.0777 36.5313 27.6694 36.5313H14.5181C9.50813 36.5313 5.4375 32.4606 5.4375 27.4506V14.2994C5.4375 11.891 6.39421 9.58135 8.09715 7.8784C9.8001 6.17546 12.1098 5.21875 14.5181 5.21875ZM14.205 8.35C12.7102 8.35 11.2766 8.94382 10.2196 10.0008C9.16257 11.0578 8.56875 12.4914 8.56875 13.9863V27.7638C8.56875 30.8793 11.0894 33.4 14.205 33.4H27.9825C29.4773 33.4 30.9109 32.8062 31.9679 31.7492C33.0249 30.6922 33.6188 29.2586 33.6188 27.7638V13.9863C33.6188 10.8707 31.0981 8.35 27.9825 8.35H14.205ZM29.3133 10.6984C29.8323 10.6984 30.3301 10.9046 30.6971 11.2716C31.0641 11.6387 31.2703 12.1364 31.2703 12.6555C31.2703 13.1745 31.0641 13.6723 30.6971 14.0393C30.3301 14.4063 29.8323 14.6125 29.3133 14.6125C28.7942 14.6125 28.2965 14.4063 27.9295 14.0393C27.5624 13.6723 27.3563 13.1745 27.3563 12.6555C27.3563 12.1364 27.5624 11.6387 27.9295 11.2716C28.2965 10.9046 28.7942 10.6984 29.3133 10.6984ZM21.0938 13.0469C23.1699 13.0469 25.161 13.8716 26.6291 15.3397C28.0971 16.8077 28.9219 18.7989 28.9219 20.875C28.9219 22.9512 28.0971 24.9423 26.6291 26.4103C25.161 27.8784 23.1699 28.7031 21.0938 28.7031C19.0176 28.7031 17.0265 27.8784 15.5584 26.4103C14.0904 24.9423 13.2656 22.9512 13.2656 20.875C13.2656 18.7989 14.0904 16.8077 15.5584 15.3397C17.0265 13.8716 19.0176 13.0469 21.0938 13.0469ZM21.0938 16.1781C19.8481 16.1781 18.6534 16.673 17.7726 17.5538C16.8917 18.4346 16.3969 19.6293 16.3969 20.875C16.3969 22.1207 16.8917 23.3154 17.7726 24.1962C18.6534 25.077 19.8481 25.5719 21.0938 25.5719C22.3394 25.5719 23.5341 25.077 24.4149 24.1962C25.2958 23.3154 25.7906 22.1207 25.7906 20.875C25.7906 19.6293 25.2958 18.4346 24.4149 17.5538C23.5341 16.673 22.3394 16.1781 21.0938 16.1781Z"
+                                                      fill="#1E1E1E"/>
+                                            </svg>
+                                        </a>
+                                    @else
+                                        <a href="https://instagram.com/people_in_gaming" class="contacts__icon-wrap"
+                                           target="_blank">
+                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                <rect class="contacts__icon-rect" x="0.21875" width="41.75" height="41.75"
+                                                      rx="5" fill="#4F4F4F"/>
+                                                <path class="contacts__icon-path"
+                                                      d="M14.5181 5.21875H27.6694C32.6794 5.21875 36.75 9.28938 36.75 14.2994V27.4506C36.75 29.859 35.7933 32.1687 34.0904 33.8716C32.3874 35.5745 30.0777 36.5313 27.6694 36.5313H14.5181C9.50813 36.5313 5.4375 32.4606 5.4375 27.4506V14.2994C5.4375 11.891 6.39421 9.58135 8.09715 7.8784C9.8001 6.17546 12.1098 5.21875 14.5181 5.21875ZM14.205 8.35C12.7102 8.35 11.2766 8.94382 10.2196 10.0008C9.16257 11.0578 8.56875 12.4914 8.56875 13.9863V27.7638C8.56875 30.8793 11.0894 33.4 14.205 33.4H27.9825C29.4773 33.4 30.9109 32.8062 31.9679 31.7492C33.0249 30.6922 33.6188 29.2586 33.6188 27.7638V13.9863C33.6188 10.8707 31.0981 8.35 27.9825 8.35H14.205ZM29.3133 10.6984C29.8323 10.6984 30.3301 10.9046 30.6971 11.2716C31.0641 11.6387 31.2703 12.1364 31.2703 12.6555C31.2703 13.1745 31.0641 13.6723 30.6971 14.0393C30.3301 14.4063 29.8323 14.6125 29.3133 14.6125C28.7942 14.6125 28.2965 14.4063 27.9295 14.0393C27.5624 13.6723 27.3563 13.1745 27.3563 12.6555C27.3563 12.1364 27.5624 11.6387 27.9295 11.2716C28.2965 10.9046 28.7942 10.6984 29.3133 10.6984ZM21.0938 13.0469C23.1699 13.0469 25.161 13.8716 26.6291 15.3397C28.0971 16.8077 28.9219 18.7989 28.9219 20.875C28.9219 22.9512 28.0971 24.9423 26.6291 26.4103C25.161 27.8784 23.1699 28.7031 21.0938 28.7031C19.0176 28.7031 17.0265 27.8784 15.5584 26.4103C14.0904 24.9423 13.2656 22.9512 13.2656 20.875C13.2656 18.7989 14.0904 16.8077 15.5584 15.3397C17.0265 13.8716 19.0176 13.0469 21.0938 13.0469ZM21.0938 16.1781C19.8481 16.1781 18.6534 16.673 17.7726 17.5538C16.8917 18.4346 16.3969 19.6293 16.3969 20.875C16.3969 22.1207 16.8917 23.3154 17.7726 24.1962C18.6534 25.077 19.8481 25.5719 21.0938 25.5719C22.3394 25.5719 23.5341 25.077 24.4149 24.1962C25.2958 23.3154 25.7906 22.1207 25.7906 20.875C25.7906 19.6293 25.2958 18.4346 24.4149 17.5538C23.5341 16.673 22.3394 16.1781 21.0938 16.1781Z"
+                                                      fill="#1E1E1E"/>
+                                            </svg>
+                                        </a>
+                                    @endif
+
                                     <a href="https://t.me/ping_agency" class="contacts__icon-wrap" target="_blank">
                                         <svg viewBox="0 0 42 42" class="contacts__icon">
                                             <rect class="contacts__icon-rect" x="0.625" width="41.75" height="41.75"

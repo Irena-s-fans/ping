@@ -28,12 +28,18 @@ $(document).ready(function() {
     $('#video__popup').on('click', function(e) {
         if (e.target === this) {
             $('#video__popup').fadeOut(300);
+            stopYoutubeVideo();
         }
     });
 
     $('.popup-video__cross').on('click', function() {
         $('#video__popup').fadeOut(300);
+        stopYoutubeVideo();
     })
+
+    function stopYoutubeVideo() {
+        $('#video__popup .popup-video__content').attr('src', '');
+    }
 })
 
 function changeServicesContent(contentId) {

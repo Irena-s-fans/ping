@@ -9,6 +9,12 @@
     display: none;
     z-index: 1001;
 
+    &_phrase {
+        @include from(769) {
+            display: none !important;
+        }
+    }
+
     &__body {
         min-height: 100%;
         display: flex;
@@ -17,6 +23,7 @@
     }
 
     &__content {
+        position: relative;
         border: 1px solid white;
         max-width: min(50vw, 960px);
         transform: skewX(-$skewX);
@@ -43,6 +50,10 @@
             box-sizing: border-box;
             width: 90%;
         }
+    }
+
+    &__content_phrase {
+        box-shadow: 0 0 14px #90FFFF;
     }
 
     &__wrap {
@@ -254,6 +265,10 @@
         }
     }
 
+    &__text_xl {
+        font-size: clamp(16px, 2.6vw, 20px);
+    }
+
     &__text_bold {
         font-weight: 700;
         border: none;
@@ -305,5 +320,26 @@
         height: 675px;
         max-height: 53.43vw;
         max-width: 95vw;
+    }
+
+    &-phrase__cross {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(110%, -110%);
+        cursor: pointer;
+        transition: background-color $ui-transition-1;
+
+        &:hover {
+            path {
+                fill: #8E0CD0;
+            }
+        }
+
+        @include to(1300) {
+            transform: translate(0%, -125%);
+        }
     }
 }

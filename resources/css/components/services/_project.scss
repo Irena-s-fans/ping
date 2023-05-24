@@ -241,16 +241,16 @@
 
 .projects {
     &__list {
-        margin-top: clamp(15px, min(3.12vw, 5.55vh), 60px);
+        padding-top: clamp(15px, min(3.12vw, 5.55vh), 60px);
+        padding-bottom: 10px;
         margin-left: clamp(25px, 7vw, 75px);
         padding-right: clamp(25px, 4.6vw, 90px);
         transform: skewX(-$skewX);
         transform-origin: top;
         gap: clamp(10px, min(1.04vw, 1.85vh), 20px);
-        overflow: hidden;
 
         @include from(1921) {
-            margin-top: clamp(15px, min(3.12vw, 5.55vh), 80px);
+            padding-top: clamp(15px, min(3.12vw, 5.55vh), 80px);
             padding-right: clamp(25px, 4.6vw, 117px);
             margin-left: clamp(25px, 7vw, 179px);
         }
@@ -260,7 +260,7 @@
         }
 
         @include to(768) {
-            margin-top: 50px;
+            padding-top: 50px;
             padding-inline: 10%;
             margin-inline: 0 -8px;
         }
