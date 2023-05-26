@@ -761,7 +761,7 @@
                                 @foreach($projects as $project)
                                     <div class="services__list-item swiper-slide show-services" rel="project{{ $project->id }}">
                                         @if (explode('/', mime_content_type(base_path() . '/img/preview/' . $project->preview))[0] === 'video')
-                                            <video class="services__list-img" src="/img/preview/{{ $project->preview }}" muted loop></video>
+                                            <video class="services__list-img" src="/img/preview/{{ $project->preview }}" muted loop preload="none"></video>
                                         @else
                                             <img class="services__list-img" alt="" src="/img/preview/{{ $project->preview }}">
                                         @endif
@@ -792,7 +792,7 @@
                                         data-video-embed="{{ $project->is_vk ? '' : $project->video }}"
                                     >
                                         @if (explode('/', mime_content_type(base_path() . '/img/media/' . $project->pic))[0] === 'video')
-                                            <video class="project__img project__img_blurred" src="/img/media/{{ $project->pic }}" muted loop></video>
+                                            <video class="project__img project__img_blurred" src="/img/media/{{ $project->pic }}" muted loop preload="none"></video>
                                         @else
                                             <img class="project__img project__img_blurred" alt="" src="/img/media/{{ $project->pic }}">
                                         @endif
