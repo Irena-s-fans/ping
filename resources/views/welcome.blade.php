@@ -1879,19 +1879,19 @@
                                 <div class="form__item">
                                     <label class="form__label" for="name">{{ __('Name') }}</label>
                                     <div class="form__input-wrap">
-                                        <input class="form__input form__field" type="text" id="name" name="name" autocomplete="off">
+                                        <input class="form__input form__field" type="text" id="name" name="name" autocomplete="off" maxlength="255">
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <label class="form__label" for="email">E-Mail</label>
                                     <div class="form__input-wrap">
-                                        <input class="form__input form__field" type="text" id="email" name="email" autocomplete="off">
+                                        <input class="form__input form__field" type="text" id="email" name="email" autocomplete="off" maxlength="255">
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <label class="form__label form__textarea-label" for="message">{{ __('Message') }}</label>
                                     <div class="form__texarea-wrap">
-                                        <textarea class="form__textarea form__field" id="message" name="message" cols="30" rows="10" autocomplete="off"></textarea>
+                                        <textarea class="form__textarea form__field" id="message" name="message" cols="30" rows="10" autocomplete="off" maxlength="1024"></textarea>
                                     </div>
                                 </div>
                                 <button class="form__btn" type="submit">{{ __('Send') }}</button>
