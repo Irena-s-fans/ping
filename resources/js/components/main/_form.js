@@ -19,7 +19,8 @@ $(document).ready(function() {
        $.ajax({
            type: 'POST',
            url: '/form/send',
-           datatype: 'json',
+           contentType: 'application/json; charset=utf-8',
+           dataType: 'json',
            headers: {
                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
            },
