@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\Seo;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 
@@ -33,7 +34,7 @@ class ProjectsController extends Controller
             $destinationPath = 'img/preview';
             $file = $request->file('preview');
             $file_name = $file->getClientOriginalName();
-            if ($file->move($destinationPath , $file_name)) {
+            if ($file->move($destinationPath, $file_name)) {
                 $item->preview = $file_name;
             }
         } else {
@@ -47,7 +48,7 @@ class ProjectsController extends Controller
             $destinationPath = 'img/media';
             $file = $request->file('media');
             $file_name = $file->getClientOriginalName();
-            if ($file->move($destinationPath , $file_name)) {
+            if ($file->move($destinationPath, $file_name)) {
                 $item->pic = $file_name;
             }
         } else {
@@ -78,7 +79,11 @@ class ProjectsController extends Controller
 
     public function delete(Request $request)
     {
-        Project::where('id', $request->projectID)->delete();
+        $item = Project::getProjectById($request->projectID);
+        File::delete(Project::getPicUrl($item->pic));
+        File::delete(Project::getPreviewUrl($item->preview));
+        $item->delete();
+
         return json_encode([
             'status' => 1,
         ]);
@@ -110,7 +115,14 @@ class ProjectsController extends Controller
         $item = Project::getProjectById($request->projectID);
 
         if ($request->hasFile('preview') && $item->preview != $request->preview) {
-            $item->preview = $request->preview;
+            //$item->preview = $request->preview;
+            $destinationPath = 'img/preview';
+            $file = $request->file('preview');
+            $file_name = $file->getClientOriginalName();
+            if ($file->move($destinationPath, $file_name)) {
+                File::delete(Project::getPreviewUrl($item->preview));
+                $item->preview = $file_name;
+            }
         }
 
         if ($item->is_eng != Project::getResultForEng($request->lang)) {
@@ -126,7 +138,14 @@ class ProjectsController extends Controller
         }
 
         if ($request->hasFile('media') && $item->pic != $request->media) {
-            $item->pic = $request->media;
+            //$item->pic = $request->media;
+            $destinationPath = 'img/media';
+            $file = $request->file('media');
+            $file_name = $file->getClientOriginalName();
+            if ($file->move($destinationPath, $file_name)) {
+                File::delete(Project::getPicUrl($item->pic));
+                $item->pic = $file_name;
+            }
         }
 
         if ($item->video != $request->link) {

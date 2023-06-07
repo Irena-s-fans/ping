@@ -18,6 +18,7 @@
     <link rel="preload" as="image" href="/public/img/loader__logo.png">
     <link rel="preload" as="image" href="/public/img/bg.png">
     <script src="/public/js/libs/jquery-3.6.1.min.js"></script>
+    <script src="/public/js/libs/yall.js"></script>
     <script src="/public/js/index.js"></script>
 </head>
 <style>
@@ -561,6 +562,7 @@
                                 <img class="partners__img partners__img_sm" src="/public/img/partners/viewsonic 2.png" alt="">
                                 <img class="partners__img partners__img_xxl" src="/public/img/partners/cm.png" alt="">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/vk.svg" alt="">
+                                <img class="partners__img partners__img_xl" src="/public/img/partners/fond.svg" alt="">
                             </div>
                             <div class="partners__list">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/igromania 2.png" alt="">
@@ -575,6 +577,7 @@
                                 <img class="partners__img partners__img_sm" src="/public/img/partners/viewsonic 2.png" alt="">
                                 <img class="partners__img partners__img_xxl" src="/public/img/partners/cm.png" alt="">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/vk.svg" alt="">
+                                <img class="partners__img partners__img_xl" src="/public/img/partners/fond.svg" alt="">
                             </div>
                         </div>
                         <div class="partners__line"></div>
@@ -609,7 +612,7 @@
                                 <img class="services__list-img" src="/public/img/services/dir_desc_5.png" alt="">
                                 <p class="services__list-text">{{ __('Design') }}</p>
                             </div>
-                            <div class="services__list-item show-services" rel="projects">
+                            <div class="services__list-item services__list-item_non-blur show-services" rel="projects">
                                 <p class="services__list-text">{{ __('All projects') }}</p>
                             </div>
                         </div>
@@ -755,13 +758,13 @@
                     <div class="services__wrap" id="projects">
                         <div class="projects__list">
                             <div class="swiper-wrapper">
-                                <div class="services__list-item swiper-slide show-services projects__return" rel="services">
+                                <div class="services__list-item services__list-item_non-blur swiper-slide show-services projects__return" rel="services">
                                     <p class="services__list-text">{{ __('Go back') }}</p>
                                 </div>
                                 @foreach($projects as $project)
                                     <div class="services__list-item swiper-slide show-services" rel="project{{ $project->id }}">
                                         @if (explode('/', mime_content_type(base_path() . '/img/preview/' . $project->preview))[0] === 'video')
-                                            <video class="services__list-img" src="/img/preview/{{ $project->preview }}" muted loop preload="none"></video>
+                                            <video class="services__list-img lazy" src="/img/preview/{{ $project->preview }}" muted loop></video>
                                         @else
                                             <img class="services__list-img" alt="" src="/img/preview/{{ $project->preview }}">
                                         @endif
@@ -792,7 +795,7 @@
                                         data-video-embed="{{ $project->is_vk ? '' : $project->video }}"
                                     >
                                         @if (explode('/', mime_content_type(base_path() . '/img/media/' . $project->pic))[0] === 'video')
-                                            <video class="project__img project__img_blurred" src="/img/media/{{ $project->pic }}" muted loop preload="none"></video>
+                                            <video class="project__img project__img_blurred lazy" src="/img/media/{{ $project->pic }}" muted loop></video>
                                         @else
                                             <img class="project__img project__img_blurred" alt="" src="/img/media/{{ $project->pic }}">
                                         @endif

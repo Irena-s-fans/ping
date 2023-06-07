@@ -37,3 +37,7 @@ $(document).ready(function() {
        $(this).toggleClass('form__checkbox-label_active');
     });
 });
+
+$(window).on('load', function() {
+
+});

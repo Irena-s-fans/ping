@@ -66,7 +66,11 @@
 
         &:hover {
             .project__video-icon-path {
-                fill: #8E0CD0;
+                opacity: 0;
+            }
+
+            .project__img_blurred {
+                filter: blur(0);
             }
         }
 
@@ -92,6 +96,7 @@
 
         &_blurred {
             filter: blur(5px);
+            transition: $ui-transition-1 filter;
         }
     }
 
@@ -110,7 +115,7 @@
     }
 
     &__video-icon-path {
-        transition: fill $ui-transition-1;
+        transition: opacity $ui-transition-1;
     }
 
     &__wrap {
