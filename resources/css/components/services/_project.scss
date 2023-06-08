@@ -254,7 +254,6 @@
         padding-left: clamp(25px, 7vw, 75px);
         padding-right: clamp(25px, 4.6vw, 90px);
         transform: skewX(-$skewX);
-        transform-origin: top;
         gap: clamp(10px, min(1.04vw, 1.85vh), 20px);
         overflow: hidden;
 
@@ -267,6 +266,7 @@
         @include from(769) {
             height: min(min(36.4vw, 64.8vh), 700px) !important;
             padding-bottom: 25px;
+            transform-origin: top;
         }
 
         @include to(768) {
@@ -280,7 +280,7 @@
         .swiper-slide {
             height: min(min(16.92vw, 30vh), 433px) !important;
 
-            &:nth-child(2n+1) {
+/*            &:nth-child(2n+1) {
                 margin-right: clamp(10px, min(1.04vw, 1.85vh), 20px);
             }
 
@@ -290,7 +290,7 @@
                 @include to(768) {
                     margin-top: 0 !important;
                 }
-            }
+            }*/
 
             @include to(768) {
                 height: clamp(275px, 42.3vw, 325px) !important;

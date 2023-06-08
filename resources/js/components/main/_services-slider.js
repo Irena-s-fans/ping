@@ -21,6 +21,7 @@ $(document).ready(function() {
     const projects_swiper = new Swiper('.projects__list', {
         modules: [Grid],
         slidesPerView: 1,
+        spaceBetween: 15,
         grid: {
             rows: 1,
         },

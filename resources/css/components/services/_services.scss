@@ -143,7 +143,7 @@
     &__list-item_sm {
         height: min(min(16.92vw, 30vh), 433px) !important;
         box-sizing: border-box;
-        transition-property: all !important;
+        transition: transform $ui-transition-1, box-shadow $ui-transition-1, border $ui-transition-1 !important;
 
         @include to(768) {
             height: clamp(275px, 42.3vw, 325px) !important;

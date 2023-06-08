@@ -514,9 +514,8 @@
         <div class="swiper-wrapper">
             <div class="section swiper-slide" id="about_section">
                 <div class="section__wrapper">
-                    <video class="about__video" autoplay muted loop>
+                    <video class="about__video" autoplay muted loop preload="auto">
                         <source src="/public/videos/main.mp4" type="video/mp4">
-                        <source src="/public/videos/test.webm" type="video/webm">
                     </video>
                     <div class="about">
                         <div class="about__wrap">
@@ -562,7 +561,7 @@
                                 <img class="partners__img partners__img_sm" src="/public/img/partners/viewsonic 2.png" alt="">
                                 <img class="partners__img partners__img_xxl" src="/public/img/partners/cm.png" alt="">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/vk.svg" alt="">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/fond.svg" alt="">
+                                <img class="partners__img partners__img_xl" src="/public/img/partners/fond.png" alt="">
                             </div>
                             <div class="partners__list">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/igromania 2.png" alt="">
@@ -577,7 +576,7 @@
                                 <img class="partners__img partners__img_sm" src="/public/img/partners/viewsonic 2.png" alt="">
                                 <img class="partners__img partners__img_xxl" src="/public/img/partners/cm.png" alt="">
                                 <img class="partners__img partners__img_xl" src="/public/img/partners/vk.svg" alt="">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/fond.svg" alt="">
+                                <img class="partners__img partners__img_xl" src="/public/img/partners/fond.png" alt="">
                             </div>
                         </div>
                         <div class="partners__line"></div>
@@ -664,9 +663,8 @@
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Tournaments') }}</h2>
-                                    <p class="project__text">{{ __('All professional esports tournaments start with a properly developed concept and strategy') }}.</p>
-                                    <p class="project__text">{{ __('Our team has many years of experience in creating tournament and competition formats, as well as rulebooks, regulations for participants, planning and managing matches and, of course, administration') }}.</p>
-                                    <p class="project__text">{{ __('This type of event will increase your brand awareness and attract attention by establishing direct contact with the audience') }}.</p>
+                                    <p class="project__text">{{ __('In esports, tournaments are an efficient way for brands to promote to a new audience, engage them in the product and establish a direct contact between the brand and the consumer. Our team knows that behind each tournament lies a concept and a strategy') }}.</p>
+                                    <p class="project__text">{{ __('We organize turnkey tournaments: come up with ideas how to use the tournament to advertise your brand or product in a native way, develop a set of rules and regulations for participants, plan and manage the matches, coordinate on-set') }}.</p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
                                     <p class="project__btn-text">{{ __('To other services') }}</p>
@@ -680,10 +678,10 @@
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Spec projects') }}</h2>
-                                    <p class="project__text">{{ __('Based on your marketing objectives, we can create a unique special project for your brand. These can be entertainment shows of a gaming, news or conversational nature, supplemented with widgets and landing pages') }}.
+                                    <p class="project__text">{{ __('Special projects with gamification help to attract and engage the audience in an advertising campaign, as well as in the culture of the brand and its product') }}.
                                     </p>
-                                    <p class="project__text">{{ __('With their help, you can stand out among competitors, capture the interest of the audience, directly raise sales and set the starting point of a full-fledged campaign') }}.</p>
-                                    <p class="project__text">{{ __('It is important for us to convey brand values to consumers and present the product in a way that is understandable and interesting to them') }}.</p>
+                                    <p class="project__text">{{ __('Based on your marketing objectives, we can create unique special projects of various formats and scales: from entertaining game shows to news digests with augmented widgets') }}.</p>
+                                    <p class="project__text">{{ __('It is important for us to convey brand values to consumers, clearly present the product to the community and spark its interest') }}.</p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
                                     <p class="project__btn-text">{{ __('To other services') }}</p>
@@ -697,9 +695,9 @@
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Offline events') }}</h2>
-                                    <p class="project__text">{{ __('Having extensive experience in the development, planning and holding of events in various fields, our team conducts creative and professional events') }}.</p>
+                                    <p class="project__text">{{ __("We produce fascinating and exciting events that help our clients reach their goals. For that, we offer creative solutions and come up with a format of the event, based on the client's requests") }}.</p>
                                     <p class="project__text">
-                                        {{ __('Being able to work with visitors live, we can organize any event for you') }}
+                                        {{ __("Here's a list of events we can organize for you") }}
                                         :<span class="project__text_blue">
                                             {{ __('lan-finals') }}</span>,<span class="project__text_blue">
                                             {{ __('presentations') }}</span>,<span class="project__text_blue">
@@ -722,11 +720,9 @@
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Digital ads') }}</h2>
-                                    <p class="project__text">{{ __('Our team can develop a marketing and content plan for you that will allow you to reach the right audience using digital platforms and social networks, which are most often used by esports professionals and gamers') }}.</p>
-                                    <p class="project__text"> {{ __("We understand that the main goal of brands is to increase sales and present their products as the best in their segments, and at the same time we understand what fans of the gaming sphere like. Therefore, we create individual marketing activities in which the audience gets acquainted with the brand's products in meaningful and interesting ways, creating value for all participants") }}.
-                                    </p>
+                                    <p class="project__text">{{ __("We know which digital platforms and social networks are popular with the esports community. Our team will develop a communication and marketing campaign for your brand, which the target audience will definitely notice - and which will reach the brand's image and business objectives") }}.</p>
                                     <p class="project__text">
-                                        {{ __('Our options') }}: <span class="project__text_blue">
+                                        {{ __('We create individual marketing campaigns') }}: <span class="project__text_blue">
                                             {{ __('placement of brand promotions') }}</span>,<span class="project__text_blue">
                                             {{ __('influencer engagement and social media coverage') }}</span>,<span class="project__text_blue">
                                             {{ __('brand coverage on streams, voice mentions') }}</span>,<span class="project__text_blue">
@@ -745,8 +741,8 @@
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Creative services') }}</h2>
-                                    <p class="project__text">{{ __('The appearance of integration is very important for the perception of an advertising campaign, whether it is a beautifully designed studio, a creative in social networks or a banner under the translation') }}.</p>
-                                    <p class="project__text"> {{ __("We can develop and prepare for you a complete design package from scratch or make a special design based on the company's brandbook and your wishes: print products with a personal identity, merch, pos materials and decorative elements for you") }}.
+                                    <p class="project__text">{{ __("The appearance of integrations is very important for the perception of an advertising campaign and the transmission of the brand's key messages: from the design of the live broadcast studio of the championship to banners and all things digital") }}.</p>
+                                    <p class="project__text"> {{ __("We will develop and prepare a design code for you from scratch or prepare layouts based on the company's brandbook and your wishes: our services also include printing products with a personal identity, development and production of merchandise, pos materials and decorative elements") }}.
                                     </p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
@@ -764,7 +760,7 @@
                                 @foreach($projects as $project)
                                     <div class="services__list-item swiper-slide show-services" rel="project{{ $project->id }}">
                                         @if (explode('/', mime_content_type(base_path() . '/img/preview/' . $project->preview))[0] === 'video')
-                                            <video class="services__list-img lazy" src="/img/preview/{{ $project->preview }}" muted loop></video>
+                                            <video class="services__list-img lazy" src="/img/preview/{{ $project->preview }}" muted loop preload="auto"></video>
                                         @else
                                             <img class="services__list-img" alt="" src="/img/preview/{{ $project->preview }}">
                                         @endif
@@ -795,7 +791,7 @@
                                         data-video-embed="{{ $project->is_vk ? '' : $project->video }}"
                                     >
                                         @if (explode('/', mime_content_type(base_path() . '/img/media/' . $project->pic))[0] === 'video')
-                                            <video class="project__img project__img_blurred lazy" src="/img/media/{{ $project->pic }}" muted loop></video>
+                                            <video class="project__img project__img_blurred lazy" src="/img/media/{{ $project->pic }}" muted loop preload="auto"></video>
                                         @else
                                             <img class="project__img project__img_blurred" alt="" src="/img/media/{{ $project->pic }}">
                                         @endif
@@ -858,19 +854,35 @@
                                         </li>
                                     </ul>
                                     <div class="team__socials">
-                                        <a href="https://vk.com/cd_tux0" class="team__socials-item" target="_blank">
-                                            <svg viewBox="0 0 42 42" class="contacts__icon">
-                                                <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
-                                                      fill="#4F4F4F"/>
-                                                <path
-                                                    class="contacts__icon-path"
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                    fill="#1E1E1E"
-                                                />
-                                            </svg>
-                                        </a>
+                                        @if (App::currentLocale() == 'ru')
+                                            <a href="https://vk.com/cd_tux0" class="team__socials-item" target="_blank">
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
+                                                          fill="#4F4F4F"/>
+                                                    <path
+                                                        class="contacts__icon-path"
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                        fill="#1E1E1E"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        @else
+                                            <a
+                                                href="https://www.facebook.com/cdtux0"
+                                                class="team__socials-item"
+                                                target="_blank"
+                                            >
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                    <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                          rx="5" fill="#4F4F4F"/>
+                                                    <path class="contacts__icon-path"
+                                                          d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                          fill="#1E1E1E"/>
+                                                </svg>
+                                            </a>
+                                        @endif
                                         <a href="https://t.me/cd_tux0" class="team__socials-item" target="_blank">
                                             <svg viewBox="0 0 42 42" class="contacts__icon">
                                                 <rect class="contacts__icon-rect" x="0.625" width="41.75" height="41.75"
@@ -925,20 +937,35 @@
                                         </li>
                                     </ul>
                                     <div class="team__socials">
-                                        <a href="https://vk.com/v1ktorika" class="team__socials-item" target="_blank">
-                                            <svg viewBox="0 0 42 42" class="contacts__icon">
-
-                                                <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
-                                                      fill="#4F4F4F"/>
-                                                <path
-                                                    class="contacts__icon-path"
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                    fill="#1E1E1E"
-                                                />
-                                            </svg>
-                                        </a>
+                                        @if (App::currentLocale() == 'ru')
+                                            <a href="https://vk.com/v1ktorika" class="team__socials-item" target="_blank">
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
+                                                          fill="#4F4F4F"/>
+                                                    <path
+                                                        class="contacts__icon-path"
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                        fill="#1E1E1E"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        @else
+                                            <a
+                                                href="https://www.facebook.com/profile.php?id=100053719274059"
+                                                class="team__socials-item"
+                                                target="_blank"
+                                            >
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                    <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                          rx="5" fill="#4F4F4F"/>
+                                                    <path class="contacts__icon-path"
+                                                          d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                          fill="#1E1E1E"/>
+                                                </svg>
+                                            </a>
+                                        @endif
                                         <a href="https://t.me/V1ktorika" class="team__socials-item" target="_blank">
                                             <svg viewBox="0 0 42 42" class="contacts__icon">
                                                 <rect class="contacts__icon-rect" x="0.625" width="41.75" height="41.75"
@@ -994,20 +1021,36 @@
                                         </li>
                                     </ul>
                                     <div class="team__socials">
-                                        <a href="https://vk.com/deeoneezy" class="team__socials-item" target="_blank">
-                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                        @if (App::currentLocale() == 'ru')
+                                            <a href="https://vk.com/deeoneezy" class="team__socials-item" target="_blank">
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
 
-                                                <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
-                                                      fill="#4F4F4F"/>
-                                                <path
-                                                    class="contacts__icon-path"
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                    fill="#1E1E1E"
-                                                />
-                                            </svg>
-                                        </a>
+                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
+                                                          fill="#4F4F4F"/>
+                                                    <path
+                                                        class="contacts__icon-path"
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                        fill="#1E1E1E"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        @else
+                                            <a
+                                                href="https://www.facebook.com/eaexelle"
+                                                class="team__socials-item"
+                                                target="_blank"
+                                            >
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                    <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                          rx="5" fill="#4F4F4F"/>
+                                                    <path class="contacts__icon-path"
+                                                          d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                          fill="#1E1E1E"/>
+                                                </svg>
+                                            </a>
+                                        @endif
                                         <a href="https://t.me/deeoneezy" class="team__socials-item" target="_blank">
                                             <svg viewBox="0 0 42 42" class="contacts__icon">
                                                 <rect class="contacts__icon-rect" x="0.625" width="41.75" height="41.75"
@@ -1063,20 +1106,36 @@
                                         </li>
                                     </ul>
                                     <div class="team__socials">
-                                        <a href="https://vk.com/onitaka" class="team__socials-item" target="_blank">
-                                            <svg viewBox="0 0 42 42" class="contacts__icon">
+                                        @if (App::currentLocale() == 'ru')
+                                            <a href="https://vk.com/onitaka" class="team__socials-item" target="_blank">
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
 
-                                                <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
-                                                      fill="#4F4F4F"/>
-                                                <path
-                                                    class="contacts__icon-path"
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                    fill="#1E1E1E"
-                                                />
-                                            </svg>
-                                        </a>
+                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
+                                                          fill="#4F4F4F"/>
+                                                    <path
+                                                        class="contacts__icon-path"
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                        fill="#1E1E1E"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        @else
+                                            <a
+                                                href="https://www.facebook.com/rslnmb"
+                                                class="team__socials-item"
+                                                target="_blank"
+                                            >
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                    <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                          rx="5" fill="#4F4F4F"/>
+                                                    <path class="contacts__icon-path"
+                                                          d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                          fill="#1E1E1E"/>
+                                                </svg>
+                                            </a>
+                                        @endif
                                         <a href="https://t.me/Ruslan_maybe" class="team__socials-item" target="_blank">
                                             <svg viewBox="0 0 42 42" class="contacts__icon">
                                                 <rect class="contacts__icon-rect" x="0.625" width="41.75" height="41.75"
@@ -1128,19 +1187,35 @@
                                         </li>
                                     </ul>
                                     <div class="team__socials">
-                                        <a href="https://vk.com/lagustkin" class="team__socials-item" target="_blank">
-                                            <svg viewBox="0 0 42 42" class="contacts__icon">
-                                                <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
-                                                      fill="#4F4F4F"/>
-                                                <path
-                                                    class="contacts__icon-path"
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                    fill="#1E1E1E"
-                                                />
-                                            </svg>
-                                        </a>
+                                        @if (App::currentLocale() == 'ru')
+                                            <a href="https://vk.com/lagustkin" class="team__socials-item" target="_blank">
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75" rx="5"
+                                                          fill="#4F4F4F"/>
+                                                    <path
+                                                        class="contacts__icon-path"
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                        fill="#1E1E1E"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        @else
+                                            <a
+                                                href="https://www.facebook.com/profile.php?id=100011623239774"
+                                                class="team__socials-item"
+                                                target="_blank"
+                                            >
+                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                    <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                          rx="5" fill="#4F4F4F"/>
+                                                    <path class="contacts__icon-path"
+                                                          d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                          fill="#1E1E1E"/>
+                                                </svg>
+                                            </a>
+                                        @endif
                                         <a href="https://t.me/LAGUSTKIN" class="team__socials-item" target="_blank">
                                             <svg viewBox="0 0 42 42" class="contacts__icon">
                                                 <rect class="contacts__icon-rect" x="0.625" width="41.75" height="41.75"
@@ -1177,18 +1252,34 @@
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
-                                            <a href="https://vk.com/cd_tux0"
-                                               class="team__socials-item team__socials-item_sm" target="_blank">
-                                                <svg viewBox="0 0 42 42" class="contacts__icon">
-                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75"
-                                                          rx="5" fill="#4F4F4F"/>
-                                                    <path class="contacts__icon-path" fill-rule="evenodd"
-                                                          clip-rule="evenodd"
-                                                          d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                          fill="#1E1E1E"
-                                                    />
-                                                </svg>
-                                            </a>
+                                            @if (App::currentLocale() == 'ru')
+                                                <a href="https://vk.com/cd_tux0"
+                                                   class="team__socials-item team__socials-item_sm" target="_blank">
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                        <rect class="contacts__icon-rect" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path class="contacts__icon-path" fill-rule="evenodd"
+                                                              clip-rule="evenodd"
+                                                              d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                              fill="#1E1E1E"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            @else
+                                                <a
+                                                    href="https://www.facebook.com/cdtux0"
+                                                    class="team__socials-item team__socials-item_sm"
+                                                    target="_blank"
+                                                >
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                        <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path class="contacts__icon-path"
+                                                              d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                              fill="#1E1E1E"/>
+                                                    </svg>
+                                                </a>
+                                            @endif
                                             <a href="https://t.me/cd_tux0"
                                                class="team__socials-item team__socials-item_sm" target="_blank">
                                                 <svg viewBox="0 0 42 42" class="contacts__icon">
@@ -1225,21 +1316,37 @@
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
-                                            <a href="https://vk.com/v1ktorika"
-                                               class="team__socials-item team__socials-item_sm" target="_blank">
-                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                            @if (App::currentLocale() == 'ru')
+                                                <a href="https://vk.com/v1ktorika"
+                                                   class="team__socials-item team__socials-item_sm" target="_blank">
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
 
-                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75"
-                                                          rx="5" fill="#4F4F4F"/>
-                                                    <path
-                                                        class="contacts__icon-path"
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                        fill="#1E1E1E"
-                                                    />
-                                                </svg>
-                                            </a>
+                                                        <rect class="contacts__icon-rect" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path
+                                                            class="contacts__icon-path"
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                            fill="#1E1E1E"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            @else
+                                                <a
+                                                    href="https://www.facebook.com/profile.php?id=100053719274059"
+                                                    class="team__socials-item team__socials-item_sm"
+                                                    target="_blank"
+                                                >
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                        <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path class="contacts__icon-path"
+                                                              d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                              fill="#1E1E1E"/>
+                                                    </svg>
+                                                </a>
+                                            @endif
                                             <a href="https://t.me/V1ktorika"
                                                class="team__socials-item team__socials-item_sm" target="_blank">
                                                 <svg viewBox="0 0 42 42" class="contacts__icon">
@@ -1276,21 +1383,37 @@
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
-                                            <a href="https://vk.com/deeoneezy"
-                                               class="team__socials-item team__socials-item_sm" target="_blank">
-                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                            @if (App::currentLocale() == 'ru')
+                                                <a href="https://vk.com/deeoneezy"
+                                                   class="team__socials-item team__socials-item_sm" target="_blank">
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
 
-                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75"
-                                                          rx="5" fill="#4F4F4F"/>
-                                                    <path
-                                                        class="contacts__icon-path"
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                        fill="#1E1E1E"
-                                                    />
-                                                </svg>
-                                            </a>
+                                                        <rect class="contacts__icon-rect" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path
+                                                            class="contacts__icon-path"
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                            fill="#1E1E1E"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            @else
+                                                <a
+                                                    href="https://www.facebook.com/eaexelle"
+                                                    class="team__socials-item team__socials-item_sm"
+                                                    target="_blank"
+                                                >
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                        <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path class="contacts__icon-path"
+                                                              d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                              fill="#1E1E1E"/>
+                                                    </svg>
+                                                </a>
+                                            @endif
                                             <a href="https://t.me/deeoneezy"
                                                class="team__socials-item team__socials-item_sm" target="_blank">
                                                 <svg viewBox="0 0 42 42" class="contacts__icon">
@@ -1327,21 +1450,37 @@
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
-                                            <a href="https://vk.com/onitaka"
-                                               class="team__socials-item team__socials-item_sm" target="_blank">
-                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                            @if (App::currentLocale() == 'ru')
+                                                <a href="https://vk.com/onitaka"
+                                                   class="team__socials-item team__socials-item_sm" target="_blank">
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
 
-                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75"
-                                                          rx="5" fill="#4F4F4F"/>
-                                                    <path
-                                                        class="contacts__icon-path"
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                        fill="#1E1E1E"
-                                                    />
-                                                </svg>
-                                            </a>
+                                                        <rect class="contacts__icon-rect" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path
+                                                            class="contacts__icon-path"
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                            fill="#1E1E1E"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            @else
+                                                <a
+                                                    href="https://www.facebook.com/rslnmb"
+                                                    class="team__socials-item team__socials-item_sm"
+                                                    target="_blank"
+                                                >
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                        <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path class="contacts__icon-path"
+                                                              d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                              fill="#1E1E1E"/>
+                                                    </svg>
+                                                </a>
+                                            @endif
                                             <a href="https://t.me/Ruslan_maybe"
                                                class="team__socials-item team__socials-item_sm" target="_blank">
                                                 <svg viewBox="0 0 42 42" class="contacts__icon">
@@ -1378,21 +1517,37 @@
                                         </h2>
                                         <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
-                                            <a href="https://vk.com/lagustkin"
-                                               class="team__socials-item team__socials-item_sm" target="_blank">
-                                                <svg viewBox="0 0 42 42" class="contacts__icon">
+                                            @if (App::currentLocale() == 'ru')
+                                                <a href="https://vk.com/lagustkin"
+                                                   class="team__socials-item team__socials-item_sm" target="_blank">
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
 
-                                                    <rect class="contacts__icon-rect" width="41.75" height="41.75"
-                                                          rx="5" fill="#4F4F4F"/>
-                                                    <path
-                                                        class="contacts__icon-path"
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
-                                                        fill="#1E1E1E"
-                                                    />
-                                                </svg>
-                                            </a>
+                                                        <rect class="contacts__icon-rect" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path
+                                                            class="contacts__icon-path"
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M33.7043 29.7825H30.6736C29.8558 29.7825 29.4411 29.3204 28.5237 28.2982C28.1533 27.8854 27.7008 27.3812 27.1067 26.7792C25.3128 25.0401 24.5182 24.8092 24.076 24.8092C23.451 24.8092 23.2736 24.9853 23.2736 25.8425V28.5809C23.2736 29.3154 23.0427 29.7564 21.0988 29.7564C17.8841 29.7564 14.3172 27.8125 11.8162 24.1908C8.04445 18.8835 7.01248 14.9082 7.01248 14.0863C7.01248 13.644 7.18861 13.2304 8.03793 13.2304H11.0751C11.8436 13.2304 12.1358 13.584 12.4346 14.4059C13.9362 18.7413 16.4372 22.5391 17.4692 22.5391C17.8502 22.5391 18.0263 22.363 18.0263 21.391V16.9134C17.9545 15.637 17.512 15.0817 17.1844 14.6706C16.982 14.4166 16.8234 14.2176 16.8234 13.9375C16.8234 13.584 17.1157 13.2304 17.584 13.2304H22.3603C23.0061 13.2304 23.2436 13.584 23.2436 14.3446V20.3851C23.2436 21.0374 23.5358 21.2684 23.712 21.2684C24.0929 21.2684 24.4191 21.0374 25.1249 20.3303C27.3063 17.8841 28.8692 14.1124 28.8692 14.1124C29.0728 13.6701 29.4263 13.2565 30.1948 13.2565H33.232C34.1426 13.2565 34.3461 13.7249 34.1426 14.3772C33.7617 16.1437 30.0447 21.3897 30.0447 21.3897C29.7251 21.9194 29.6024 22.1503 30.0447 22.7413C30.2056 22.9595 30.5454 23.2933 30.9331 23.6743C31.3312 24.0654 31.7798 24.5063 32.1374 24.9227C33.4355 26.3969 34.4335 27.6337 34.6997 28.4896C34.9985 29.3389 34.5575 29.7812 33.7003 29.7812L33.7043 29.7825Z"
+                                                            fill="#1E1E1E"
+                                                        />
+                                                    </svg>
+                                                </a>
+                                            @else
+                                                <a
+                                                    href="https://www.facebook.com/profile.php?id=100011623239774"
+                                                    class="team__socials-item team__socials-item_sm"
+                                                    target="_blank"
+                                                >
+                                                    <svg viewBox="0 0 42 42" class="contacts__icon">
+                                                        <rect class="contacts__icon-rect" x="0.40625" width="41.75" height="41.75"
+                                                              rx="5" fill="#4F4F4F"/>
+                                                        <path class="contacts__icon-path"
+                                                              d="M36.9375 20.9142C36.9375 12.2503 29.9235 5.21875 21.2813 5.21875C12.639 5.21875 5.625 12.2503 5.625 20.9142C5.625 28.5109 11.0108 34.8361 18.15 36.2958V25.6229H15.0188V20.9142H18.15V16.9904C18.15 13.9611 20.608 11.4969 23.6297 11.4969H27.5438V16.2056H24.4125C23.5514 16.2056 22.8469 16.9119 22.8469 17.7751V20.9142H27.5438V25.6229H22.8469V36.5313C30.7533 35.7465 36.9375 29.0602 36.9375 20.9142Z"
+                                                              fill="#1E1E1E"/>
+                                                    </svg>
+                                                </a>
+                                            @endif
                                             <a href="https://t.me/LAGUSTKIN"
                                                class="team__socials-item team__socials-item_sm" target="_blank">
                                                 <svg viewBox="0 0 42 42" class="contacts__icon">
@@ -1553,21 +1708,25 @@
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review1.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Сергей</h4>
-                                        <h4 class="review__el-subname">Зритель</h4>
+                                        <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Хотел поблагодарить всю Вашу команду за проделанную работу над организацией турнира, трансляций и личной встречи в кинотеатре! Было невероятно круто!</p>
+                                        <p class="review__el-text">{{ __('I want to thank your entire team for all the work they did in organizing the tournament, the broadcasts, and the face-to-face meeting at the movie theater! It was cool!') }}</p>
                                     </div>
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review2.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">もっと試す</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Отличный турнир, сделано всё на высоте и организация в этот раз стала на порядок лучше. Не могу говорить за, всех насколько удобно пользоваться Battlefy, но после турнира по Overwatch мы привыкли к нему.</p>
-                                        <p class="review__el-text">Отдельная благодарность за составление сетки с сеткой проигравших, даёт второй шанс и добавляет интереса играть. Заметен рост организации, что создаёт крайне приятное впечатление и чёткое понимание, что PinG создан не шутки ради.</p>
+                                        <p class="review__el-text">
+                                            {{ __("Great tournament, everything is done at a high level and the organization this time is much better. I can't speak for everyone, how convenient it is to use Battlefy, but after the Overwatch tournament , we got used to it.") }}
+                                        </p>
+                                        <p class="review__el-text">
+                                            {{ __('Special thanks for the grid with a loser brackets, gives a second chance and adds interest to play. The growth of the organization is noticeable, which creates a very pleasant impression and a clear understanding that PinG is not created for fun.') }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1576,30 +1735,36 @@
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review3.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">TobyGRI_N</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">PinG самые крутые ребята!</p>
+                                        <p class="review__el-text">
+                                            {{ __('PinG are the coolest guys!') }}
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review4.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Ева</h4>
-                                        <h4 class="review__el-subname">Зритель</h4>
+                                        <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Здравствуйте. Спасибо за мероприятие, очень крутая организация события. Только процветания Вам! Фильм тоже очень классный, в такой компании всё очень приятно!</p>
+                                        <p class="review__el-text">
+                                            {{ __('Hello. Thank you for the event, very cool organization of the event. Only prosperity to you! The film is also very cool, in such a company everything is very pleasant!') }}
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review5.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">hAron</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Шикарный турнир получился! По отзывам тех, кто был в зале на финалах, это лучшее, что случалось с турнирами DBD. Радует, что Ping продолжают делать турниры.</p>
+                                        <p class="review__el-text">
+                                            {{ __("It was an awesome tournament! According to those who were in the audience at the finals, it was the best thing that ever happened to DBD tournaments. I'm glad that PinG keeps making tournaments.") }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1608,30 +1773,36 @@
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review6.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Аноним</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Впечатление крайне положительное. Сам участвовал в турнире и, хоть мы и проиграли, буду ждать новый.</p>
+                                        <p class="review__el-text">
+                                            {{ __("The impression is extremely positive. I participated in the tournament myself, and even though we lost, I'm looking forward to the new one.") }}
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review7.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Аноним</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Ивент нам зашёл, пускай даже не выиграли. Получили хороший опыт и рвение повышать свой скилл, чтобы составлять более сильную конкуренцию. Спасибо за такую возможность!</p>
+                                        <p class="review__el-text">
+                                            {{ __("The event was good for us, even if we didn't win. We got a good experience and the zeal to improve our skills to be a stronger competitor. Thank you for this opportunity!") }}
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review8.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Влас</h4>
-                                        <h4 class="review__el-subname">Зритель</h4>
+                                        <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Спасибо за мега крутое мероприятие PING. Вы всегда топ.</p>
+                                        <p class="review__el-text">
+                                            {{ __('Thanks for the mega cool event PinG. You are always the top.') }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1644,11 +1815,15 @@
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review2.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">もっと試す</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Отличный турнир, сделано всё на высоте и организация в этот раз стала на порядок лучше. Не могу говорить за, всех насколько удобно пользоваться Battlefy, но после турнира по Overwatch мы привыкли к нему.</p>
-                                        <p class="review__el-text">Отдельная благодарность за составление сетки с сеткой проигравших, даёт второй шанс и добавляет интереса играть. Заметен рост организации, что создаёт крайне приятное впечатление и чёткое понимание, что PinG создан не шутки ради.</p>
+                                        <p class="review__el-text">
+                                            {{ __("Great tournament, everything is done at a high level and the organization this time is much better. I can't speak for everyone, how convenient it is to use Battlefy, but after the Overwatch tournament , we got used to it.") }}
+                                        </p>
+                                        <p class="review__el-text">
+                                            {{ __('Special thanks for the grid with a loser brackets, gives a second chance and adds interest to play. The growth of the organization is noticeable, which creates a very pleasant impression and a clear understanding that PinG is not created for fun.') }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1657,20 +1832,24 @@
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review1.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Сергей</h4>
-                                        <h4 class="review__el-subname">Зритель</h4>
+                                        <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Хотел поблагодарить всю Вашу команду за проделанную работу над организацией турнира, трансляций и личной встречи в кинотеатре! Было невероятно круто!</p>
+                                        <p class="review__el-text">
+                                            {{ __('I want to thank your entire team for all the work they did in organizing the tournament, the broadcasts, and the face-to-face meeting at the movie theater! It was cool!') }}
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review3.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">TobyGRI_N</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">PinG самые крутые ребята!</p>
+                                        <p class="review__el-text">
+                                            {{ __('PinG are the coolest guys!') }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1679,10 +1858,12 @@
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review4.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Ева</h4>
-                                        <h4 class="review__el-subname">Зритель</h4>
+                                        <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Здравствуйте. Спасибо за мероприятие, очень крутая организация события. Только процветания Вам! Фильм тоже очень классный, в такой компании всё очень приятно!</p>
+                                        <p class="review__el-text">
+                                            {{ __('Hello. Thank you for the event, very cool organization of the event. Only prosperity to you! The film is also very cool, in such a company everything is very pleasant!') }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1691,20 +1872,24 @@
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review5.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">hAron</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Шикарный турнир получился! По отзывам тех, кто был в зале на финалах, это лучшее, что случалось с турнирами DBD. Радует, что Ping продолжают делать турниры.</p>
+                                        <p class="review__el-text">
+                                            {{ __("It was an awesome tournament! According to those who were in the audience at the finals, it was the best thing that ever happened to DBD tournaments. I'm glad that PinG keeps making tournaments.") }}
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review8.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Влас</h4>
-                                        <h4 class="review__el-subname">Зритель</h4>
+                                        <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Спасибо за мега крутое мероприятие PING. Вы всегда топ.</p>
+                                        <p class="review__el-text">
+                                            {{ __('Thanks for the mega cool event PinG. You are always the top.') }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1713,29 +1898,27 @@
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review6.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Аноним</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Впечатление крайне положительное. Сам участвовал в турнире и, хоть мы и проиграли, буду ждать новый.</p>
+                                        <p class="review__el-text">
+                                            {{ __("The impression is extremely positive. I participated in the tournament myself, and even though we lost, I'm looking forward to the new one.") }}
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review7.jpg" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">Аноним</h4>
-                                        <h4 class="review__el-subname">Участник</h4>
+                                        <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
-                                        <p class="review__el-text">Ивент нам зашёл, пускай даже не выиграли. Получили хороший опыт и рвение повышать свой скилл, чтобы составлять более сильную конкуренцию. Спасибо за такую возможность!</p>
+                                        <p class="review__el-text">
+                                            {{ __("The event was good for us, even if we didn't win. We got a good experience and the zeal to improve our skills to be a stronger competitor. Thank you for this opportunity!") }}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>
