@@ -53,4 +53,41 @@
     &__form {
         margin-top: 25px;
     }
+
+    &__table-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 75px;
+    }
+
+    &__table-language {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 25px;
+    }
+
+    &__table-language-el {
+        font-family: Play, sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        text-decoration: none;
+        color: rgba(#FFFFFF, 0.25);
+        cursor: pointer;
+        transition: $ui-transition-1 color, $ui-transition-1 font-weight;
+
+        &_active {
+            color: #90FFFF;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+
+    &__project-row {
+
+        &_disabled {
+            display: none;
+        }
+    }
 }

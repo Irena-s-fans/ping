@@ -18,7 +18,7 @@
     <link rel="preload" as="image" href="/public/img/loader__logo.png">
     <link rel="preload" as="image" href="/public/img/bg.png">
     <script src="/public/js/libs/jquery-3.6.1.min.js"></script>
-    <script src="/public/js/libs/yall.js"></script>
+    <script src="/public/js/libs/yall.js" type="module"></script>
     <script src="/public/js/index.js"></script>
 </head>
 <style>
@@ -760,7 +760,7 @@
                                 @foreach($projects as $project)
                                     <div class="services__list-item swiper-slide show-services" rel="project{{ $project->id }}">
                                         @if (explode('/', mime_content_type(base_path() . '/img/preview/' . $project->preview))[0] === 'video')
-                                            <video class="services__list-img lazy" src="/img/preview/{{ $project->preview }}" muted loop preload="auto"></video>
+                                            <video class="services__list-img lazy initialize" src="/img/preview/{{ $project->preview }}" muted loop preload="auto" playsinline></video>
                                         @else
                                             <img class="services__list-img" alt="" src="/img/preview/{{ $project->preview }}">
                                         @endif
@@ -788,10 +788,10 @@
                                         href="{{ $project->is_vk ? $project->video : '' }}"
                                         target="{{ $project->is_vk ? '_blank' : '_self' }}"
                                         class="project__img-wrap project__img-wrap_clickable"
-                                        data-video-embed="{{ $project->is_vk ? '' : $project->video }}"
+                                        data-video-embed="{{ $project->is_vk ? '' : ($project->video . '?enablejsapi=1&origin=https://peopleingaming.com/') }}"
                                     >
                                         @if (explode('/', mime_content_type(base_path() . '/img/media/' . $project->pic))[0] === 'video')
-                                            <video class="project__img project__img_blurred lazy" src="/img/media/{{ $project->pic }}" muted loop preload="auto"></video>
+                                            <video class="project__img project__img_blurred lazy initialize" src="/img/media/{{ $project->pic }}" muted loop preload="auto" playsinline></video>
                                         @else
                                             <img class="project__img project__img_blurred" alt="" src="/img/media/{{ $project->pic }}">
                                         @endif

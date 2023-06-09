@@ -11,9 +11,32 @@ const mapTitles = {
 }
 
 $(document).ready(function() {
+    $('.initialize').trigger('play');
+    $('.initialize').trigger('pause');
+
+    $('.services__list-item').on('mouseenter touchstart', function() {
+        $('.services__list-item_active').removeClass('services__list-item_active');
+        $(this).addClass('services__list-item_active');
+    });
+
+    $('.services__list-item').on('mouseleave touchleave touchcancel touchend', function() {
+        $(this).removeClass('services__list-item_active');
+    });
+
+    $('.project__img-wrap').on('mouseenter touchstart', function() {
+        $('.project__img-wrap_active').removeClass('project__img-wrap_active');
+        $(this).addClass('project__img-wrap_active');
+    });
+
+    $('.project__img-wrap').on('mouseleave touchleave touchcancel touchend', function() {
+        $(this).removeClass('project__img-wrap_active');
+    });
+
+
     $('.show-services').on('click', function() {
         changeServicesContent($(this).attr('rel'));
     });
+
     addPlayOnHover($('.services__list-item'));
     addPlayOnHover($('.project__img-wrap'));
 
@@ -68,11 +91,21 @@ function changeServicesContent(contentId) {
 }
 
 function addPlayOnHover(el) {
-    el.on('mouseenter', function() {
-        $(this).find('video').trigger('play');
+    el.on('mouseenter touchstart', function() {
+        const video = $(this).find('video');
+        const playingVideo = $('.projects__video_playing')
+
+        playingVideo.trigger('pause');
+        playingVideo.removeClass('projects__video_playing');
+
+        video.trigger('play');
+        video.addClass('projects__video_playing');
     });
 
-    el.on('mouseleave', function() {
-        $(this).find('video').trigger('pause');
+    el.on('mouseleave touchleave touchcancel touchend', function() {
+        const video = $(this).find('video');
+
+        video.trigger('pause');
+        video.removeClass('projects__video_playing');
     });
 }

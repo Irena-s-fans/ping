@@ -9,13 +9,30 @@
     <h2 class="admin__title">
         Все проекты
     </h2>
-    <a href="/admin/projects/new" class="admin__btn add-project__btn">
-        <span class="admin__btn-text">
-            Добавить проект
-        </span>
-    </a>
+    <div class="admin__table-controls">
+        <div class="admin__table-controls-el">
+            <a href="/admin/projects/new" class="admin__btn add-project__btn">
+                <span class="admin__btn-text">
+                    Добавить проект
+                </span>
+            </a>
+        </div>
+        <div class="admin__table-controls-el">
+            <div class="admin__table-language" data-target="#projects-table" data-target-item="admin__project-row">
+                <a class="admin__table-language-el admin__table-language-el_active" data-value-language="*">
+                    Все
+                </a>
+                <a class="admin__table-language-el" data-value-language="Русский">
+                    RU
+                </a>
+                <a class="admin__table-language-el" data-value-language="English">
+                    EN
+                </a>
+            </div>
+        </div>
+    </div>
     @if ($projects)
-        <table class="table">
+        <table class="table" id="projects-table">
             <thead>
                 <tr class="table__row">
                     <td class="table__cell">
@@ -42,7 +59,7 @@
                 </tr>
             </thead>
             @foreach ($projects as $key => $project)
-                <tr>
+                <tr class="admin__project-row">
                     <td class="table__cell">
                         <p class="table__text">
                             {{ $key + 1 }}
@@ -54,7 +71,7 @@
                         </p>
                     </td>
                     <td class="table__cell">
-                        <p class="table__text">
+                        <p class="table__text admin__table-language-content">
                             {{ $project->is_eng ? 'English' : 'Русский' }}
                         </p>
                     </td>

@@ -13,6 +13,11 @@
     <script src="https://cdn.tiny.cloud/1/m0995flxa8uyq68fgacwx6dsx5ed4ozsn4k13sm7fpwwzw4t/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body class="body">
+    <div class="popup" id="loader__popup">
+        <div class="loader popup__loader">
+            <div class="loader__ring"></div>
+        </div>
+    </div>
     <div class="admin">
         <div class="admin-container">
             <header class="header">

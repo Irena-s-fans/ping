@@ -21,3 +21,8 @@
         @content;
     }
 }
+
+@mixin reset_size($size) {
+    width: $size;
+    height: $size;
+}

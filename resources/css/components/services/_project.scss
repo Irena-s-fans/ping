@@ -64,18 +64,18 @@
             z-index: 25;
         }
 
-        &:hover {
-            .project__video-icon-path {
-                opacity: 0;
-            }
-
-            .project__img_blurred {
-                filter: blur(0);
-            }
-        }
-
         &_clickable {
             cursor: pointer;
+        }
+    }
+
+    &__img-wrap_active {
+        .project__video-icon-path {
+            opacity: 0;
+        }
+
+        .project__img_blurred {
+            filter: blur(0);
         }
     }
 
@@ -169,6 +169,15 @@
             color: #90FFFF;
             font-style: italic;
         }
+    }
+
+    &__wrap mark {
+        background-color: transparent;
+        color: #90FFFF;
+    }
+
+    &__wrap strong {
+        font-weight: 700;
     }
 
     &__title {

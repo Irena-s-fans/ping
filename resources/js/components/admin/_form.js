@@ -1,3 +1,5 @@
+import Popup from './Popup'
+
 $(document).ready(function() {
     $('.form__checkbox-label').each(function() {
         if ($(this).closest('.form__block').find('input[type="checkbox"]').is(':checked')) {
@@ -52,12 +54,18 @@ $(document).ready(function() {
                 cache: false,
                 contentType: false,
                 processData: false,
+                beforeSend() {
+                    Popup.hide().show('#loader__popup');
+                },
                 success: (data) => {
                     alert(JSON.parse(data).msg);
                 },
                 error: () => {
                     alert('Ошибка при отправке формы.');
                 },
+                complete() {
+                    Popup.hide('#loader__popup');
+                }
             });
         }
     });
@@ -82,12 +90,18 @@ $(document).ready(function() {
                 cache: false,
                 contentType: false,
                 processData: false,
+                beforeSend() {
+                    Popup.hide().show('#loader__popup');
+                },
                 success: (data) => {
                     alert(JSON.parse(data).msg);
                 },
                 error: () => {
                     alert('Ошибка при отправке формы.');
                 },
+                complete() {
+                    Popup.hide('#loader__popup');
+                }
             });
         }
     });
@@ -109,6 +123,9 @@ $(document).ready(function() {
                 cache: false,
                 contentType: false,
                 processData: false,
+                beforeSend() {
+                    Popup.hide().show('#loader__popup');
+                },
                 success: () => {
                     if (form.attr('redirect-on-submit') !== undefined) {
                         window.location.href = '/home';
@@ -119,6 +136,9 @@ $(document).ready(function() {
                 error: () => {
                     alert('Ошибка при отправке формы.');
                 },
+                complete() {
+                    Popup.hide('#loader__popup');
+                }
             });
         }
     });
