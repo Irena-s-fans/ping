@@ -12,23 +12,19 @@ class FormController extends Controller
 {
     public function form(Request $request)
     {
-        $mapping = [
-            'newbie1' => 'Новички 1.0',
-            'newbie2' => 'Новички 2.0',
-            'assAndPress' => 'Попа пресс',
-            'advanced' => 'Продвинутые',
-            'oneToOne' => 'One-to-One'
-        ];
-
         $params = [
-            'name' => $request['name'],
-            'tel' => $request['tel'],
-            'email' => $request['email'],
-            'program' => $mapping[$request['program']]
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+            'design_service' => $this->mapping($request->design_service),
+            'digital_ads' => $this->mapping($request->digital_ads),
+            'offline_events' => $this->mapping($request->offline_events),
+            'special_projects' => $this->mapping($request->special_projects),
+            'tournaments' => $this->mapping($request->tournaments),
         ];
 
         try {
-            Mail::to('fushick@gmail.com')->send(new Feedback($params));
+            Mail::to('dubchak@peopleingaming.com')->send(new Feedback($params));
             return \json_encode('Ваша заявка была успешно отправлена');
         } catch (\Exception $exception) {
             return \json_encode('Произошла ошибка при отправке заявки');
@@ -43,4 +39,13 @@ class FormController extends Controller
        $item->save();
     }
 
+    private function mapping($i): string
+    {
+        switch ($i) {
+            case 'N':
+                return 'Нет';
+            case 'Y':
+                return 'Да';
+        }
+    }
 }

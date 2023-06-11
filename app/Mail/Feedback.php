@@ -30,7 +30,7 @@ class Feedback extends Mailable
      */
     public function build()
     {
-        return $this->from('noreply@peopleingaming.com', 'Example')
+        return $this->from('info@peopleingaming.com', 'Заявка с сайта peopleingaming')
             ->with('params', $this->params)
             ->view('emails.feedback');
     }
