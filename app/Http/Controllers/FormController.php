@@ -25,9 +25,15 @@ class FormController extends Controller
 
         try {
             Mail::to('dubchak@peopleingaming.com')->send(new Feedback($params));
-            return \json_encode('Ваша заявка была успешно отправлена');
+            return \json_encode([
+                'status' => 1,
+                'msg' => 'Ваша заявка была успешно отправлена',
+            ]);
         } catch (\Exception $exception) {
-            return \json_encode('Произошла ошибка при отправке заявки');
+            return \json_encode([
+                'status' => 0,
+                'msg' => 'Произошла ошибка при отправке заявки',
+            ]);
         }
     }
 

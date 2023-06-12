@@ -14,7 +14,7 @@ $(document).ready(function() {
     $('.initialize').trigger('play');
     $('.initialize').trigger('pause');
 
-    $('.services__list-item').on('mouseenter touchstart', function() {
+    $(".services__list-item").on('mouseenter touchstart', function() {
         $('.services__list-item_active').removeClass('services__list-item_active');
         $(this).addClass('services__list-item_active');
     });

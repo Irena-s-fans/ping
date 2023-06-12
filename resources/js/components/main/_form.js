@@ -1,3 +1,5 @@
+import Popup from '../admin/Popup';
+
 $(document).ready(function() {
     $('.form__field').on('focus', function() {
        $('.form__field-wrap_active').removeClass('form__field-wrap_active');
@@ -25,12 +27,22 @@ $(document).ready(function() {
                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
            },
            data: JSON.stringify(formData),
-           success: () => {
-                alert('Форма была отправлена.');
+           beforeSend() {
+               Popup.hide().show('#loader__popup');
+           },
+           success: (res) => {
+               if (res.status === 1) {
+                   $('#popup-success').fadeIn(300);
+               } else {
+                   $('#popup-error').fadeIn(300);
+               }
            },
            error: () => {
-                alert('Ошибка при отправке формы.');
+               $('#popup-error').fadeIn(300);
            },
+           complete() {
+               Popup.hide('#loader__popup');
+           }
        });
     });
 

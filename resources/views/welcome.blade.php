@@ -319,6 +319,7 @@
     </div>
 </div>
 <script>
+    $('body').css('overflow', 'hidden');
     (function() {
         let loadRatio = 0
         const intervalID = setInterval(() => {
@@ -376,11 +377,16 @@
     function finishLoad() {
         changeLoaderPercent(1);
         $('.loader__text-percents').addClass('finished');
+        $('body').css('overflow', 'auto');
         $('.loader').fadeOut(500);
         $('.main').fadeIn(750);
     }
 </script>
-
+<div class="popup" id="loader__popup">
+    <div class="popup-loader popup__loader">
+        <div class="popup-loader__ring"></div>
+    </div>
+</div>
 <div class="popup" id="popup1">
     <div class="popup__body">
         <div class="popup__content">
@@ -448,6 +454,37 @@
             <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
             <p class="popup__text popup__text_xl popup__text_bold">
                 {{ __('I also like: riding a bicycle for at least 20 kms straight') }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="popup popup_phrase" id="phrase_andrey">
+    <div class="popup__body">
+        <div class="popup__content popup__content_phrase">
+            <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
+            <p class="popup__text popup__text_xl popup__text_bold">
+                {{ __('I also like: argue with your friends on discord about your next purchase of a co-op game on Steam') }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="popup popup_info" id="popup-success">
+    <div class="popup__body">
+        <div class="popup__content popup__content_phrase">
+            <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
+            <p class="popup__text popup__text_xl popup__text_bold">
+                {{ __('Your form was sent. Thanks!') }}
+
+            </p>
+        </div>
+    </div>
+</div>
+<div class="popup popup_info" id="popup-error">
+    <div class="popup__body">
+        <div class="popup__content popup__content_phrase">
+            <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
+            <p class="popup__text popup__text_xl popup__text_bold">
+                {{ __('An error occurred. Try again.') }}
             </p>
         </div>
     </div>
@@ -616,7 +653,7 @@
                             </div>
                         </div>
                         <div class="services__list_sm">
-                            <div class="swiper services__swiper">
+                            <div class="services__swiper">
                                 <div class="swiper-wrapper">
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services"
                                          rel="tournaments">
@@ -664,7 +701,10 @@
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Tournaments') }}</h2>
                                     <p class="project__text">{{ __('In esports, tournaments are an efficient way for brands to promote to a new audience, engage them in the product and establish a direct contact between the brand and the consumer. Our team knows that behind each tournament lies a concept and a strategy') }}.</p>
-                                    <p class="project__text">{{ __('We organize turnkey tournaments: come up with ideas how to use the tournament to advertise your brand or product in a native way, develop a set of rules and regulations for participants, plan and manage the matches, coordinate on-set') }}.</p>
+                                    <p class="project__text">
+                                        {{ __('We organize turnkey tournaments:') }}
+                                        <span class="project__text_blue">{{ __('come up with ideas how to use the tournament to advertise your brand or product in a native way') }}</span>, <span class="project__text_blue">{{ __('develop a set of rules and regulations for participants') }}</span>, <span class="project__text_blue">{{ __('plan and manage the matches') }}</span>, <span class="project__text_blue">{{ __('coordinate on-set') }}</span>.
+                                    </p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
                                     <p class="project__btn-text">{{ __('To other services') }}</p>
@@ -680,7 +720,9 @@
                                     <h2 class="project__title">{{ __('Spec projects') }}</h2>
                                     <p class="project__text">{{ __('Special projects with gamification help to attract and engage the audience in an advertising campaign, as well as in the culture of the brand and its product') }}.
                                     </p>
-                                    <p class="project__text">{{ __('Based on your marketing objectives, we can create unique special projects of various formats and scales: from entertaining game shows to news digests with augmented widgets') }}.</p>
+                                    <p class="project__text">
+                                        {{ __('Based on your marketing objectives, we can create unique special projects of various formats and scales: from') }} <span class="project__text_blue">{{ __('entertaining game shows') }}</span> {{ __('to') }} <span class="project__text_blue">{{ __('news digests with augmented widgets') }}</span>.
+                                    </p>
                                     <p class="project__text">{{ __('It is important for us to convey brand values to consumers, clearly present the product to the community and spark its interest') }}.</p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
@@ -697,14 +739,13 @@
                                     <h2 class="project__title">{{ __('Offline events') }}</h2>
                                     <p class="project__text">{{ __("We produce fascinating and exciting events that help our clients reach their goals. For that, we offer creative solutions and come up with a format of the event, based on the client's requests") }}.</p>
                                     <p class="project__text">
-                                        {{ __("Here's a list of events we can organize for you") }}
-                                        :<span class="project__text_blue">
-                                            {{ __('lan-finals') }}</span>,<span class="project__text_blue">
-                                            {{ __('presentations') }}</span>,<span class="project__text_blue">
-                                            {{ __('exhibitions') }}</span>,<span class="project__text_blue">
-                                            {{ __('theme parties') }}</span>,<span class="project__text_blue">
-                                            {{ __('corporate events') }}</span>,<span class="project__text_blue">
-                                            {{ __('team building') }}</span>,<span class="project__text_blue">
+                                        {{ __("Here's a list of events we can organize for you") }}:
+                                        <span class="project__text_blue">{{ __('lan-finals') }}</span>, <span class="project__text_blue">
+                                            {{ __('presentations') }}</span>, <span class="project__text_blue">
+                                            {{ __('exhibitions') }}</span>, <span class="project__text_blue">
+                                            {{ __('theme parties') }}</span>, <span class="project__text_blue">
+                                            {{ __('corporate events') }}</span>, <span class="project__text_blue">
+                                            {{ __('team building') }}</span>, <span class="project__text_blue">
                                             {{ __('festivals') }}</span>.
                                     </p>
                                 </div>
@@ -723,9 +764,9 @@
                                     <p class="project__text">{{ __("We know which digital platforms and social networks are popular with the esports community. Our team will develop a communication and marketing campaign for your brand, which the target audience will definitely notice - and which will reach the brand's image and business objectives") }}.</p>
                                     <p class="project__text">
                                         {{ __('We create individual marketing campaigns') }}: <span class="project__text_blue">
-                                            {{ __('placement of brand promotions') }}</span>,<span class="project__text_blue">
-                                            {{ __('influencer engagement and social media coverage') }}</span>,<span class="project__text_blue">
-                                            {{ __('brand coverage on streams, voice mentions') }}</span>,<span class="project__text_blue">
+                                            {{ __('placement of brand promotions') }}</span>, <span class="project__text_blue">
+                                            {{ __('influencer engagement and social media coverage') }}</span>, <span class="project__text_blue">
+                                            {{ __('brand coverage on streams') }}</span>, <span class="project__text_blue">{{ __('voice mentions') }}</span>, <span class="project__text_blue">
                                             {{ __('banner on the broadcast and in the channel description') }}</span>.
                                     </p>
                                 </div>
@@ -742,7 +783,8 @@
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Creative services') }}</h2>
                                     <p class="project__text">{{ __("The appearance of integrations is very important for the perception of an advertising campaign and the transmission of the brand's key messages: from the design of the live broadcast studio of the championship to banners and all things digital") }}.</p>
-                                    <p class="project__text"> {{ __("We will develop and prepare a design code for you from scratch or prepare layouts based on the company's brandbook and your wishes: our services also include printing products with a personal identity, development and production of merchandise, pos materials and decorative elements") }}.
+                                    <p class="project__text">
+                                        {{ __("We will develop and prepare a design code for you from scratch or prepare layouts based on the company's brandbook and your wishes: our services also include") }} <span class="project__text_blue">{{ __('printing products with a personal identity') }}</span>, <span class="project__text_blue">{{ __('development and production of merchandise') }}</span>, <span class="project__text_blue">{{ __('pos materials and decorative elements') }}</span>.
                                     </p>
                                 </div>
                                 <div class="project__btn show-services" rel="services">
@@ -1707,7 +1749,7 @@
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review1.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Сергей</h4>
+                                        <h4 class="review__el-name">{{ __('Sergey') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
@@ -1746,7 +1788,7 @@
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review4.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Ева</h4>
+                                        <h4 class="review__el-name">{{ __('Eva') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
@@ -1772,7 +1814,7 @@
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review6.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Аноним</h4>
+                                        <h4 class="review__el-name">{{ __('Anonymous') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
@@ -1784,7 +1826,7 @@
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review7.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Аноним</h4>
+                                        <h4 class="review__el-name">{{ __('Anonymous') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
@@ -1796,7 +1838,7 @@
                                 <div class="review__el">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review8.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Влас</h4>
+                                        <h4 class="review__el-name">{{ __('Vlas') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
@@ -1831,7 +1873,7 @@
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review1.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Сергей</h4>
+                                        <h4 class="review__el-name">{{ __('Sergey') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
@@ -1857,7 +1899,7 @@
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review4.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Ева</h4>
+                                        <h4 class="review__el-name">{{ __('Eva') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
@@ -1883,7 +1925,7 @@
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review8.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Влас</h4>
+                                        <h4 class="review__el-name">{{ __('Vlas') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
                                     <div class="review__el-content">
@@ -1897,7 +1939,7 @@
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review6.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Аноним</h4>
+                                        <h4 class="review__el-name">{{ __('Anonymous') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">
@@ -1909,7 +1951,7 @@
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
                                         <img src="/public/img/team/review7.jpg" alt="" class="review__el-avatar">
-                                        <h4 class="review__el-name">Аноним</h4>
+                                        <h4 class="review__el-name">{{ __('Anonymous') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
                                     <div class="review__el-content">

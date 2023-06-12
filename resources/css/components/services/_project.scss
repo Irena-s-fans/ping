@@ -266,16 +266,17 @@
         gap: clamp(10px, min(1.04vw, 1.85vh), 20px);
         overflow: hidden;
 
-        @include from(1921) {
-            padding-top: clamp(15px, min(3.12vw, 5.55vh), 80px);
-            padding-right: clamp(25px, 4.6vw, 117px);
-            padding-left: clamp(25px, 7vw, 179px);
-        }
-
         @include from(769) {
             height: min(min(36.4vw, 64.8vh), 700px) !important;
             padding-bottom: 25px;
             transform-origin: top;
+        }
+
+        @include from(1921) {
+            height: min(min(36.4vw, 64.8vh), 931px) !important;
+            padding-top: clamp(15px, min(3.12vw, 5.55vh), 80px);
+            padding-right: clamp(25px, 4.6vw, 117px);
+            padding-left: clamp(25px, 7vw, 179px);
         }
 
         @include to(768) {

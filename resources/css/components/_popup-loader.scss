@@ -1,0 +1,65 @@
+.popup-loader {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__ring {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+
+        @include from(768) {
+            @include reset_size(125px)
+        }
+
+        @include from(1200) {
+            @include reset_size(160px);
+        }
+
+        @include from(1600) {
+            @include reset_size(180px);
+        }
+
+        @include from(2240) {
+            @include reset_size(200px);
+        }
+    }
+
+    &__ring:after {
+        content: " ";
+        display: block;
+        width: 80%;
+        height: 80%;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid;
+        border-color: #8E0CD0 transparent #8E0CD0 transparent;
+        animation: loading 1.2s linear infinite;
+
+        @include from(768) {
+            border-width: 8px;
+        }
+
+        @include from(1200) {
+            border-width: 10px;
+        }
+
+        @include from(1600) {
+            border-width: 12px;
+        }
+
+        @include from(2240) {
+            border-width: 14px;
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
