@@ -56,6 +56,11 @@
         box-shadow: 0 0 14px #90FFFF;
     }
 
+    &__content_info {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
     &__wrap {
         display: flex;
         justify-content: flex-end;
@@ -328,7 +333,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(110%, -110%);
+        transform: translate(110%, -110%) skewX($skewX);
         cursor: pointer;
         transition: background-color $ui-transition-1;
 

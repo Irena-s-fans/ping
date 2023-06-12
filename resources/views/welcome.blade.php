@@ -470,7 +470,7 @@
 </div>
 <div class="popup popup_info" id="popup-success">
     <div class="popup__body">
-        <div class="popup__content popup__content_phrase">
+        <div class="popup__content popup__content_phrase popup__content_info">
             <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
             <p class="popup__text popup__text_xl popup__text_bold">
                 {{ __('Your form was sent. Thanks!') }}
@@ -481,7 +481,7 @@
 </div>
 <div class="popup popup_info" id="popup-error">
     <div class="popup__body">
-        <div class="popup__content popup__content_phrase">
+        <div class="popup__content popup__content_phrase popup__content_info">
             <img src="/public/img/cross.svg" alt="" class="popup-phrase__cross close_popup">
             <p class="popup__text popup__text_xl popup__text_bold">
                 {{ __('An error occurred. Try again.') }}
