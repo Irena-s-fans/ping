@@ -2065,19 +2065,19 @@
                                 <div class="form__item">
                                     <label class="form__label" for="name">{{ __('Name') }}</label>
                                     <div class="form__input-wrap">
-                                        <input class="form__input form__field" type="text" id="name" name="name" autocomplete="off">
+                                        <input class="form__input form__field" type="text" id="name" name="name" autocomplete="off" maxlength="255">
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <label class="form__label" for="email">E-Mail</label>
                                     <div class="form__input-wrap">
-                                        <input class="form__input form__field" type="text" id="email" name="email" autocomplete="off">
+                                        <input class="form__input form__field" type="text" id="email" name="email" autocomplete="off" maxlength="255">
                                     </div>
                                 </div>
                                 <div class="form__item">
                                     <label class="form__label form__textarea-label" for="message">{{ __('Message') }}</label>
                                     <div class="form__texarea-wrap">
-                                        <textarea class="form__textarea form__field" id="message" name="message" cols="30" rows="10" autocomplete="off"></textarea>
+                                        <textarea class="form__textarea form__field" id="message" name="message" cols="30" rows="10" autocomplete="off" maxlength="1024"></textarea>
                                     </div>
                                 </div>
                                 <button class="form__btn" type="submit">{{ __('Send') }}</button>
@@ -2085,43 +2085,43 @@
                             <div class="form__list">
                                 <h2 class="form__subtitle">{{ __('Choose services') }}</h2>
                                 <div class="form__list-item">
-                                    <input name="tours" type="checkbox" id="tours" hidden>
+                                    <input name="tournaments" type="checkbox" id="tours" hidden>
                                     <label class="form__checkbox-label" for="tours">
                                         <span class="form__checkbox"></span>
                                         {{ __('Tournaments') }}
                                     </label>
                                 </div>
                                 <div class="form__list-item">
-                                    <input name="specialProjects" type="checkbox" id="specialProjects" hidden>
-                                    <label class="form__checkbox-label" for="specialProjects">
+                                    <input name="special_projects" type="checkbox" id="special_projects" hidden>
+                                    <label class="form__checkbox-label" for="special_projects">
                                         <span class="form__checkbox"></span>
                                         {{ __('Spec projects') }}
                                     </label>
                                 </div>
                                 <div class="form__list-item">
-                                    <input name="offlineEvents" type="checkbox" id="offlineEvents" hidden>
-                                    <label class="form__checkbox-label" for="offlineEvents">
+                                    <input name="offline_events" type="checkbox" id="offline_events" hidden>
+                                    <label class="form__checkbox-label" for="offline_events">
                                         <span class="form__checkbox"></span>
                                         {{ __('Offline events') }}
                                     </label>
                                 </div>
                                 <div class="form__list-item">
-                                    <input name="digitalAds" type="checkbox" id="digitalAds" hidden>
-                                    <label class="form__checkbox-label" for="digitalAds">
+                                    <input name="digital_ads" type="checkbox" id="digital_ads" hidden>
+                                    <label class="form__checkbox-label" for="digital_ads">
                                         <span class="form__checkbox"></span>
                                         {{ __('Digital ads') }}
                                     </label>
                                 </div>
                                 <div class="form__list-item">
-                                    <input name="design" type="checkbox" id="design" hidden>
-                                    <label class="form__checkbox-label" for="design">
+                                    <input name="design_service" type="checkbox" id="design_service" hidden>
+                                    <label class="form__checkbox-label" for="design_service">
                                         <span class="form__checkbox"></span>
                                         {{ __('Design') }}
                                     </label>
                                 </div>
                             </div>
                             <div class="form__btn-wrap">
-                                <button class="form__btn form__btn_sm" type="submit">{{ __('Send') }}</button>
+                                <button class="form__btn form__btn_sm contact-form-send" type="submit">{{ __('Send') }}</button>
                             </div>
                         </form>
                         <div class="contacts__icons-wrap">
