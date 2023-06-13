@@ -36,6 +36,7 @@
         color: transparent;
         -webkit-text-stroke: 1px rgba(#FFFFFF, 1);
         margin-inline: clamp(10px, 1.3vw, 25px) clamp(15px, 2.08vw, 40px);
+        user-select: none;
 
         @include from(1921) {
             font-size: clamp(36px, min(5.2vw, 9.25vh), 133px);
@@ -53,6 +54,7 @@
         border-top: 2px solid #FFFFFF;
         width: 100%;
         box-shadow: 0 0 clamp(12px, 2.8vw, 54px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 35px) #A509B2, 0 0 clamp(3px, 0.78vw, 15px) #BF1CE8;
+        user-select: none;
 
         @include from(1921) {
             margin-top: clamp(8px, 0.88vw, 22px);
@@ -184,6 +186,7 @@
         filter: blur(9px);
         transform: skewX($skewX);
         transition: $ui-transition-1 filter;
+        user-select: none;
     }
 
     &__list-text {
@@ -215,6 +218,7 @@
         margin-top: 30px;
         border-top: 2px solid #FFFFFF;
         box-shadow: 0 0 clamp(12px, 2.8vw, 54px) #FFFFFF, 0 0 clamp(8px, 1.8vw, 35px) #A509B2, 0 0 clamp(3px, 0.78vw, 15px) #BF1CE8;
+        user-select: none;
 
         @include from(1921) {
             width: min(90%, 600px);
@@ -249,6 +253,7 @@
         color: #FFFFFF;
         background: transparent;
         transition: $ui-transition-1 background-color;
+        user-select: none;
 
         @include from(1921) {
             width: min(75%, 400px);

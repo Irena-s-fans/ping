@@ -23,7 +23,6 @@ $(document).ready(function() {
     });
 
     const projects_swiper = new Swiper('.projects__list', {
-        initialSlide: 1,
         modules: [Grid],
         cssMode: true,
         centeredSlides: true,
