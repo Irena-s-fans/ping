@@ -59,14 +59,5 @@ function enableSwiper() {
         },
     });
 
-    $('.header__nav-item:not(.header__language, .header__nav-language)').on('click', function() {
-        if ($(window).width() <= 768) {
-            $('.header__nav-item_active:not(.header__language, .header__nav-language)').removeClass('header__nav-item_active');
-            $(this).addClass('header__nav-item_active');
-            $('.header').removeClass('header_active');
-            $($(this).attr('rel')).get(0).scrollIntoView({behavior: 'smooth'});
-        }
-    });
-
     return sw;
 }

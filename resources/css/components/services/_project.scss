@@ -260,14 +260,14 @@
 .projects {
     &__list {
         padding-top: clamp(15px, min(3.12vw, 5.55vh), 60px);
-        padding-left: clamp(25px, 7vw, 75px);
-        padding-right: clamp(25px, 4.6vw, 90px);
         transform: skewX(-$skewX);
         gap: clamp(10px, min(1.04vw, 1.85vh), 20px);
         overflow: hidden;
 
         @include from(769) {
-            height: min(min(36.4vw, 64.8vh), 700px) !important;
+            height: clamp(300px, min(36.4vw, 64.8vh), 700px) !important;
+            padding-left: clamp(25px, 7vw, 75px);
+            padding-right: clamp(25px, 4.6vw, 90px);
             padding-bottom: 25px;
             transform-origin: top;
         }
@@ -280,11 +280,10 @@
         }
 
         @include to(768) {
-            padding-top: 50px;
-            padding-inline: 10%;
-            padding-bottom: 15px;
-            margin-inline: 0 -8px;
-            overflow: visible;
+            .swiper-wrapper {
+                padding-top: 50px;
+                padding-bottom: 15px;
+            }
         }
 
         .swiper-slide {
@@ -304,6 +303,10 @@
 
             @include to(768) {
                 height: clamp(275px, 42.3vw, 325px) !important;
+            }
+
+            @include to(375) {
+                height: clamp(240px, 42.3vw, 325px) !important;
             }
         }
     }
