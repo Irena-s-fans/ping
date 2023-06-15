@@ -12,6 +12,16 @@ $(document).ready(function() {
     let swiper = enableSwiper();
     let resizeTimer = 0;
 
+    $(document).on('click', '.header__nav-item', function() {
+        const headerEl = $(this)
+        $('.header_active').removeClass('header_active');
+        $('.header__nav-item_active').removeClass('header__nav-item_active');
+        $(this).addClass('header__nav-item_active');
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(headerEl.attr('rel')).offset().top
+        }, 750);
+    });
+
     function breakpointChecker() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
