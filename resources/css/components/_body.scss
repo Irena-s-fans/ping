@@ -15,4 +15,8 @@
             display: block;
         }
     }
+
+    img, video {
+        -webkit-touch-callout: none !important;
+    }
 }

@@ -551,7 +551,7 @@
         <div class="swiper-wrapper">
             <div class="section swiper-slide" id="about_section">
                 <div class="section__wrapper">
-                    <video class="about__video" autoplay muted loop preload="auto">
+                    <video class="about__video" draggable="false" autoplay muted loop preload="auto">
                         <source src="/public/videos/main.mp4" type="video/mp4">
                     </video>
                     <div class="about">
@@ -586,34 +586,34 @@
                         <h2 class="partners__title">{{ __('Partners') }}</h2>
                         <div class="partners__list-wrapper">
                             <div class="partners__list">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/igromania 2.png" alt="">
-                                <img class="partners__img partners__img_sm" src="/public/img/partners/wd.svg" alt="">
-                                <img class="partners__img partners__img_xxl" src="/public/img/partners/universal.svg" alt="">
-                                <img class="partners__img partners__img_xxl" src="/public/img/partners/ubisoft 2.png" alt="">
-                                <img class="partners__img partners__img_regular" src="/public/img/partners/kanobu.svg" alt="">
-                                <img class="partners__img partners__img_xxl" src="/public/img/partners/lg.png" alt="">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/dtf 2.png" alt="">
-                                <img class="partners__img partners__img_regular" src="/public/img/partners/syberia 2.png" alt="">
-                                <img class="partners__img partners__img_regular" src="/public/img/partners/sports_ru 2.png" alt="">
-                                <img class="partners__img partners__img_sm" src="/public/img/partners/viewsonic 2.png" alt="">
-                                <img class="partners__img partners__img_xxl" src="/public/img/partners/cm.png" alt="">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/vk.svg" alt="">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/fond.png" alt="">
+                                <img class="partners__img partners__img_xl" draggable="false" src="/public/img/partners/igromania 2.png" alt="">
+                                <img class="partners__img partners__img_sm" draggable="false" src="/public/img/partners/wd.svg" alt="">
+                                <img class="partners__img partners__img_xxl" draggable="false" src="/public/img/partners/universal.svg" alt="">
+                                <img class="partners__img partners__img_xxl" draggable="false" src="/public/img/partners/ubisoft 2.png" alt="">
+                                <img class="partners__img partners__img_regular" draggable="false" src="/public/img/partners/kanobu.svg" alt="">
+                                <img class="partners__img partners__img_xxl" draggable="false" src="/public/img/partners/lg.png" alt="">
+                                <img class="partners__img partners__img_xl" draggable="false" src="/public/img/partners/dtf 2.png" alt="">
+                                <img class="partners__img partners__img_regular" draggable="false" src="/public/img/partners/syberia 2.png" alt="">
+                                <img class="partners__img partners__img_regular" draggable="false" src="/public/img/partners/sports_ru 2.png" alt="">
+                                <img class="partners__img partners__img_sm" draggable="false" src="/public/img/partners/viewsonic 2.png" alt="">
+                                <img class="partners__img partners__img_xxl" draggable="false" src="/public/img/partners/cm.png" alt="">
+                                <img class="partners__img partners__img_xl" draggable="false" src="/public/img/partners/vk.svg" alt="">
+                                <img class="partners__img partners__img_xl" draggable="false" src="/public/img/partners/fond.png" alt="">
                             </div>
                             <div class="partners__list">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/igromania 2.png" alt="">
-                                <img class="partners__img partners__img_sm" src="/public/img/partners/wd.svg" alt="">
-                                <img class="partners__img partners__img_xxl" src="/public/img/partners/universal.svg" alt="">
-                                <img class="partners__img partners__img_xxl" src="/public/img/partners/ubisoft 2.png" alt="">
-                                <img class="partners__img partners__img_regular" src="/public/img/partners/kanobu.svg" alt="">
-                                <img class="partners__img partners__img_xxl" src="/public/img/partners/lg.png" alt="">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/dtf 2.png" alt="">
-                                <img class="partners__img partners__img_regular" src="/public/img/partners/syberia 2.png" alt="">
-                                <img class="partners__img partners__img_regular" src="/public/img/partners/sports_ru 2.png" alt="">
-                                <img class="partners__img partners__img_sm" src="/public/img/partners/viewsonic 2.png" alt="">
-                                <img class="partners__img partners__img_xxl" src="/public/img/partners/cm.png" alt="">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/vk.svg" alt="">
-                                <img class="partners__img partners__img_xl" src="/public/img/partners/fond.png" alt="">
+                                <img class="partners__img partners__img_xl" draggable="false" src="/public/img/partners/igromania 2.png" alt="">
+                                <img class="partners__img partners__img_sm" draggable="false" src="/public/img/partners/wd.svg" alt="">
+                                <img class="partners__img partners__img_xxl" draggable="false" src="/public/img/partners/universal.svg" alt="">
+                                <img class="partners__img partners__img_xxl" draggable="false" src="/public/img/partners/ubisoft 2.png" alt="">
+                                <img class="partners__img partners__img_regular" draggable="false" src="/public/img/partners/kanobu.svg" alt="">
+                                <img class="partners__img partners__img_xxl" draggable="false" src="/public/img/partners/lg.png" alt="">
+                                <img class="partners__img partners__img_xl" draggable="false" src="/public/img/partners/dtf 2.png" alt="">
+                                <img class="partners__img partners__img_regular" draggable="false" src="/public/img/partners/syberia 2.png" alt="">
+                                <img class="partners__img partners__img_regular" draggable="false" src="/public/img/partners/sports_ru 2.png" alt="">
+                                <img class="partners__img partners__img_sm" draggable="false" src="/public/img/partners/viewsonic 2.png" alt="">
+                                <img class="partners__img partners__img_xxl" draggable="false" src="/public/img/partners/cm.png" alt="">
+                                <img class="partners__img partners__img_xl" draggable="false" src="/public/img/partners/vk.svg" alt="">
+                                <img class="partners__img partners__img_xl" draggable="false" src="/public/img/partners/fond.png" alt="">
                             </div>
                         </div>
                         <div class="partners__line"></div>
@@ -629,23 +629,23 @@
                     <div class="services__wrap services__wrap_active" id="services">
                         <div class="services__list">
                             <div class="services__list-item show-services" rel="tournaments">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_1.png" alt="">
+                                <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_1.png" alt="">
                                 <p class="services__list-text">{{ __('Tournaments') }}</p>
                             </div>
                             <div class="services__list-item show-services" rel="specialProjects">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_2.png" alt="">
+                                <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_2.png" alt="">
                                 <p class="services__list-text">{{ __('Spec projects') }}</p>
                             </div>
                             <div class="services__list-item show-services" rel="offline">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_3.png" alt="">
+                                <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_3.png" alt="">
                                 <p class="services__list-text">{{ __('Offline events') }}</p>
                             </div>
                             <div class="services__list-item show-services" rel="digital">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_4.png" alt="">
+                                <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_4.png" alt="">
                                 <p class="services__list-text">{{ __('Digital ads') }}</p>
                             </div>
                             <div class="services__list-item show-services" rel="design">
-                                <img class="services__list-img" src="/public/img/services/dir_desc_5.png" alt="">
+                                <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_5.png" alt="">
                                 <p class="services__list-text">{{ __('Design') }}</p>
                             </div>
                             <div class="services__list-item services__list-item_non-blur show-services" rel="projects">
@@ -657,26 +657,26 @@
                                 <div class="swiper-wrapper">
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services"
                                          rel="tournaments">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_1.png"
+                                        <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_1.png"
                                              alt="">
                                         <p class="services__list-text">{{ __('Tournaments') }}</p>
                                     </div>
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services" rel="specialProjects">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_2.png"
+                                        <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_2.png"
                                              alt="">
                                         <p class="services__list-text">{{ __('Spec projects') }}</p>
                                     </div>
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services" rel="offline">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_3.png"
+                                        <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_3.png"
                                              alt="">
                                         <p class="services__list-text">{{ __('Offline events') }}</p>
                                     </div>
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services" rel="digital">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_4.png" alt="">
+                                        <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_4.png" alt="">
                                         <p class="services__list-text">{{ __('Digital ads') }}</p>
                                     </div>
                                     <div class="services__list-item services__list-item_sm swiper-slide show-services" rel="design">
-                                        <img class="services__list-img" src="/public/img/services/dir_desc_5.png"
+                                        <img class="services__list-img" draggable="false" src="/public/img/services/dir_desc_5.png"
                                              alt="">
                                         <p class="services__list-text">{{ __('Design') }}</p>
                                     </div>
@@ -696,7 +696,7 @@
                         <div class="project services__wrap" id="tournaments">
                             <div class="project__content">
                                 <div class="project__img-wrap">
-                                    <img class="project__img" src="/public/img/services/dir_desc_1.png" alt="">
+                                    <img class="project__img" draggable="false" src="/public/img/services/dir_desc_1.png" alt="">
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Tournaments') }}</h2>
@@ -714,7 +714,7 @@
                         <div class="project services__wrap" id="specialProjects">
                             <div class="project__content">
                                 <div class="project__img-wrap">
-                                    <img class="project__img" src="/public/img/services/dir_desc_2.png" alt="">
+                                    <img class="project__img" draggable="false" src="/public/img/services/dir_desc_2.png" alt="">
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Spec projects') }}</h2>
@@ -733,7 +733,7 @@
                         <div class="project services__wrap" id="offline">
                             <div class="project__content">
                                 <div class="project__img-wrap">
-                                    <img class="project__img" src="/public/img/services/dir_desc_3.png" alt="">
+                                    <img class="project__img" draggable="false" src="/public/img/services/dir_desc_3.png" alt="">
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Offline events') }}</h2>
@@ -757,7 +757,7 @@
                         <div class="project services__wrap" id="digital">
                             <div class="project__content">
                                 <div class="project__img-wrap">
-                                    <img class="project__img" src="/public/img/services/dir_desc_4.png" alt="">
+                                    <img class="project__img" draggable="false" src="/public/img/services/dir_desc_4.png" alt="">
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Digital ads') }}</h2>
@@ -778,7 +778,7 @@
                         <div class="project services__wrap" id="design">
                             <div class="project__content">
                                 <div class="project__img-wrap">
-                                    <img class="project__img" src="/public/img/services/dir_desc_5.png" alt="">
+                                    <img class="project__img" draggable="false" src="/public/img/services/dir_desc_5.png" alt="">
                                 </div>
                                 <div class="project__wrap">
                                     <h2 class="project__title">{{ __('Creative services') }}</h2>
@@ -802,9 +802,9 @@
                                 @foreach($projects as $project)
                                     <div class="services__list-item swiper-slide show-services" rel="project{{ $project->id }}">
                                         @if (explode('/', mime_content_type(base_path() . '/img/preview/' . $project->preview))[0] === 'video')
-                                            <video class="services__list-img lazy initialize" src="/img/preview/{{ $project->preview }}" muted loop preload="auto" playsinline></video>
+                                            <video class="services__list-img lazy initialize" draggable="false" src="/img/preview/{{ $project->preview }}" muted loop preload="auto" playsinline></video>
                                         @else
-                                            <img class="services__list-img" alt="" src="/img/preview/{{ $project->preview }}">
+                                            <img class="services__list-img" alt="" draggable="false" src="/img/preview/{{ $project->preview }}">
                                         @endif
                                         <p class="services__list-text">{{ $project->title }}</p>
                                     </div>
@@ -833,9 +833,9 @@
                                         data-video-embed="{{ $project->is_vk ? '' : ($project->video . '?enablejsapi=1&origin=https://peopleingaming.com/') }}"
                                     >
                                         @if (explode('/', mime_content_type(base_path() . '/img/media/' . $project->pic))[0] === 'video')
-                                            <video class="project__img project__img_blurred lazy initialize" src="/img/media/{{ $project->pic }}" muted loop preload="auto" playsinline></video>
+                                            <video class="project__img project__img_blurred lazy initialize" draggable="false" src="/img/media/{{ $project->pic }}" muted loop preload="auto" playsinline></video>
                                         @else
-                                            <img class="project__img project__img_blurred" alt="" src="/img/media/{{ $project->pic }}">
+                                            <img class="project__img project__img_blurred" draggable="false" alt="" src="/img/media/{{ $project->pic }}">
                                         @endif
 
                                         <svg viewBox="0 0 42 42" class="project__video-icon">
@@ -867,7 +867,7 @@
                         <div class="team__content">
                             <div class="team__item team__item_active">
                                 <div class="team__phrase">
-                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <img src="/public/img/team/team__phrase-icon.svg" draggable="false" alt="" class="team__phrase-icon">
                                     <div class="team__phrase-content">
                                         <p class="team__phrase-text">
                                             {{ __('I also like: argue with your friends on discord about your next purchase of a co-op game on Steam') }}
@@ -875,8 +875,8 @@
                                     </div>
                                 </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="/public/img/team/team1.png" alt="">
-                                    <img class="team__img" src="/public/img/team/team1.png" alt="">
+                                    <img class="team__img_shadow" draggable="false" src="/public/img/team/team1.png" alt="">
+                                    <img class="team__img" draggable="false" src="/public/img/team/team1.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
@@ -892,7 +892,7 @@
                                             <p class="team__list-text">{{ __('Creative events and activations') }}</p>
                                         </li>
                                         <li class="team__list-item">
-                                            <p class="team__list-text">{{ __("Product's integration into the e-sports industry")  }}</p>
+                                            <p class="team__list-text">{{ __("Product's integration into the esports industry")  }}</p>
                                         </li>
                                     </ul>
                                     <div class="team__socials">
@@ -948,7 +948,7 @@
                             </div>
                             <div class="team__item">
                                 <div class="team__phrase">
-                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <img src="/public/img/team/team__phrase-icon.svg" draggable="false" alt="" class="team__phrase-icon">
                                     <div class="team__phrase-content">
                                         <p class="team__phrase-text">
                                             {{ __('I also like: buying Battle Pass in the games but never levelling it') }}
@@ -956,12 +956,12 @@
                                     </div>
                                 </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="/public/img/team/team2.png" alt="">
-                                    <img class="team__img" src="/public/img/team/team2.png" alt="">
+                                    <img class="team__img_shadow" draggable="false" src="/public/img/team/team2.png" alt="">
+                                    <img class="team__img" draggable="false" src="/public/img/team/team2.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
-                                        <h2 class="team__name">{{ __('Vika Martoyan') }}</h2>
+                                        <h2 class="team__name">{{ __('Victoria Martoyan') }}</h2>
                                         <p class="team__title">{{ __("I’m responsible for") }}:</p>
                                     </div>
                                     <ul class="team__list">
@@ -1032,7 +1032,7 @@
                             </div>
                             <div class="team__item">
                                 <div class="team__phrase">
-                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <img src="/public/img/team/team__phrase-icon.svg" draggable="false" alt="" class="team__phrase-icon">
                                     <div class="team__phrase-content">
                                         <p class="team__phrase-text">
                                             {{ __('I also like: planning a whole bunch of streams only to never start them') }}
@@ -1040,8 +1040,8 @@
                                     </div>
                                 </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="/public/img/team/team3.png" alt="">
-                                    <img class="team__img" src="/public/img/team/team3.png" alt="">
+                                    <img class="team__img_shadow" draggable="false" src="/public/img/team/team3.png" alt="">
+                                    <img class="team__img" draggable="false" src="/public/img/team/team3.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
@@ -1117,7 +1117,7 @@
                             </div>
                             <div class="team__item">
                                 <div class="team__phrase">
-                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <img src="/public/img/team/team__phrase-icon.svg" draggable="false" alt="" class="team__phrase-icon">
                                     <div class="team__phrase-content">
                                         <p class="team__phrase-text">
                                             {{ __('I also like: sharing pictures of my cat') }}
@@ -1125,8 +1125,8 @@
                                     </div>
                                 </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="/public/img/team/team4.png" alt="">
-                                    <img class="team__img" src="/public/img/team/team4.png" alt="">
+                                    <img class="team__img_shadow" draggable="false" src="/public/img/team/team4.png" alt="">
+                                    <img class="team__img" draggable="false" src="/public/img/team/team4.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
@@ -1201,7 +1201,7 @@
                             </div>
                             <div class="team__item">
                                 <div class="team__phrase">
-                                    <img src="/public/img/team/team__phrase-icon.svg" alt="" class="team__phrase-icon">
+                                    <img src="/public/img/team/team__phrase-icon.svg" draggable="false" alt="" class="team__phrase-icon">
                                     <div class="team__phrase-content">
                                         <p class="team__phrase-text">
                                             {{ __('I also like: riding a bicycle for at least 20 kms straight') }}
@@ -1209,8 +1209,8 @@
                                     </div>
                                 </div>
                                 <div class="team__img-wrap">
-                                    <img class="team__img_shadow" src="/public/img/team/team5.png" alt="">
-                                    <img class="team__img" src="/public/img/team/team5.png" alt="">
+                                    <img class="team__img_shadow" draggable="false" src="/public/img/team/team5.png" alt="">
+                                    <img class="team__img" draggable="false" src="/public/img/team/team5.png" alt="">
                                 </div>
                                 <div class="team__about">
                                     <div class="team__wrap">
@@ -1285,14 +1285,14 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide team__slide">
                                         <div class="team__img-wrap team__img-wrap_sm">
-                                            <img src="/public/img/team/team1.png" alt=""
+                                            <img src="/public/img/team/team1.png" draggable="false" alt=""
                                                  class="team__img_shadow team__img_shadow-sm">
-                                            <img src="/public/img/team/team1.png" alt="" class="team__img team__img_sm">
+                                            <img src="/public/img/team/team1.png" draggable="false" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
                                             {{ __('Andrey') }} <br> {{ __('Dubchak') }}
                                         </h2>
-                                        <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
+                                        <img src="/public/img/team/triangle.svg" draggable="false" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
                                             @if (App::currentLocale() == 'ru')
                                                 <a href="https://vk.com/cd_tux0"
@@ -1343,20 +1343,20 @@
                                                 </svg>
                                             </a>
                                             <div class="team__phrase_sm show_popup" rel="phrase_andrey">
-                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" draggable="false" alt="" class="team__phrase-icon_sm">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide team__slide">
                                         <div class="team__img-wrap team__img-wrap_sm">
-                                            <img src="/public/img/team/team2.png" alt=""
+                                            <img src="/public/img/team/team2.png" draggable="false" alt=""
                                                  class="team__img_shadow team__img_shadow-sm">
-                                            <img src="/public/img/team/team2.png" alt="" class="team__img team__img_sm">
+                                            <img src="/public/img/team/team2.png" draggable="false" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
-                                            {{ __('Vika') }} <br> {{ __('Martoyan') }}
+                                            {{ __('Victoria') }} <br> {{ __('Martoyan') }}
                                         </h2>
-                                        <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
+                                        <img src="/public/img/team/triangle.svg" draggable="false" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
                                             @if (App::currentLocale() == 'ru')
                                                 <a href="https://vk.com/v1ktorika"
@@ -1410,20 +1410,20 @@
                                                 </svg>
                                             </a>
                                             <div class="team__phrase_sm show_popup" rel="phrase_vika">
-                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" draggable="false" alt="" class="team__phrase-icon_sm">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide team__slide">
                                         <div class="team__img-wrap team__img-wrap_sm">
-                                            <img src="/public/img/team/team3.png" alt=""
+                                            <img src="/public/img/team/team3.png" draggable="false" alt=""
                                                  class="team__img_shadow team__img_shadow-sm">
-                                            <img src="/public/img/team/team3.png" alt="" class="team__img team__img_sm">
+                                            <img src="/public/img/team/team3.png" draggable="false" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
                                             {{ __('Anton') }} <br> {{ __('Murashov') }}
                                         </h2>
-                                        <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
+                                        <img src="/public/img/team/triangle.svg" draggable="false" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
                                             @if (App::currentLocale() == 'ru')
                                                 <a href="https://vk.com/deeoneezy"
@@ -1477,20 +1477,20 @@
                                                 </svg>
                                             </a>
                                             <div class="team__phrase_sm show_popup" rel="phrase_anton">
-                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" draggable="false" alt="" class="team__phrase-icon_sm">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide team__slide">
                                         <div class="team__img-wrap team__img-wrap_sm">
-                                            <img src="/public/img/team/team4.png" alt=""
+                                            <img src="/public/img/team/team4.png" draggable="false" alt=""
                                                  class="team__img_shadow team__img_shadow-sm">
-                                            <img src="/public/img/team/team4.png" alt="" class="team__img team__img_sm">
+                                            <img src="/public/img/team/team4.png" draggable="false" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
                                             {{ __('Ruslan') }} <br> {{ __('Sokolov') }}
                                         </h2>
-                                        <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
+                                        <img src="/public/img/team/triangle.svg" draggable="false" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
                                             @if (App::currentLocale() == 'ru')
                                                 <a href="https://vk.com/onitaka"
@@ -1544,20 +1544,20 @@
                                                 </svg>
                                             </a>
                                             <div class="team__phrase_sm show_popup" rel="phrase_ruslan">
-                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" draggable="false" alt="" class="team__phrase-icon_sm">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide team__slide">
                                         <div class="team__img-wrap team__img-wrap_sm">
-                                            <img src="/public/img/team/team5.png" alt=""
+                                            <img src="/public/img/team/team5.png" draggable="false" alt=""
                                                  class="team__img_shadow team__img_shadow-sm">
-                                            <img src="/public/img/team/team5.png" alt="" class="team__img team__img_sm">
+                                            <img src="/public/img/team/team5.png" draggable="false" alt="" class="team__img team__img_sm">
                                         </div>
                                         <h2 class="team__name team__name_sm">
                                             {{ __('Maxim') }} <br> {{ __('Lagutkin') }}
                                         </h2>
-                                        <img src="/public/img/team/triangle.svg" alt="" class="team__triangle">
+                                        <img src="/public/img/team/triangle.svg" draggable="false" alt="" class="team__triangle">
                                         <div class="team__socials team__socials_sm">
                                             @if (App::currentLocale() == 'ru')
                                                 <a href="https://vk.com/lagustkin"
@@ -1611,7 +1611,7 @@
                                                 </svg>
                                             </a>
                                             <div class="team__phrase_sm show_popup" rel="phrase_maxim">
-                                                <img src="/public/img/team/team__phrase-icon_sm.svg" alt="" class="team__phrase-icon_sm">
+                                                <img src="/public/img/team/team__phrase-icon_sm.svg" draggable="false" alt="" class="team__phrase-icon_sm">
                                             </div>
                                         </div>
                                     </div>
@@ -1630,7 +1630,7 @@
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
                                             <p class="team__list-text team__list-text_sm">
-                                                {{ __("Product's integration into the e-sports industry") }}
+                                                {{ __("Product's integration into the esports industry") }}
                                             </p>
                                         </li>
                                         <li class="team__list-item team__list-item_sm">
@@ -1748,7 +1748,7 @@
                             <div class="review__row swiper-slide">
                                 <div class="review__el">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review1.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review1.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Sergey') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
@@ -1758,7 +1758,7 @@
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review2.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review2.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">もっと試す</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
@@ -1775,7 +1775,7 @@
                             <div class="review__row swiper-slide">
                                 <div class="review__el">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review3.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review3.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">TobyGRI_N</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
@@ -1787,7 +1787,7 @@
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review4.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review4.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Eva') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
@@ -1799,7 +1799,7 @@
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review5.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review5.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">hAron</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
@@ -1813,7 +1813,7 @@
                             <div class="review__row swiper-slide">
                                 <div class="review__el">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review6.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review6.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Anonymous') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
@@ -1825,7 +1825,7 @@
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review7.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review7.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Anonymous') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
@@ -1837,7 +1837,7 @@
                                 </div>
                                 <div class="review__el">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review8.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review8.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Vlas') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
@@ -1855,7 +1855,7 @@
                             <div class="review__group swiper-slide">
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review2.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review2.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">もっと試す</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
@@ -1872,7 +1872,7 @@
                             <div class="review__group swiper-slide">
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review1.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review1.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Sergey') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
@@ -1884,7 +1884,7 @@
                                 </div>
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review3.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review3.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">TobyGRI_N</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
@@ -1898,7 +1898,7 @@
                             <div class="review__group swiper-slide">
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review4.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review4.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Eva') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
@@ -1912,7 +1912,7 @@
                             <div class="review__group swiper-slide">
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review5.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review5.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">hAron</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
@@ -1924,7 +1924,7 @@
                                 </div>
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review8.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review8.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Vlas') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Viewer') }}</h4>
                                     </div>
@@ -1938,7 +1938,7 @@
                             <div class="review__group swiper-slide">
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review6.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review6.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Anonymous') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>
@@ -1950,7 +1950,7 @@
                                 </div>
                                 <div class="review__el review__el_sm">
                                     <div class="review__el-header">
-                                        <img src="/public/img/team/review7.jpg" alt="" class="review__el-avatar">
+                                        <img src="/public/img/team/review7.jpg" draggable="false" alt="" class="review__el-avatar">
                                         <h4 class="review__el-name">{{ __('Anonymous') }}</h4>
                                         <h4 class="review__el-subname">{{ __('Participant') }}</h4>
                                     </div>

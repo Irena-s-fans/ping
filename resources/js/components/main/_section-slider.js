@@ -12,7 +12,7 @@ $(document).ready(function() {
     let swiper = enableSwiper();
     let resizeTimer = 0;
 
-    $(document).on('click', '.header__nav-item', function() {
+    $(document).on('click', '.header__nav-item:not(.header__language, .header__nav-language)', function() {
         const headerEl = $(this)
         $('.header_active').removeClass('header_active');
         $('.header__nav-item_active').removeClass('header__nav-item_active');
