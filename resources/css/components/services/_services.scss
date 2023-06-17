@@ -26,6 +26,11 @@
         &_active {
             display: block;
         }
+
+        * {
+            -webkit-touch-callout: none !important;
+            user-select: none !important;
+        }
     }
 
     &__title {
