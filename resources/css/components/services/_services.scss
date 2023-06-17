@@ -11,7 +11,7 @@
         }
 
         @include to(768) {
-            margin-left: clamp(25px, 19.53vw, 135px);
+            margin-left: clamp(25px, 19.53vw, 50px);
         }
 
         @include to(450) {
@@ -50,7 +50,7 @@
 
         @include to(768) {
             margin-left: 0;
-            font-size: clamp(42px, 14.49vw, 75px);
+            font-size: clamp(36px, 11.25vw, 75px);
         }
     }
 
