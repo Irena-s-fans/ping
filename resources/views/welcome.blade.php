@@ -428,7 +428,7 @@
                 {{ __('Our task is to help brands build and establish partnerships with key representatives of gaming culture, well-known players and opinion leaders and make them known amongst the gaming community') }}.
             </p>
             <p class="popup__text">
-                {{ __('We apply our experience in marketing and PR communications in esports to  create a global ecosystem of cybersports and well-established communications between companies and the industry') }}.
+                {{ __('We apply our experience in marketing and PR communications in esports to create a global ecosystem of cybersports and well-established communications between companies and the industry') }}.
             </p>
             <div class="popup__icon-wrap">
                 <p class="popup__icon">!</p>
@@ -588,11 +588,11 @@
                                 {{ __('About') }}
                             </h1>
                             <p class="about__text about__text_blue">
-                                {{ __('PinG is a creative agency that’s all about cybersports, gaming and  geek culture') }}.
+                                {{ __('We are a creative agency that’s all about cybersports, gaming and geek culture') }}.
                             </p>
                         </div>
                         <p class="about__text about__text-description">
-                            <span class="about__text_purple">PinG</span> {{ __('is your guide in the world of marketing for gaming communities. We will help to tell stories about your brand and find suitable opportunities for its promotion to those who share its values') }}.
+                            <span class="about__text_blue">PinG</span> {{ __('is your guide in the world of marketing for gaming communities. We will help to tell stories about your brand and find suitable opportunities for its promotion to those who share its values') }}.
                         </p>
                     </div>
                     <div class="quest">
