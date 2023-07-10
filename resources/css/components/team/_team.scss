@@ -59,7 +59,7 @@
     &__item {
         box-sizing: border-box;
         position: relative;
-        width: 9%;
+        width: 11%;
         height: min(min(25.78vw, 45.8vh), 495px);
         display: flex;
         align-items: flex-end;
@@ -123,7 +123,7 @@
             }
         }
 
-        &:nth-child(3) {
+/*        &:nth-child(3) {
             .team__img-wrap {
                 left: calc(-1 * min(1.82vw, 35px));
                 z-index: 4;
@@ -148,9 +148,9 @@
                     padding-left: 35%;
                 }
             }
-        }
+        }*/
 
-        &:nth-child(4) {
+        &:nth-child(3) {
             .team__img-wrap {
                 left: min(1.82vw, 35px);
                 z-index: 5;
@@ -177,7 +177,7 @@
             }
         }
 
-        &:nth-child(5) {
+        &:nth-child(4) {
             .team__img-wrap {
                 left: calc(-1 * min(1.82vw, 35px));
                 z-index: 6;
@@ -193,7 +193,7 @@
         }
 
         &_active {
-            width: 64%;
+            width: 67%;
             border: none;
             overflow: visible;
 
@@ -220,7 +220,7 @@
                 }
             }
 
-            &:nth-child(3) {
+/*            &:nth-child(3) {
                 .team__img-wrap {
                     left: calc(-1 * min(5.2vw, 100px));
 
@@ -228,9 +228,9 @@
                         left: calc(-1 * min(5.2vw, 133px));
                     }
                 }
-            }
+            }*/
 
-            &:nth-child(4) {
+            &:nth-child(3) {
                 .team__img-wrap {
                     left: calc(-1 * min(2.3vw, 45px));
 
@@ -240,7 +240,7 @@
                 }
             }
 
-            &:nth-child(5) {
+            &:nth-child(4) {
                 .team__img-wrap {
                     left: calc(-1 * min(5.2vw, 100px));
 
@@ -345,20 +345,16 @@
 
     &__name {
         font-family: Radio, sans-serif;
-        font-size: min(min(1.35vw, 2.4vh), 24px);
+        font-size: min(min(1.35vw, 2.4vh), 26px);
         font-weight: 400;
         line-height: 200%;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.1em;
         color: #90FFFF;
-        margin-right: min(1.3vw, 15px);
+        margin-right: min(1.3vw, 25px);
 
         @include from(1921) {
-            font-size: min(min(1.35vw, 2.4vh), 31px);
-            margin-right: min(1.3vw, 27px);
-        }
-
-        @include to(991) {
-            font-size: min(min(1.2vw, 2.4vh), 12px);
+            font-size: min(min(1.35vw, 2.4vh), 34px);
+            margin-right: min(1.3vw, 33px);
         }
     }
 

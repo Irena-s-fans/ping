@@ -395,12 +395,11 @@
                     <p class="popup__close">{{ __('Close') }}</p>
                 </div>
             </div>
-            <p class="popup__text">{{ __('Everything we do is based on the principle of building') }} <span class="about__text_purple">{{ __('meaningful connections') }}</span>.
-                {{ __('In an exciting industry like') }} <span class="popup__text_bold">{{ __('esports') }}</span>, {{ __('we understand the importance of building') }} <span class="popup__text_bold">{{ __('strong brand partnerships') }}</span> {{ __('with established players and influencers') }}.
+            <p class="popup__text">
+                {{ __('Our task is to help brands build and establish partnerships with key representatives of gaming culture, well-known players and opinion leaders and make them known amongst the gaming community') }}.
             </p>
             <p class="popup__text">
-                <span class="popup__text_blue">{{ __('Our agency') }}</span> {{ __('wants to actively contribute to building') }} <span class="about__text_purple">{{ __('the global esports ecosystem') }}</span>. {{ __('We see our mission in bridging the gap and establishing communication between') }} <span class="popup__text_bold">{{ __('brands') }}</span> {{ __('and') }}
-                <span class="popup__text_bold">{{ __('the world of gamers') }}</span> {{ __('through partnerships, marketing, content creation and distribution') }}.
+                {{ __('We apply our experience in marketing and PR communications in esports to  create a global ecosystem of cybersports and well-established communications between companies and the industry') }}.
             </p>
             <div class="popup__icon-wrap">
                 <p class="popup__icon">!</p>
@@ -560,11 +559,11 @@
                                 {{ __('About') }}
                             </h1>
                             <p class="about__text about__text_blue">
-                                {{ __('We are a creative agency that combines the functions of event and advertising activities in esports, gaming and geek culture') }}.
+                                {{ __('PinG is a creative agency that’s all about cybersports, gaming and  geek culture') }}.
                             </p>
                         </div>
                         <p class="about__text about__text-description">
-                            <span class="about__text_purple">PinG</span> {{ __('will help you grow in the world of marketing and commercial partnerships to find the right opportunities that match the values ​​of your brand, team and community. We know exactly how to create a project that attracts any audience') }}.
+                            <span class="about__text_purple">PinG</span> {{ __('is your guide in the world of marketing for gaming communities. We will help to tell stories about your brand and find suitable opportunities for its promotion to those who share its values') }}.
                         </p>
                     </div>
                     <div class="quest">
@@ -578,8 +577,7 @@
                                 <span class="quest__icon-wrap show_popup" rel="popup1">
                                     <span class="quest__icon">!</span>
                                 </span>
-                            {{ __('Our mission is to offer') }} <span class="about__text_purple">{{ __('innovative and creative campaigns') }}</span>,
-                            {{ __('that resonate with the gaming community') }}.
+                            {{ __('We create and implement turnkey creative campaigns, manage events and offer strategic consulting for brands and well-known players') }}.
                         </p>
                     </div>
                     <div class="partners">
@@ -1030,7 +1028,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="team__item">
+{{--                            <div class="team__item">
                                 <div class="team__phrase">
                                     <img src="/public/img/team/team__phrase-icon.svg" draggable="false" alt="" class="team__phrase-icon">
                                     <div class="team__phrase-content">
@@ -1114,7 +1112,7 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--}}
                             <div class="team__item">
                                 <div class="team__phrase">
                                     <img src="/public/img/team/team__phrase-icon.svg" draggable="false" alt="" class="team__phrase-icon">
@@ -1414,7 +1412,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide team__slide">
+{{--                                    <div class="swiper-slide team__slide">
                                         <div class="team__img-wrap team__img-wrap_sm">
                                             <img src="/public/img/team/team3.png" draggable="false" alt=""
                                                  class="team__img_shadow team__img_shadow-sm">
@@ -1480,7 +1478,7 @@
                                                 <img src="/public/img/team/team__phrase-icon_sm.svg" draggable="false" alt="" class="team__phrase-icon_sm">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>--}}
                                     <div class="swiper-slide team__slide">
                                         <div class="team__img-wrap team__img-wrap_sm">
                                             <img src="/public/img/team/team4.png" draggable="false" alt=""
